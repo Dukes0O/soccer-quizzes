@@ -1,7 +1,7 @@
 // landing.js: Loads manifest, renders quiz cards, badges, and user progress
 
 async function loadManifest() {
-  const res = await fetch('quizzes/manifest.json');
+  const res = await fetch('/soccer-quizzes/quizzes/manifest.json');
   if (!res.ok) throw new Error('Manifest not found');
   return await res.json();
 }
@@ -12,14 +12,14 @@ function renderQuizCards(quizzes, userProgress) {
   quizzes.forEach(q => {
     const badge = userProgress[q.id]?.badge || '';
     container.innerHTML += `
-      <div class="quiz-card" style="border-left: 8px solid ${q.themeColor};">
-        <div class="quiz-graphic">${q.graphic}</div>
-        <div class="quiz-info">
-          <h2>${q.title}</h2>
-          <p>${q.description}</p>
-          <button onclick="location.href='quizzes/quiz.html?quiz=${q.id}'">Start Quiz</button>
+      <div class="quiz-card bg-white rounded shadow flex items-center gap-4 p-4 border-l-8" style="border-color: ${q.themeColor};">
+        <div class="quiz-graphic text-3xl">${q.graphic}</div>
+        <div class="quiz-info flex-1">
+          <h2 class="text-xl font-bold mb-1">${q.title}</h2>
+          <p class="text-gray-700 mb-2">${q.description}</p>
+          <button onclick="location.href='quizzes/quiz.html?quiz=${q.id}'" class="bg-blue-600 hover:bg-blue-700 text-white rounded px-4 py-2 transition">Start Quiz</button>
         </div>
-        <div class="quiz-badge">${badge}</div>
+        <div class="quiz-badge text-2xl">${badge}</div>
       </div>
     `;
   });
@@ -31,7 +31,7 @@ function renderBadges(userProgress, quizzes) {
   quizzes.forEach(q => {
     const badge = userProgress[q.id]?.badge;
     if (badge) {
-      container.innerHTML += `<span class="badge">${badge}</span>`;
+      container.innerHTML += `<span class="badge text-2xl">${badge}</span>`;
     }
   });
 }
