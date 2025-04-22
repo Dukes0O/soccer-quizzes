@@ -1,0 +1,26 @@
+{
+  "id": "transitions",
+  "title": "Transitions (Attack ↔ Defense)",
+  "description": "Master the moments when the ball changes teams!",
+  "graphic": "🔁",
+  "badge": "🔄",
+  "animation": "assets/animations/transitions.json",
+  "themeColor": "#6366f1",
+  "questions": [
+    { "question": "What does a 'transition' mean in soccer?", "options": ["A player changing uniforms", "The moment your team wins or loses the ball", "When the coach yells", "Going to halftime"], "correct": 1, "explanation": "Transitions happen instantly when possession changes." },
+    { "question": "When your team loses the ball, what’s the first thing to do?", "options": ["Freeze", "Recover and defend quickly", "Sit down", "Wait for the coach"], "correct": 1, "explanation": "Fast reaction helps prevent counter-attacks." },
+    { "question": "If you win the ball in defense, what should you look for first?", "options": ["A quick pass forward", "A trick move", "Standing still", "The scoreboard"], "correct": 0, "explanation": "A quick forward pass can launch a counter-attack." },
+    { "question": "Why are transitions important?", "options": ["They help coaches", "They change the field", "They are when goals often happen", "They don’t matter"], "correct": 2, "explanation": "Many goals are scored during fast changes in possession." },
+    { "question": "If the ball is lost near the opponent’s goal, what can you do?", "options": ["Counter-press to win it back", "Run away", "Let them dribble", "Blame a teammate"], "correct": 0, "explanation": "Winning it back quickly high up the field is a great opportunity." },
+    { "question": "After your team wins the ball, what should you do if you’re far from the play?", "options": ["Walk slowly", "Watch", "Sprint into a good position to help", "Yell 'pass it!'"], "correct": 2, "explanation": "Support the play to keep the ball moving and stay dangerous." },
+    { "question": "If you lose the ball while attacking, should you always run all the way back?", "options": ["Yes, unless you're pressing", "No, let others do it", "Only if coach says so", "Never"], "correct": 0, "explanation": "Sometimes you need to stay close to press or block passes." },
+    { "question": "Good transition teams are:", "options": ["Slow", "Always yelling", "Fast and organized", "Always spread out"], "correct": 2, "explanation": "Fast thinking and organized movement makes transition play powerful." },
+    { "question": "How can you prepare before a transition happens?", "options": ["Watch closely and stay alert", "Talk to the ref", "Tie your shoe", "Ignore the ball"], "correct": 0, "explanation": "Being alert helps you react faster when the ball changes teams." },
+    { "question": "In a defensive transition, your team should:", "options": ["Drop back and close space", "Run forward", "Spread out wide", "Let them shoot"], "correct": 0, "explanation": "Quickly getting into shape stops the other team from attacking." },
+    { "question": "What's a counter-attack?", "options": ["A backwards move", "A quick attack right after winning the ball", "A fight", "A restart"], "correct": 1, "explanation": "Quick attacks right after winning the ball can be deadly." },
+    { "question": "Why is communication important during transitions?", "options": ["To confuse teammates", "To tell each other what’s happening", "So you don’t have to run", "To tell jokes"], "correct": 1, "explanation": "Talking helps teammates react and organize fast." },
+    { "question": "Should defenders always stay back during transitions?", "options": ["No, sometimes they can join attacks", "Yes, never move", "Only if they feel like it", "Depends on the color of uniforms"], "correct": 0, "explanation": "Even defenders can support quick transitions at the right time." },
+    { "question": "A smart attacker during transitions will:", "options": ["Dribble slowly", "Look for passes and space immediately", "Celebrate early", "Ignore the ball"], "correct": 1, "explanation": "Reading the game fast leads to better chances." },
+    { "question": "After winning the ball, what do you look for first?", "options": ["The open space or teammate", "A snack", "The ref", "The coach"], "correct": 0, "explanation": "Spotting the best next move helps keep the advantage." }
+  ]
+}

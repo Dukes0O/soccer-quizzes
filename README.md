@@ -32,22 +32,34 @@ soccer-quizzes/
     defense.json              # Defense quiz bank (15+ questions)
     passing-movement.json     # Passing & Movement quiz bank (15+ questions)
     shooting-finishing.json   # Shooting & Finishing quiz bank (15+ questions)
+    soccer-field-awareness.json # Soccer Field Awareness quiz bank (15+ questions)
+    attacking-with-purpose.json # Attacking with Purpose quiz bank (15+ questions)
+    transitions.json          # Transitions (Attack ↔ Defense) quiz bank (15+ questions)
     manifest.json             # List of all available quizzes (metadata)
   /assets/
     /graphics/
       defense.svg             # (Placeholder: ⚽️)
       passing.svg             # (Placeholder: 🔄)
       shooting.svg            # (Placeholder: 🎯)
+      soccer-field-awareness.svg # (Placeholder: 🗺️)
+      attacking-with-purpose.svg # (Placeholder: 🔥)
+      transitions.svg         # (Placeholder: 🔄)
       ...                     # More graphics per quiz
     /badges/
       defense-badge.svg       # (Placeholder: 🏅)
       passing-badge.svg       # (Placeholder: 🥈)
       shooting-badge.svg      # (Placeholder: 🥇)
+      soccer-field-awareness-badge.svg # (Placeholder: 📍)
+      attacking-with-purpose-badge.svg # (Placeholder: 🔝)
+      transitions-badge.svg   # (Placeholder: 🔜)
       ...                     # More badges per quiz
     /animations/
       defense.json            # Animation data (or placeholder)
       passing.json            # Animation data (or placeholder)
       shooting.json           # Animation data (or placeholder)
+      soccer-field-awareness.json # Animation data (or placeholder)
+      attacking-with-purpose.json # Animation data (or placeholder)
+      transitions.json        # Animation data (or placeholder)
       ...                     # More animation assets
   /js/
     quiz.js                   # Quiz logic (for quiz.html)
@@ -88,10 +100,41 @@ soccer-quizzes/
 ---
 
 ## Quiz Bank & Randomization
-- Each quiz bank contains at least 15 questions.
-- When a user starts a quiz, 10 random questions are selected for that session.
-- No repeat questions within a single quiz attempt.
-- Randomization logic is handled in `quiz.js`.
+- Six quiz banks are provided as examples:
+  - **Defense**
+  - **Passing & Movement**
+  - **Shooting & Finishing**
+  - **Soccer Field Awareness**
+  - **Attacking with Purpose**
+  - **Transitions (Attack ↔ Defense)**
+- Each quiz bank is a JSON file in `/quizzes/`, containing at least 15 questions. Each quiz attempt randomly selects 10 questions (no repeats per session).
+
+### Example Quiz Bank Structure
+
+```json
+{
+  "id": "field-awareness",
+  "title": "Soccer Field Awareness",
+  "description": "Know your field! Boundaries, positions, and smart movement.",
+  "graphic": "🗺️",
+  "badge": "📍",
+  "animation": "assets/animations/field-awareness.json",
+  "themeColor": "#0284c7",
+  "questions": [
+    { "question": "What’s the name of the big box in front of your goal?", "options": ["The fun zone", "The 18-yard box (penalty area)", "The midfield", "The restart zone"], "correct": 1, "explanation": "The 18-yard box is where the goalie can use hands and where penalties happen." },
+    ...
+  ]
+}
+```
+
+---
+
+## Adding New Quizzes
+
+1. Create a new JSON file in `/quizzes/` following the structure above. You can use any of the provided quiz banks as a template.
+2. Add the quiz metadata to `quizzes/manifest.json` (id, title, description, graphic, badge, animation, themeColor).
+3. Add any new assets (graphics, badges, animations) to the appropriate folders in `/assets/`.
+4. No code changes are required—new quizzes will appear automatically on the landing page!
 
 ---
 

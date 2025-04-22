@@ -25,5 +25,32 @@
     "badge": "🥇",
     "animation": "assets/animations/shooting.json",
     "themeColor": "#b91c1c"
+  },
+  {
+    "id": "field-awareness",
+    "title": "Soccer Field Awareness",
+    "description": "Know your field! Boundaries, positions, and smart movement.",
+    "graphic": "🗺️",
+    "badge": "📍",
+    "animation": "assets/animations/field-awareness.json",
+    "themeColor": "#0284c7"
+  },
+  {
+    "id": "attacking-purpose",
+    "title": "Attacking with Purpose",
+    "description": "Score goals with smart decisions and teamwork!",
+    "graphic": "🧠",
+    "badge": "⚡",
+    "animation": "assets/animations/attacking-purpose.json",
+    "themeColor": "#f59e42"
+  },
+  {
+    "id": "transitions",
+    "title": "Transitions (Attack ↔ Defense)",
+    "description": "Master the moments when the ball changes teams!",
+    "graphic": "🔁",
+    "badge": "🔄",
+    "animation": "assets/animations/transitions.json",
+    "themeColor": "#6366f1"
   }
 ]

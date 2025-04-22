@@ -1,0 +1,26 @@
+{
+  "id": "attacking-purpose",
+  "title": "Attacking with Purpose",
+  "description": "Score goals with smart decisions and teamwork!",
+  "graphic": "🧠",
+  "badge": "⚡",
+  "animation": "assets/animations/attacking-purpose.json",
+  "themeColor": "#f59e42",
+  "questions": [
+    { "question": "What should you do if you're in a 2v1 situation?", "options": ["Try to dribble the defender alone", "Pass to your teammate if the defender comes to you", "Shoot from far away", "Pass backwards"], "correct": 1, "explanation": "Draw the defender in, then pass to your open teammate." },
+    { "question": "What is the goal of an attacking play?", "options": ["To look cool", "To get the ball wide", "To score or create a chance to score", "To show off your tricks"], "correct": 2, "explanation": "Every attack should move toward scoring or threatening the goal." },
+    { "question": "An overlap is when:", "options": ["You trip", "A teammate runs around you to get ahead", "You run backwards", "You steal the ball"], "correct": 1, "explanation": "Overlapping creates confusion for defenders and passing options." },
+    { "question": "When is a good time to dribble instead of pass?", "options": ["When you’re alone and have space", "When 3 defenders are in front", "When your coach says so", "Always"], "correct": 0, "explanation": "Use dribbling when there’s space or you can beat a single player." },
+    { "question": "Why is it smart to keep your head up while attacking?", "options": ["To look at the clouds", "To avoid defenders and find teammates", "To look at your fans", "To waste time"], "correct": 1, "explanation": "Good attackers scan for options while moving." },
+    { "question": "A through ball is:", "options": ["A pass into open space behind the defenders", "A shot from far away", "A pass to your coach", "A cross"], "correct": 0, "explanation": "A through ball helps a teammate run behind the defense to score." },
+    { "question": "What's the best way to break down a tight defense?", "options": ["Pass slowly", "Try solo moves", "Pass quickly and move off the ball", "Shoot every time"], "correct": 2, "explanation": "Fast passing and movement pulls defenders out of position." },
+    { "question": "If you’re near the goal with the ball, what do you do?", "options": ["Run back to midfield", "Kick it high", "Look to shoot or pass quickly", "Wait for everyone"], "correct": 2, "explanation": "Quick decisions lead to goals." },
+    { "question": "When your teammate is making a run forward, you should:", "options": ["Pass behind them", "Wait until they stop", "Pass in front into space", "Yell loudly"], "correct": 2, "explanation": "Timing and leading passes create scoring chances." },
+    { "question": "What is the benefit of switching the play?", "options": ["It confuses teammates", "It finds space on the other side", "It makes it harder to pass", "It delays the attack"], "correct": 1, "explanation": "Switching helps attack open areas when one side is crowded." },
+    { "question": "What helps attackers most when playing as a team?", "options": ["Tricks only", "Spacing, timing, and support", "Standing still", "Yelling a lot"], "correct": 1, "explanation": "Attacking as a group needs movement and smart choices." },
+    { "question": "You are wide open near the goal. What should your teammate do?", "options": ["Pass to you", "Shoot from far away", "Turn around", "Pass backward"], "correct": 0, "explanation": "Using open players near goal leads to better chances." },
+    { "question": "When attacking, where is the most dangerous space to go?", "options": ["The middle in front of the goal", "The sidelines", "The halfway line", "Behind your own goalie"], "correct": 0, "explanation": "The middle near the goal is the best area to create chances." },
+    { "question": "If you're outnumbered on attack, what should you do?", "options": ["Take on all the defenders", "Hold the ball and wait for support", "Run offside", "Kick the ball away"], "correct": 1, "explanation": "Slow down and keep possession until teammates arrive." },
+    { "question": "Why should you try to attack fast after winning the ball?", "options": ["The other team is out of position", "To rest", "To show off", "To waste time"], "correct": 0, "explanation": "Quick attacks can surprise a team that just lost the ball." }
+  ]
+}

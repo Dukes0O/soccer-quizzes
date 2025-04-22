@@ -1,0 +1,26 @@
+{
+  "id": "field-awareness",
+  "title": "Soccer Field Awareness",
+  "description": "Know your field! Boundaries, positions, and smart movement.",
+  "graphic": "🗺️",
+  "badge": "📍",
+  "animation": "assets/animations/field-awareness.json",
+  "themeColor": "#0284c7",
+  "questions": [
+    { "question": "What’s the name of the big box in front of your goal?", "options": ["The fun zone", "The 18-yard box (penalty area)", "The midfield", "The restart zone"], "correct": 1, "explanation": "The 18-yard box is where the goalie can use hands and where penalties happen." },
+    { "question": "Where is the midfield line?", "options": ["At the very top", "In the middle of the field", "Beside the net", "Behind the goal"], "correct": 1, "explanation": "It cuts the field in half and is where kickoffs happen." },
+    { "question": "Why should you know where the sidelines are?", "options": ["To sit and rest", "So you don’t run out of bounds", "So you can trip someone", "To take water breaks"], "correct": 1, "explanation": "Awareness of boundaries helps you stay in play and use space better." },
+    { "question": "If you're a winger (wide player), where should you usually be?", "options": ["In the middle", "Out near the sideline", "Beside the goalie", "On the bench"], "correct": 1, "explanation": "Wingers stretch the field and help spread the defense." },
+    { "question": "The job of a center-back is mostly to:", "options": ["Attack a lot", "Stand near the goalie and defend", "Take throw-ins", "Score goals"], "correct": 1, "explanation": "Center-backs protect the goal and organize the back line." },
+    { "question": "A striker usually plays:", "options": ["In goal", "As a referee", "Up top to score goals", "In defense"], "correct": 2, "explanation": "Strikers are the players farthest forward trying to finish chances." },
+    { "question": "Why is checking over your shoulder important?", "options": ["To stretch your neck", "To spot defenders and space", "To look cool", "To waste time"], "correct": 1, "explanation": "You can avoid pressure or find teammates by looking before the ball comes." },
+    { "question": "What does 'switching the play' mean?", "options": ["Running off the field", "Moving the ball from one side to the other", "Changing teammates", "Shooting backward"], "correct": 1, "explanation": "Switching spreads the defense and finds space on the opposite side." },
+    { "question": "Why should defenders spread out when your team has the ball?", "options": ["To go to sleep", "To stretch the other team and make passing easier", "To block shots", "To score"], "correct": 1, "explanation": "Wide defenders help your team keep the ball and attack better." },
+    { "question": "The 'final third' is:", "options": ["The last part of your school day", "The attacking part near the opponent’s goal", "The middle of the field", "A type of shoe"], "correct": 1, "explanation": "It's where your team tries to create and finish chances." },
+    { "question": "When you lose the ball, what should you do first?", "options": ["Yell", "Wait to see what happens", "Recover quickly and defend", "Blame your teammate"], "correct": 2, "explanation": "Reacting fast helps your team win the ball back." },
+    { "question": "What's the benefit of staying wide on offense?", "options": ["You get more sun", "It pulls defenders away from the middle", "You don’t run as much", "You get to rest"], "correct": 1, "explanation": "Width opens up space for passes and attacking runs." },
+    { "question": "The halfway circle is used for:", "options": ["Decorations", "Shooting", "Kickoffs and restart spacing", "Resting"], "correct": 2, "explanation": "At kickoff, only one team can be inside the center circle." },
+    { "question": "Which area should you defend the hardest?", "options": ["Near the other team’s goal", "The middle of the field", "The area in front of your own goal", "The sidelines"], "correct": 2, "explanation": "The zone in front of goal is the most dangerous to leave open." },
+    { "question": "When you're in your own half, what's most important?", "options": ["Being creative", "Protecting the ball", "Always shooting", "Calling out loudly"], "correct": 1, "explanation": "Mistakes in your own half can lead to goals for the other team." }
+  ]
+}
