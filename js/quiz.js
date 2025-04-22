@@ -11,7 +11,8 @@ function shuffle(array) {
 
 // Load quiz data from JSON file
 async function loadQuizData(quizId) {
-  const res = await fetch(`quizzes/${quizId}.json`);
+  // Always fetch from the root for GitHub Pages compatibility
+  const res = await fetch(`/soccer-quizzes/quizzes/${quizId}.json`);
   if (!res.ok) throw new Error('Quiz not found');
   return await res.json();
 }
