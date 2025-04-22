@@ -1,0 +1,26 @@
+{
+  "id": "passing-movement",
+  "title": "Passing & Movement Challenge",
+  "description": "Show your soccer passing and movement skills!",
+  "graphic": "🔄",
+  "badge": "🥈",
+  "animation": "assets/animations/passing.json",
+  "themeColor": "#2563eb",
+  "questions": [
+    { "question": "What is the main purpose of a wall pass (give-and-go)?", "options": ["To beat a defender with a quick exchange", "To waste time", "To confuse teammates", "To show off"], "correct": 0, "explanation": "A wall pass helps you get around a defender using a teammate." },
+    { "question": "When moving off the ball, you should...", "options": ["Find space and be available", "Stand still", "Run away from the play", "Yell loudly"], "correct": 0, "explanation": "Good movement creates passing options and stretches the defense." },
+    { "question": "Which surface is most commonly used for a short, accurate pass?", "options": ["Inside of the foot", "Outside of the foot", "Toe", "Heel"], "correct": 0, "explanation": "The inside of the foot gives control and accuracy." },
+    { "question": "What should you do after passing the ball?", "options": ["Move to support the play", "Stop and watch", "Turn your back", "Sit down"], "correct": 0, "explanation": "Always move to give your teammate another option." },
+    { "question": "A 'through ball' is best used to...", "options": ["Send a teammate behind the defense", "Pass backwards", "Waste time", "Switch play"], "correct": 0, "explanation": "A through ball splits defenders for a forward run." },
+    { "question": "If you receive the ball under pressure, you should...", "options": ["Play a simple pass", "Dribble into trouble", "Panic", "Shoot immediately"], "correct": 0, "explanation": "Keep it simple and keep possession." },
+    { "question": "What is 'checking to the ball'?", "options": ["Moving toward the ball to receive", "Running away", "Standing still", "Hiding from defenders"], "correct": 0, "explanation": "Checking to the ball helps create a passing option." },
+    { "question": "Which movement helps create space for teammates?", "options": ["Making a run away from the ball", "Standing still", "Crowding the ball", "Ignoring the play"], "correct": 0, "explanation": "Off-the-ball runs pull defenders and open space." },
+    { "question": "A 'switch of play' is...", "options": ["Changing the ball from one side to the other", "Passing backwards", "Shooting from distance", "Dribbling in circles"], "correct": 0, "explanation": "Switching play spreads the defense and creates new opportunities." },
+    { "question": "What is a key to successful combination play?", "options": ["Communication", "Ignoring teammates", "Solo dribbling", "Random passing"], "correct": 0, "explanation": "Talking and signaling helps coordinate movement and passes." },
+    { "question": "When should you use a one-touch pass?", "options": ["When under pressure or to speed up play", "Whenever you want", "Never", "Only in practice"], "correct": 0, "explanation": "One-touch passes are useful for quick, unpredictable play." },
+    { "question": "How do you make yourself available for a pass?", "options": ["Move into space and show for the ball", "Hide behind defenders", "Stand still", "Argue with the ref"], "correct": 0, "explanation": "Movement and signaling show you’re ready to receive." },
+    { "question": "What is 'third man running'?", "options": ["A teammate making a run after two others combine", "The referee", "A defender", "A substitute"], "correct": 0, "explanation": "Third man runs add unpredictability to attacks." },
+    { "question": "Why is body position important when receiving a pass?", "options": ["To see the field and play quickly", "To look cool", "To confuse yourself", "It’s not important"], "correct": 0, "explanation": "Open body position lets you see more and make better decisions." },
+    { "question": "When building from the back, what is most important?", "options": ["Patience and support", "Kicking long every time", "Ignoring teammates", "Dribbling alone"], "correct": 0, "explanation": "Patience and support help keep possession and break lines." }
+  ]
+}

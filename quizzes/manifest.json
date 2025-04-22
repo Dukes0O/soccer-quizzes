@@ -1,0 +1,29 @@
+[
+  {
+    "id": "defense",
+    "title": "Defense Challenge",
+    "description": "Test your defensive soccer defending knowledge!",
+    "graphic": "⚽️",
+    "badge": "🏅",
+    "animation": "assets/animations/defense.json",
+    "themeColor": "#2d6a4f"
+  },
+  {
+    "id": "passing-movement",
+    "title": "Passing & Movement Challenge",
+    "description": "Show your soccer passing and movement skills!",
+    "graphic": "🔄",
+    "badge": "🥈",
+    "animation": "assets/animations/passing.json",
+    "themeColor": "#2563eb"
+  },
+  {
+    "id": "shooting-finishing",
+    "title": "Shooting & Finishing Challenge",
+    "description": "How sharp is your shooting and finishing?",
+    "graphic": "🎯",
+    "badge": "🥇",
+    "animation": "assets/animations/shooting.json",
+    "themeColor": "#b91c1c"
+  }
+]

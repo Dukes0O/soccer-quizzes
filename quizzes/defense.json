@@ -1,0 +1,26 @@
+{
+  "id": "defense",
+  "title": "Soccer Defense Challenge",
+  "description": "Test your defensive soccer knowledge!",
+  "graphic": "⚽️",
+  "badge": "🏅",
+  "animation": "assets/animations/defense.json",
+  "themeColor": "#2d6a4f",
+  "questions": [
+    { "question": "1v1 Defending: Force attacker towards?", "options": ["Center", "Sideline/Endline", "Anywhere", "Goal"], "correct": 1, "explanation": "Force wide: harder angle, allows recovery." },
+    { "question": "'Pressure' means:", "options": ["Close down attacker", "Wait", "Run away", "Ask for ball"], "correct": 0, "explanation": "Pressure limits attacker's time/space." },
+    { "question": "Teammate pressures, you provide:", "options": ["Cover", "Space", "Commentary", "A distraction"], "correct": 0, "explanation": "Cover supports the pressuring defender." },
+    { "question": "Zonal Marking: Defend your...", "options": ["Assigned area", "Best friend", "Favorite spot", "Goalie"], "correct": 0, "explanation": "Zone defense = area responsibility." },
+    { "question": "Communication helps:", "options": ["Organize defense", "Confuse yourself", "Sound cool", "Make noise"], "correct": 0, "explanation": "Talk organizes shape, tracks runners, warns teammates." },
+    { "question": "Stay 'Compact' means:", "options": ["Reduce space between players/lines", "Spread out", "Hug goalie", "Tight shorts"], "correct": 0, "explanation": "Compactness limits passing/running lanes." },
+    { "question": "Best time to tackle?", "options": ["Heavy touch/ball exposed", "Immediately", "Randomly", "After they score"], "correct": 0, "explanation": "Timing is key; tackle on attacker's mistake." },
+    { "question": "Weak-side defender should usually:", "options": ["Tuck in centrally", "Attack", "Watch", "Mark goalie"], "correct": 0, "explanation": "Tuck in maintains central cover." },
+    { "question": "Defending a cross: Job is to...", "options": ["Attack ball or mark tightly", "Admire flight", "Hide", "Yell 'Keeper!'"] , "correct": 0, "explanation": "Be active: clear the ball or stop your mark." },
+    { "question": "Goal-Side position means:", "options": ["Between attacker & your goal", "On goal line", "Near opponent goal", "Next to post"], "correct": 0, "explanation": "Stay between attacker and goal to block path/shot." },
+    { "question": "When defending as a team, what is most important?", "options": ["Communication", "Running fast", "Scoring goals", "Wearing matching socks"], "correct": 0, "explanation": "Communication keeps the defense organized." },
+    { "question": "Which is a key principle of defending?", "options": ["Pressure, Cover, Balance", "Attack, Dribble, Score", "Dance, Sing, Jump", "Shoot, Pass, Run"], "correct": 0, "explanation": "Pressure, cover, and balance are defensive basics." },
+    { "question": "A defender's primary job is to...", "options": ["Prevent goals", "Score goals", "Take throw-ins", "Win corners"], "correct": 0, "explanation": "Defenders focus on stopping the opposition from scoring." },
+    { "question": "When marking a player, you should...", "options": ["Stay close and goal-side", "Stand far away", "Ignore them", "Watch the ball only"], "correct": 0, "explanation": "Stay close and between the attacker and your goal." },
+    { "question": "If you get beaten, what's next?", "options": ["Recover quickly", "Give up", "Blame teammates", "Sit down"], "correct": 0, "explanation": "Recover and try to help again!" }
+  ]
+}

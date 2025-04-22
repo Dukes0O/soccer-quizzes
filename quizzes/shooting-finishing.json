@@ -1,0 +1,26 @@
+{
+  "id": "shooting-finishing",
+  "title": "Shooting & Finishing Challenge",
+  "description": "How sharp is your shooting and finishing?",
+  "graphic": "🎯",
+  "badge": "🥇",
+  "animation": "assets/animations/shooting.json",
+  "themeColor": "#b91c1c",
+  "questions": [
+    { "question": "What part of the foot is best for a powerful shot?", "options": ["Laces (instep)", "Heel", "Toe", "Outside of the foot"], "correct": 0, "explanation": "The laces provide power and accuracy." },
+    { "question": "When should you try to chip the goalkeeper?", "options": ["When they rush out and leave goal open", "Every time", "Never", "When you’re far from goal"], "correct": 0, "explanation": "Chip when the keeper is off their line." },
+    { "question": "What is 'placement' in finishing?", "options": ["Aiming for corners over power", "Shooting as hard as possible", "Passing backwards", "Standing still"], "correct": 0, "explanation": "Placing the ball makes it harder for the keeper to save." },
+    { "question": "Which is the best body position when shooting?", "options": ["Over the ball, balanced", "Leaning back", "On one foot", "Turning away"], "correct": 0, "explanation": "Staying over the ball keeps shots low and controlled." },
+    { "question": "A 'first-time finish' means...", "options": ["Shooting without controlling the ball first", "Celebrating early", "Passing instead", "Using your hands"], "correct": 0, "explanation": "A first-time finish is quick and can catch keepers off guard." },
+    { "question": "What is a volley?", "options": ["Striking the ball before it hits the ground", "Dribbling", "Heading the ball", "Passing"], "correct": 0, "explanation": "A volley is when you shoot an airborne ball." },
+    { "question": "When shooting from distance, what helps accuracy?", "options": ["Keeping head down and following through", "Looking away", "Leaning back", "Standing still"], "correct": 0, "explanation": "Good technique keeps shots on target." },
+    { "question": "What is a 'poacher’s goal'?", "options": ["A close-range, opportunistic finish", "A long shot", "A header", "A penalty"], "correct": 0, "explanation": "Poachers score from rebounds and loose balls in the box." },
+    { "question": "When should you use the inside of your foot to finish?", "options": ["For accuracy and placement", "For power", "For fun", "Never"], "correct": 0, "explanation": "Inside foot is best for picking out corners." },
+    { "question": "What should you do after shooting?", "options": ["Follow up for rebounds", "Celebrate immediately", "Walk away", "Complain"], "correct": 0, "explanation": "Always be ready for a second chance." },
+    { "question": "A 'curled shot' is best for...", "options": ["Bending the ball around defenders/keeper", "Shooting straight", "Passing", "Clearing"], "correct": 0, "explanation": "Curled shots can beat keepers from angles." },
+    { "question": "What is the main goal when finishing?", "options": ["Score!", "Hit the post", "Miss on purpose", "Kick the ground"], "correct": 0, "explanation": "The aim is to put the ball in the net." },
+    { "question": "How do you disguise your shot?", "options": ["Look one way, shoot another", "Announce your shot", "Kick softly", "Wave your arms"], "correct": 0, "explanation": "Disguising shots fools defenders and the keeper." },
+    { "question": "What is a 'half-volley'?", "options": ["Striking the ball just after it bounces", "Shooting with your hands", "Passing", "Standing still"], "correct": 0, "explanation": "A half-volley is hit just after the ball bounces." },
+    { "question": "Why is composure important when finishing?", "options": ["To stay calm and pick the right shot", "To panic", "To rush", "To show off"], "correct": 0, "explanation": "Composure leads to better decisions and more goals." }
+  ]
+}

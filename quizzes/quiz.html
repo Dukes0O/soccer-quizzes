@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soccer Quiz</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="bg-green-50 min-h-screen flex flex-col items-center">
+  <main class="w-full max-w-2xl flex-1 p-4">
+    <div id="quiz-app"></div>
+  </main>
+  <footer class="w-full py-4 text-center text-gray-500 text-sm">Soccer Quizzes &copy; 2025</footer>
+  <script src="../js/quiz.js"></script>
+  <script src="../js/user.js"></script>
+  <script>
+    // Parse quiz ID from URL
+    function getQuizId() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('quiz');
+    }
+
+    // Render quiz UI
+    async function renderQuiz() {
+      const quizId = getQuizId();
+      if (!quizId) {
+        document.getElementById('quiz-app').innerHTML = '<p class="text-red-600">Quiz not found.</p>';
+        return;
+      }
+      try {
+        const quizData = await window.quizCore.loadQuizData(quizId);
+        const questions = window.quizCore.pickRandomQuestions(quizData.questions, 10);
+        let current = 0, score = 0, answers = [];
+
+        function showQuestion(idx) {
+          const q = questions[idx];
+          let options = '';
+          q.options.forEach((opt, i) => {
+            options += `<button class="quiz-option" data-idx="${i}">${opt}</button>`;
+          });
+          document.getElementById('quiz-app').innerHTML = `
+            <div class="quiz-header flex items-center gap-4 mb-4">
+              <span class="text-3xl">${quizData.graphic}</span>
+              <h2 class="text-2xl font-bold" style="color:${quizData.themeColor}">${quizData.title}</h2>
+            </div>
+            <div class="quiz-question mb-4">${q.question}</div>
+            <div class="quiz-options flex flex-col gap-2 mb-4">${options}</div>
+            <div class="quiz-progress text-sm text-gray-500 mb-2">Question ${idx + 1} of 10</div>
+          `;
+          document.querySelectorAll('.quiz-option').forEach(btn => {
+            btn.onclick = function() {
+              const selected = parseInt(this.getAttribute('data-idx'));
+              const correct = q.correct;
+              answers[idx] = selected;
+              if (selected === correct) score++;
+              showFeedback(selected === correct, q.explanation, idx < 9);
+            };
+          });
+        }
+
+        function showFeedback(isCorrect, explanation, hasNext) {
+          document.getElementById('quiz-app').innerHTML += `
+            <div class="quiz-feedback mt-2 ${isCorrect ? 'text-green-700' : 'text-red-600'}">
+              <strong>${isCorrect ? 'Correct!' : 'Incorrect.'}</strong> ${explanation}
+            </div>
+            <button id="next-btn" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">${hasNext ? 'Next' : 'See Results'}</button>
+          `;
+          document.getElementById('next-btn').onclick = function() {
+            if (hasNext) {
+              showQuestion(++current);
+            } else {
+              showResults();
+            }
+          };
+        }
+
+        function showResults() {
+          const passed = score === 10;
+          // Award badge if perfect
+          if (passed) {
+            window.userCore.setQuizProgress(quizId, score, quizData.badge);
+          } else {
+            window.userCore.setQuizProgress(quizId, score, null);
+          }
+          document.getElementById('quiz-app').innerHTML = `
+            <div class="quiz-header flex items-center gap-4 mb-4">
+              <span class="text-3xl">${quizData.graphic}</span>
+              <h2 class="text-2xl font-bold" style="color:${quizData.themeColor}">${quizData.title}</h2>
+            </div>
+            <div class="quiz-results mb-4">
+              <p class="text-lg">You scored <strong>${score} / 10</strong>.</p>
+              ${passed ? `<div class="text-green-700 text-2xl">Perfect! You earned a badge: <span>${quizData.badge}</span></div>` : '<div class="text-gray-600">Try again to earn the badge!</div>'}
+            </div>
+            <button onclick="window.location.href='../index.html'" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">Back to Landing Page</button>
+            <button onclick="window.location.reload()" class="ml-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Retry Quiz</button>
+          `;
+        }
+
+        showQuestion(0);
+      } catch (e) {
+        document.getElementById('quiz-app').innerHTML = `<p class="text-red-600">Quiz not found or error loading quiz.</p>`;
+      }
+    }
+
+    renderQuiz();
+  </script>
+</body>
+</html>
