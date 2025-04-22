@@ -12,6 +12,7 @@ A scalable, static, and modular quiz platform designed for GitHub Pages. Built w
 - [User Progress & Badges](#user-progress--badges)
 - [Customization & Extensibility](#customization--extensibility)
 - [Development Workflow](#development-workflow)
+- [Project Status & Roadmap](#project-status--roadmap)
 - [Future Enhancements](#future-enhancements)
 
 ---
@@ -101,9 +102,9 @@ soccer-quizzes/
 
 ## Quiz Bank & Randomization
 - Six quiz banks are provided as examples:
-  - **Defense**
-  - **Passing & Movement**
-  - **Shooting & Finishing**
+  - **Defense** (updated April 2025)
+  - **Passing & Movement** (updated April 2025)
+  - **Shooting & Finishing** (updated April 2025)
   - **Soccer Field Awareness**
   - **Attacking with Purpose**
   - **Transitions (Attack ↔ Defense)**
@@ -168,6 +169,30 @@ soccer-quizzes/
   - Design for keyboard navigation and screen readers.
 - **Static-Only:**
   - All code and assets must be static and client-side (works on GitHub Pages).
+
+---
+
+## Project Status & Roadmap
+
+### ✅ Accomplished
+- Modular quiz platform scaffolded and deployed for GitHub Pages.
+- Six quiz banks implemented (see below). Quizzes randomly select 10 out of 15+ questions per attempt.
+- **Defense, Passing & Movement, and Shooting & Finishing question banks updated with new content (April 2025).**
+- Modern UI/UX: player name entry, radio button answers, "Check Answer" step, animated progress bar, and badge rewards.
+- User progress and badges persist across sessions using localStorage.
+- Landing page dynamically lists quizzes, badges, and supports modular expansion.
+- All code and assets are static and GitHub Pages compatible.
+
+### 🚧 In Progress / To Do
+- **Create and add assets:** SVG/PNG images, icons, badge graphics, animations, and sound effects for quizzes and results.
+- **Enhance memory persistence:** Continue testing and improving localStorage so progress, badges, and player names are maintained reliably across sessions and browsers.
+- **Remove legacy files:** Delete `wordpress-embed.html` and any other unused or legacy files.
+- **Quiz unlocking sequence:** Implement logic so quizzes unlock only after a certain date or after completing prerequisite quizzes.
+
+### 💡 Future Ideas
+- **Advanced Section:** Add a section for advanced quizzes, separate from "Fundamentals" or "Principles".
+- **Player Goals:** Allow users to enter and track their personal objectives/goals for the season.
+- **Stats Tracking:** Add a (possibly separate) page to track team/player stats for the boys' season (planned for Fall/September).
 
 ---
 
