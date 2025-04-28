@@ -18,7 +18,16 @@ function getQuizProgress(quizId) {
 function setQuizProgress(quizId, score, badge) {
   const user = getUserData();
   user.progress = user.progress || {};
-  user.progress[quizId] = { score, badge };
+  const prev = user.progress[quizId]?.score || 0;
+  // Always store the best score and badge if perfect
+  let bestScore = Math.max(score, prev);
+  let earnedBadge = badge;
+  if (bestScore === 10) {
+    earnedBadge = badge; // Only award badge if perfect
+  } else {
+    earnedBadge = null;
+  }
+  user.progress[quizId] = { score: bestScore, badge: earnedBadge };
   saveUserData(user);
 }
 

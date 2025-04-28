@@ -10,7 +10,7 @@ function renderBadge(badge, alt, size = 'small', downloadable = false) {
   if (badge && badge.endsWith('.png')) {
     let sizeClass;
     if (size === 'large') {
-      sizeClass = 'w-30 h-30'; 
+      sizeClass = 'w-22 h-22'; 
     } else {
       sizeClass = 'w-8 h-8';
     }
@@ -29,6 +29,15 @@ function renderQuizCards(quizzes, userProgress) {
   container.innerHTML = '';
   quizzes.forEach(q => {
     const badge = userProgress[q.id]?.badge || '';
+    const best = userProgress[q.id]?.score || 0;
+    let badgeOrBest = '';
+    if (badge) {
+      badgeOrBest = renderBadge(badge, q.title, 'large', false);
+    } else if (best > 0) {
+      badgeOrBest = `<div class="text-lg font-semibold text-yellow-700">Personal Best: ${best} / 10</div>`;
+    } else {
+      badgeOrBest = '';
+    }
     container.innerHTML += `
       <div class="quiz-card bg-white rounded shadow flex items-center gap-4 p-4 border-l-8" style="border-color: ${q.themeColor};">
         <div class="quiz-graphic text-3xl">${q.graphic}</div>
@@ -37,7 +46,7 @@ function renderQuizCards(quizzes, userProgress) {
           <p class="text-gray-700 mb-2">${q.description}</p>
           <button onclick="location.href='quizzes/quiz.html?quiz=${q.id}'" class="bg-blue-600 hover:bg-blue-700 text-white rounded px-4 py-2 transition">Start Quiz</button>
         </div>
-        <div class="quiz-badge text-2xl">${renderBadge(badge, q.title, 'large', false)}</div>
+        <div class="quiz-badge text-2xl flex flex-col items-center justify-center min-w-[90px]">${badgeOrBest}</div>
       </div>
     `;
   });

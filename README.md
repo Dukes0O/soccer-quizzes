@@ -63,6 +63,7 @@ soccer-quizzes/
       attacking-with-purpose.json # Animation data (or placeholder)
       transitions.json        # Animation data (or placeholder)
       ...                     # More animation assets
+    badge-style.json         # Badge style definition (JSON, design spec)
   /js/
     quiz.js                   # Quiz logic (for quiz.html)
     landing.js                # Landing page logic
@@ -86,9 +87,13 @@ soccer-quizzes/
   - Enhanced error reporting for missing quizzes or manifest fetch issues.
 - **UI/UX Improvements:**
   - Improved badge sizing and layout for clarity and visual appeal.
-  - Quiz badge beside each quiz card is larger for prominence.
+  - Quiz badge beside each quiz card is larger for prominence, and displays the user's personal best until the badge is earned.
+- **Personal Best Tracking:**
+  - Each quiz card now displays your highest score achieved ("Personal Best") until you earn the badge (10/10), at which point the badge is shown instead.
 - **Cleanup:**
   - Removed obsolete or unused files (e.g., `wordpress-embed.html`).
+- **Badge Style Spec:**
+  - The badge design system is now documented in `/assets/badge-style.json` for future reference or automated badge generation.
 
 ---
 

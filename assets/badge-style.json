@@ -1,0 +1,43 @@
+{
+  "resolution": "1024x1024 (any square aspect)",
+  "color_palette": {
+    "deep_navy": "#04254d",
+    "royal_blue": "#083b74",
+    "sunset_orange": "#f36c21",
+    "gold_gradient_start": "#e9b341",
+    "gold_gradient_end": "#cf8b19",
+    "off_white": "#f6f4e8"
+  },
+  "composition_rules": {
+    "shape": "perfect_circle",
+    "hierarchy": "concentric",
+    "alignment": "center",
+    "symmetry": true,
+    "negative_space": "balanced",
+    "focal_elements_max": 3
+  },
+  "shading_techniques": {
+    "style": "minimal",
+    "gradient_stops": 2,
+    "light_direction": "top-left",
+    "inner_shadow": "soft"
+  },
+  "typography": {
+    "font_family": "bold_sans_serif",
+    "text_alignment": "center",
+    "text_colors": [
+      "off_white",
+      "deep_navy"
+    ],
+    "layout": [
+      "horizontal_bands",
+      "gentle_upward_arcs"
+    ]
+  },
+  "icons_and_silhouettes": {
+    "soccer_ball": "solid_fill_with_darker_tone_for_depth",
+    "player_silhouettes": "solid_orange_fill_with_minimal_detail"
+  },
+  "export_format": "transparent_background_PNG_or_vector",
+  "scaling": "clean_scaling_from_favicon_to_print"
+}
