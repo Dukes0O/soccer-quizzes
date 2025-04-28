@@ -14,6 +14,7 @@ A scalable, static, and modular quiz platform designed for GitHub Pages. Built w
 - [Development Workflow](#development-workflow)
 - [Project Status & Roadmap](#project-status--roadmap)
 - [Future Enhancements](#future-enhancements)
+- [Recent Enhancements](#recent-enhancements)
 
 ---
 
@@ -47,12 +48,12 @@ soccer-quizzes/
       transitions.svg         # (Placeholder: 🔄)
       ...                     # More graphics per quiz
     /badges/
-      defense-badge.svg       # (Placeholder: 🏅)
-      passing-badge.svg       # (Placeholder: 🥈)
-      shooting-badge.svg      # (Placeholder: 🥇)
-      soccer-field-awareness-badge.svg # (Placeholder: 📍)
-      attacking-with-purpose-badge.svg # (Placeholder: 🔝)
-      transitions-badge.svg   # (Placeholder: 🔜)
+      defense.png
+      passing-movement.png
+      shooting-finishing.png
+      soccer-field-awareness.png
+      attacking-with-purpose.png
+      transitions.png
       ...                     # More badges per quiz
     /animations/
       defense.json            # Animation data (or placeholder)
@@ -69,6 +70,25 @@ soccer-quizzes/
   style.css                   # Common styles
   README.md                   # Project documentation
 ```
+
+---
+
+## Recent Enhancements
+
+- **Badge Asset Consistency:**
+  - All quizzes now use PNG badge assets (`/assets/badges/{quiz}.png`), referenced in both quiz JSON and manifest.
+  - Badge display logic updated to render PNGs as images (not text paths or emoji).
+  - Quiz cards show large badges; "Your Badges" section shows smaller, downloadable badges.
+- **Downloadable Badges:**
+  - Users can download earned badges from the "Your Badges" section by clicking on them.
+- **Robust Local & GitHub Pages Compatibility:**
+  - All fetch paths for quizzes and manifest are relative and robust to both local and GitHub Pages deployments.
+  - Enhanced error reporting for missing quizzes or manifest fetch issues.
+- **UI/UX Improvements:**
+  - Improved badge sizing and layout for clarity and visual appeal.
+  - Quiz badge beside each quiz card is larger for prominence.
+- **Cleanup:**
+  - Removed obsolete or unused files (e.g., `wordpress-embed.html`).
 
 ---
 
