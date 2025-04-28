@@ -173,11 +173,11 @@ soccer-quizzes/
 
 ## Customization & Extensibility
 - **Graphics:** Each quiz can specify a unique graphic (emoji or SVG).
-- **Badges:** Each quiz can specify a unique badge (emoji or SVG).
+- **Badges:** Each quiz can specify a unique badge (emoji or SVG/PNG). Badge graphics have been added to `/assets/badges/`.
 - **Animations:** Each quiz can specify a unique animation asset (JSON, Lottie, or placeholder).
 - **Themes:** Each quiz can have its own color theme.
 - **Question Banks:** Each quiz loads its own question set from its JSON file.
-- **Future:** Easily add authentication, leaderboards, or shareable badges; the codebase is modular for future enhancements.
+- **Future:** Easily add authentication, or shareable badges; the codebase is modular for future enhancements.
 
 ---
 
@@ -199,6 +199,11 @@ soccer-quizzes/
 
 ## Project Status & Roadmap
 
+### Status Update (April 2025)
+- The leaderboard feature with memory persistence is **no longer planned**. Focus is on personal bests and badges for user motivation.
+- All legacy files have been removed.
+- Badge graphics have been added and are now used for quiz rewards.
+
 ### ✅ Accomplished
 - Modular quiz platform scaffolded and deployed for GitHub Pages.
 - Six quiz banks implemented (see below). Quizzes randomly select 10 out of 15+ questions per attempt.
@@ -209,9 +214,8 @@ soccer-quizzes/
 - All code and assets are static and GitHub Pages compatible.
 
 ### 🚧 In Progress / To Do
-- **Create and add assets:** SVG/PNG images, icons, badge graphics, animations, and sound effects for quizzes and results.
+- **Create and add assets:** SVG/PNG images, icons, and sound effects for quizzes and results.
 - **Enhance memory persistence:** Continue testing and improving localStorage so progress, badges, and player names are maintained reliably across sessions and browsers.
-- **Remove legacy files:** Delete `wordpress-embed.html` and any other unused or legacy files.
 - **Quiz unlocking sequence:** Implement logic so quizzes unlock only after a certain date or after completing prerequisite quizzes.
 
 ### 💡 Future Ideas
@@ -223,8 +227,7 @@ soccer-quizzes/
 
 ## Future Enhancements
 - SVG/PNG graphics and badges (replace emojis as assets become available)
-- User authentication (optional, for cloud sync or leaderboards)
-- Leaderboards (local or remote)
+- User authentication (optional, for cloud sync)
 - Shareable/downloadable badges
 - Dark/light mode theming
 - Enhanced accessibility

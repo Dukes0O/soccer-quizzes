@@ -10,7 +10,7 @@ function renderBadge(badge, alt, size = 'small', downloadable = false) {
   if (badge && badge.endsWith('.png')) {
     let sizeClass;
     if (size === 'large') {
-      sizeClass = 'w-20 h-20'; // Tailwind standard size for card display
+      sizeClass = 'w-24 h-24'; // Tailwind standard size for card display
     } else {
       sizeClass = 'w-8 h-8';
     }
