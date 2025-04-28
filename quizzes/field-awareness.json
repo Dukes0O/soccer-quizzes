@@ -2,8 +2,8 @@
   "id": "field-awareness",
   "title": "Soccer Field Awareness",
   "description": "Know your field! Boundaries, positions, and smart movement.",
-  "graphic": "🗺️",
-  "badge": "📍",
+  "graphic": "",
+  "badge": "assets/badges/soccer-field-awareness.png",
   "animation": "assets/animations/field-awareness.json",
   "themeColor": "#0284c7",
   "questions": [

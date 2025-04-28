@@ -3,8 +3,8 @@
     "id": "defense",
     "title": "Defense Challenge",
     "description": "Test your defensive soccer defending knowledge!",
-    "graphic": "⚽️",
-    "badge": "🏅",
+    "graphic": "",
+    "badge": "assets/badges/defense.png",
     "animation": "assets/animations/defense.json",
     "themeColor": "#2d6a4f"
   },
@@ -12,8 +12,8 @@
     "id": "passing-movement",
     "title": "Passing & Movement Challenge",
     "description": "Show your soccer passing and movement skills!",
-    "graphic": "🔄",
-    "badge": "🥈",
+    "graphic": "",
+    "badge": "assets/badges/passing-movement.png",
     "animation": "assets/animations/passing.json",
     "themeColor": "#2563eb"
   },
@@ -21,8 +21,8 @@
     "id": "shooting-finishing",
     "title": "Shooting & Finishing Challenge",
     "description": "How sharp is your shooting and finishing?",
-    "graphic": "🎯",
-    "badge": "🥇",
+    "graphic": "",
+    "badge": "assets/badges/shooting-finishing.png",
     "animation": "assets/animations/shooting.json",
     "themeColor": "#b91c1c"
   },
@@ -30,8 +30,8 @@
     "id": "field-awareness",
     "title": "Soccer Field Awareness",
     "description": "Know your field! Boundaries, positions, and smart movement.",
-    "graphic": "🗺️",
-    "badge": "📍",
+    "graphic": "",
+    "badge": "assets/badges/soccer-field-awareness.png",
     "animation": "assets/animations/field-awareness.json",
     "themeColor": "#0284c7"
   },
@@ -39,17 +39,17 @@
     "id": "attacking-purpose",
     "title": "Attacking with Purpose",
     "description": "Score goals with smart decisions and teamwork!",
-    "graphic": "🧠",
-    "badge": "⚡",
+    "graphic": "",
+    "badge": "assets/badges/attacking-with-purpose.png",
     "animation": "assets/animations/attacking-purpose.json",
     "themeColor": "#f59e42"
   },
   {
     "id": "transitions",
-    "title": "Transitions (Attack ↔ Defense)",
+    "title": "Transitions (Attack Defense)",
     "description": "Master the moments when the ball changes teams!",
-    "graphic": "🔁",
-    "badge": "🔄",
+    "graphic": "",
+    "badge": "assets/badges/transitions.png",
     "animation": "assets/animations/transitions.json",
     "themeColor": "#6366f1"
   }

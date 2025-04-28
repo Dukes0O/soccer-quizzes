@@ -2,8 +2,8 @@
   "id": "passing-movement",
   "title": "Passing & Movement Challenge",
   "description": "Show your soccer passing and movement skills!",
-  "graphic": "🔄",
-  "badge": "🥈",
+  "graphic": "",
+  "badge": "assets/badges/passing-movement.png",
   "animation": "assets/animations/passing.json",
   "themeColor": "#2563eb",
   "questions": [

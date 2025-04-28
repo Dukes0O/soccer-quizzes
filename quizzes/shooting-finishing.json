@@ -3,7 +3,7 @@
   "title": "Shooting & Finishing Challenge",
   "description": "How sharp is your shooting and finishing?",
   "graphic": "",
-  "badge": "",
+  "badge": "assets/badges/shooting-finishing.png",
   "animation": "assets/animations/shooting.json",
   "themeColor": "#f59e42",
   "questions": [

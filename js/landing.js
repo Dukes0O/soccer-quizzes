@@ -1,7 +1,7 @@
 // landing.js: Loads manifest, renders quiz cards, badges, and user progress
 
 async function loadManifest() {
-  const res = await fetch('/soccer-quizzes/quizzes/manifest.json');
+  const res = await fetch('quizzes/manifest.json');
   if (!res.ok) throw new Error('Manifest not found');
   return await res.json();
 }

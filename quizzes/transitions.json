@@ -1,9 +1,9 @@
 {
   "id": "transitions",
-  "title": "Transitions (Attack ↔ Defense)",
+  "title": "Transitions (Attack Defense)",
   "description": "Master the moments when the ball changes teams!",
-  "graphic": "🔁",
-  "badge": "🔄",
+  "graphic": "",
+  "badge": "assets/badges/transitions.png",
   "animation": "assets/animations/transitions.json",
   "themeColor": "#6366f1",
   "questions": [

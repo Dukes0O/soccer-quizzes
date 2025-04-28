@@ -2,8 +2,8 @@
   "id": "attacking-purpose",
   "title": "Attacking with Purpose",
   "description": "Score goals with smart decisions and teamwork!",
-  "graphic": "🧠",
-  "badge": "⚡",
+  "graphic": "",
+  "badge": "assets/badges/attacking-with-purpose.png",
   "animation": "assets/animations/attacking-purpose.json",
   "themeColor": "#f59e42",
   "questions": [

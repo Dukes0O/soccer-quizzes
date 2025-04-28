@@ -2,8 +2,8 @@
   "id": "defense",
   "title": "Defense Challenge",
   "description": "Test your defensive soccer skills!",
-  "graphic": "🛡️",
-  "badge": "🛡️",
+  "graphic": "",
+  "badge": "assets/badges/defense.png",
   "animation": "assets/animations/defense.json",
   "themeColor": "#2563eb",
   "questions": [
