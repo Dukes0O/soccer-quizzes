@@ -26,7 +26,7 @@ async function renderQuizUI() {
   try {
     quizData = await window.quizCore.loadQuizData(quizId);
   } catch (e) {
-    document.getElementById('quiz-app').innerHTML = `<p class="text-red-600">Quiz not found or error loading quiz.</p>`;
+    document.getElementById('quiz-app').innerHTML = `<p class="text-red-600">Quiz not found or error loading quiz.<br>${e.message}</p>`;
     return;
   }
 

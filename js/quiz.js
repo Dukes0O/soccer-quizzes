@@ -11,10 +11,20 @@ function shuffle(array) {
 
 // Load quiz data from JSON file
 async function loadQuizData(quizId) {
-  // Always fetch from the root for GitHub Pages compatibility
-  const res = await fetch(`quizzes/${quizId}.json`);
-  if (!res.ok) throw new Error('Quiz not found');
-  return await res.json();
+  let fetchPath = `quizzes/${quizId}.json`;
+  // If running on GitHub Pages, ensure fetch path is relative to base
+  if (window.location.hostname.endsWith('github.io')) {
+    const repo = window.location.pathname.split('/')[1];
+    fetchPath = `/${repo}/quizzes/${quizId}.json`;
+  }
+  try {
+    const res = await fetch(fetchPath);
+    if (!res.ok) throw new Error(`Quiz not found: ${fetchPath} (status ${res.status})`);
+    return await res.json();
+  } catch (e) {
+    console.error('Error loading quiz data:', e);
+    throw e;
+  }
 }
 
 // Pick N random questions from a question bank
