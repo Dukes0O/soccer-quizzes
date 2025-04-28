@@ -6,9 +6,15 @@ async function loadManifest() {
   return await res.json();
 }
 
-function renderBadge(badge, alt) {
+function renderBadge(badge, alt, size = 'small', downloadable = false) {
   if (badge && badge.endsWith('.png')) {
-    return `<img src="${badge}" alt="${alt || 'Badge'}" class="inline w-8 h-8 align-middle rounded shadow" loading="lazy">`;
+    const sizeClass = size === 'large' ? 'w-16 h-16' : 'w-8 h-8';
+    const imgTag = `<img src="${badge}" alt="${alt || 'Badge'}" class="inline ${sizeClass} align-middle rounded shadow" loading="lazy">`;
+    if (downloadable) {
+      return `<a href="${badge}" download title="Download badge">${imgTag}</a>`;
+    } else {
+      return imgTag;
+    }
   }
   return badge || '';
 }
@@ -26,7 +32,7 @@ function renderQuizCards(quizzes, userProgress) {
           <p class="text-gray-700 mb-2">${q.description}</p>
           <button onclick="location.href='quizzes/quiz.html?quiz=${q.id}'" class="bg-blue-600 hover:bg-blue-700 text-white rounded px-4 py-2 transition">Start Quiz</button>
         </div>
-        <div class="quiz-badge text-2xl">${renderBadge(badge, q.title)}</div>
+        <div class="quiz-badge text-2xl">${renderBadge(badge, q.title, 'large', false)}</div>
       </div>
     `;
   });
@@ -38,7 +44,7 @@ function renderBadges(userProgress, quizzes) {
   quizzes.forEach(q => {
     const badge = userProgress[q.id]?.badge;
     if (badge) {
-      container.innerHTML += `<span class="badge text-2xl">${renderBadge(badge, q.title)}</span>`;
+      container.innerHTML += `<span class="badge text-2xl">${renderBadge(badge, q.title, 'small', true)}</span>`;
     }
   });
 }
