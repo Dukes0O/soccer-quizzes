@@ -16,6 +16,13 @@ function setPlayerName(name) {
   localStorage.setItem(USERNAME_KEY, name);
 }
 
+function renderBadge(badge, alt) {
+  if (badge && badge.endsWith('.png')) {
+    return `<img src="${badge}" alt="${alt || 'Badge'}" class="inline w-10 h-10 align-middle rounded shadow" loading="lazy">`;
+  }
+  return badge || '';
+}
+
 async function renderQuizUI() {
   const quizId = getQuizId();
   if (!quizId) {
@@ -156,7 +163,7 @@ async function renderQuizUI() {
         </div>
         <div class="text-lg mb-2">Well done, <span class="font-bold">${getPlayerName()}</span>!</div>
         <div class="text-lg mb-2">You scored <strong>${score} / 10</strong>.</div>
-        ${passed ? `<div class="text-green-700 text-2xl">Perfect! You earned a badge: <span>${quizData.badge}</span></div>` : '<div class="text-gray-600">Try again to earn the badge!</div>'}
+        ${passed ? `<div class="text-green-700 text-2xl">Perfect! You earned a badge: <span>${renderBadge(quizData.badge, quizData.title)}</span></div>` : '<div class="text-gray-600">Try again to earn the badge!</div>'}
         ${animation}
         <button onclick="window.location.href='../index.html'" class="mt-4 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">Back to Landing Page</button>
         <button onclick="window.location.reload()" class="ml-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Play Again</button>
