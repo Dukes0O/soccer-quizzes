@@ -8,7 +8,12 @@ async function loadManifest() {
 
 function renderBadge(badge, alt, size = 'small', downloadable = false) {
   if (badge && badge.endsWith('.png')) {
-    const sizeClass = size === 'large' ? 'w-16 h-16' : 'w-8 h-8';
+    let sizeClass;
+    if (size === 'large') {
+      sizeClass = 'w-30 h-30'; 
+    } else {
+      sizeClass = 'w-8 h-8';
+    }
     const imgTag = `<img src="${badge}" alt="${alt || 'Badge'}" class="inline ${sizeClass} align-middle rounded shadow" loading="lazy">`;
     if (downloadable) {
       return `<a href="${badge}" download title="Download badge">${imgTag}</a>`;
