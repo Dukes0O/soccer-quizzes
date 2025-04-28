@@ -10,7 +10,7 @@ function renderBadge(badge, alt, size = 'small', downloadable = false) {
   if (badge && badge.endsWith('.png')) {
     let sizeClass;
     if (size === 'large') {
-      sizeClass = 'w-22 h-22'; 
+      sizeClass = 'w-18 h-18'; // User requested size
     } else {
       sizeClass = 'w-8 h-8';
     }
