@@ -70,26 +70,28 @@ async function renderQuizUI() {
   function renderFieldProgress() {
     const percent = (current / 10) * 100;
     document.getElementById('field-container').innerHTML = `
-      <img 
-        src="../assets/graphics/soccer pitch.png" 
-        alt="Soccer Pitch" 
-        class="absolute inset-0 w-full h-full object-fill" 
-        style="z-index: 0;" 
-      />
-      <img 
-        src="../assets/graphics/football player CR7.png" 
-        alt="Player" 
-        class="absolute"
-        style="
-          left: calc(${percent}% - 32px); /* center player horizontally at percent */
-          top: calc(50% - 64px);         /* vertically center a 128px icon */
-          width: 64px;
-          height: 128px;
-          z-index: 1;
-        "
-      />
-      <div class="absolute bottom-2 left-0 w-full text-xs text-gray-600 text-center select-none" style="z-index:2;">
-        Question ${current + 1} of 10
+      <div class="relative w-full h-full">
+        <img 
+          src="../assets/graphics/soccer pitch.png" 
+          alt="Soccer Pitch" 
+          class="absolute inset-0 w-full h-full object-fill" 
+          style="z-index: 0;" 
+        />
+        <img 
+          src="../assets/graphics/football player CR7.png" 
+          alt="Player" 
+          class="absolute"
+          style="
+            left: calc(${percent}% - 32px); /* center player horizontally at percent */
+            top: calc(50% - 64px);         /* vertically center a 128px icon */
+            width: 64px;
+            height: 128px;
+            z-index: 1;
+          "
+        />
+        <div class="absolute bottom-2 left-0 w-full text-xs text-gray-600 text-center select-none" style="z-index:2;">
+          Question ${current + 1} of 10
+        </div>
       </div>
     `;
   }
