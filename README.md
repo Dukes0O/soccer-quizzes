@@ -323,7 +323,7 @@ For questions or contributions, see the full plan in this section and follow the
 
 ## Project Status & Roadmap
 
-✅ Completed: Hub, quizzes, gallery, formation detail, navigation ribbon, progress & badge logic, responsive styling, and robust relative fetch paths.
+✅ Completed: Hub, quizzes, gallery, formation detail, navigation ribbon, progress & badge logic, responsive quiz progress tracker with PNG assets (SVG removed), responsive styling, and robust relative fetch paths.
 
 🎯 Next Milestones:
 - Cross-environment testing (localhost & GitHub Pages)
