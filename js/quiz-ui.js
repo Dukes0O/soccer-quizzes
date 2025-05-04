@@ -70,27 +70,35 @@ async function renderQuizUI() {
   function renderFieldProgress() {
     const percent = (current / 10) * 100;
     document.getElementById('field-container').innerHTML = `
-      <div class="relative w-full rounded-lg">
-        <img
-          src="../assets/graphics/soccer pitch.png"
-          alt="Soccer Pitch"
-          class="w-full h-auto object-contain z-0 rounded-lg"
-        >
-        <img
-          src="../assets/graphics/football player CR7.png"
-          alt="Player"
-          class="absolute"
-          style="
-            left: ${percent}% ;
-            top: calc(50% - 32px);
-            width: 48px;
-            height: 64px;
-            z-index: 1;
-          "
-        >
+      <!-- Simple fixed-height container with full-width pitch -->
+      <div class="relative bg-white rounded-lg overflow-hidden">
+        <!-- Soccer field with aspect ratio preserved -->
+        <div class="relative" style="height: 80px;">
+          <!-- Full-width pitch image with proper aspect ratio -->
+          <img 
+            src="../assets/graphics/soccer pitch.png" 
+            alt="Soccer Pitch" 
+            class="w-full h-full object-cover"
+          />
+          <!-- Player positioned based on progress percentage -->
+          <img 
+            src="../assets/graphics/football player CR7.png" 
+            alt="Player" 
+            class="absolute"
+            style="
+              left: ${10 + (percent * 0.8)}%; 
+              top: 15px;
+              width: 40px; 
+              height: 50px;
+              z-index: 10;
+            "
+          />
+        </div>
+        <!-- Progress indicator below the field -->
+        <div class="text-xs text-gray-600 p-1 text-center">
+          Question ${current + 1} of 10
+        </div>
       </div>
-      <!-- progress label -->
-      <div class="text-xs text-gray-600 mt-1">Progress: ${current} / 10</div>
     `;
   }
 
