@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formation Detail</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-green-50 min-h-screen flex flex-col">
+  <nav class="bg-green-700 text-white p-4 flex justify-between">
+    <a href="../index.html" class="font-bold text-lg">Home</a>
+    <a href="../quizzes/index.html" class="ml-4">Quizzes</a>
+    <a href="index.html" class="ml-4 font-semibold">Playbook</a>
+  </nav>
+  <main class="flex-1 p-6 flex flex-col items-center">
+    <div id="formation-detail" class="w-full max-w-xl"></div>
+  </main>
+  <script>
+    async function loadFormationDetail() {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+      const container = document.getElementById('formation-detail');
+      if (!id) {
+        container.innerHTML = '<p class="text-red-600">No formation selected.</p>';
+        return;
+      }
+      try {
+        const manifestUrl = new URL('manifest.json', window.location.href);
+        const res = await fetch(manifestUrl);
+        if (!res.ok) throw new Error('Manifest fetch failed');
+        const formations = await res.json();
+        const item = formations.find(f => f.id === id);
+        if (!item) {
+          container.innerHTML = '<p class="text-red-600">Formation not found.</p>';
+          return;
+        }
+        const imgUrl = new URL(item.image, window.location.origin + '/').href;
+        container.innerHTML = `
+          <img src="${imgUrl}" alt="${item.title}" loading="lazy" class="max-w-full h-auto mb-4 border rounded" style="background:${item.themeColor};">
+          <h1 class="text-2xl font-bold mb-2">${item.title}</h1>
+          <p class="mb-4 text-gray-700">${item.description}</p>
+        `;
+      } catch (err) {
+        console.error('Formation detail error:', err);
+        container.innerHTML = '<p class="text-red-600">Failed to load formation.</p>';
+      }
+    }
+    document.addEventListener('DOMContentLoaded', loadFormationDetail);
+  </script>
+</body>
+</html>

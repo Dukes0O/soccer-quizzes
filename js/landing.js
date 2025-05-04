@@ -1,9 +1,16 @@
 // landing.js: Loads manifest, renders quiz cards, badges, and user progress
 
 async function loadManifest() {
-  const res = await fetch('quizzes/manifest.json');
-  if (!res.ok) throw new Error('Manifest not found');
-  return await res.json();
+  // Determine correct manifest path
+  const inQuizzes = location.pathname.includes('/quizzes/');
+  const manifestPath = inQuizzes ? './manifest.json' : 'quizzes/manifest.json';
+  const res = await fetch(manifestPath);
+  if (!res.ok) {
+    console.error('landing.js: manifest fetch error', res.status, res.statusText);
+    throw new Error('Manifest not found');
+  }
+  const data = await res.json();
+  return data;
 }
 
 function renderBadge(badge, alt, size = 'small', downloadable = false) {
@@ -14,12 +21,14 @@ function renderBadge(badge, alt, size = 'small', downloadable = false) {
     } else {
       sizeClass = 'w-8 h-8';
     }
-    const imgTag = `<img src="${badge}" alt="${alt || 'Badge'}" class="inline ${sizeClass} align-middle rounded shadow" loading="lazy">`;
+    // fix path when on quizzes page
+    let src = badge;
+    if (window.location.pathname.includes('/quizzes/')) src = '../' + badge;
+    const imgTag = `<img src="${src}" alt="${alt || 'Badge'}" class="inline ${sizeClass} align-middle rounded shadow" loading="lazy">`;
     if (downloadable) {
-      return `<a href="${badge}" download title="Download badge">${imgTag}</a>`;
-    } else {
-      return imgTag;
+      return `<a href="${src}" download title="Download badge">${imgTag}</a>`;
     }
+    return imgTag;
   }
   return badge || '';
 }
@@ -44,7 +53,7 @@ function renderQuizCards(quizzes, userProgress) {
         <div class="quiz-info flex-1">
           <h2 class="text-xl font-bold mb-1">${q.title}</h2>
           <p class="text-gray-700 mb-2">${q.description}</p>
-          <button onclick="location.href='quizzes/quiz.html?quiz=${q.id}'" class="bg-blue-600 hover:bg-blue-700 text-white rounded px-4 py-2 transition">Start Quiz</button>
+          <button onclick="location.href='quiz.html?quiz=${q.id}'" class="bg-blue-600 hover:bg-blue-700 text-white rounded px-4 py-2 transition">Start Quiz</button>
         </div>
         <div class="quiz-badge text-2xl flex flex-col items-center justify-center min-w-[90px]">${badgeOrBest}</div>
       </div>

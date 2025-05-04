@@ -1,0 +1,30 @@
+[
+  {
+    "id": "crossing-from-right",
+    "title": "Crossing from Right",
+    "description": "Technique for delivering balls from the right flank",
+    "image": "assets/graphics/crossing from right.png",
+    "themeColor": "#1e40af"
+  },
+  {
+    "id": "field-long-thirds",
+    "title": "Field Long Thirds",
+    "description": "Break field into thirds vertically",
+    "image": "assets/graphics/field long thirds.png",
+    "themeColor": "#065f46"
+  },
+  {
+    "id": "field-zones-thirds",
+    "title": "Field Zones Thirds",
+    "description": "Tactical zones in thirds horizontally",
+    "image": "assets/graphics/field zones thirds.png",
+    "themeColor": "#81550c"
+  },
+  {
+    "id": "formation-21211",
+    "title": "Formation 2-1-2-1-1",
+    "description": "2-1-2-1-1 formation layout",
+    "image": "assets/graphics/formation 2-1-2-1-1.png",
+    "themeColor": "#b91c1c"
+  }
+]

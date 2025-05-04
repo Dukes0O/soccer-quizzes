@@ -1,40 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soccer Quizzes</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soccer Quizzes Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-green-50 min-h-screen flex flex-col items-center">
-    <header class="w-full py-6 bg-green-700 text-white text-center shadow">
-        <h1 class="text-3xl font-bold">Soccer Quizzes</h1>
-        <p class="text-lg">Test your knowledge and collect badges!</p>
-    </header>
-    <main class="w-full max-w-3xl flex-1 p-4">
-        <section class="mb-8">
-            <h2 class="text-xl font-semibold mb-2">Your Badges</h2>
-            <div id="badge-list" class="flex flex-wrap gap-2"></div>
-        </section>
-        <section>
-            <h2 class="text-xl font-semibold mb-2">Available Quizzes</h2>
-            <div id="quiz-list" class="grid gap-4"></div>
-        </section>
-        <section class="mt-8">
-            <button onclick="window.userCore.resetUserProgress(); window.location.reload();" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded">Reset Progress</button>
-        </section>
-    </main>
-    <footer class="w-full py-4 text-center text-gray-500 text-sm">Soccer Quizzes &copy; 2025</footer>
-    <script src="js/user.js"></script>
-    <script src="js/landing.js"></script>
-    <script>
-    (async function() {
-      const quizzes = await window.landingCore.loadManifest();
-      const userProgress = window.userCore.getUserData().progress || {};
-      window.landingCore.renderQuizCards(quizzes, userProgress);
-      window.landingCore.renderBadges(userProgress, quizzes);
-    })();
-    </script>
+  <header class="w-full py-6 bg-green-700 text-white text-center shadow">
+    <h1 class="text-3xl font-bold">Soccer Quizzes Hub</h1>
+    <p class="text-lg">Choose an activity below</p>
+  </header>
+  <main class="w-full max-w-xl flex-1 flex flex-col items-center justify-center gap-8 py-12">
+    <a href="quizzes/index.html" class="block w-full">
+      <div class="bg-white rounded-lg shadow-lg p-8 flex items-center gap-6 hover:bg-blue-50 transition border-4 border-blue-600">
+        <span class="text-4xl">📝</span>
+        <div>
+          <h2 class="text-2xl font-bold mb-1">Quizzes</h2>
+          <p class="text-gray-700">Test your soccer knowledge and earn badges!</p>
+        </div>
+      </div>
+    </a>
+    <a href="resources/index.html" class="block w-full">
+      <div class="bg-white rounded-lg shadow-lg p-8 flex items-center gap-6 hover:bg-green-50 transition border-4 border-green-600">
+        <span class="text-4xl">📊</span>
+        <div>
+          <h2 class="text-2xl font-bold mb-1">Playbook</h2>
+          <p class="text-gray-700">Explore formations and field graphics.</p>
+        </div>
+      </div>
+    </a>
+  </main>
+  <footer class="w-full py-4 text-center text-gray-500 text-sm">Soccer Quizzes &copy; 2025</footer>
 </body>
 </html>

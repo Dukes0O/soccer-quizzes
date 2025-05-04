@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Playbook Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="bg-green-50 min-h-screen flex flex-col">
+  <nav class="bg-green-700 text-white p-4 flex justify-between">
+    <a href="../index.html" class="font-bold text-lg">Home</a>
+    <a href="../quizzes/index.html" class="ml-4">Quizzes</a>
+    <span class="ml-4 font-semibold">Playbook</span>
+  </nav>
+  <main class="flex-1 p-6">
+    <h1 class="text-3xl font-bold mb-6 text-center">Formations & Graphics Gallery</h1>
+    <div id="gallery" class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3"></div>
+  </main>
+  <script src="../js/gallery.js"></script>
+</body>
+</html>

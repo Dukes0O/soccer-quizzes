@@ -7,6 +7,8 @@ A scalable, static, and modular quiz platform designed for GitHub Pages. Built w
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Project Structure](#project-structure)
+- [Playbook / Graphics Gallery](#playbook--graphics-gallery)
+- [Recent Enhancements](#recent-enhancements)
 - [How to Add a New Quiz](#how-to-add-a-new-quiz)
 - [Quiz Bank & Randomization](#quiz-bank--randomization)
 - [User Progress & Badges](#user-progress--badges)
@@ -14,6 +16,7 @@ A scalable, static, and modular quiz platform designed for GitHub Pages. Built w
 - [Development Workflow](#development-workflow)
 - [Project Status & Roadmap](#project-status--roadmap)
 - [Future Enhancements](#future-enhancements)
+- [Project Status & To Do List](#project-status--to-do-list)
 - [Recent Enhancements](#recent-enhancements)
 
 ---
@@ -71,6 +74,131 @@ soccer-quizzes/
   style.css                   # Common styles
   README.md                   # Project documentation
 ```
+
+---
+
+## Playbook / Graphics Gallery
+
+This project supports a static image gallery for soccer formation diagrams, field graphics, and other reference images, accessible via the main hub page. This is designed for U11 boys to easily browse and learn from visual resources.
+
+### Information Architecture
+- `/index.html` is the single top-level entry point, now a hub page with two main sections:
+  - **Quizzes** → `/quizzes/index.html` (the original landing content, now moved)
+  - **Playbook** (Formations & Graphics) → `/resources/index.html` (new gallery landing page)
+- Navigation between hub, quizzes, and gallery is intuitive for kids.
+
+### Directory Layout
+```
+soccer-quizzes/
+  /resources/              # NEW section
+    index.html             # Gallery landing
+    formation.html         # (optional) Single formation detail page
+    manifest.json          # Metadata for all graphics
+  /assets/graphics/        # PNGs or SVGs (e.g., crossing from right.png, field zones thirds.png)
+  /js/gallery.js           # Logic to load manifest and render gallery
+```
+
+### Gallery Manifest Example
+`resources/manifest.json`:
+```json
+[
+  {
+    "id": "crossing-from-right",
+    "title": "Crossing from Right",
+    "description": "Technique for delivering balls from the right flank",
+    "image": "assets/graphics/crossing from right.png",
+    "themeColor": "#10b981"
+  }
+]
+```
+
+### How the Gallery Works
+- `gallery.js` fetches `resources/manifest.json` and renders cards for each formation/graphic.
+- Each card: thumbnail, title, description, and a “View Full” button.
+- (Optional) Clicking a card opens `formation.html?id=crossing-from-right` for a full-size image and teaching notes.
+
+### Static Image Handling
+- Use **PNG** for complex diagrams/screenshots; use **optimized SVG** for line-art for crisp scaling.
+- Place all images in `/assets/graphics/`.
+- Add `loading="lazy"` to `<img>` tags for performance.
+- Use Tailwind utility `max-w-full h-auto` for responsive images.
+
+### Updating & Extending the Gallery
+- To add new graphics:
+  1. Place PNG/SVG in `/assets/graphics/`.
+  2. Add an entry to `resources/manifest.json` (see example above).
+  3. (Optional) Add detail notes as Markdown and link via manifest.
+- To add animation: drop Lottie JSON in `/assets/animations/` and reference in the manifest.
+
+### Contribution Workflow
+- Add new graphics and manifest entries in a single commit.
+- Recommended commit message template:
+  ```
+  feat(resources): add crossing from right, field zones thirds diagrams + manifest entries
+  ```
+- PR review/self-review before merging. Confirm GitHub Pages redeploys and share the new URL with the team.
+
+### Future-Proofing
+- Track “viewed” formations in `localStorage` (like quiz badges) for unlockable content.
+- Support Lottie animations for interactive graphics.
+- Extend manifest with Markdown docs for coach/teaching notes.
+
+---
+
+## Implementation Plan for Gallery Extension
+
+**0. Ground-truth the starting point**
+- Clone/pull latest main branch.
+- Smoke-test existing quizzes (`index.html → quiz cards → quizzes/quiz.html`).
+
+**1. Agree on the information architecture**
+- Keep `/index.html` as hub; move original landing to `quizzes/index.html`.
+- Add hub navigation: “Quizzes” and “Playbook”.
+- Add navbar/breadcrumbs for easy navigation.
+
+**2. Create the graphics subsystem**
+- Scaffold `/resources/` directory and pages.
+- Create `manifest.json` for gallery metadata.
+- Use `/assets/graphics/` for images (existing PNGs are already here).
+- Implement `/js/gallery.js` to load and display gallery.
+
+**3. Static image handling**
+- Use PNG for complex, SVG for line art.
+- Lazy-load images and ensure responsive display.
+
+**4. Update shared utilities**
+- Optionally generalize `js/renderBadge()` to `renderImage()` for reuse.
+
+**5. Documentation & onboarding**
+- Update this README with gallery instructions and workflow.
+
+**6. Implementation sprint (suggested order)**
+- Day 1: Move landing, build new hub.
+- Day 2: Scaffold gallery MVP.
+- Day 3: Add detail page (optional).
+- Day 4: Populate content.
+- Day 5: Polish and cross-device test.
+- Day 6: Merge, release, and share URL.
+
+**7. Future-proofing hooks**
+- Unlockable graphics, Lottie support, coach notes via Markdown.
+
+---
+
+### Windows Directory Creation
+If you need to create missing directories, use one command at a time in PowerShell:
+```
+mkdir resources
+mkdir assets\graphics
+```
+Or, using PowerShell's `New-Item`:
+```
+New-Item -ItemType Directory resources,assets\graphics
+```
+
+---
+
+For questions or contributions, see the full plan in this section and follow the workflow above.
 
 ---
 
@@ -190,8 +318,6 @@ soccer-quizzes/
   - Use placeholder assets (emojis) for graphics, badges, and animations until SVGs/JSONs are available.
 - **Testing:**
   - Test new quizzes and features locally before pushing.
-- **Accessibility:**
-  - Design for keyboard navigation and screen readers.
 - **Static-Only:**
   - All code and assets must be static and client-side (works on GitHub Pages).
 
@@ -222,6 +348,39 @@ soccer-quizzes/
 - **Advanced Section:** Add a section for advanced quizzes, separate from "Fundamentals" or "Principles".
 - **Player Goals:** Allow users to enter and track their personal objectives/goals for the season.
 - **Stats Tracking:** Add a (possibly separate) page to track team/player stats for the boys' season (planned for Fall/September).
+
+---
+
+## Project Status & To Do List
+
+### ✅ Completed (April-May 2025)
+- Created a hub landing page (`index.html`) with clear navigation to Quizzes and Playbook (Gallery)
+- Moved quiz landing to `/quizzes/index.html` and implemented dynamic quiz card rendering
+- Implemented `/resources/index.html` as a gallery landing page that loads from `resources/manifest.json`
+- Created `/resources/formation.html` for formation detail, with dynamic rendering based on `?id=...`
+- Populated manifests with actual paths for graphics and quizzes
+- Used Tailwind CSS for consistent styling and responsive design
+- Implemented robust fetch logic for manifests and assets (quizzes, gallery) to work locally and on GitHub Pages
+- Added user progress and badge display logic; badges are now PNGs and downloadable
+- Improved error handling and debug logging for manifest/asset loading
+- Updated README with gallery and quiz extension instructions
+
+### 🟡 Outstanding / In Progress
+- **Cross-Environment Testing:** Finalize and test all fetches and asset loads on both localhost and GitHub Pages (ensure images, manifests, and quizzes load everywhere)
+- **Cache Busting:** Add cache-busting query params to JS/CSS includes to prevent browser caching issues after deploys
+- **Gallery/Quiz Content Expansion:** Add more graphics and quizzes for broader coverage
+- **Future-proofing:** Add support for Lottie/JSON animations in gallery, unlockable content, and Markdown coach notes
+- **Documentation:** Expand README for contributors, add troubleshooting for path issues on GitHub Pages
+
+---
+
+**Design Note:**
+- No config file is used; all fetch/image paths are simple and relative for easy maintenance.
+- Accessibility features (ARIA, keyboard navigation, etc.) are not included by design for this project/audience.
+
+---
+
+_See the full implementation plan and recent enhancements above for details on each item._
 
 ---
 
