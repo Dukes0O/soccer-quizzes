@@ -12,6 +12,8 @@ async function loadGallery() {
     console.log('gallery.js: loaded items', formations.length);
     gallery.innerHTML = '';
     formations.forEach(item => {
+      // Defensive: skip items with missing image file or empty string
+      if (!item.image || typeof item.image !== 'string') return;
       const card = document.createElement('div');
       card.className = 'bg-white rounded shadow p-4 flex flex-col items-center';
       card.innerHTML = `
