@@ -7,6 +7,13 @@
     "themeColor": "#1e40af"
   },
   {
+    "id": "crossing-from-left",
+    "title": "Crossing from Left",
+    "description": "Technique for delivering balls from the left flank",
+    "image": "assets/graphics/crossing from left.png",
+    "themeColor": "#059669"
+  },
+  {
     "id": "field-long-thirds",
     "title": "Field Long Thirds",
     "description": "Break field into thirds vertically",

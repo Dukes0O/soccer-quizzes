@@ -68,16 +68,17 @@ async function renderQuizUI() {
   let current = 0, score = 0, answers = Array(10).fill(null), checked = false;
 
   function renderFieldProgress() {
-    // SVG field with player and ball
+    // PNG field with player and ball
     const percent = (current / 10) * 100;
     document.getElementById('field-container').innerHTML = `
       <div class="w-full flex flex-col items-center">
-        <svg viewBox="0 0 400 60" width="100%" height="60">
-          <rect x="0" y="10" width="400" height="40" rx="20" fill="#d1fae5" />
-          <rect x="0" y="10" width="400" height="40" rx="20" fill="none" stroke="#10b981" stroke-width="4" />
-          <circle id="player" cx="${40 + percent * 3.2}" cy="30" r="12" fill="#2563eb" stroke="#fff" stroke-width="3" />
-          <circle id="ball" cx="${40 + percent * 3.2 + 16}" cy="30" r="7" fill="#fbbf24" stroke="#fff" stroke-width="2" />
-        </svg>
+        <div style="position: relative; width: 400px; height: 60px;">
+          <img src="../assets/graphics/soccer pitch.png" alt="Soccer Pitch" style="position: absolute; left: 0; top: 0; width: 400px; height: 60px; z-index: 0; border-radius: 20px;">
+          <img src="../assets/graphics/football player CR7.png" alt="Player" style="position: absolute; left: ${40 + percent * 3.2 - 12}px; top: 14px; width: 24px; height: 32px; z-index: 1;">
+          <svg width="400" height="60" style="position: absolute; left: 0; top: 0; z-index: 2; pointer-events: none;">
+            <circle id="ball" cx="${40 + percent * 3.2 + 16}" cy="30" r="7" fill="#fbbf24" stroke="#fff" stroke-width="2" />
+          </svg>
+        </div>
         <div class="text-xs text-gray-600 mt-1">Progress: ${current} / 10</div>
       </div>
     `;
