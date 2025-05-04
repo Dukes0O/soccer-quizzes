@@ -70,34 +70,26 @@ async function renderQuizUI() {
   function renderFieldProgress() {
     const percent = (current / 10) * 100;
     document.getElementById('field-container').innerHTML = `
-      <!-- Simple fixed-height container with full-width pitch -->
-      <div class="relative bg-white rounded-lg overflow-hidden">
-        <!-- Soccer field with aspect ratio preserved -->
-        <div class="relative" style="height: 80px;">
-          <!-- Full-width pitch image with proper aspect ratio -->
-          <img 
-            src="../assets/graphics/soccer pitch.png" 
-            alt="Soccer Pitch" 
-            class="w-full h-full object-cover"
-          />
-          <!-- Player positioned based on progress percentage -->
-          <img 
-            src="../assets/graphics/football player CR7.png" 
-            alt="Player" 
-            class="absolute"
-            style="
-              left: ${10 + (percent * 0.8)}%; 
-              top: 15px;
-              width: 40px; 
-              height: 50px;
-              z-index: 10;
-            "
-          />
-        </div>
-        <!-- Progress indicator below the field -->
-        <div class="text-xs text-gray-600 p-1 text-center">
-          Question ${current + 1} of 10
-        </div>
+      <img 
+        src="../assets/graphics/soccer pitch.png" 
+        alt="Soccer Pitch" 
+        class="absolute inset-0 w-full h-full object-fill" 
+        style="z-index: 0;" 
+      />
+      <img 
+        src="../assets/graphics/football player CR7.png" 
+        alt="Player" 
+        class="absolute"
+        style="
+          left: calc(${percent}% - 32px); /* center player horizontally at percent */
+          top: calc(50% - 64px);         /* vertically center a 128px icon */
+          width: 64px;
+          height: 128px;
+          z-index: 1;
+        "
+      />
+      <div class="absolute bottom-2 left-0 w-full text-xs text-gray-600 text-center select-none" style="z-index:2;">
+        Question ${current + 1} of 10
       </div>
     `;
   }
