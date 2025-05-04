@@ -70,13 +70,27 @@ async function renderQuizUI() {
   function renderFieldProgress() {
     const percent = (current / 10) * 100;
     document.getElementById('field-container').innerHTML = `
-      <div class="w-full flex flex-col items-center">
-        <div class="relative w-full max-w-[600px] mx-auto aspect-[20/8] rounded-lg overflow-hidden">
-          <img src="../assets/graphics/soccer pitch.png" alt="Soccer Pitch" class="absolute inset-0 w-full h-full object-cover z-0">
-          <img src="../assets/graphics/football player CR7.png" alt="Player" class="absolute" style="left: ${40 + percent * 3.2}px; top: 14px; width: 24px; height: 32px; z-index: 1;">
-        </div>
-        <div class="text-xs text-gray-600 mt-1">Progress: ${current} / 10</div>
+      <div class="relative w-full rounded-lg">
+        <img
+          src="../assets/graphics/soccer pitch.png"
+          alt="Soccer Pitch"
+          class="w-full h-auto object-contain z-0 rounded-lg"
+        >
+        <img
+          src="../assets/graphics/football player CR7.png"
+          alt="Player"
+          class="absolute"
+          style="
+            left: ${percent}% ;
+            top: calc(50% - 32px);
+            width: 48px;
+            height: 64px;
+            z-index: 1;
+          "
+        >
       </div>
+      <!-- progress label -->
+      <div class="text-xs text-gray-600 mt-1">Progress: ${current} / 10</div>
     `;
   }
 
