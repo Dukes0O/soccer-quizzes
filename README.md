@@ -16,8 +16,6 @@ A scalable, static, and modular quiz platform designed for GitHub Pages. Built w
 - [Development Workflow](#development-workflow)
 - [Project Status & Roadmap](#project-status--roadmap)
 - [Future Enhancements](#future-enhancements)
-- [Project Status & To Do List](#project-status--to-do-list)
-- [Recent Enhancements](#recent-enhancements)
 
 ---
 
@@ -325,68 +323,14 @@ For questions or contributions, see the full plan in this section and follow the
 
 ## Project Status & Roadmap
 
-### Status Update (April 2025)
-- The leaderboard feature with memory persistence is **no longer planned**. Focus is on personal bests and badges for user motivation.
-- All legacy files have been removed.
-- Badge graphics have been added and are now used for quiz rewards.
+✅ Completed: Hub, quizzes, gallery, formation detail, navigation ribbon, progress & badge logic, responsive styling, and robust relative fetch paths.
 
-### ✅ Accomplished
-- Modular quiz platform scaffolded and deployed for GitHub Pages.
-- Six quiz banks implemented (see below). Quizzes randomly select 10 out of 15+ questions per attempt.
-- **Defense, Passing & Movement, and Shooting & Finishing question banks updated with new content (April 2025).**
-- Modern UI/UX: player name entry, radio button answers, "Check Answer" step, animated progress bar, and badge rewards.
-- User progress and badges persist across sessions using localStorage.
-- Landing page dynamically lists quizzes, badges, and supports modular expansion.
-- All code and assets are static and GitHub Pages compatible.
-
-### 🚧 In Progress / To Do
-- **Create and add assets:** SVG/PNG images, icons, and sound effects for quizzes and results.
-- **Enhance memory persistence:** Continue testing and improving localStorage so progress, badges, and player names are maintained reliably across sessions and browsers.
-- **Quiz unlocking sequence:** Implement logic so quizzes unlock only after a certain date or after completing prerequisite quizzes.
-
-### 💡 Future Ideas
-- **Advanced Section:** Add a section for advanced quizzes, separate from "Fundamentals" or "Principles".
-- **Player Goals:** Allow users to enter and track their personal objectives/goals for the season.
-- **Stats Tracking:** Add a (possibly separate) page to track team/player stats for the boys' season (planned for Fall/September).
-
----
-
-## Project Status & To Do List
-
-### ✅ Completed (April-May 2025)
-- Created a hub landing page (`index.html`) with clear navigation to Quizzes and Playbook (Gallery)
-- Moved quiz landing to `/quizzes/index.html` and implemented dynamic quiz card rendering
-- Implemented `/resources/index.html` as a gallery landing page that loads from `resources/manifest.json`
-- Created `/resources/formation.html` for formation detail, with dynamic rendering based on `?id=...`
-- Populated manifests with actual paths for graphics and quizzes
-- Used Tailwind CSS for consistent styling and responsive design
-- Implemented robust fetch logic for manifests and assets (quizzes, gallery) to work locally and on GitHub Pages
-- Added user progress and badge display logic; badges are now PNGs and downloadable
-- Improved error handling and debug logging for manifest/asset loading
-- Updated README with gallery and quiz extension instructions
-- Added navigation ribbon to all pages (Home, Quizzes, Playbook) for consistent cross-site navigation
-- Fixed gallery "View Full" functionality in [formation.html](cci:7://file:///c:/Users/kyleb/CascadeProjects/soccer-quizzes/resources/formation.html:0:0-0:0):
-  - Now reliably fetches `manifest.json` from `/resources/`
-  - Correctly loads images with `../` prefix for local/GitHub Pages compatibility
-  - Displays formation details (title, description, themed image)
-- Updated all fetch paths to use simple relative URLs (no config file needed)
-
-### 🟡 Outstanding / In Progress
-- **Cross-Environment Testing:** Finalize and test all fetches and asset loads on both localhost and GitHub Pages (ensure images, manifests, and quizzes load everywhere)
-- **Cache Busting:** Add cache-busting query params to JS/CSS includes to prevent browser caching issues after deploys
-- **Gallery/Quiz Content Expansion:** Add more graphics and quizzes for broader coverage
-- **Future-proofing:** Add support for Lottie/JSON animations in gallery, unlockable content, and Markdown coach notes
-- **Documentation:** Expand README for contributors, add troubleshooting for path issues on GitHub Pages
-
----
-
-**Design Note:**
-- No config file is used; all fetch/image paths are simple and relative for easy maintenance.
-- Accessibility features (ARIA, keyboard navigation, etc.) are not included by design for this project/audience.
-
----
-
-_See the full implementation plan and recent enhancements above for details on each item._
+🎯 Next Milestones:
+- Cross-environment testing (localhost & GitHub Pages)
+- Cache busting for JS/CSS
+- Expand gallery & quizzes
+- Add Lottie animations & Markdown coach notes
+- Update documentation and add troubleshooting guide
 
 ---
 
