@@ -364,6 +364,12 @@ For questions or contributions, see the full plan in this section and follow the
 - Added user progress and badge display logic; badges are now PNGs and downloadable
 - Improved error handling and debug logging for manifest/asset loading
 - Updated README with gallery and quiz extension instructions
+- Added navigation ribbon to all pages (Home, Quizzes, Playbook) for consistent cross-site navigation
+- Fixed gallery "View Full" functionality in [formation.html](cci:7://file:///c:/Users/kyleb/CascadeProjects/soccer-quizzes/resources/formation.html:0:0-0:0):
+  - Now reliably fetches `manifest.json` from `/resources/`
+  - Correctly loads images with `../` prefix for local/GitHub Pages compatibility
+  - Displays formation details (title, description, themed image)
+- Updated all fetch paths to use simple relative URLs (no config file needed)
 
 ### 🟡 Outstanding / In Progress
 - **Cross-Environment Testing:** Finalize and test all fetches and asset loads on both localhost and GitHub Pages (ensure images, manifests, and quizzes load everywhere)

@@ -25,8 +25,8 @@
         return;
       }
       try {
-        const manifestUrl = new URL('manifest.json', window.location.href);
-        const res = await fetch(manifestUrl);
+        // Always fetch manifest from the resources directory, regardless of current URL
+        const res = await fetch('manifest.json');
         if (!res.ok) throw new Error('Manifest fetch failed');
         const formations = await res.json();
         const item = formations.find(f => f.id === id);
@@ -34,9 +34,9 @@
           container.innerHTML = '<p class="text-red-600">Formation not found.</p>';
           return;
         }
-        const imgUrl = new URL(item.image, window.location.origin + '/').href;
+        // Always prefix with ../ so /resources/formation.html can reach /assets/graphics/...
         container.innerHTML = `
-          <img src="${imgUrl}" alt="${item.title}" loading="lazy" class="max-w-full h-auto mb-4 border rounded" style="background:${item.themeColor};">
+          <img src="../${item.image}" alt="${item.title}" loading="lazy" class="max-w-full h-auto mb-4 border rounded" style="background:${item.themeColor};">
           <h1 class="text-2xl font-bold mb-2">${item.title}</h1>
           <p class="mb-4 text-gray-700">${item.description}</p>
         `;
