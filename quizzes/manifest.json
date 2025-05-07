@@ -52,5 +52,14 @@
     "badge": "assets/badges/transitions.png",
     "animation": "assets/animations/transitions.json",
     "themeColor": "#6366f1"
+  },
+  {
+    "id": "build-from-back",
+    "title": "Build from the Back",
+    "description": "Learn how to move the ball safely from defense into attack!",
+    "graphic": "",
+    "badge": "assets/badges/build-from-back.png",
+    "animation": "assets/animations/build-from-back.json",
+    "themeColor": "#10b981"
   }
 ]

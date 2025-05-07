@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soccer Video Clips</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center">
+  <nav class="bg-green-700 text-white p-4 flex justify-center space-x-6 w-full shadow-md">
+    <a href="index.html" class="hover:text-green-200">Home</a>
+    <a href="quizzes/index.html" class="hover:text-green-200">Quizzes</a>
+    <a href="resources/index.html" class="hover:text-green-200">Playbook</a>
+    <a href="video-clips.html" class="font-semibold text-green-200">Video Clips</a>
+  </nav>
+
+  <header class="w-full py-6 bg-green-600 text-white text-center shadow-lg">
+    <h1 class="text-3xl font-bold">Soccer Video Clips</h1>
+  </header>
+
+  <main class="w-full max-w-4xl flex-1 p-6">
+    <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-6" role="alert">
+      <p class="font-bold">Important Disclaimer</p>
+      <p>The video links on this page redirect to Kyle's Google Drive. Due to YouTube copyright restrictions, these clips cannot be hosted directly on that platform.</p>
+    </div>
+
+    <section id="video-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Video items will be injected here by script or manually added -->
+    </section>
+  </main>
+
+  <footer class="w-full py-4 text-center text-gray-600 text-sm bg-gray-200">
+    Soccer Learning Hub &copy; 2025
+  </footer>
+
+  <script>
+    const videoClipsData = [
+      {
+        title: "soccer basics - looking around",
+        thumbnail: "assets/thumbnails/soccer-basics-looking-around.png",
+        gdrive_link: "https://drive.google.com/file/d/1dYs4NJD57N-lSYpG6E3KPvmjbBMjcJn_/view?usp=drive_link"
+      },
+      {
+        title: "soccer basics - Positioning and Movement",
+        thumbnail: "assets/thumbnails/soccer-basics-position-movement.png",
+        gdrive_link: "https://drive.google.com/file/d/15Q7SqVSkW33K6E2uExfzhb-H81l5cNx4/view?usp=drive_link"
+      },
+      {
+        title: "Attacking Basics Part 1 - Understanding Defensive Tactics",
+        thumbnail: "assets/thumbnails/attacking-defense-part-1.png",
+        gdrive_link: "https://drive.google.com/file/d/19bDvMFbv02YaXTIJ33qHdAKnE6hDpmJj/view?usp=drive_link"
+      },
+      {
+        title: "Attacking Basics Part 2 - Attacking from the Outside",
+        thumbnail: "assets/thumbnails/attacking-outside-part-2.png",
+        gdrive_link: "https://drive.google.com/file/d/1FkY1fkzhRJfnmQRXHaHIgZv3lybdtfFu/view?usp=drive_link"
+      },
+      {
+        title: "Attacking Basics Part 3 - Attacking from the Inside",
+        thumbnail: "assets/thumbnails/attacking-inside-part-3.png",
+        gdrive_link: "https://drive.google.com/file/d/1mrifjd84wigTumTVpu0OyTzyFm1c0RiV/view?usp=drive_link"
+      },
+      {
+        title: "Attacking Basics Part 4 - Striker Tactics",
+        thumbnail: "assets/thumbnails/attacking-striker-tactics-part-4.png",
+        gdrive_link: "https://drive.google.com/file/d/1qYCeUIJRsrD0hFHcFWO6KOPbfNJ4v4rE/view?usp=drive_link"
+      }
+    ];
+
+    function renderVideoClips() {
+      const videoList = document.getElementById('video-list');
+      if (!videoList) return;
+
+      videoClipsData.forEach(video => {
+        const card = document.createElement('div');
+        card.className = 'bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300';
+        
+        card.innerHTML = `
+          <a href="${video.gdrive_link}" target="_blank" rel="noopener noreferrer">
+            <img src="${video.thumbnail}" alt="${video.title}" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-green-700 mb-1">${video.title}</h3>
+            </div>
+          </a>
+        `;
+        videoList.appendChild(card);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', renderVideoClips);
+  </script>
+</body>
+</html>

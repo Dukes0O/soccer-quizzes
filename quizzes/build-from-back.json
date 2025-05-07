@@ -1,0 +1,176 @@
+{
+  "id": "build-from-back",
+  "title": "Build from the Back",
+  "description": "Learn how to move the ball safely from defense into attack!",
+  "graphic": "",
+  "badge": "assets/badges/build-from-back.png",
+  "animation": "assets/animations/build-from-back.json",
+  "themeColor": "#10b981",
+  "questions": [
+    {
+      "question": "What’s the easiest way to move the ball up the field?",
+      "options": [
+        "Through the middle where it’s crowded",
+        "Along the sidelines where fewer players are",
+        "Backwards only",
+        "High in the air"
+      ],
+      "correct": 1,
+      "explanation": "The sidelines usually have more space, so it’s easier to pass and dribble there."
+    },
+    {
+      "question": "Why should defenders spread out when starting an attack?",
+      "options": [
+        "To give themselves space to receive a pass",
+        "To stand next to each other",
+        "To block their own goal",
+        "To run away"
+      ],
+      "correct": 0,
+      "explanation": "Spreading creates passing lanes and makes it easier to keep the ball."
+    },
+    {
+      "question": "Who should step forward to receive the ball from the goalie?",
+      "options": [
+        "The closest defender",
+        "Someone far away",
+        "The coach",
+        "No one"
+      ],
+      "correct": 0,
+      "explanation": "The nearest defender helps the goalie by offering an easy option to pass."
+    },
+    {
+      "question": "What’s a smart choice if the middle is too tight?",
+      "options": [
+        "Pass back to the goalie",
+        "Switch play to the opposite sideline",
+        "Dribble into traffic",
+        "Kick it out"
+      ],
+      "correct": 1,
+      "explanation": "Switching to the other side finds more open space."
+    },
+    {
+      "question": "When a teammate is open on the wing, you should:",
+      "options": [
+        "Pass the ball quickly to them",
+        "Hold onto the ball",
+        "Dribble straight",
+        "Shout at them"
+      ],
+      "correct": 0,
+      "explanation": "A quick pass to an open wing player moves the attack forward safely."
+    },
+    {
+      "question": "Why do we sometimes take a few small passes instead of one long pass?",
+      "options": [
+        "To keep better control and accuracy",
+        "To waste time",
+        "Because we can’t kick far",
+        "To confuse teammates"
+      ],
+      "correct": 0,
+      "explanation": "Short, accurate passes help keep possession under pressure."
+    },
+    {
+      "question": "What does ‘playing out of the back’ mean?",
+      "options": [
+        "Building an attack from our defenders and goalie",
+        "Clearing the ball as far as possible",
+        "Passing between two defenders only",
+        "Only dribbling"
+      ],
+      "correct": 0,
+      "explanation": "It’s moving the ball forward with control, starting from defense."
+    },
+    {
+      "question": "If a defender is double-teamed, you should:",
+      "options": [
+        "Offer yourself for a pass in space",
+        "Stand still",
+        "Hide behind someone",
+        "Yell ‘shoot!’"
+      ],
+      "correct": 0,
+      "explanation": "Moving into space gives your teammate a safe outlet."
+    },
+    {
+      "question": "When building from the back, why is it okay to pass backwards sometimes?",
+      "options": [
+        "It keeps the ball when forward options are blocked",
+        "It makes the game slow",
+        "It’s always wrong",
+        "It confuses the coach"
+      ],
+      "correct": 0,
+      "explanation": "A backward pass can reset and open up new spaces to attack."
+    },
+    {
+      "question": "In which situation should you play a long ball forward?",
+      "options": [
+        "When the other team is pressing high",
+        "When they’re far from our goal",
+        "When we’re losing",
+        "When no one is there"
+      ],
+      "correct": 0,
+      "explanation": "A long ball can break a high press by finding teammates behind defenders."
+    },
+    {
+      "question": "What role does the defensive midfielder play in building from the back?",
+      "options": [
+        "Offers a passing option in front of defense",
+        "Runs to the corners",
+        "Stands still",
+        "Only defends in the box"
+      ],
+      "correct": 0,
+      "explanation": "They link defense and attack by receiving and distributing passes."
+    },
+    {
+      "question": "If a pass in front is risky, you should:",
+      "options": [
+        "Pass wide to a defender",
+        "Dribble into the box",
+        "Stop playing",
+        "Yell ‘help!’"
+      ],
+      "correct": 0,
+      "explanation": "Passing wide lets you keep control and find a better angle."
+    },
+    {
+      "question": "Why is checking over your shoulder useful when building out?",
+      "options": [
+        "To see where teammates and defenders are",
+        "To look at the sky",
+        "To confuse yourself",
+        "To rest"
+      ],
+      "correct": 0,
+      "explanation": "It helps you pick the best passing lane and avoid pressure."
+    },
+    {
+      "question": "What does it mean to ‘break the lines’ in build-up play?",
+      "options": [
+        "Pass into space behind the opponent’s midfield",
+        "Run offside",
+        "Pass to our own goalkeeper",
+        "Only dribble"
+      ],
+      "correct": 0,
+      "explanation": "It moves the ball past defenders into areas where teammates can run."
+    },
+    {
+      "question": "The most important thing in building from the back is:",
+      "options": [
+        "Keeping possession and moving safely forward",
+        "Scoring on every pass",
+        "Only dribbling",
+        "Never passing"
+      ],
+      "correct": 0,
+      "explanation": "Safe, smart passing helps your team control the game and create chances."
+    }
+  ]
+}
