@@ -8,6 +8,7 @@ A scalable, static, and modular quiz platform designed for GitHub Pages. Built w
 - [Project Overview](#project-overview)
 - [Project Structure](#project-structure)
 - [Playbook / Graphics Gallery](#playbook--graphics-gallery)
+- [Video Clips Page](#video-clips-page)
 - [Recent Enhancements](#recent-enhancements)
 - [How to Add a New Quiz](#how-to-add-a-new-quiz)
 - [Quiz Bank & Randomization](#quiz-bank--randomization)
@@ -29,8 +30,10 @@ This project is a client-side quiz platform for soccer (football) knowledge, des
 
 ```
 soccer-quizzes/
-  index.html                  # Landing page (lists all quizzes, badges, user progress)
+  index.html                  # Main hub page (links to Quizzes, Playbook, and Video Clips)
+  video-clips.html            # Page for curated soccer video clips
   /quizzes/
+    index.html                # Quiz selection page
     quiz.html                 # Generic quiz template (loads quiz data dynamically)
     defense.json              # Defense quiz bank (15+ questions)
     passing-movement.json     # Passing & Movement quiz bank (15+ questions)
@@ -38,6 +41,7 @@ soccer-quizzes/
     soccer-field-awareness.json # Soccer Field Awareness quiz bank (15+ questions)
     attacking-with-purpose.json # Attacking with Purpose quiz bank (15+ questions)
     transitions.json          # Transitions (Attack ↔ Defense) quiz bank (15+ questions)
+    build-from-back.json      # Build from the Back quiz bank (15+ questions)
     manifest.json             # List of all available quizzes (metadata)
   /assets/
     /graphics/
@@ -47,6 +51,7 @@ soccer-quizzes/
       soccer-field-awareness.svg # (Placeholder: 🗺️)
       attacking-with-purpose.svg # (Placeholder: 🔥)
       transitions.svg         # (Placeholder: 🔄)
+      build-from-back.svg     # (Placeholder: 🏗️)
       ...                     # More graphics per quiz
     /badges/
       defense.png
@@ -55,6 +60,7 @@ soccer-quizzes/
       soccer-field-awareness.png
       attacking-with-purpose.png
       transitions.png
+      build-from-back.png
       ...                     # More badges per quiz
     /animations/
       defense.json            # Animation data (or placeholder)
@@ -63,6 +69,7 @@ soccer-quizzes/
       soccer-field-awareness.json # Animation data (or placeholder)
       attacking-with-purpose.json # Animation data (or placeholder)
       transitions.json        # Animation data (or placeholder)
+      build-from-back.json    # Animation data (or placeholder)
       ...                     # More animation assets
     badge-style.json         # Badge style definition (JSON, design spec)
   /js/
@@ -80,10 +87,11 @@ soccer-quizzes/
 This project supports a static image gallery for soccer formation diagrams, field graphics, and other reference images, accessible via the main hub page. This is designed for U11 boys to easily browse and learn from visual resources.
 
 ### Information Architecture
-- `/index.html` is the single top-level entry point, now a hub page with two main sections:
+- `/index.html` is the single top-level entry point, now a hub page with three main sections:
   - **Quizzes** → `/quizzes/index.html` (the original landing content, now moved)
   - **Playbook** (Formations & Graphics) → `/resources/index.html` (new gallery landing page)
-- Navigation between hub, quizzes, and gallery is intuitive for kids.
+  - **Video Clips** → `/video-clips.html` (new page for curated video links)
+- Navigation between hub, quizzes, playbook, and video clips is intuitive for kids.
 
 ### Directory Layout
 ```
@@ -143,82 +151,41 @@ soccer-quizzes/
 
 ---
 
-## Implementation Plan for Gallery Extension
+## Video Clips Page
 
-**0. Ground-truth the starting point**
-- Clone/pull latest main branch.
-- Smoke-test existing quizzes (`index.html → quiz cards → quizzes/quiz.html`).
+A new `video-clips.html` page has been added to host links to soccer video clips. These clips are intended to be short, focused, and provide visual examples of tactics, skills, or game situations.
 
-**1. Agree on the information architecture**
-- Keep `/index.html` as hub; move original landing to `quizzes/index.html`.
-- Add hub navigation: “Quizzes” and “Playbook”.
-- Add navbar/breadcrumbs for easy navigation.
-
-**2. Create the graphics subsystem**
-- Scaffold `/resources/` directory and pages.
-- Create `manifest.json` for gallery metadata.
-- Use `/assets/graphics/` for images (existing PNGs are already here).
-- Implement `/js/gallery.js` to load and display gallery.
-
-**3. Static image handling**
-- Use PNG for complex, SVG for line art.
-- Lazy-load images and ensure responsive display.
-
-**4. Update shared utilities**
-- Optionally generalize `js/renderBadge()` to `renderImage()` for reuse.
-
-**5. Documentation & onboarding**
-- Update this README with gallery instructions and workflow.
-
-**6. Implementation sprint (suggested order)**
-- Day 1: Move landing, build new hub.
-- Day 2: Scaffold gallery MVP.
-- Day 3: Add detail page (optional).
-- Day 4: Populate content.
-- Day 5: Polish and cross-device test.
-- Day 6: Merge, release, and share URL.
-
-**7. Future-proofing hooks**
-- Unlockable graphics, Lottie support, coach notes via Markdown.
-
----
-
-### Windows Directory Creation
-If you need to create missing directories, use one command at a time in PowerShell:
-```
-mkdir resources
-mkdir assets\graphics
-```
-Or, using PowerShell's `New-Item`:
-```
-New-Item -ItemType Directory resources,assets\graphics
-```
-
----
-
-For questions or contributions, see the full plan in this section and follow the workflow above.
+- **Content**: Links to videos hosted on Google Drive.
+- **Layout**: Videos are displayed in a responsive grid format with thumbnails and titles.
+- **Disclaimer**: Includes a note about copyright, as direct embedding of YouTube videos can be problematic.
+- **Navigation**: Accessible from the main hub (`index.html`) and navigation bars on other key pages.
 
 ---
 
 ## Recent Enhancements
 
-- **Badge Asset Consistency:**
+- **Video Clips Page**: Added `video-clips.html` to display links to Google Drive videos with thumbnails and titles. This section is linked from the homepage and navigation bars.
+- **Homepage Update**: The main `index.html` page was enhanced with responsive side images of Lionel Messi and Cristiano Ronaldo, flanking the main content cards. These images adjust with screen size and are hidden on smaller mobile devices.
+- **New Quiz Added**: A new quiz, "Build from the Back," was added to the `quizzes/` directory (`build-from-back.json`) and included in the `quizzes/manifest.json`.
+- **Navigation Updates**: Navigation bars on `index.html`, `quizzes/index.html`, and `resources/index.html` were updated to include a link to the new Video Clips page.
+- **Styling Consistency**: Ensured consistent styling for navigation ribbons and interactive cards across different sections of the site.
+- **Badge Asset Consistency**:
   - All quizzes now use PNG badge assets (`/assets/badges/{quiz}.png`), referenced in both quiz JSON and manifest.
   - Badge display logic updated to render PNGs as images (not text paths or emoji).
   - Quiz cards show large badges; "Your Badges" section shows smaller, downloadable badges.
-- **Downloadable Badges:**
+- **Downloadable Badges**:
   - Users can download earned badges from the "Your Badges" section by clicking on them.
-- **Robust Local & GitHub Pages Compatibility:**
+- **Robust Local & GitHub Pages Compatibility**:
   - All fetch paths for quizzes and manifest are relative and robust to both local and GitHub Pages deployments.
   - Enhanced error reporting for missing quizzes or manifest fetch issues.
-- **UI/UX Improvements:**
+- **UI/UX Improvements**:
   - Improved badge sizing and layout for clarity and visual appeal.
   - Quiz badge beside each quiz card is larger for prominence, and displays the user's personal best until the badge is earned.
-- **Personal Best Tracking:**
+- **Personal Best Tracking**:
   - Each quiz card now displays your highest score achieved ("Personal Best") until you earn the badge (10/10), at which point the badge is shown instead.
-- **Cleanup:**
+- **Cleanup**:
   - Removed obsolete or unused files (e.g., `wordpress-embed.html`).
-- **Badge Style Spec:**
+- **Badge Style Spec**:
   - The badge design system is now documented in `/assets/badge-style.json` for future reference or automated badge generation.
 
 ---
@@ -259,6 +226,7 @@ For questions or contributions, see the full plan in this section and follow the
   - **Soccer Field Awareness**
   - **Attacking with Purpose**
   - **Transitions (Attack ↔ Defense)**
+  - **Build from the Back**
 - Each quiz bank is a JSON file in `/quizzes/`, containing at least 15 questions. Each quiz attempt randomly selects 10 questions (no repeats per session).
 
 ### Example Quiz Bank Structure
