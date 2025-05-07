@@ -74,12 +74,14 @@
 
       videoClipsData.forEach(video => {
         const card = document.createElement('div');
-        card.className = 'bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300';
-        
+        card.className = 'bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 flex flex-col items-center';
+
         card.innerHTML = `
-          <a href="${video.gdrive_link}" target="_blank" rel="noopener noreferrer">
-            <img src="${video.thumbnail}" alt="${video.title}" class="w-full h-48 object-cover">
-            <div class="p-4">
+          <a href="${video.gdrive_link}" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center">
+            <div class="w-64 h-64 bg-gray-100 flex items-center justify-center">
+              <img src="${video.thumbnail}" alt="${video.title}" class="object-contain w-full h-full" style="aspect-ratio: 1 / 1;" />
+            </div>
+            <div class="p-4 text-center w-64">
               <h3 class="text-lg font-semibold text-green-700 mb-1">${video.title}</h3>
             </div>
           </a>
