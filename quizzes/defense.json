@@ -7,15 +7,95 @@
   "animation": "assets/animations/defense.json",
   "themeColor": "#2563eb",
   "questions": [
-    {"question": "In a 1-on-1 situation, where should you try to push the attacker?","options": ["Towards the middle", "Towards the sideline or endline", "Wherever you feel like", "Straight at our goal"],"correct": 1,"explanation": "Push the attacker wide so they have a worse angle and it’s easier for teammates to help."},
-    {"question": "What does it mean to put 'pressure' on the attacker?","options": ["Get close to stop their time and space", "Stand still", "Run away", "Ask for the ball"],"correct": 0,"explanation": "Getting close quickly makes it harder for the attacker to dribble or pass."},
-    {"question": "If your teammate is pressuring the ball, what should YOU do?","options": ["Be ready behind them (cover)", "Back up far", "Start talking a lot", "Look at the crowd"],"correct": 0,"explanation": "If they get beat, you’re the second line of defense."},
-    {"question": "In zonal defense, what do you defend?","options": ["Your assigned area on the field", "Your buddy", "Your favorite spot", "The goalie"],"correct": 0,"explanation": "You’re responsible for players who come into your zone, not chasing people everywhere."},
-    {"question": "Why do defenders need to talk to each other?","options": ["To stay organized and help each other", "To confuse each other", "To sound cool", "To make noise"],"correct": 0,"explanation": "Talking lets your teammates know about open players, danger, or when to step up."},
-    {"question": "What does it mean to stay 'compact' on defense?","options": ["Stay close together so there’s no space between us", "Spread out", "Crowd the goalie", "Wear tight shorts"],"correct": 0,"explanation": "A tight shape makes it harder for the other team to pass through or find gaps."},
-    {"question": "When is the best time to go in for a tackle?","options": ["When they take a bad touch or leave the ball out", "Right away no matter what", "Whenever you feel like it", "After they score"],"correct": 0,"explanation": "Be patient—go in when they mess up or expose the ball."},
-    {"question": "As a weak-side defender (on the far side), where should you be?","options": ["Closer to the middle to help cover", "Charging forward", "Watching from far away", "Marking the goalie"],"correct": 0,"explanation": "Shift in to stay tight with the team and close gaps in the middle."},
-    {"question": "When the other team crosses the ball in front of our net, what’s your job?","options": ["Stop their player or clear the ball", "Watch the ball fly", "Hide", "Shout 'Keeper!' loudly"],"correct": 0,"explanation": "Defend with purpose—don’t just look. Stop their player or get the ball out!"},
-    {"question": "What does it mean to be 'goal-side' of your mark?","options": ["Stand between your player and our goal", "Stand on our goal line", "Go near their net", "Stand beside the goalpost"],"correct": 0,"explanation": "Being goal-side means you’re blocking the easiest path to goal."}
+    {
+      "question": "In a 1-on-1 situation, where should you try to push the attacker?",
+      "options": ["Towards the middle", "Towards the sideline or endline", "Wherever you feel like", "Straight at our goal"],
+      "correct": 1,
+      "explanation": "Push them wide! It's a harder angle and your teammates can help more easily."
+    },
+    {
+      "question": "What does 'pressure' mean in defending?",
+      "options": ["Get close to the attacker quickly", "Yell really loud", "Stand back and wait", "Kick the ball away every time"],
+      "correct": 0,
+      "explanation": "Good pressure makes attackers rush and lose control of the ball."
+    },
+    {
+      "question": "Who should pressure the attacker first?",
+      "options": ["The coach", "Whoever is closest", "The goalie", "Someone fast"],
+      "correct": 1,
+      "explanation": "The nearest defender closes down first to stop progress."
+    },
+    {
+      "question": "If your teammate is pressuring the ball, what should you do?",
+      "options": ["Cover space or open players", "Take a nap", "Run to the crowd", "Do the same thing"],
+      "correct": 0,
+      "explanation": "You’re the second line—block passes or be ready if they get beat."
+    },
+    {
+      "question": "What do you defend in zonal marking?",
+      "options": ["Your part of the field", "The attacker’s shoes", "Your best friend", "Just the ball"],
+      "correct": 0,
+      "explanation": "Stick to your zone and handle threats when they enter it."
+    },
+    {
+      "question": "Why is talking important on defense?",
+      "options": ["To organize and warn teammates", "To trash talk", "To be loud", "To tell jokes"],
+      "correct": 0,
+      "explanation": "Call out danger, help teammates know who to mark or when to press."
+    },
+    {
+      "question": "What does 'compact' mean in defending?",
+      "options": ["Stay close together", "Spread out everywhere", "Stand in a circle", "Chase the ball alone"],
+      "correct": 0,
+      "explanation": "Close lines and players make it harder for the other team to get through."
+    },
+    {
+      "question": "When is a great time to tackle?",
+      "options": ["When the attacker makes a bad touch", "As soon as they get the ball", "Only in the box", "After they pass it"],
+      "correct": 0,
+      "explanation": "Wait for them to make a mistake and go in!"
+    },
+    {
+      "question": "Where should a weak-side defender (far from the ball) be?",
+      "options": ["Shift toward the middle to help cover", "Far away by themselves", "Next to the goalpost", "Near the snack bar"],
+      "correct": 0,
+      "explanation": "Stay tucked in to help defend passes and protect the middle."
+    },
+    {
+      "question": "What do you do when a cross comes into the box?",
+      "options": ["Clear the ball or mark the attacker tightly", "Wave at the ball", "Back away", "Let the goalie do it all"],
+      "correct": 0,
+      "explanation": "Be brave—defend the space and don’t let them score!"
+    },
+    {
+      "question": "What does it mean to be 'goal-side'?",
+      "options": ["Stand between the attacker and our goal", "Stand behind your teammate", "Stand near their net", "Stand in the corner"],
+      "correct": 0,
+      "explanation": "It helps stop shots or passes toward our goal."
+    },
+    {
+      "question": "What does 'jockeying' mean in defense?",
+      "options": ["Stay in front and slow them down", "Trip the attacker", "Run away fast", "Juggle the ball"],
+      "correct": 0,
+      "explanation": "It’s a way to delay them without diving in—just stay in control!"
+    },
+    {
+      "question": "What should defenders always watch?",
+      "options": ["The attacker’s hips and the ball", "The crowd", "The scoreboard", "The goalie’s hair"],
+      "correct": 0,
+      "explanation": "Eyes on the ball and hips—they don’t lie!"
+    },
+    {
+      "question": "What does ‘clear your lines’ mean?",
+      "options": ["Kick it out of danger", "Draw a picture", "Run in a straight line", "Shout at teammates"],
+      "correct": 0,
+      "explanation": "Sometimes you just need to get the ball away from our goal!"
+    },
+    {
+      "question": "Why is teamwork important on defense?",
+      "options": ["Everyone helps and covers each other", "You get to yell at people", "Only one player defends", "So you don’t have to run"],
+      "correct": 0,
+      "explanation": "Defense works best when players help, cover, and trust each other."
+    }
   ]
 }

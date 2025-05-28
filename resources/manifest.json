@@ -1,5 +1,12 @@
 [
   {
+    "id": "jaxson-formation",
+    "title": "Jaxson Formation",
+    "description": "Jaxson team formation and positioning",
+    "image": "assets/graphics/Jaxson Formation.png",
+    "themeColor": "#1e3a8a"
+  },
+  {
     "id": "crossing-from-right",
     "title": "Crossing from Right",
     "description": "Technique for delivering balls from the right flank",
