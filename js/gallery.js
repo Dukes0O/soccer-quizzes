@@ -2,7 +2,7 @@ async function loadGallery() {
   console.log('gallery.js: loadGallery');
   const gallery = document.getElementById('gallery');
   try {
-    const res = await fetch('./manifest.json');
+    const res = await fetch('/resources/manifest.json');
     if (!res.ok) {
       console.error('gallery.js: manifest fetch error', res.status, res.statusText);
       gallery.innerHTML = '<p class="text-red-600">Failed to load gallery.</p>';
