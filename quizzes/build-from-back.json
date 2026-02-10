@@ -8,15 +8,15 @@
   "themeColor": "#10b981",
   "questions": [
     {
-      "question": "What’s the easiest way to move the ball up the field?",
+      "question": "What's the easiest way to move the ball up the field?",
       "options": [
-        "Through the middle where it’s crowded",
+        "Through the middle where it's crowded",
         "Along the sidelines where fewer players are",
         "Backwards only",
         "High in the air"
       ],
       "correct": 1,
-      "explanation": "The sidelines usually have more space, so it’s easier to pass and dribble there."
+      "explanation": "The sidelines usually have more space, so it's easier to pass and dribble there."
     },
     {
       "question": "Why should defenders spread out when starting an attack?",
@@ -41,7 +41,7 @@
       "explanation": "The nearest defender helps the goalie by offering an easy option to pass."
     },
     {
-      "question": "What’s a smart choice if the middle is too tight?",
+      "question": "What's a smart choice if the middle is too tight?",
       "options": [
         "Pass back to the goalie",
         "Switch play to the opposite sideline",
@@ -67,14 +67,14 @@
       "options": [
         "To keep better control and accuracy",
         "To waste time",
-        "Because we can’t kick far",
+        "Because we can't kick far",
         "To confuse teammates"
       ],
       "correct": 0,
       "explanation": "Short, accurate passes help keep possession under pressure."
     },
     {
-      "question": "What does ‘playing out of the back’ mean?",
+      "question": "What does 'playing out of the back' mean?",
       "options": [
         "Building an attack from our defenders and goalie",
         "Clearing the ball as far as possible",
@@ -82,7 +82,7 @@
         "Only dribbling"
       ],
       "correct": 0,
-      "explanation": "It’s moving the ball forward with control, starting from defense."
+      "explanation": "It's moving the ball forward with control, starting from defense."
     },
     {
       "question": "If a defender is double-teamed, you should:",
@@ -90,7 +90,7 @@
         "Offer yourself for a pass in space",
         "Stand still",
         "Hide behind someone",
-        "Yell ‘shoot!’"
+        "Yell 'shoot!'"
       ],
       "correct": 0,
       "explanation": "Moving into space gives your teammate a safe outlet."
@@ -100,7 +100,7 @@
       "options": [
         "It keeps the ball when forward options are blocked",
         "It makes the game slow",
-        "It’s always wrong",
+        "It's always wrong",
         "It confuses the coach"
       ],
       "correct": 0,
@@ -110,8 +110,8 @@
       "question": "In which situation should you play a long ball forward?",
       "options": [
         "When the other team is pressing high",
-        "When they’re far from our goal",
-        "When we’re losing",
+        "When they're far from our goal",
+        "When we're losing",
         "When no one is there"
       ],
       "correct": 0,
@@ -134,7 +134,7 @@
         "Pass wide to a defender",
         "Dribble into the box",
         "Stop playing",
-        "Yell ‘help!’"
+        "Yell 'help!'"
       ],
       "correct": 0,
       "explanation": "Passing wide lets you keep control and find a better angle."
@@ -151,9 +151,9 @@
       "explanation": "It helps you pick the best passing lane and avoid pressure."
     },
     {
-      "question": "What does it mean to ‘break the lines’ in build-up play?",
+      "question": "What does it mean to 'break the lines' in build-up play?",
       "options": [
-        "Pass into space behind the opponent’s midfield",
+        "Pass into space behind the opponent's midfield",
         "Run offside",
         "Pass to our own goalkeeper",
         "Only dribble"

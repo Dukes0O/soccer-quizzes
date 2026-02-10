@@ -7,8 +7,8 @@
   "animation": "assets/animations/passing.json",
   "themeColor": "#2563eb",
   "questions": [
-    {"question": "When making a pass to your teammate, where should you aim?","options": ["Behind them", "Where they’re running to (into space)", "At their feet if they're standing still", "Far away from them"],"correct": 1,"explanation": "Pass into space so your teammate can run onto the ball without slowing down."},
-    {"question": "What’s the best way to make sure your pass reaches your teammate?","options": ["Look down at your feet", "Yell loudly", "Look at your teammate before passing", "Close your eyes"],"correct": 2,"explanation": "Always look up to find your teammate before passing."},
+    {"question": "When making a pass to your teammate, where should you aim?","options": ["Behind them", "Where they're running to (into space)", "At their feet if they're standing still", "Far away from them"],"correct": 1,"explanation": "Pass into space so your teammate can run onto the ball without slowing down."},
+    {"question": "What's the best way to make sure your pass reaches your teammate?","options": ["Look down at your feet", "Yell loudly", "Look at your teammate before passing", "Close your eyes"],"correct": 2,"explanation": "Always look up to find your teammate before passing."},
     {"question": "After passing the ball, what should you usually do?","options": ["Stop moving", "Follow your pass to support your teammate", "Run off the field", "Stay where you passed from"],"correct": 1,"explanation": "Move after passing so your teammate can pass back or you can find space."},
     {"question": "A 'give-and-go' means:","options": ["You pass, then your teammate passes right back", "Keep the ball for yourself", "You give the ball away", "Pass backward only"],"correct": 0,"explanation": "A give-and-go helps quickly move past defenders with teamwork."},
     {"question": "If your teammate is covered closely, how can you help them?","options": ["Hide behind a defender", "Stand still", "Move to space so they can pass easier", "Sit down"],"correct": 2,"explanation": "Finding space makes it easier for teammates to pass safely."},

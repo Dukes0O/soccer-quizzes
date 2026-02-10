@@ -124,15 +124,6 @@ h1, h2, h3, .font-sports {
     background-color: #334155; /* hover:bg-slate-700 */
 }
 
-}
-
-/* EA FC Style Player Card Options */
-.option-label {
-    @apply block w-full bg-slate-800 hover:bg-slate-700 text-slate-100 font-semibold py-4 px-6 border border-slate-700 rounded-xl shadow-lg mb-3 transition duration-200 cursor-pointer;
-    position: relative;
-    overflow: hidden;
-}
-
 .option-label::before {
     content: '';
     position: absolute;
@@ -187,24 +178,6 @@ h1, h2, h3, .font-sports {
     opacity: 0.5;
     filter: grayscale(1);
     cursor: not-allowed;
-    @apply bg-green-900/50 border-green-500 text-green-100;
-}
-
-.option-label.incorrect {
-    @apply bg-red-900/50 border-red-500 text-red-100;
-}
-
-.option-label.selected-incorrect {
-    @apply bg-red-900/70 border-red-400 text-red-50;
-}
-
-.quiz-button {
-    @apply bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-200 uppercase tracking-wider;
-    font-family: 'Rajdhani', sans-serif;
-}
-
-.quiz-button:disabled {
-    @apply opacity-50 grayscale cursor-not-allowed;
 }
 
 .field-bg {
