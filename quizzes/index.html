@@ -3,47 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soccer Quizzes</title>
+  <title>Tactical Quizzes | Soccer Pro Hub</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-green-50 min-h-screen flex flex-col items-center">
-  <nav class="bg-green-700 text-white p-4 flex justify-center space-x-6 w-full shadow-md">
-    <a href="../index.html" class="hover:text-green-200">Home</a>
-    <a href="index.html" class="font-semibold text-green-200">Quizzes</a>
-    <a href="../resources/index.html" class="hover:text-green-200">Playbook</a>
-    <a href="../video-clips.html" class="ml-4">Video Clips</a>
+<body class="bg-[#0f172a] text-slate-50 min-h-screen flex flex-col items-center">
+  <nav class="bg-[#1e293b]/80 backdrop-blur-md border-b border-white/10 p-4 flex justify-center space-x-8 w-full sticky top-0 z-50">
+    <a href="../index.html" class="font-sports text-slate-300 hover:text-green-400 transition">HOME</a>
+    <a href="index.html" class="font-sports text-green-400 font-bold tracking-widest border-b-2 border-green-400">QUIZZES</a>
+    <a href="../resources/index.html" class="font-sports text-slate-300 hover:text-green-400 transition">PLAYBOOK</a>
+    <a href="../video-clips.html" class="font-sports text-slate-300 hover:text-green-400 transition">VIDEOS</a>
   </nav>
-  <header class="w-full py-6 bg-green-700 text-white text-center shadow">
-    <h1 class="text-3xl font-bold">Soccer Quizzes</h1>
-    <p class="text-lg">Test your knowledge and collect badges!</p>
+
+  <header class="w-full py-10 bg-gradient-to-b from-blue-900/20 to-[#0f172a] text-center">
+    <h1 class="text-4xl md:text-5xl font-bold font-sports italic text-white">Tactical <span class="text-blue-500">Quizzes</span></h1>
+    <p class="text-slate-400 font-sports tracking-widest uppercase mt-2">Level Up Your Soccer IQ</p>
   </header>
-  <main class="w-full max-w-3xl flex-1 p-4">
-    <section class="mb-8">
-      <h2 class="text-xl font-semibold mb-2">Your Badges</h2>
-      <div id="badge-list" class="flex flex-wrap gap-2"></div>
+
+  <main class="w-full max-w-4xl flex-1 p-6">
+    <section class="mb-12 glass-panel rounded-2xl p-8 border-t-4 border-yellow-500">
+      <h2 class="text-2xl font-bold mb-6 font-sports flex items-center gap-3">
+        <span class="text-yellow-500">🏆</span> Your Pro Badges
+      </h2>
+      <div id="badge-list" class="flex flex-wrap gap-4"></div>
     </section>
+
     <section>
-      <h2 class="text-xl font-semibold mb-2">Available Quizzes</h2>
-      <div id="quiz-list" class="grid gap-4"></div>
+      <h2 class="text-2xl font-bold mb-6 font-sports flex items-center gap-3">
+        <span class="text-green-500">⚽</span> Available Challenges
+      </h2>
+      <div id="quiz-list" class="grid gap-6 md:grid-cols-2"></div>
     </section>
-    <section class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-      <a href="../video-clips.html" class="block">
-        <h2 class="text-2xl font-bold text-green-700 mb-3">Soccer Video Clips</h2>
-        <p class="text-gray-600 mb-4">Watch curated video clips from Google Drive to enhance your understanding of key soccer concepts and tactics.</p>
-        <div class="flex items-center justify-center h-32 bg-gray-200 rounded-md mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-green-500" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm0-2a6 6 0 100-12 6 6 0 000 12zm-1.53-6.28l2.94-1.82c.24-.15.55.04.55.32v3.64c0 .28-.31.47-.55.32l-2.94-1.82a.5.5 0 010-.64z" clip-rule="evenodd" />
-          </svg>
-        </div>
-        <span class="inline-block bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-green-700 transition-colors duration-300">Watch Videos</span>
-      </a>
-    </section>
-    <section class="mt-8">
-      <button onclick="window.userCore.resetUserProgress(); window.location.reload();" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded">Reset Progress</button>
+
+    <section class="mt-12">
+      <button onclick="if(confirm('Reset all progress?')) { window.userCore.resetUserProgress(); window.location.reload(); }"
+              class="bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 px-6 py-2 rounded-full text-sm font-sports transition">
+        Reset Academy Progress
+      </button>
     </section>
   </main>
-  <footer class="w-full py-4 text-center text-gray-500 text-sm">Soccer Quizzes 2025</footer>
+
+  <footer class="w-full py-8 text-center text-slate-600 text-sm font-sports">
+    &copy; 2025 ELITE SOCCER ACADEMY
+  </footer>
+
   <script src="../js/user.js"></script>
   <script src="../js/landing.js"></script>
   <script>
@@ -55,7 +61,7 @@
         window.landingCore.renderBadges(userProgress, quizzes);
       } catch (err) {
         console.error('Error loading quizzes manifest:', err);
-        document.getElementById('quiz-list').innerHTML = '<p class="text-red-600">Failed to load quizzes.</p>';
+        document.getElementById('quiz-list').innerHTML = '<p class="text-red-400">Failed to load mission data.</p>';
       }
     })();
   </script>

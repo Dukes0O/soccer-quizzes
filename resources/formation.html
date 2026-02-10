@@ -3,46 +3,155 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Formation Detail</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Tactical Analysis | Soccer Pro Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    .whiteboard-grid {
+      background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+    .pitch-lines {
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 100px 100px;
+    }
+  </style>
 </head>
-<body class="bg-green-50 min-h-screen flex flex-col">
-  <nav class="bg-green-700 text-white p-4 flex justify-between">
-    <a href="../index.html" class="font-bold text-lg">Home</a>
-    <a href="../quizzes/index.html" class="ml-4">Quizzes</a>
-    <a href="index.html" class="ml-4 font-semibold">Playbook</a>
+<body class="bg-[#0f172a] text-slate-50 min-h-screen flex flex-col whiteboard-grid">
+  <nav class="bg-[#1e293b]/80 backdrop-blur-md border-b border-white/10 p-4 flex justify-center space-x-8 w-full sticky top-0 z-50">
+    <a href="../index.html" class="font-sports text-slate-300 hover:text-green-400 transition">HOME</a>
+    <a href="../quizzes/index.html" class="font-sports text-slate-300 hover:text-green-400 transition">QUIZZES</a>
+    <a href="index.html" class="font-sports text-green-400 font-bold tracking-widest border-b-2 border-green-400">PLAYBOOK</a>
+    <a href="../video-clips.html" class="font-sports text-slate-300 hover:text-green-400 transition">VIDEOS</a>
   </nav>
-  <main class="flex-1 p-6 flex flex-col items-center">
-    <div id="formation-detail" class="w-full max-w-xl"></div>
+
+  <main class="flex-1 p-6 flex flex-col items-center max-w-6xl mx-auto w-full">
+    <div id="formation-detail" class="w-full"></div>
+
+    <!-- Legend / Whiteboard Tools -->
+    <div class="w-full mt-8 glass-panel rounded-2xl p-6 flex flex-wrap justify-center gap-8 border-dashed border-white/10">
+       <div class="flex items-center gap-3">
+          <div class="w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+          <span class="font-sports text-xs tracking-widest text-slate-400">DEFENSIVE UNIT</span>
+       </div>
+       <div class="flex items-center gap-3">
+          <div class="w-4 h-4 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]"></div>
+          <span class="font-sports text-xs tracking-widest text-slate-400">MIDFIELD CORE</span>
+       </div>
+       <div class="flex items-center gap-3">
+          <div class="w-4 h-4 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.5)]"></div>
+          <span class="font-sports text-xs tracking-widest text-slate-400">ATTACKING LINE</span>
+       </div>
+       <div class="flex items-center gap-3">
+          <div class="w-4 h-4 bg-white rotate-45"></div>
+          <span class="font-sports text-xs tracking-widest text-slate-400">BALL MOVEMENT</span>
+       </div>
+    </div>
+
+    <div class="mt-12 mb-12">
+      <a href="index.html" class="font-sports text-green-400 hover:text-green-300 transition flex items-center gap-2 group">
+        <span class="transition-transform group-hover:-translate-x-2">←</span> BACK TO TACTICAL HUB
+      </a>
+    </div>
   </main>
+
+  <footer class="w-full py-8 text-center text-slate-600 text-sm font-sports">
+    &copy; 2025 ELITE SOCCER ACADEMY | COACH'S TABLET V2.0
+  </footer>
+
   <script>
     async function loadFormationDetail() {
       const params = new URLSearchParams(window.location.search);
       const id = params.get('id');
       const container = document.getElementById('formation-detail');
       if (!id) {
-        container.innerHTML = '<p class="text-red-600">No formation selected.</p>';
+        container.innerHTML = '<p class="text-red-400">No mission selected.</p>';
         return;
       }
       try {
-        // Use relative path to the manifest file
         const res = await fetch('manifest.json');
         if (!res.ok) throw new Error('Manifest fetch failed');
         const formations = await res.json();
         const item = formations.find(f => f.id === id);
         if (!item) {
-          container.innerHTML = '<p class="text-red-600">Formation not found.</p>';
+          container.innerHTML = '<p class="text-red-400">Tactical data not found.</p>';
           return;
         }
-        // Use relative path for the image to ensure it loads correctly
+
         container.innerHTML = `
-          <img src="../${item.image}" alt="${item.title}" loading="lazy" class="max-w-full h-auto mb-4 border rounded" style="background:${item.themeColor};">
-          <h1 class="text-2xl font-bold mb-2">${item.title}</h1>
-          <p class="mb-4 text-gray-700">${item.description}</p>
+          <div class="glass-panel rounded-3xl overflow-hidden border-t-8 shadow-2xl relative" style="border-color: ${item.themeColor}">
+            <div class="absolute top-4 right-6 font-sports text-[10px] text-white/20 tracking-[0.5em]">TOP SECRET // ACADEMY USE ONLY</div>
+
+            <div class="bg-slate-800/50 p-8 flex justify-center pitch-lines">
+              <div class="relative group">
+                <img src="../${item.image}" alt="${item.title}" loading="lazy" class="max-w-full h-auto rounded-xl shadow-2xl border border-white/10 transition-transform duration-700 group-hover:scale-[1.02]">
+                <div class="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-green-500 opacity-50"></div>
+                <div class="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-green-500 opacity-50"></div>
+              </div>
+            </div>
+
+            <div class="p-10 md:p-16">
+              <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+                <div>
+                  <h1 class="text-5xl md:text-6xl font-bold font-sports italic text-white uppercase leading-none">${item.title}</h1>
+                  <p class="text-green-500 font-sports tracking-[0.3em] text-sm mt-4 uppercase">Strategic Analysis Phase</p>
+                </div>
+                <div class="bg-white/5 px-6 py-3 rounded-xl border border-white/10">
+                   <span class="font-sports text-xs text-slate-500 block mb-1">MODULE ID</span>
+                   <span class="font-mono text-xl text-blue-400">${item.id.toUpperCase()}</span>
+                </div>
+              </div>
+
+              <div class="h-px w-full bg-gradient-to-r from-white/20 to-transparent mb-10"></div>
+
+              <p class="text-xl md:text-2xl text-slate-300 leading-relaxed max-w-4xl font-light italic mb-12">"${item.description}"</p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                 <div class="glass-panel p-8 rounded-3xl border border-white/5 card-hover">
+                    <div class="flex items-center gap-4 mb-6">
+                       <div class="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center text-green-500 text-2xl">🎯</div>
+                       <h3 class="font-sports text-2xl text-white font-bold tracking-wider uppercase">Tactical Objective</h3>
+                    </div>
+                    <ul class="space-y-4 text-slate-400">
+                       <li class="flex gap-3">
+                          <span class="text-green-500">▶</span>
+                          <span>Optimize field coverage through synchronized movement patterns.</span>
+                       </li>
+                       <li class="flex gap-3">
+                          <span class="text-green-500">▶</span>
+                          <span>Establish rapid transition channels from defensive to offensive zones.</span>
+                       </li>
+                    </ul>
+                 </div>
+
+                 <div class="glass-panel p-8 rounded-3xl border border-white/5 card-hover">
+                    <div class="flex items-center gap-4 mb-6">
+                       <div class="w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center text-amber-500 text-2xl">📐</div>
+                       <h3 class="font-sports text-2xl text-white font-bold tracking-wider uppercase">Key Positioning</h3>
+                    </div>
+                    <ul class="space-y-4 text-slate-400">
+                       <li class="flex gap-3">
+                          <span class="text-amber-500">▶</span>
+                          <span>Maintain structural integrity during high-pressure defensive phases.</span>
+                       </li>
+                       <li class="flex gap-3">
+                          <span class="text-amber-500">▶</span>
+                          <span>Exploit vertical space between opponent lines.</span>
+                       </li>
+                    </ul>
+                 </div>
+              </div>
+            </div>
+          </div>
         `;
       } catch (err) {
         console.error('Formation detail error:', err);
-        container.innerHTML = '<p class="text-red-600">Failed to load formation.</p>';
+        container.innerHTML = '<p class="text-red-400">Failed to load tactical intelligence.</p>';
       }
     }
     document.addEventListener('DOMContentLoaded', loadFormationDetail);

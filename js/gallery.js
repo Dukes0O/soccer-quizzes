@@ -1,32 +1,35 @@
 async function loadGallery() {
-  console.log('gallery.js: loadGallery');
   const gallery = document.getElementById('gallery');
   try {
-    // Use relative path to the manifest file
     const res = await fetch('../resources/manifest.json');
     if (!res.ok) {
-      console.error('gallery.js: manifest fetch error', res.status, res.statusText);
-      gallery.innerHTML = '<p class="text-red-600">Failed to load gallery.</p>';
+      gallery.innerHTML = '<p class="text-red-400">Failed to load tactical data.</p>';
       return;
     }
     const formations = await res.json();
-    console.log('gallery.js: loaded items', formations.length);
     gallery.innerHTML = '';
     formations.forEach(item => {
-      // Defensive: skip items with missing image file or empty string
       if (!item.image || typeof item.image !== 'string') return;
+
       const card = document.createElement('div');
-      card.className = 'bg-white rounded shadow p-4 flex flex-col items-center';
+      card.className = 'glass-panel rounded-2xl overflow-hidden card-hover flex flex-col border-t-4';
+      card.style.borderColor = item.themeColor || '#22c55e';
+
       card.innerHTML = `
-        <img src="../${item.image}" alt="${item.title}" loading="lazy" class="max-w-full h-auto mb-3 border rounded" style="background:${item.themeColor};">
-        <h2 class="text-xl font-semibold mb-1">${item.title}</h2>
-        <p class="mb-2 text-gray-700">${item.description}</p>
-        <a href="../resources/formation.html?id=${item.id}" class="mt-auto px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">View Full</a>
+        <div class="relative aspect-video overflow-hidden bg-slate-800">
+          <img src="../${item.image}" alt="${item.title}" loading="lazy" class="w-full h-full object-contain p-4">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h2 class="text-2xl font-bold font-sports mb-2 text-white">${item.title}</h2>
+          <p class="text-slate-400 text-sm mb-6 flex-1">${item.description}</p>
+          <a href="../resources/formation.html?id=${item.id}" class="mt-auto inline-block text-center bg-green-600 hover:bg-green-500 text-white font-sports py-3 rounded-xl transition shadow-lg tracking-widest">ANALYSIS</a>
+        </div>
       `;
       gallery.appendChild(card);
     });
   } catch (e) {
-    gallery.innerHTML = '<p class="text-red-600">Failed to load gallery.</p>';
+    gallery.innerHTML = '<p class="text-red-400">Failed to load tactical data.</p>';
   }
 }
 
