@@ -15,6 +15,13 @@ async function loadQuizData(quizId) {
   // Use relative paths to be robust across local and GitHub Pages environments
   let fetchPath = inQuizzes ? `./${quizId}.json` : `./quizzes/${quizId}.json`;
 
+  let fetchPath = inQuizzes ? `${quizId}.json` : `quizzes/${quizId}.json`;
+
+  // If running on GitHub Pages, ensure fetch path is relative to base
+  if (window.location.hostname.endsWith('github.io')) {
+    const repo = window.location.pathname.split('/')[1];
+    fetchPath = `/${repo}/quizzes/${quizId}.json`;
+  }
   try {
     const res = await fetch(fetchPath);
     if (!res.ok) throw new Error(`Quiz not found: ${fetchPath} (status ${res.status})`);
