@@ -3,21 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Playbook Gallery</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Academy Playbook | Soccer Pro Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-green-50 min-h-screen flex flex-col">
-  <nav class="bg-green-700 text-white p-4 flex justify-center space-x-6 w-full shadow-md">
-    <a href="../index.html" class="hover:text-green-200">Home</a>
-    <a href="../quizzes/index.html" class="hover:text-green-200">Quizzes</a>
-    <a href="index.html" class="font-semibold text-green-200">Playbook</a>
-    <a href="../video-clips.html" class="hover:text-green-200">Video Clips</a>
+<body class="bg-[#0f172a] text-slate-50 min-h-screen flex flex-col">
+  <nav class="bg-[#1e293b]/80 backdrop-blur-md border-b border-white/10 p-4 flex justify-center space-x-8 w-full sticky top-0 z-50">
+    <a href="../index.html" class="font-sports text-slate-300 hover:text-green-400 transition">HOME</a>
+    <a href="../quizzes/index.html" class="font-sports text-slate-300 hover:text-green-400 transition">QUIZZES</a>
+    <a href="index.html" class="font-sports text-green-400 font-bold tracking-widest border-b-2 border-green-400">PLAYBOOK</a>
+    <a href="../video-clips.html" class="font-sports text-slate-300 hover:text-green-400 transition">VIDEOS</a>
   </nav>
-  <main class="flex-1 p-6">
-    <h1 class="text-3xl font-bold mb-6 text-center">Formations & Graphics Gallery</h1>
-    <div id="gallery" class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3"></div>
+
+  <header class="w-full py-10 bg-gradient-to-b from-green-900/20 to-[#0f172a] text-center">
+    <h1 class="text-4xl md:text-5xl font-bold font-sports italic text-white">Academy <span class="text-green-500">Playbook</span></h1>
+    <p class="text-slate-400 font-sports tracking-widest uppercase mt-2">Master the Tactical Board</p>
+  </header>
+
+  <main class="flex-1 p-6 max-w-7xl mx-auto w-full">
+    <div id="gallery" class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
   </main>
+
+  <footer class="w-full py-8 text-center text-slate-600 text-sm font-sports">
+    &copy; 2025 ELITE SOCCER ACADEMY
+  </footer>
+
   <script src="../js/gallery.js"></script>
 </body>
 </html>

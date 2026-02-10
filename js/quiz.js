@@ -11,7 +11,9 @@ function shuffle(array) {
 
 // Load quiz data from JSON file
 async function loadQuizData(quizId) {
-  let fetchPath = `quizzes/${quizId}.json`;
+  const inQuizzes = window.location.pathname.includes('/quizzes/');
+  let fetchPath = inQuizzes ? `${quizId}.json` : `quizzes/${quizId}.json`;
+
   // If running on GitHub Pages, ensure fetch path is relative to base
   if (window.location.hostname.endsWith('github.io')) {
     const repo = window.location.pathname.split('/')[1];
