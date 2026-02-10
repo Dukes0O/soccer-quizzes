@@ -16,6 +16,11 @@ function setPlayerName(name) {
 
 function renderBadge(badge, alt) {
   if (badge && badge.endsWith('.png')) {
+    let src = badge;
+    if (window.location.pathname.includes('/quizzes/') || window.location.pathname.includes('/resources/')) {
+      src = '../' + badge;
+    }
+    return `<img src="${src}" alt="${alt || 'Badge'}" class="inline w-12 h-12 align-middle rounded-lg shadow-lg badge-glow" loading="lazy">`;
     return `<img src="../${badge}" alt="${alt || 'Badge'}" class="inline w-12 h-12 align-middle rounded-lg shadow-lg badge-glow" loading="lazy">`;
   }
   return badge || '';
@@ -105,6 +110,15 @@ async function renderQuizUI() {
     const percent = (current / 10) * 100;
     const container = document.getElementById('field-container');
 
+    // Resolve asset paths based on location
+    let assetPrefix = '';
+    if (window.location.pathname.includes('/quizzes/') || window.location.pathname.includes('/resources/')) {
+      assetPrefix = '../';
+    }
+
+    container.innerHTML = `
+      <div class="relative w-full h-full overflow-hidden">
+        <img src="${assetPrefix}assets/graphics/soccer pitch.png" alt="Pitch" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay" />
     container.innerHTML = `
       <div class="relative w-full h-full overflow-hidden">
         <img src="../assets/graphics/soccer pitch.png" alt="Pitch" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay" />
@@ -120,6 +134,7 @@ async function renderQuizUI() {
         <!-- Player -->
         <div class="absolute transition-all duration-1000 ease-out flex flex-col items-center"
              style="left: ${percent}%; top: 50%; transform: translate(-50%, -50%); z-index: 10;">
+          <img src="${assetPrefix}assets/graphics/football player CR7.png" alt="Player" class="w-16 md:w-24 h-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" />
           <img src="../assets/graphics/football player CR7.png" alt="Player" class="w-16 md:w-24 h-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" />
           <div class="bg-black/80 px-2 py-0.5 rounded text-[10px] font-sports text-white mt-1 border border-white/20 whitespace-nowrap uppercase">${getPlayerName()}</div>
         </div>
