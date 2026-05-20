@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goal Leaders | Soccer Pro Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#0f172a] text-slate-50 min-h-screen flex flex-col items-center">
+  <nav class="bg-[#1e293b]/80 backdrop-blur-md border-b border-white/10 p-4 flex flex-wrap justify-center gap-x-8 gap-y-2 w-full sticky top-0 z-50">
+    <a href="index.html" class="font-sports text-slate-300 hover:text-green-400 transition">HOME</a>
+    <a href="quizzes/index.html" class="font-sports text-slate-300 hover:text-green-400 transition">QUIZZES</a>
+    <a href="resources/index.html" class="font-sports text-slate-300 hover:text-green-400 transition">PLAYBOOK</a>
+    <a href="video-clips.html" class="font-sports text-slate-300 hover:text-green-400 transition">VIDEOS</a>
+    <a href="goal-leaders.html" class="font-sports text-green-400 font-bold tracking-widest border-b-2 border-green-400">LEADERS</a>
+  </nav>
+
+  <header class="w-full py-10 bg-gradient-to-b from-lime-900/20 to-[#0f172a] text-center">
+    <h1 class="text-4xl md:text-5xl font-bold font-sports italic text-white">Goal <span class="text-lime-500">Leaders</span></h1>
+    <p class="text-slate-400 font-sports tracking-widest uppercase mt-2">Season stats through May 9</p>
+  </header>
+
+  <main class="w-full max-w-5xl flex-1 p-6">
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+      <div class="glass-panel rounded-2xl p-6 border-t-4 border-amber-400 card-hover md:order-2">
+        <p class="font-sports text-amber-400 tracking-[0.3em] text-xs mb-2">CO-LEADER</p>
+        <h2 class="text-4xl font-bold font-sports italic text-white">Andy</h2>
+        <p class="text-6xl font-bold font-sports text-amber-400 mt-4">4</p>
+        <p class="text-slate-500 font-sports tracking-widest uppercase text-xs">Goals</p>
+      </div>
+
+      <div class="glass-panel rounded-2xl p-6 border-t-4 border-slate-300 card-hover md:order-1 md:mt-8">
+        <p class="font-sports text-slate-300 tracking-[0.3em] text-xs mb-2">CO-LEADER</p>
+        <h2 class="text-3xl font-bold font-sports italic text-white">Mohammad</h2>
+        <p class="text-5xl font-bold font-sports text-slate-200 mt-4">4</p>
+        <p class="text-slate-500 font-sports tracking-widest uppercase text-xs">Goals</p>
+      </div>
+
+      <div class="glass-panel rounded-2xl p-6 border-t-4 border-orange-400 card-hover md:order-3 md:mt-8">
+        <p class="font-sports text-orange-400 tracking-[0.3em] text-xs mb-2">CHASE PACK</p>
+        <h2 class="text-3xl font-bold font-sports italic text-white">Gratian</h2>
+        <p class="text-5xl font-bold font-sports text-orange-400 mt-4">2</p>
+        <p class="text-slate-500 font-sports tracking-widest uppercase text-xs">Goals</p>
+      </div>
+    </section>
+
+    <section class="glass-panel rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+      <div class="bg-slate-800/60 p-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 border-b border-white/10">
+        <div>
+          <p class="font-sports text-lime-500 font-bold tracking-[0.3em] text-xs mb-2">ACADEMY SCOREBOARD</p>
+          <h2 class="text-3xl font-bold font-sports italic text-white">Goal Scoring Leaders</h2>
+        </div>
+        <p class="text-slate-500 font-sports tracking-widest uppercase text-xs">Last game: May 9</p>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left">
+          <thead class="bg-slate-950/40 border-b border-white/10">
+            <tr>
+              <th class="px-6 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase">Player</th>
+              <th class="px-6 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase text-right">Goals</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5">
+            <tr class="bg-lime-500/10">
+              <td class="px-6 py-4 font-sports text-2xl font-bold text-white">Andy</td>
+              <td class="px-6 py-4 text-right font-sports text-3xl font-bold text-lime-400">4</td>
+            </tr>
+            <tr class="bg-lime-500/10">
+              <td class="px-6 py-4 font-sports text-2xl font-bold text-white">Mohammad</td>
+              <td class="px-6 py-4 text-right font-sports text-3xl font-bold text-lime-400">4</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-sports text-xl font-bold text-slate-100">Gratian</td>
+              <td class="px-6 py-4 text-right font-sports text-2xl font-bold text-white">2</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-sports text-xl font-bold text-slate-100">Matteo</td>
+              <td class="px-6 py-4 text-right font-sports text-2xl font-bold text-white">2</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-sports text-xl font-bold text-slate-100">Oz</td>
+              <td class="px-6 py-4 text-right font-sports text-2xl font-bold text-white">2</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-sports text-xl font-bold text-slate-300">Aaron</td>
+              <td class="px-6 py-4 text-right font-sports text-2xl font-bold text-slate-300">1</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-sports text-xl font-bold text-slate-300">Callum</td>
+              <td class="px-6 py-4 text-right font-sports text-2xl font-bold text-slate-300">1</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-sports text-xl font-bold text-slate-300">Luke</td>
+              <td class="px-6 py-4 text-right font-sports text-2xl font-bold text-slate-300">1</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-sports text-xl font-bold text-slate-300">Noah</td>
+              <td class="px-6 py-4 text-right font-sports text-2xl font-bold text-slate-300">1</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-sports text-xl font-bold text-slate-300">Pouya</td>
+              <td class="px-6 py-4 text-right font-sports text-2xl font-bold text-slate-300">1</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-sports text-xl font-bold text-slate-300">Weston</td>
+              <td class="px-6 py-4 text-right font-sports text-2xl font-bold text-slate-300">1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full py-12 text-center text-slate-600 text-sm font-sports border-t border-white/5 mt-12">
+    &copy; 2025 ELITE SOCCER ACADEMY | FINISHING REPORT
+  </footer>
+</body>
+</html>
