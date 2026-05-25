@@ -33,12 +33,5 @@
     "description": "2-1-2-1-1 formation layout",
     "image": "assets/graphics/formation-2-1-2-1-1.png",
     "themeColor": "#b91c1c"
-  },
-  {
-    "id": "jaxson-formation",
-    "title": "Jaxson Formation",
-    "description": "Jaxson team formation and positioning",
-    "image": "assets/graphics/jaxson-formation.png",
-    "themeColor": "#1e3a8a"
   }
 ]

@@ -20,106 +20,189 @@
   </nav>
 
   <header class="w-full py-10 bg-gradient-to-b from-lime-900/20 to-[#0f172a] text-center">
-    <h1 class="text-4xl md:text-5xl font-bold font-sports italic text-white">Goal <span class="text-lime-500">Leaders</span></h1>
-    <p class="text-slate-400 font-sports tracking-widest uppercase mt-2">Season stats through May 9</p>
+    <h1 class="text-4xl md:text-5xl font-bold font-sports italic text-white">Scoring <span class="text-lime-500">Leaders</span></h1>
+    <p class="text-slate-400 font-sports tracking-widest uppercase mt-2">Season stats through May 25</p>
   </header>
 
-  <main class="w-full max-w-5xl flex-1 p-6">
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-      <div class="glass-panel rounded-2xl p-6 border-t-4 border-amber-400 card-hover md:order-2">
-        <p class="font-sports text-amber-400 tracking-[0.3em] text-xs mb-2">GOLD</p>
-        <h2 class="text-4xl font-bold font-sports italic text-white">Andy</h2>
-        <h2 class="text-4xl font-bold font-sports italic text-white">Mohammad</h2>
-        <p class="text-6xl font-bold font-sports text-amber-400 mt-4">4</p>
-        <p class="text-slate-500 font-sports tracking-widest uppercase text-xs">Goals</p>
-      </div>
+  <main class="w-full max-w-6xl flex-1 p-6">
+    <section id="leader-cards" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10"></section>
 
-      <div class="glass-panel rounded-2xl p-6 border-t-4 border-slate-300 card-hover md:order-1 md:mt-8">
-        <p class="font-sports text-slate-300 tracking-[0.3em] text-xs mb-2">SILVER</p>
-        <h2 class="text-3xl font-bold font-sports italic text-white">Gratian</h2>
-        <h2 class="text-3xl font-bold font-sports italic text-white">Matteo</h2>
-        <p class="text-5xl font-bold font-sports text-slate-200 mt-4">2</p>
-        <p class="text-slate-500 font-sports tracking-widest uppercase text-xs">Goals</p>
+    <section class="glass-panel border-l-4 border-lime-500 p-6 mb-10 rounded-2xl flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div>
+        <p class="font-sports text-lime-500 font-bold text-lg mb-1 italic uppercase tracking-wider">Latest Result: 6-0 Win</p>
+        <p class="text-slate-400 text-sm">Points use one point per goal and one point per assist.</p>
       </div>
-
-      <div class="glass-panel rounded-2xl p-6 border-t-4 border-orange-400 card-hover md:order-3 md:mt-8">
-        <p class="font-sports text-orange-400 tracking-[0.3em] text-xs mb-2">BRONZE</p>
-        <h2 class="text-3xl font-bold font-sports italic text-white">See below</h2>
-        <p class="text-5xl font-bold font-sports text-orange-400 mt-4">&darr;</p>
-        <p class="text-slate-500 font-sports tracking-widest uppercase text-xs">Full rankings</p>
-      </div>
-    </section>
-
-    <section class="glass-panel rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-      <div class="bg-slate-800/60 p-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 border-b border-white/10">
-        <div>
-          <p class="font-sports text-lime-500 font-bold tracking-[0.3em] text-xs mb-2">ACADEMY SCOREBOARD</p>
-          <h2 class="text-3xl font-bold font-sports italic text-white">Goal Scoring Leaders</h2>
+      <div class="grid grid-cols-3 gap-3 text-center">
+        <div class="bg-white/5 rounded-xl px-4 py-3 border border-white/10">
+          <p class="font-sports text-3xl font-bold text-white">6</p>
+          <p class="font-sports text-[10px] tracking-widest text-slate-500 uppercase">Goals</p>
         </div>
-        <p class="text-slate-500 font-sports tracking-widest uppercase text-xs">Last game: May 9</p>
-      </div>
-
-      <div class="overflow-x-auto">
-        <table class="w-full text-left">
-          <thead class="bg-slate-950/40 border-b border-white/10">
-            <tr>
-              <th class="px-6 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase">Player</th>
-              <th class="px-6 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase text-right">Goals</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-white/5">
-            <tr class="bg-lime-500/10">
-              <td class="px-6 py-4 font-sports text-2xl font-bold text-white">Andy</td>
-              <td class="px-6 py-4 text-right font-sports text-3xl font-bold text-lime-400">4</td>
-            </tr>
-            <tr class="bg-lime-500/10">
-              <td class="px-6 py-4 font-sports text-2xl font-bold text-white">Mohammad</td>
-              <td class="px-6 py-4 text-right font-sports text-3xl font-bold text-lime-400">4</td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 font-sports text-xl font-bold text-slate-100">Gratian</td>
-              <td class="px-6 py-4 text-right font-sports text-2xl font-bold text-white">2</td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 font-sports text-xl font-bold text-slate-100">Matteo</td>
-              <td class="px-6 py-4 text-right font-sports text-2xl font-bold text-white">2</td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 font-sports text-xl font-bold text-slate-100">Oz</td>
-              <td class="px-6 py-4 text-right font-sports text-2xl font-bold text-white">2</td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 font-sports text-xl font-bold text-slate-300">Aaron</td>
-              <td class="px-6 py-4 text-right font-sports text-2xl font-bold text-slate-300">1</td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 font-sports text-xl font-bold text-slate-300">Callum</td>
-              <td class="px-6 py-4 text-right font-sports text-2xl font-bold text-slate-300">1</td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 font-sports text-xl font-bold text-slate-300">Luke</td>
-              <td class="px-6 py-4 text-right font-sports text-2xl font-bold text-slate-300">1</td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 font-sports text-xl font-bold text-slate-300">Noah</td>
-              <td class="px-6 py-4 text-right font-sports text-2xl font-bold text-slate-300">1</td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 font-sports text-xl font-bold text-slate-300">Pouya</td>
-              <td class="px-6 py-4 text-right font-sports text-2xl font-bold text-slate-300">1</td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 font-sports text-xl font-bold text-slate-300">Weston</td>
-              <td class="px-6 py-4 text-right font-sports text-2xl font-bold text-slate-300">1</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="bg-white/5 rounded-xl px-4 py-3 border border-white/10">
+          <p class="font-sports text-3xl font-bold text-white">6</p>
+          <p class="font-sports text-[10px] tracking-widest text-slate-500 uppercase">Assists</p>
+        </div>
+        <div class="bg-white/5 rounded-xl px-4 py-3 border border-white/10">
+          <p class="font-sports text-3xl font-bold text-white">12</p>
+          <p class="font-sports text-[10px] tracking-widest text-slate-500 uppercase">Points</p>
+        </div>
       </div>
     </section>
+
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+      <section class="glass-panel rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+        <div class="bg-slate-800/60 p-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 border-b border-white/10">
+          <div>
+            <p class="font-sports text-lime-500 font-bold tracking-[0.3em] text-xs mb-2">FINISHING REPORT</p>
+            <h2 class="text-3xl font-bold font-sports italic text-white">Goal Leaders</h2>
+          </div>
+          <p class="text-slate-500 font-sports tracking-widest uppercase text-xs">Last game: May 25</p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left">
+            <thead class="bg-slate-950/40 border-b border-white/10">
+              <tr>
+                <th class="px-6 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase">Player</th>
+                <th class="px-6 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase text-right">Goals</th>
+                <th class="px-6 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase text-right">Assists</th>
+                <th class="px-6 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase text-right">Points</th>
+              </tr>
+            </thead>
+            <tbody id="goal-table" class="divide-y divide-white/5"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="glass-panel rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+        <div class="bg-slate-800/60 p-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 border-b border-white/10">
+          <div>
+            <p class="font-sports text-amber-500 font-bold tracking-[0.3em] text-xs mb-2">ACADEMY SCOREBOARD</p>
+            <h2 class="text-3xl font-bold font-sports italic text-white">Point Leaders</h2>
+          </div>
+          <p class="text-slate-500 font-sports tracking-widest uppercase text-xs">Goals + Assists</p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left">
+            <thead class="bg-slate-950/40 border-b border-white/10">
+              <tr>
+                <th class="px-6 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase">Player</th>
+                <th class="px-6 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase text-right">Points</th>
+                <th class="px-6 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase text-right">Goals</th>
+                <th class="px-6 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase text-right">Assists</th>
+              </tr>
+            </thead>
+            <tbody id="point-table" class="divide-y divide-white/5"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="w-full py-12 text-center text-slate-600 text-sm font-sports border-t border-white/5 mt-12">
     &copy; 2025 ELITE SOCCER ACADEMY | FINISHING REPORT
   </footer>
+
+  <script>
+    const playerStats = [
+      { name: 'Andy', goals: 6, assists: 0 },
+      { name: 'Mohammad', goals: 6, assists: 0 },
+      { name: 'Gratian', goals: 2, assists: 3 },
+      { name: 'Callum', goals: 2, assists: 0 },
+      { name: 'Matteo', goals: 2, assists: 0 },
+      { name: 'Oz', goals: 2, assists: 0 },
+      { name: 'Pouya', goals: 2, assists: 0 },
+      { name: 'Aaron', goals: 1, assists: 1 },
+      { name: 'Luke', goals: 1, assists: 1 },
+      { name: 'Noah', goals: 1, assists: 1 },
+      { name: 'Weston', goals: 1, assists: 0 }
+    ].map(player => ({
+      ...player,
+      points: player.goals + player.assists
+    }));
+
+    const sortByGoals = (a, b) => b.goals - a.goals || b.points - a.points || a.name.localeCompare(b.name);
+    const sortByPoints = (a, b) => b.points - a.points || b.goals - a.goals || b.assists - a.assists || a.name.localeCompare(b.name);
+
+    function namesForValue(players, key, value) {
+      return players
+        .filter(player => player[key] === value)
+        .map(player => player.name);
+    }
+
+    function renderLeaderCards() {
+      const cards = document.getElementById('leader-cards');
+      const pointLeaders = [...playerStats].sort(sortByPoints);
+      const goldValue = pointLeaders[0].points;
+      const silverValue = pointLeaders.find(player => player.points < goldValue).points;
+      const bronzeValue = pointLeaders.find(player => player.points < silverValue).points;
+      const podium = [
+        {
+          label: 'Gold Points',
+          names: namesForValue(pointLeaders, 'points', goldValue),
+          value: goldValue,
+          border: 'border-amber-400',
+          text: 'text-amber-400',
+          order: 'md:order-2'
+        },
+        {
+          label: 'Silver Points',
+          names: namesForValue(pointLeaders, 'points', silverValue),
+          value: silverValue,
+          border: 'border-slate-300',
+          text: 'text-slate-200',
+          order: 'md:order-1 md:mt-8'
+        },
+        {
+          label: 'Bronze Points',
+          names: namesForValue(pointLeaders, 'points', bronzeValue),
+          value: bronzeValue,
+          border: 'border-orange-400',
+          text: 'text-orange-400',
+          order: 'md:order-3 md:mt-8'
+        }
+      ];
+
+      cards.innerHTML = podium.map(card => `
+        <div class="glass-panel rounded-2xl p-6 border-t-4 ${card.border} card-hover ${card.order}">
+          <p class="font-sports ${card.text} tracking-[0.3em] text-xs mb-2">${card.label}</p>
+          ${card.names.map(name => `<h2 class="text-3xl lg:text-4xl font-bold font-sports italic text-white">${name}</h2>`).join('')}
+          <p class="text-6xl font-bold font-sports ${card.text} mt-4">${card.value}</p>
+          <p class="text-slate-500 font-sports tracking-widest uppercase text-xs">Points</p>
+        </div>
+      `).join('');
+    }
+
+    function renderRows(containerId, players, columns, highlightCount) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = players.map((player, index) => {
+        const featured = index < highlightCount;
+        const nameClass = featured ? 'text-2xl text-white' : 'text-xl text-slate-300';
+        const valueClass = featured ? 'text-3xl text-lime-400' : 'text-2xl text-slate-300';
+        const rowClass = featured ? 'bg-lime-500/10' : '';
+        return `
+          <tr class="${rowClass}">
+            <td class="px-6 py-4 font-sports ${nameClass} font-bold">${player.name}</td>
+            ${columns.map(column => `<td class="px-6 py-4 text-right font-sports ${valueClass} font-bold">${player[column]}</td>`).join('')}
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function renderTables() {
+      const goalLeaders = [...playerStats].sort(sortByGoals);
+      const pointLeaders = [...playerStats].sort(sortByPoints);
+      const topGoalCount = goalLeaders.filter(player => player.goals === goalLeaders[0].goals).length;
+      const topPointCount = pointLeaders.filter(player => player.points === pointLeaders[0].points).length;
+
+      renderRows('goal-table', goalLeaders, ['goals', 'assists', 'points'], topGoalCount);
+      renderRows('point-table', pointLeaders, ['points', 'goals', 'assists'], topPointCount);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderLeaderCards();
+      renderTables();
+    });
+  </script>
 </body>
 </html>
