@@ -21,7 +21,7 @@
 
   <header class="w-full py-10 bg-gradient-to-b from-lime-900/20 to-[#0f172a] text-center">
     <h1 class="text-4xl md:text-5xl font-bold font-sports italic text-white">Scoring <span class="text-lime-500">Leaders</span></h1>
-    <p class="text-slate-400 font-sports tracking-widest uppercase mt-2">Season stats through May 25</p>
+    <p class="text-slate-400 font-sports tracking-widest uppercase mt-2">Season stats through May 30</p>
   </header>
 
   <main class="w-full max-w-6xl flex-1 p-6">
@@ -29,20 +29,20 @@
 
     <section class="glass-panel border-l-4 border-lime-500 p-6 mb-10 rounded-2xl flex flex-col md:flex-row md:items-center md:justify-between gap-4">
       <div>
-        <p class="font-sports text-lime-500 font-bold text-lg mb-1 italic uppercase tracking-wider">Latest Result: 6-0 Win</p>
-        <p class="text-slate-400 text-sm">Points use one point per goal and one point per assist.</p>
+        <p class="font-sports text-lime-500 font-bold text-lg mb-1 italic uppercase tracking-wider">Latest Update: 11 Goals Logged</p>
+        <p class="text-slate-400 text-sm">Points use one point per goal and one point per assist. Two goals were unassisted.</p>
       </div>
       <div class="grid grid-cols-3 gap-3 text-center">
         <div class="bg-white/5 rounded-xl px-4 py-3 border border-white/10">
-          <p class="font-sports text-3xl font-bold text-white">6</p>
+          <p class="font-sports text-3xl font-bold text-white">11</p>
           <p class="font-sports text-[10px] tracking-widest text-slate-500 uppercase">Goals</p>
         </div>
         <div class="bg-white/5 rounded-xl px-4 py-3 border border-white/10">
-          <p class="font-sports text-3xl font-bold text-white">6</p>
+          <p class="font-sports text-3xl font-bold text-white">9</p>
           <p class="font-sports text-[10px] tracking-widest text-slate-500 uppercase">Assists</p>
         </div>
         <div class="bg-white/5 rounded-xl px-4 py-3 border border-white/10">
-          <p class="font-sports text-3xl font-bold text-white">12</p>
+          <p class="font-sports text-3xl font-bold text-white">20</p>
           <p class="font-sports text-[10px] tracking-widest text-slate-500 uppercase">Points</p>
         </div>
       </div>
@@ -55,7 +55,7 @@
             <p class="font-sports text-lime-500 font-bold tracking-[0.3em] text-xs mb-2">FINISHING REPORT</p>
             <h2 class="text-3xl font-bold font-sports italic text-white">Goal Leaders</h2>
           </div>
-          <p class="text-slate-500 font-sports tracking-widest uppercase text-xs">Last game: May 25</p>
+          <p class="text-slate-500 font-sports tracking-widest uppercase text-xs">Last game: May 30</p>
         </div>
 
         <div class="overflow-x-auto">
@@ -105,16 +105,17 @@
 
   <script>
     const playerStats = [
-      { name: 'Andy', goals: 6, assists: 0 },
-      { name: 'Mohammad', goals: 6, assists: 0 },
-      { name: 'Gratian', goals: 2, assists: 3 },
-      { name: 'Callum', goals: 2, assists: 0 },
+      { name: 'Andy', goals: 8, assists: 1 },
+      { name: 'Mohammad', goals: 10, assists: 0 },
+      { name: 'Gratian', goals: 3, assists: 4 },
+      { name: 'Callum', goals: 4, assists: 1 },
+      { name: 'Dash', goals: 1, assists: 1 },
       { name: 'Matteo', goals: 2, assists: 0 },
       { name: 'Oz', goals: 2, assists: 0 },
-      { name: 'Pouya', goals: 2, assists: 0 },
+      { name: 'Pouya', goals: 3, assists: 1 },
       { name: 'Aaron', goals: 1, assists: 1 },
-      { name: 'Luke', goals: 1, assists: 1 },
-      { name: 'Noah', goals: 1, assists: 1 },
+      { name: 'Luke', goals: 1, assists: 2 },
+      { name: 'Noah', goals: 1, assists: 4 },
       { name: 'Weston', goals: 1, assists: 0 }
     ].map(player => ({
       ...player,
