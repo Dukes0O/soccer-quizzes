@@ -15,7 +15,7 @@ function setPlayerName(name) {
 }
 
 function renderBadge(badge, alt) {
-  if (badge && badge.endsWith('.png')) {
+  if (badge && /\.(png|svg)$/i.test(badge)) {
     let src = badge;
     if (window.location.pathname.includes('/quizzes/') && !badge.startsWith('../') && !badge.startsWith('/')) {
       src = `../${badge}`;
@@ -23,6 +23,24 @@ function renderBadge(badge, alt) {
     return `<img src="${src}" alt="${alt || 'Badge'}" class="inline w-12 h-12 align-middle rounded-lg shadow-lg badge-glow" loading="lazy">`;
   }
   return badge || '';
+}
+
+function resolveAssetPath(path) {
+  if (!path || path.startsWith('http')) return path || '';
+  if (window.location.pathname.includes('/quizzes/') && !path.startsWith('../') && !path.startsWith('/')) {
+    return `../${path}`;
+  }
+  return path;
+}
+
+function renderQuestionMedia(question) {
+  if (!question.image) return '';
+  const src = resolveAssetPath(question.image);
+  return `
+    <div class="mb-8 overflow-hidden rounded-2xl border border-white/10 bg-slate-950/40">
+      <img src="${src}" alt="${question.imageAlt || 'Tactical diagram'}" class="w-full h-auto" loading="lazy" />
+    </div>
+  `;
 }
 
 function triggerGoalAnimation() {
@@ -109,20 +127,19 @@ async function renderQuizUI() {
     const percent = (current / 10) * 100;
     const container = document.getElementById('field-container');
 
-    // Resolve asset paths based on location
-    let assetPrefix = '';
-    if (window.location.pathname.includes('/quizzes/')) {
-      assetPrefix = '../';
-    }
+    const playerImage = 'https://upload.wikimedia.org/wikipedia/commons/6/64/Kylian_Mbapp%C3%A9_%28cropped%29.png';
 
     container.innerHTML = `
-      <div class="relative w-full h-full overflow-hidden">
-        <img src="${assetPrefix}assets/graphics/soccer-pitch.png" alt="Pitch" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay" />
-
-        <!-- Lines -->
-        <div class="absolute inset-0 border-2 border-white/10 m-4 rounded-sm"></div>
-        <div class="absolute top-0 bottom-0 left-1/2 w-px bg-white/10"></div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 border border-white/10 rounded-full"></div>
+      <div class="relative w-full h-full overflow-hidden bg-[repeating-linear-gradient(90deg,#0b5c2a_0_9%,#0a5427_9%_18%)]">
+        <div class="absolute inset-4 rounded-sm border-2 border-white/15"></div>
+        <div class="absolute top-4 bottom-4 left-1/2 w-px bg-white/15"></div>
+        <div class="absolute top-1/2 left-1/2 w-20 h-20 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white/15"></div>
+        <div class="absolute top-[22%] bottom-[22%] left-4 w-[18%] border-y-2 border-r-2 border-white/15"></div>
+        <div class="absolute top-[34%] bottom-[34%] left-4 w-[7%] border-y-2 border-r-2 border-white/15"></div>
+        <div class="absolute top-[22%] bottom-[22%] right-4 w-[18%] border-y-2 border-l-2 border-white/15"></div>
+        <div class="absolute top-[34%] bottom-[34%] right-4 w-[7%] border-y-2 border-l-2 border-white/15"></div>
+        <div class="absolute top-1/2 left-[17%] h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/15"></div>
+        <div class="absolute top-1/2 right-[17%] h-2 w-2 translate-x-1/2 -translate-y-1/2 rounded-full bg-white/15"></div>
 
         <!-- Progress Line -->
         <div class="absolute top-1/2 left-0 h-1 bg-gradient-to-r from-green-500 to-transparent transition-all duration-1000" style="width: ${percent}%; transform: translateY(-50%)"></div>
@@ -130,7 +147,7 @@ async function renderQuizUI() {
         <!-- Player -->
         <div class="absolute transition-all duration-1000 ease-out flex flex-col items-center"
              style="left: ${percent}%; top: 50%; transform: translate(-50%, -50%); z-index: 10;">
-          <img src="${assetPrefix}assets/graphics/football-player-cr7.png" alt="Player" class="w-16 md:w-24 h-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" />
+          <img src="${playerImage}" alt="Kylian Mbappe" class="w-16 md:w-24 h-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" />
           <div class="bg-black/80 px-2 py-0.5 rounded text-[10px] font-sports text-white mt-1 border border-white/20 whitespace-nowrap uppercase">${getPlayerName()}</div>
         </div>
 
@@ -176,6 +193,8 @@ async function renderQuizUI() {
             `).join('')}
           </div>
         </div>
+
+        ${renderQuestionMedia(q)}
 
         <div class="text-xl md:text-2xl font-semibold mb-10 text-slate-100 leading-relaxed">${q.question}</div>
 

@@ -14,7 +14,7 @@ async function loadManifest() {
 }
 
 function renderBadge(badge, alt, size = 'small', downloadable = false) {
-  if (badge && badge.endsWith('.png')) {
+  if (badge && /\.(png|svg)$/i.test(badge)) {
     let sizeClass;
     if (size === 'large') {
       sizeClass = 'w-24 h-24'; // Tailwind standard size for card display

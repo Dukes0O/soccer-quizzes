@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
+  <title id="title">Indirect kick near goal</title>
+  <desc id="desc">Indirect free kick near the penalty area showing first touch and shot option.</desc>
+  <rect width="900" height="500" fill="#0b5c2a"/>
+  <rect x="35" y="35" width="830" height="430" fill="none" stroke="#d9f99d" stroke-width="4"/>
+  <rect x="670" y="145" width="195" height="210" fill="none" stroke="#d9f99d" stroke-width="4"/>
+  <rect x="795" y="205" width="70" height="90" fill="none" stroke="#d9f99d" stroke-width="3"/>
+  <g font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle">
+    <circle cx="610" cy="285" r="18" fill="#22c55e"/><text x="610" y="325" fill="white">FIRST TOUCH</text>
+    <circle cx="665" cy="250" r="18" fill="#22c55e"/><text x="665" y="222" fill="white">SHOT</text>
+    <circle cx="835" cy="250" r="18" fill="#facc15"/><text x="835" y="285" fill="white">GK</text>
+    <circle cx="720" cy="248" r="16" fill="#ef4444"/>
+    <circle cx="745" cy="248" r="16" fill="#ef4444"/>
+    <circle cx="770" cy="248" r="16" fill="#ef4444"/>
+  </g>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10z" fill="#fef08a"/></marker></defs>
+  <path d="M610 285 L665 250" stroke="#fef08a" stroke-width="6" marker-end="url(#arrow)"/>
+  <path d="M675 248 C730 205 785 205 830 238" fill="none" stroke="#fef08a" stroke-width="5" marker-end="url(#arrow)"/>
+  <text x="450" y="488" fill="#d9f99d" font-family="Inter, Arial, sans-serif" font-size="22" text-anchor="middle">Indirect free kick: the ball must touch another player before a goal can count.</text>
+</svg>

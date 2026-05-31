@@ -96,6 +96,36 @@
       "options": ["Everyone helps and covers each other", "You get to yell at people", "Only one player defends", "So you don't have to run"],
       "correct": 0,
       "explanation": "Defense works best when players help, cover, and trust each other."
+    },
+    {
+      "question": "If you cannot win the ball right away, what is still a good defensive job?",
+      "options": ["Slow the attacker down", "Dive in from far away", "Let them run past", "Stop moving"],
+      "correct": 0,
+      "explanation": "Delaying the attacker gives teammates time to recover and get organized."
+    },
+    {
+      "question": "Why should defenders protect the middle first?",
+      "options": ["The middle usually leads to the easiest shots", "The sideline is the only danger", "It saves running", "The middle is never used"],
+      "correct": 0,
+      "explanation": "Shots from central areas are dangerous, so defenders try to force play wide."
+    },
+    {
+      "question": "What should the second defender do when the first defender pressures the ball?",
+      "options": ["Cover behind and block the next pass", "Stand on the same attacker", "Run to the other goal", "Ignore the play"],
+      "correct": 0,
+      "explanation": "The second defender gives cover in case the first defender gets beaten."
+    },
+    {
+      "question": "When defending near your own goal, what kind of clearance is best?",
+      "options": ["High or wide away from danger", "Soft into the middle", "Back across your own goal", "Straight to an attacker"],
+      "correct": 0,
+      "explanation": "Clearances should move the ball away from the most dangerous central space."
+    },
+    {
+      "question": "After your team wins the ball back, what should defenders do?",
+      "options": ["Open up to support the first pass", "All sprint away from the ball", "Stand still and watch", "Celebrate immediately"],
+      "correct": 0,
+      "explanation": "Good defenders help the team keep possession after winning it."
     }
   ]
 }

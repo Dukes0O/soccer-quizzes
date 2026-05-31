@@ -21,6 +21,12 @@
     {"question": "Before shooting, you should always:","options": ["Check where the goalkeeper is", "Close your eyes", "Spin around", "Wave to the fans"],"correct": 0,"explanation": "Knowing the keeper's position helps you decide where to shoot."},
     {"question": "When should you shoot with your weaker foot?","options": ["Never", "When forced to", "Always", "Only if your stronger foot is perfect"],"correct": 1,"explanation": "Use your weaker foot when needed; practice makes it better."},
     {"question": "If a teammate is open for an easy goal, you should:","options": ["Shoot yourself anyway", "Pass to them", "Ignore them", "Kick it far away"],"correct": 1,"explanation": "A simple pass can often guarantee a goal."},
-    {"question": "If your shot misses, you should:","options": ["Give up", "Get back quickly and keep playing", "Sit down", "Complain"],"correct": 1,"explanation": "Mistakes happen-stay focused and ready for the next chance."}
+    {"question": "If your shot misses, you should:","options": ["Give up", "Get back quickly and keep playing", "Sit down", "Complain"],"correct": 1,"explanation": "Mistakes happen-stay focused and ready for the next chance."},
+    {"question": "When a teammate cuts the ball back from the endline, where should an attacker arrive?","options": ["Around the penalty spot or open space behind defenders", "Inside their own goal", "Off the field", "Behind the passer only"],"correct": 0,"explanation": "Cutbacks are dangerous because defenders often run toward their goal and leave space behind them."},
+    {"question": "What is often better than shooting from a bad angle?","options": ["Pass across goal to an open teammate", "Shoot into the side net from anywhere", "Turn away from goal", "Stop the attack"],"correct": 0,"explanation": "A pass to a teammate with a better angle can create a much easier goal."},
+    {"question": "Why should attackers stay calm in front of goal?","options": ["Calm players pick better shots", "Calm players never shoot", "It makes the keeper bigger", "It slows the ball"],"correct": 0,"explanation": "Composure helps you see the keeper, the corners, and open teammates."},
+    {"question": "If the goalkeeper spills a shot, what should nearby attackers do?","options": ["Attack the rebound", "Walk away", "Ask for a new ball", "Run back to midfield"],"correct": 0,"explanation": "Rebounds are great scoring chances because the keeper may be out of position."},
+    {"question": "What does 'shoot across the keeper' mean?","options": ["Aim toward the far side of goal from your angle", "Shoot behind yourself", "Pass to the keeper", "Always shoot high"],"correct": 0,"explanation": "A far-side shot is harder to save and can create rebounds for teammates."
+    }
   ]
 }

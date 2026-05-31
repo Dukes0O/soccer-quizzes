@@ -1,0 +1,141 @@
+{
+  "id": "set-pieces-restarts",
+  "title": "Set Pieces & Restarts",
+  "description": "Corners, free kicks, penalties, throw-ins, and restart decisions.",
+  "graphic": "SP",
+  "badge": "assets/badges/set-pieces-restarts.svg",
+  "animation": "assets/animations/set-pieces-restarts.json",
+  "themeColor": "#f59e0b",
+  "questions": [
+    {
+      "question": "On a throw-in, what should the thrower look for first?",
+      "options": ["A teammate who is open and ready", "The longest throw possible", "A defender to hit", "A random player"],
+      "correct": 0,
+      "explanation": "The best throw-in keeps the ball with your team, even if it is short."
+    },
+    {
+      "question": "In the diagram, which throw-in option is usually safest if A is open to feet?",
+      "image": "assets/graphics/quiz/throw-in-options.svg",
+      "imageAlt": "Throw-in options near the sideline",
+      "options": ["Throw to A's feet", "Force it into the crowded middle", "Throw straight to an opponent", "Wait until everyone is marked"],
+      "correct": 0,
+      "explanation": "A short open option helps your team keep possession and play forward after receiving."
+    },
+    {
+      "question": "What are the thrower's feet supposed to do on a legal throw-in?",
+      "options": ["Stay on or behind the line with both feet down", "Jump with both feet in the air", "Step fully onto the field", "Stand anywhere"],
+      "correct": 0,
+      "explanation": "Both feet must stay on or behind the touchline when the ball is released."
+    },
+    {
+      "question": "Can you be offside directly from a throw-in?",
+      "options": ["No", "Yes, always", "Only in your own half", "Only near the goal"],
+      "correct": 0,
+      "explanation": "There is no offside directly from a throw-in, but normal offside rules return after the next touch."
+    },
+    {
+      "question": "On an attacking corner, what should players do before the kick?",
+      "options": ["Know their run or job", "All stand on the ball", "Wait without moving", "Stand offside on purpose"],
+      "correct": 0,
+      "explanation": "Good corners work best when each player knows where to run and who attacks rebounds."
+    },
+    {
+      "question": "In the corner diagram, why is the player at the edge of the box useful?",
+      "image": "assets/graphics/quiz/corner-kick-options.svg",
+      "imageAlt": "Corner kick with near post, spot, and edge options",
+      "options": ["They can shoot or stop a clearance", "They should leave the field", "They make the goal smaller", "They distract their own keeper"],
+      "correct": 0,
+      "explanation": "The edge player can win loose clearances and help stop counter-attacks."
+    },
+    {
+      "question": "When defending a corner, what matters most?",
+      "options": ["Mark players, protect space, and be first to the ball", "All chase the kicker", "Stand still", "Wait for the keeper to do everything"],
+      "correct": 0,
+      "explanation": "Corners are dangerous, so defenders must communicate and attack the ball."
+    },
+    {
+      "question": "What is a direct free kick?",
+      "options": ["A free kick that can score without another touch", "A kick that must go backward", "A throw-in", "A keeper punt"],
+      "correct": 0,
+      "explanation": "On a direct free kick, the shooter can score straight from the kick."
+    },
+    {
+      "question": "In the direct free kick diagram, what should the shooter consider before shooting?",
+      "image": "assets/graphics/quiz/free-kick-direct.svg",
+      "imageAlt": "Direct free kick with wall and passing option",
+      "options": ["Distance, wall, keeper, and a possible pass", "Only how hard they can kick", "The crowd noise", "The scoreboard color"],
+      "correct": 0,
+      "explanation": "A smart free kick choice depends on the whole picture, not just power."
+    },
+    {
+      "question": "What is an indirect free kick?",
+      "options": ["A free kick that must touch another player before a goal counts", "A penalty kick", "A goal kick", "A shot that always counts"],
+      "correct": 0,
+      "explanation": "For an indirect kick, a teammate or opponent must touch the ball before it can be a goal."
+    },
+    {
+      "question": "In the indirect kick diagram, why does the first player touch the ball lightly?",
+      "image": "assets/graphics/quiz/indirect-kick-box.svg",
+      "imageAlt": "Indirect free kick with first touch and shot",
+      "options": ["To make the next shot legal", "To waste time", "To confuse the referee", "Because shots are not allowed"],
+      "correct": 0,
+      "explanation": "The first touch allows the second player to shoot and score legally."
+    },
+    {
+      "question": "What should the defending team do on a free kick near their goal?",
+      "options": ["Set a wall, mark runners, and listen to the keeper", "All run to midfield", "Turn away", "Stand behind the goal"],
+      "correct": 0,
+      "explanation": "The wall blocks the shot, while other defenders mark passes and rebounds."
+    },
+    {
+      "question": "On a penalty kick, what should the shooter focus on?",
+      "image": "assets/graphics/quiz/penalty-kick.svg",
+      "imageAlt": "Penalty kick setup",
+      "options": ["Pick a spot, stay calm, and strike cleanly", "Change their mind five times", "Kick with eyes closed", "Aim at the keeper"],
+      "correct": 0,
+      "explanation": "A calm, clean strike gives the shooter the best chance."
+    },
+    {
+      "question": "After taking a penalty, what should the shooter do?",
+      "options": ["Follow in for a rebound", "Run to celebrate before it goes in", "Turn around", "Leave the field"],
+      "correct": 0,
+      "explanation": "If the keeper saves and the ball stays in play, rebounds can still be scored."
+    },
+    {
+      "question": "On a goal kick, what is a good team shape?",
+      "options": ["Spread out to create safe passing lanes", "All stand in one corner", "Hide behind opponents", "Stand on the goal line"],
+      "correct": 0,
+      "explanation": "Good spacing gives the kicker more safe choices."
+    },
+    {
+      "question": "When should a team take a quick free kick?",
+      "options": ["When the ball is stopped and a good quick option is open", "When nobody is ready", "When the referee says wait for the whistle", "Only to be funny"],
+      "correct": 0,
+      "explanation": "A quick restart can surprise the other team, but only if it is allowed and useful."
+    },
+    {
+      "question": "If the referee tells you to wait for the whistle on a free kick, what should you do?",
+      "options": ["Wait for the whistle", "Kick it anyway", "Pick up the ball and run", "Ask the other team"],
+      "correct": 0,
+      "explanation": "If the referee says wait, kicking early can make your team lose the restart."
+    },
+    {
+      "question": "What is a good job for a player not attacking the ball on a corner?",
+      "options": ["Stay balanced to stop a counter-attack", "Stand off the field", "Ignore the play", "Block their own shooter"],
+      "correct": 0,
+      "explanation": "Not everyone should crash the goal; some players protect the team if the ball is cleared."
+    },
+    {
+      "question": "On defensive throw-ins, what should nearby players do?",
+      "options": ["Mark tightly and block easy passes", "Give everyone space", "Run away from the ball", "Stand behind the referee"],
+      "correct": 0,
+      "explanation": "Good pressure on throw-ins can force a mistake or a backwards pass."
+    },
+    {
+      "question": "Why are set pieces important?",
+      "options": ["They are planned chances to score or defend well", "They do not matter", "They are only for goalkeepers", "They stop teamwork"],
+      "correct": 0,
+      "explanation": "Restarts happen every game, and a prepared team can gain a big advantage."
+    }
+  ]
+}

@@ -171,6 +171,61 @@
       ],
       "correct": 0,
       "explanation": "Safe, smart passing helps your team control the game and create chances."
+    },
+    {
+      "question": "Why should center-backs split wide when the goalkeeper has the ball?",
+      "options": [
+        "To create bigger passing lanes",
+        "To stand closer together",
+        "To block the keeper",
+        "To hide from the ball"
+      ],
+      "correct": 0,
+      "explanation": "Splitting wide stretches the press and gives the keeper safer options."
+    },
+    {
+      "question": "What body shape helps you receive when building out?",
+      "options": [
+        "Side-on so you can see the field",
+        "Facing only your own goal",
+        "Back turned to everything",
+        "Eyes closed"
+      ],
+      "correct": 0,
+      "explanation": "A side-on body lets you see pressure and play forward more quickly."
+    },
+    {
+      "question": "What should the defensive midfielder do during build-up?",
+      "options": [
+        "Show for the ball between or beside opponents",
+        "Hide behind a marker",
+        "Stand on the goal line",
+        "Run offside"
+      ],
+      "correct": 0,
+      "explanation": "The defensive midfielder can connect defenders to midfield when they find a passing lane."
+    },
+    {
+      "question": "If opponents press one side hard, what can the back line do?",
+      "options": [
+        "Use the keeper or center player to switch sides",
+        "Keep forcing the same side",
+        "All dribble into pressure",
+        "Stop moving"
+      ],
+      "correct": 0,
+      "explanation": "Switching through a safe player can escape pressure and find open space."
+    },
+    {
+      "question": "When should you clear instead of build short?",
+      "options": [
+        "When pressure is too close and a mistake would be dangerous",
+        "Every time",
+        "Never",
+        "Only after halftime"
+      ],
+      "correct": 0,
+      "explanation": "Playing short is good, but protecting the goal comes first."
     }
   ]
 }
