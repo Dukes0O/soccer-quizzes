@@ -66,7 +66,7 @@
     "id": "goalkeeper-basics",
     "title": "Goalkeeper Basics",
     "description": "Learn keeper positioning, saves, communication, and safe distribution.",
-    "graphic": "GK",
+    "graphic": "assets/icons/goalkeeper-basics.svg",
     "badge": "assets/badges/goalkeeper-basics.svg",
     "animation": "assets/animations/goalkeeper-basics.json",
     "themeColor": "#22c55e"
@@ -75,7 +75,7 @@
     "id": "set-pieces-restarts",
     "title": "Set Pieces & Restarts",
     "description": "Practice smart choices on corners, free kicks, penalties, and throw-ins.",
-    "graphic": "SP",
+    "graphic": "assets/icons/set-pieces-restarts.svg",
     "badge": "assets/badges/set-pieces-restarts.svg",
     "animation": "assets/animations/set-pieces-restarts.json",
     "themeColor": "#f59e0b"

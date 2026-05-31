@@ -2,7 +2,7 @@
   "id": "goalkeeper-basics",
   "title": "Goalkeeper Basics",
   "description": "Learn the keeper habits that help the whole team stay calm and organized.",
-  "graphic": "GK",
+  "graphic": "assets/icons/goalkeeper-basics.svg",
   "badge": "assets/badges/goalkeeper-basics.svg",
   "animation": "assets/animations/goalkeeper-basics.json",
   "themeColor": "#22c55e",

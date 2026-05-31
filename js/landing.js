@@ -33,6 +33,15 @@ function renderBadge(badge, alt, size = 'small', downloadable = false) {
   return badge || '';
 }
 
+function renderGraphic(graphic, alt) {
+  if (graphic && /\.(png|svg)$/i.test(graphic)) {
+    let src = graphic;
+    if (window.location.pathname.includes('/quizzes/')) src = '../' + graphic;
+    return `<img src="${src}" alt="${alt || 'Quiz icon'}" class="w-12 h-12 object-contain" loading="lazy">`;
+  }
+  return graphic || '';
+}
+
 function renderQuizCards(quizzes, userProgress) {
   const container = document.getElementById('quiz-list');
   container.innerHTML = '';
@@ -49,7 +58,7 @@ function renderQuizCards(quizzes, userProgress) {
     }
     container.innerHTML += `
       <div class="glass-panel rounded-2xl flex items-center gap-4 p-6 border-l-4 card-hover" style="border-color: ${q.themeColor};">
-        <div class="bg-white/5 p-4 rounded-xl text-3xl">${q.graphic}</div>
+        <div class="bg-white/5 p-4 rounded-xl text-3xl flex items-center justify-center">${renderGraphic(q.graphic, q.title)}</div>
         <div class="quiz-info flex-1">
           <h2 class="text-xl font-bold font-sports tracking-wide mb-1">${q.title}</h2>
           <p class="text-slate-400 text-sm mb-4">${q.description}</p>

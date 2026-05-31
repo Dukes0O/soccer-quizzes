@@ -1,21 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
   <title id="title">Direct free kick decision</title>
-  <desc id="desc">A direct free kick near the box with a wall, keeper, shooter, and passing option.</desc>
+  <desc id="desc">A direct free kick outside the penalty area with a horizontal defensive wall in front of the goal.</desc>
   <rect width="900" height="500" fill="#0b5c2a"/>
-  <rect x="35" y="35" width="830" height="430" fill="none" stroke="#d9f99d" stroke-width="4"/>
-  <rect x="670" y="145" width="195" height="210" fill="none" stroke="#d9f99d" stroke-width="4"/>
-  <rect x="795" y="205" width="70" height="90" fill="none" stroke="#d9f99d" stroke-width="3"/>
+  <rect x="36" y="36" width="828" height="428" fill="none" stroke="#d9f99d" stroke-width="4"/>
+  <rect x="255" y="36" width="390" height="150" fill="none" stroke="#d9f99d" stroke-width="4"/>
+  <rect x="360" y="36" width="180" height="68" fill="none" stroke="#d9f99d" stroke-width="3"/>
+  <rect x="386" y="20" width="128" height="16" fill="none" stroke="#fef08a" stroke-width="5"/>
+  <path d="M348 186 Q450 255 552 186" fill="none" stroke="#d9f99d" stroke-width="3" opacity=".8"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#fef08a"/>
+    </marker>
+  </defs>
   <g font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle">
-    <circle cx="585" cy="255" r="18" fill="#22c55e"/><text x="585" y="292" fill="white">BALL</text>
-    <circle cx="635" cy="210" r="16" fill="#22c55e"/><text x="635" y="182" fill="white">PASS</text>
-    <circle cx="835" cy="250" r="18" fill="#facc15"/><text x="835" y="285" fill="white">GK</text>
-    <circle cx="700" cy="238" r="16" fill="#ef4444"/>
-    <circle cx="725" cy="238" r="16" fill="#ef4444"/>
-    <circle cx="750" cy="238" r="16" fill="#ef4444"/>
-    <circle cx="775" cy="238" r="16" fill="#ef4444"/>
+    <circle cx="450" cy="76" r="18" fill="#facc15"/><text x="450" y="112" fill="white">GK</text>
+    <circle cx="390" cy="196" r="17" fill="#ef4444"/>
+    <circle cx="430" cy="196" r="17" fill="#ef4444"/>
+    <circle cx="470" cy="196" r="17" fill="#ef4444"/>
+    <circle cx="510" cy="196" r="17" fill="#ef4444"/>
+    <text x="450" y="232" fill="white">WALL</text>
+    <circle cx="420" cy="330" r="18" fill="#22c55e"/><text x="420" y="368" fill="white">BALL</text>
+    <circle cx="320" cy="300" r="17" fill="#22c55e"/><text x="320" y="276" fill="white">PASS</text>
+    <circle cx="490" cy="360" r="17" fill="#22c55e"/><text x="490" y="400" fill="white">SHOOTER</text>
   </g>
-  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10z" fill="#fef08a"/></marker></defs>
-  <path d="M600 250 C675 160 760 155 830 220" fill="none" stroke="#fef08a" stroke-width="5" marker-end="url(#arrow)"/>
-  <path d="M595 248 C610 230 620 218 635 210" fill="none" stroke="#fef08a" stroke-width="5" marker-end="url(#arrow)" stroke-dasharray="10 10"/>
-  <text x="450" y="488" fill="#d9f99d" font-family="Inter, Arial, sans-serif" font-size="22" text-anchor="middle">Direct free kick: you may shoot, but the best choice still depends on distance, wall, and angle.</text>
+  <path d="M430 322 C465 260 490 230 510 205" fill="none" stroke="#fef08a" stroke-width="5" marker-end="url(#arrow)"/>
+  <path d="M430 330 C430 230 438 135 450 82" fill="none" stroke="#fef08a" stroke-width="5" marker-end="url(#arrow)" stroke-dasharray="10 10"/>
+  <path d="M410 322 C380 312 350 304 322 300" fill="none" stroke="#fef08a" stroke-width="5" marker-end="url(#arrow)" stroke-dasharray="4 10"/>
+  <text x="450" y="474" fill="#d9f99d" font-family="Inter, Arial, sans-serif" font-size="20" text-anchor="middle">Direct free kick: check the wall, keeper, distance, angle, and passing option.</text>
 </svg>

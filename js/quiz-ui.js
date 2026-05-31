@@ -43,6 +43,14 @@ function renderQuestionMedia(question) {
   `;
 }
 
+function renderQuizGraphic(graphic, alt, sizeClass = 'w-12 h-12') {
+  if (graphic && /\.(png|svg)$/i.test(graphic)) {
+    return `<img src="${resolveAssetPath(graphic)}" alt="${alt || 'Quiz icon'}" class="${sizeClass} object-contain" loading="lazy">`;
+  }
+  const textSize = sizeClass.includes('w-10') ? 'text-3xl' : 'text-5xl';
+  return `<span class="${textSize}">${graphic || ''}</span>`;
+}
+
 function triggerGoalAnimation() {
   const goalText = document.createElement('div');
   goalText.className = 'fixed inset-0 flex items-center justify-center z-[100] pointer-events-none';
@@ -96,7 +104,7 @@ async function renderQuizUI() {
     document.getElementById('quiz-app').innerHTML = `
       <div class="glass-panel rounded-3xl p-10 flex flex-col items-center shadow-2xl border-t-4" style="border-color:${quizData.themeColor}">
         <div class="bg-white/5 p-6 rounded-2xl mb-6">
-          <span class="text-5xl">${quizData.graphic}</span>
+          ${renderQuizGraphic(quizData.graphic, quizData.title, 'w-14 h-14')}
         </div>
         <h2 class="text-3xl font-bold font-sports italic mb-2 text-white">${quizData.title}</h2>
         <p class="text-slate-400 text-center mb-8 max-w-sm">Welcome to the Academy. Enter your callsign to begin the tactical evaluation.</p>
@@ -127,7 +135,7 @@ async function renderQuizUI() {
     const percent = (current / 10) * 100;
     const container = document.getElementById('field-container');
 
-    const playerImage = 'https://upload.wikimedia.org/wikipedia/commons/6/64/Kylian_Mbapp%C3%A9_%28cropped%29.png';
+    const playerImage = resolveAssetPath('assets/graphics/football-player-cr7.png');
 
     container.innerHTML = `
       <div class="relative w-full h-full overflow-hidden bg-[repeating-linear-gradient(90deg,#0b5c2a_0_9%,#0a5427_9%_18%)]">
@@ -147,7 +155,7 @@ async function renderQuizUI() {
         <!-- Player -->
         <div class="absolute transition-all duration-1000 ease-out flex flex-col items-center"
              style="left: ${percent}%; top: 50%; transform: translate(-50%, -50%); z-index: 10;">
-          <img src="${playerImage}" alt="Kylian Mbappe" class="w-16 md:w-24 h-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" />
+          <img src="${playerImage}" alt="Ronaldo" class="w-16 md:w-24 h-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" />
           <div class="bg-black/80 px-2 py-0.5 rounded text-[10px] font-sports text-white mt-1 border border-white/20 whitespace-nowrap uppercase">${getPlayerName()}</div>
         </div>
 
@@ -180,7 +188,7 @@ async function renderQuizUI() {
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
           <div class="flex items-center gap-4">
             <div class="bg-white/5 p-4 rounded-xl">
-              <span class="text-3xl">${quizData.graphic}</span>
+              ${renderQuizGraphic(quizData.graphic, quizData.title, 'w-10 h-10')}
             </div>
             <div>
               <h2 class="text-2xl font-bold font-sports italic text-white uppercase">${quizData.title}</h2>
@@ -275,7 +283,7 @@ async function renderQuizUI() {
     document.getElementById('quiz-app').innerHTML = `
       <div class="glass-panel rounded-3xl p-10 flex flex-col items-center shadow-2xl border-t-4" style="border-color:${quizData.themeColor}">
         <div class="bg-white/5 p-6 rounded-2xl mb-6">
-          <span class="text-5xl">${quizData.graphic}</span>
+          ${renderQuizGraphic(quizData.graphic, quizData.title, 'w-14 h-14')}
         </div>
         <h2 class="text-3xl font-bold font-sports italic mb-2 text-white uppercase">${quizData.title} COMPLETED</h2>
         <p class="text-slate-400 text-center mb-8">Debriefing for <span class="text-white font-bold">${getPlayerName()}</span></p>

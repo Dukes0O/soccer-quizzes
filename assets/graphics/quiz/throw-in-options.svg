@@ -1,27 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
-  <title id="title">Throw-in options</title>
-  <desc id="desc">A thrower on the right sideline has short, line, and backwards support options.</desc>
+  <title id="title">Throw-in options from the sideline</title>
+  <desc id="desc">A throw-in from the lower sideline with goals shown at both ends of the pitch.</desc>
   <rect width="900" height="500" fill="#0b5c2a"/>
-  <rect x="35" y="35" width="830" height="430" fill="none" stroke="#d9f99d" stroke-width="4"/>
-  <line x1="450" y1="35" x2="450" y2="465" stroke="#d9f99d" stroke-width="3" opacity=".8"/>
-  <circle cx="450" cy="250" r="62" fill="none" stroke="#d9f99d" stroke-width="3" opacity=".8"/>
-  <line x1="865" y1="35" x2="865" y2="465" stroke="#fef08a" stroke-width="7"/>
-  <g font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle">
-    <circle cx="865" cy="255" r="18" fill="#22c55e"/><text x="865" y="292" fill="white">THROWER</text>
-    <circle cx="760" cy="200" r="17" fill="#22c55e"/><text x="760" y="170" fill="white">A</text>
-    <circle cx="770" cy="340" r="17" fill="#22c55e"/><text x="770" y="385" fill="white">B</text>
-    <circle cx="690" cy="260" r="17" fill="#22c55e"/><text x="690" y="230" fill="white">C</text>
-    <circle cx="695" cy="165" r="17" fill="#ef4444"/>
-    <circle cx="725" cy="285" r="17" fill="#ef4444"/>
-    <circle cx="650" cy="340" r="17" fill="#ef4444"/>
-  </g>
+  <rect x="45" y="45" width="810" height="390" fill="none" stroke="#d9f99d" stroke-width="4"/>
+  <line x1="450" y1="45" x2="450" y2="435" stroke="#d9f99d" stroke-width="3" opacity=".8"/>
+  <circle cx="450" cy="240" r="58" fill="none" stroke="#d9f99d" stroke-width="3" opacity=".8"/>
+  <rect x="45" y="155" width="120" height="170" fill="none" stroke="#d9f99d" stroke-width="4"/>
+  <rect x="735" y="155" width="120" height="170" fill="none" stroke="#d9f99d" stroke-width="4"/>
+  <rect x="28" y="206" width="17" height="68" fill="none" stroke="#fef08a" stroke-width="5"/>
+  <rect x="855" y="206" width="17" height="68" fill="none" stroke="#fef08a" stroke-width="5"/>
+  <line x1="45" y1="435" x2="855" y2="435" stroke="#fef08a" stroke-width="7"/>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#fef08a"/>
+      <path d="M0 0 10 5 0 10z" fill="#fef08a"/>
     </marker>
   </defs>
-  <path d="M845 250 C805 235 785 215 765 200" fill="none" stroke="#fef08a" stroke-width="5" marker-end="url(#arrow)"/>
-  <path d="M845 264 C808 300 790 325 772 340" fill="none" stroke="#fef08a" stroke-width="5" marker-end="url(#arrow)"/>
-  <path d="M842 255 C790 260 735 260 705 260" fill="none" stroke="#fef08a" stroke-width="5" marker-end="url(#arrow)" stroke-dasharray="10 10"/>
-  <text x="450" y="488" fill="#d9f99d" font-family="Inter, Arial, sans-serif" font-size="22" text-anchor="middle">Choose the safest high-quality throw: open feet, down the line, or reset?</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle">
+    <circle cx="650" cy="435" r="18" fill="#22c55e"/><text x="650" y="405" fill="white">THROWER</text>
+    <circle cx="610" cy="340" r="17" fill="#22c55e"/><text x="610" y="318" fill="white">A</text>
+    <circle cx="705" cy="342" r="17" fill="#22c55e"/><text x="705" y="382" fill="white">B</text>
+    <circle cx="555" cy="410" r="17" fill="#22c55e"/><text x="555" y="392" fill="white">C</text>
+    <circle cx="585" cy="285" r="17" fill="#ef4444"/>
+    <circle cx="640" cy="320" r="17" fill="#ef4444"/>
+    <circle cx="735" cy="315" r="17" fill="#ef4444"/>
+  </g>
+  <path d="M650 416 C640 384 625 360 612 340" fill="none" stroke="#fef08a" stroke-width="5" marker-end="url(#arrow)"/>
+  <path d="M660 418 C680 385 695 360 704 342" fill="none" stroke="#fef08a" stroke-width="5" marker-end="url(#arrow)"/>
+  <path d="M637 424 C610 418 585 413 558 410" fill="none" stroke="#fef08a" stroke-width="5" marker-end="url(#arrow)" stroke-dasharray="10 10"/>
+  <text x="450" y="474" fill="#d9f99d" font-family="Inter, Arial, sans-serif" font-size="20" text-anchor="middle">Throw-in from the sideline: open feet, down the line, or reset.</text>
 </svg>

@@ -2,7 +2,7 @@
   "id": "set-pieces-restarts",
   "title": "Set Pieces & Restarts",
   "description": "Corners, free kicks, penalties, throw-ins, and restart decisions.",
-  "graphic": "SP",
+  "graphic": "assets/icons/set-pieces-restarts.svg",
   "badge": "assets/badges/set-pieces-restarts.svg",
   "animation": "assets/animations/set-pieces-restarts.json",
   "themeColor": "#f59e0b",

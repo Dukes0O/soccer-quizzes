@@ -1,9 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
   <title id="title">Set Pieces and Restarts Badge</title>
-  <rect width="256" height="256" rx="28" fill="#0f172a"/>
-  <path d="M128 22 218 58v70c0 58-38 92-90 108-52-16-90-50-90-108V58z" fill="#78350f" stroke="#f59e0b" stroke-width="10"/>
-  <path d="M72 166c24-58 58-90 112-98" fill="none" stroke="#fef3c7" stroke-width="12" stroke-linecap="round"/>
-  <path d="m176 50 22 18-27 12z" fill="#fef3c7"/>
-  <circle cx="84" cy="176" r="24" fill="#f8fafc" stroke="#111827" stroke-width="7"/>
-  <text x="128" y="214" text-anchor="middle" font-family="Rajdhani, Arial, sans-serif" font-size="42" font-weight="700" fill="#f8fafc">SP</text>
+  <defs>
+    <radialGradient id="navy" cx="35%" cy="25%" r="70%">
+      <stop offset="0" stop-color="#083b74"/>
+      <stop offset="1" stop-color="#04254d"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#e9b341"/>
+      <stop offset="1" stop-color="#cf8b19"/>
+    </linearGradient>
+  </defs>
+  <circle cx="128" cy="128" r="120" fill="url(#gold)"/>
+  <circle cx="128" cy="128" r="106" fill="url(#navy)"/>
+  <circle cx="128" cy="128" r="88" fill="#083b74" opacity=".85"/>
+  <path d="M82 184V58" stroke="#f6f4e8" stroke-width="12" stroke-linecap="round"/>
+  <path d="M90 62 176 94 90 124z" fill="#f36c21" stroke="#f6f4e8" stroke-width="8" stroke-linejoin="round"/>
+  <circle cx="160" cy="172" r="28" fill="#f6f4e8" stroke="#04254d" stroke-width="10"/>
+  <path d="M118 162c-28-24-26-58 10-78" fill="none" stroke="#e9b341" stroke-width="12" stroke-linecap="round"/>
+  <path d="m128 84 4 22 18-12" fill="#e9b341"/>
+  <text x="128" y="225" text-anchor="middle" font-family="Rajdhani, Arial, sans-serif" font-size="32" font-weight="700" fill="#f6f4e8">RESTARTS</text>
 </svg>
