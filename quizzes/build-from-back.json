@@ -22,9 +22,9 @@
       "question": "Why should defenders spread out when starting an attack?",
       "options": [
         "To give themselves space to receive a pass",
-        "To stand next to each other",
-        "To block their own goal",
-        "To run away"
+        "To stand on the same passing line",
+        "To leave the central lane empty",
+        "To force the goalkeeper to play long"
       ],
       "correct": 0,
       "explanation": "Spreading creates passing lanes and makes it easier to keep the ball."
@@ -33,9 +33,9 @@
       "question": "Who should step forward to receive the ball from the goalie?",
       "options": [
         "The closest defender",
-        "Someone far away",
-        "The coach",
-        "No one"
+        "A marked forward near halfway",
+        "A player standing behind an opponent",
+        "No passing option"
       ],
       "correct": 0,
       "explanation": "The nearest defender helps the goalie by offering an easy option to pass."
@@ -56,8 +56,8 @@
       "options": [
         "Pass the ball quickly to them",
         "Hold onto the ball",
-        "Dribble straight",
-        "Shout at them"
+        "Dribble into the central pressure",
+        "Wait until the defender closes them"
       ],
       "correct": 0,
       "explanation": "A quick pass to an open wing player moves the attack forward safely."
@@ -66,9 +66,9 @@
       "question": "Why do we sometimes take a few small passes instead of one long pass?",
       "options": [
         "To keep better control and accuracy",
-        "To waste time",
-        "Because we can't kick far",
-        "To confuse teammates"
+        "To slow down even when a forward pass is open",
+        "Because long passes are never useful",
+        "To keep every teammate in the same lane"
       ],
       "correct": 0,
       "explanation": "Short, accurate passes help keep possession under pressure."
@@ -88,9 +88,9 @@
       "question": "If a defender is double-teamed, you should:",
       "options": [
         "Offer yourself for a pass in space",
-        "Stand still",
-        "Hide behind someone",
-        "Yell 'shoot!'"
+        "Stand on the same line as the defender",
+        "Stay in the defender's cover shadow",
+        "Move farther from the passing lane"
       ],
       "correct": 0,
       "explanation": "Moving into space gives your teammate a safe outlet."
@@ -99,9 +99,9 @@
       "question": "When building from the back, why is it okay to pass backwards sometimes?",
       "options": [
         "It keeps the ball when forward options are blocked",
-        "It makes the game slow",
-        "It's always wrong",
-        "It confuses the coach"
+        "It is only useful when winning late",
+        "It is always the wrong direction",
+        "It invites pressure if no teammate moves"
       ],
       "correct": 0,
       "explanation": "A backward pass can reset and open up new spaces to attack."
@@ -122,8 +122,8 @@
       "options": [
         "Offers a passing option in front of defense",
         "Runs to the corners",
-        "Stands still",
-        "Only defends in the box"
+        "Stays marked behind an opponent",
+        "Only defends inside the penalty area"
       ],
       "correct": 0,
       "explanation": "They link defense and attack by receiving and distributing passes."
@@ -133,8 +133,8 @@
       "options": [
         "Pass wide to a defender",
         "Dribble into the box",
-        "Stop playing",
-        "Yell 'help!'"
+        "Hold the ball until pressure arrives",
+        "Force the pass through the middle"
       ],
       "correct": 0,
       "explanation": "Passing wide lets you keep control and find a better angle."
@@ -143,9 +143,9 @@
       "question": "Why is checking over your shoulder useful when building out?",
       "options": [
         "To see where teammates and defenders are",
-        "To look at the sky",
-        "To confuse yourself",
-        "To rest"
+        "To look only at your own goalkeeper",
+        "To turn blindly into pressure",
+        "To ignore the defender behind you"
       ],
       "correct": 0,
       "explanation": "It helps you pick the best passing lane and avoid pressure."
@@ -156,7 +156,7 @@
         "Pass into space behind the opponent's midfield",
         "Run offside",
         "Pass to our own goalkeeper",
-        "Only dribble"
+        "Dribble across your own goal"
       ],
       "correct": 0,
       "explanation": "It moves the ball past defenders into areas where teammates can run."
@@ -176,9 +176,9 @@
       "question": "Why should center-backs split wide when the goalkeeper has the ball?",
       "options": [
         "To create bigger passing lanes",
-        "To stand closer together",
-        "To block the keeper",
-        "To hide from the ball"
+        "To stand closer together in one lane",
+        "To block the keeper's passing angle",
+        "To stay behind the pressing forward"
       ],
       "correct": 0,
       "explanation": "Splitting wide stretches the press and gives the keeper safer options."
@@ -188,8 +188,8 @@
       "options": [
         "Side-on so you can see the field",
         "Facing only your own goal",
-        "Back turned to everything",
-        "Eyes closed"
+        "Back turned to pressure and teammates",
+        "Square to the ball with no view forward"
       ],
       "correct": 0,
       "explanation": "A side-on body lets you see pressure and play forward more quickly."
@@ -198,9 +198,9 @@
       "question": "What should the defensive midfielder do during build-up?",
       "options": [
         "Show for the ball between or beside opponents",
-        "Hide behind a marker",
+        "Stay behind a marker",
         "Stand on the goal line",
-        "Run offside"
+        "Move beyond the striker too early"
       ],
       "correct": 0,
       "explanation": "The defensive midfielder can connect defenders to midfield when they find a passing lane."
@@ -209,9 +209,9 @@
       "question": "If opponents press one side hard, what can the back line do?",
       "options": [
         "Use the keeper or center player to switch sides",
-        "Keep forcing the same side",
+        "Keep forcing passes down the crowded side",
         "All dribble into pressure",
-        "Stop moving"
+        "Stop creating new passing angles"
       ],
       "correct": 0,
       "explanation": "Switching through a safe player can escape pressure and find open space."
@@ -220,9 +220,9 @@
       "question": "When should you clear instead of build short?",
       "options": [
         "When pressure is too close and a mistake would be dangerous",
-        "Every time",
-        "Never",
-        "Only after halftime"
+        "Every time the goalkeeper has it",
+        "Never, even inside your own box",
+        "Only after the first half"
       ],
       "correct": 0,
       "explanation": "Playing short is good, but protecting the goal comes first."

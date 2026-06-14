@@ -238,18 +238,26 @@ async function renderQuizUI() {
 
       if (selected === correct) {
         score++;
-        triggerGoalAnimation();
-        document.getElementById('feedback').innerHTML = `
-          <div class="text-green-400 font-sports font-bold italic tracking-wider animate-pulse flex items-center gap-2">
-            <span>✅</span> PERFECT EXECUTION
-          </div>
-        `;
+        document.querySelectorAll('input[name="option"]').forEach(input => input.disabled = true);
+
+        setTimeout(() => {
+          if (idx < 9) {
+            current++;
+            renderQuestion(current);
+          } else {
+            renderResults();
+          }
+        }, 300);
+        return;
       } else {
         triggerMissAnimation();
         labels[selected].classList.add('selected-incorrect');
+        document.querySelectorAll('input[name="option"]').forEach(input => input.disabled = true);
         document.getElementById('feedback').innerHTML = `
-          <div class="text-red-400 font-sports font-bold italic tracking-wider flex items-center gap-2">
-            <span>❌</span> TACTICAL ERROR
+          <div class="rounded-2xl border border-red-500/20 bg-red-500/10 p-4">
+            <p class="text-red-300 font-sports font-bold italic tracking-wider mb-2">TACTICAL CORRECTION</p>
+            <p class="text-slate-200 text-sm leading-relaxed mb-2">${q.explanation}</p>
+            <p class="text-slate-400 text-xs leading-relaxed"><span class="font-bold text-slate-300">Correct answer:</span> ${q.options[correct]}</p>
           </div>
         `;
       }
@@ -276,6 +284,7 @@ async function renderQuizUI() {
     let passed = score === 10;
     if (passed) {
       window.userCore.setQuizProgress(quizId, score, quizData.badge);
+      triggerGoalAnimation();
     } else {
       window.userCore.setQuizProgress(quizId, score, null);
     }
