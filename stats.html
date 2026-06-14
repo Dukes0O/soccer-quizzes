@@ -21,7 +21,7 @@
 
   <header class="w-full py-10 bg-gradient-to-b from-emerald-900/25 to-[#0f172a] text-center">
     <h1 class="text-4xl md:text-5xl font-bold font-sports italic text-white">Team <span class="text-green-500">Stats</span></h1>
-    <p class="text-slate-400 font-sports tracking-widest uppercase mt-2">Season story through June 6</p>
+    <p class="text-slate-400 font-sports tracking-widest uppercase mt-2">Season story through June 13</p>
   </header>
 
   <main class="w-full max-w-7xl flex-1 p-6">
@@ -47,19 +47,19 @@
             <p class="font-sports text-xs tracking-widest text-slate-500 uppercase">Clean Minutes</p>
           </div>
           <div class="bg-slate-900/95 p-6">
-            <p class="font-sports text-5xl font-bold text-white">4-1-3</p>
+            <p class="font-sports text-5xl font-bold text-white">5-1-3</p>
             <p class="font-sports text-xs tracking-widest text-slate-500 uppercase">Record</p>
           </div>
           <div class="bg-slate-900/95 p-6">
-            <p class="font-sports text-5xl font-bold text-white">+22</p>
+            <p class="font-sports text-5xl font-bold text-white">+29</p>
             <p class="font-sports text-xs tracking-widest text-slate-500 uppercase">Goal Spread</p>
           </div>
           <div class="bg-slate-900/95 p-6">
-            <p class="font-sports text-5xl font-bold text-white">2.00</p>
+            <p class="font-sports text-5xl font-bold text-white">1.89</p>
             <p class="font-sports text-xs tracking-widest text-slate-500 uppercase">GA / Game</p>
           </div>
           <div class="bg-slate-900/95 p-6">
-            <p class="font-sports text-5xl font-bold text-white">38</p>
+            <p class="font-sports text-5xl font-bold text-white">46</p>
             <p class="font-sports text-xs tracking-widest text-slate-500 uppercase">Goals For</p>
           </div>
         </div>
@@ -213,7 +213,7 @@
       { date: 'May 30', opponent: 'Chilliwack Palmeiras', homeAway: 'Away', for: 11, against: 0, result: 'WIN' },
       { date: 'Jun 6', opponent: 'North Delta (Div 1)', homeAway: 'Away', for: 1, against: 8, result: 'LOSS' },
       { date: 'Jun 10', opponent: 'Boys vs. Parents', homeAway: 'Friendly', for: 6, against: 8, result: 'Friendly', countsForTeamStats: false },
-      { date: 'Jun 13', opponent: 'Chilliwack Real Betis', homeAway: 'Home', for: null, against: null, result: 'Upcoming', countsForTeamStats: false }
+      { date: 'Jun 13', opponent: 'Chilliwack Real Betis', homeAway: 'Home', for: 8, against: 1, result: 'WIN' }
     ];
 
     const defensiveLines = [
@@ -223,7 +223,8 @@
       { date: 'May 2', opponent: 'Aldergrove D11 D2', keeper: 'Andy / Matteo', mid: 'Weston / Mohammad', left: 'Dash', right: 'Logan', for: 2, against: 2 },
       { date: 'May 9', opponent: 'South Delta Selects', keeper: 'Matteo / Noah S', mid: 'Oz / Mohammad', left: 'Ayato / Oz', right: 'Dash', for: 4, against: 4 },
       { date: 'May 23', opponent: 'LUSA Jaswal', keeper: 'Matteo / Noah S', mid: 'Weston', left: 'Ayato', right: 'Dash', for: 6, against: 0 },
-      { date: 'May 30', opponent: 'Chilliwack Palmeiras', keeper: 'Noah S / Matteo', mid: 'Weston', left: 'Ayato', right: 'Dash', for: 11, against: 0 }
+      { date: 'May 30', opponent: 'Chilliwack Palmeiras', keeper: 'Noah S / Matteo', mid: 'Weston', left: 'Ayato', right: 'Dash', for: 11, against: 0 },
+      { date: 'Jun 13', opponent: 'Chilliwack Real Betis', keeper: 'Mohammad / Andy', mid: 'Gratian / Mohammad / Weston', left: 'Ayato', right: 'Dash', for: 8, against: 1 }
     ];
 
     const keeperCleanSheetCredits = [
@@ -240,17 +241,17 @@
     ];
 
     const playerStats = [
-      { name: 'Mohammad', goals: 10, assists: 0 },
-      { name: 'Andy', goals: 9, assists: 1 },
-      { name: 'Callum', goals: 4, assists: 1 },
+      { name: 'Mohammad', goals: 12, assists: 0 },
+      { name: 'Andy', goals: 10, assists: 1 },
+      { name: 'Callum', goals: 5, assists: 2 },
       { name: 'Gratian', goals: 3, assists: 4 },
-      { name: 'Pouya', goals: 3, assists: 1 },
+      { name: 'Pouya', goals: 4, assists: 2 },
       { name: 'Matteo', goals: 2, assists: 0 },
       { name: 'Oz', goals: 2, assists: 0 },
-      { name: 'Aaron', goals: 1, assists: 1 },
+      { name: 'Aaron', goals: 2, assists: 6 },
       { name: 'Dash', goals: 1, assists: 1 },
-      { name: 'Luke', goals: 1, assists: 3 },
-      { name: 'Noah', goals: 1, assists: 4 },
+      { name: 'Luke', goals: 2, assists: 4 },
+      { name: 'Noah', goals: 2, assists: 4 },
       { name: 'Weston', goals: 1, assists: 0 }
     ].map(player => ({
       ...player,
