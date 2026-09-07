@@ -65,16 +65,6 @@
       </div>
     </section>
 
-    <div class="glass-panel border-l-4 border-amber-500 p-6 mb-10 rounded-2xl flex items-center justify-between">
-      <div>
-        <p class="font-sports text-amber-500 font-bold text-lg mb-1 italic uppercase tracking-wider">Academy Intel</p>
-        <p class="text-slate-400 text-sm">Review these tactical briefings to prepare for your next match.</p>
-      </div>
-      <div class="hidden md:block">
-         <span class="font-sports text-[10px] text-slate-600 tracking-[0.3em] uppercase">Security Level: Elite</span>
-      </div>
-    </div>
-
     <section id="video-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
       <!-- Video items will be injected here -->
     </section>
@@ -83,6 +73,12 @@
   <footer class="w-full py-12 text-center text-slate-600 text-sm font-sports border-t border-white/5">
     &copy; 2025 ELITE SOCCER ACADEMY | ANALYTICS DEPT
   </footer>
+
+  <dialog id="video-player" class="video-dialog" aria-labelledby="video-title">
+    <div class="video-dialog-heading"><h2 id="video-title">Team Video</h2><button id="close-video" type="button">Close player</button></div>
+    <div id="video-frame"></div>
+    <a id="video-original" target="_blank" rel="noopener noreferrer">Open in Google Drive</a>
+  </dialog>
 
   <script>
     const videoClipsData = [
@@ -147,7 +143,37 @@
       });
     }
 
-    document.addEventListener('DOMContentLoaded', renderVideoClips);
+    document.addEventListener('DOMContentLoaded', () => {
+      renderVideoClips();
+      const dialog = document.getElementById('video-player');
+      document.querySelectorAll('main a[href^="https://drive.google.com/file/d/"]').forEach(link => {
+        const video = videoClipsData.find(item => item.gdrive_link === link.href);
+        if (!video) return;
+        link.setAttribute('aria-label', `Watch ${video.title}`);
+        link.rel = 'noopener noreferrer';
+        link.addEventListener('click', event => {
+          if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+          event.preventDefault();
+          const id = new URL(video.gdrive_link).pathname.split('/')[3];
+          const frame = document.createElement('iframe');
+          frame.src = `https://drive.google.com/file/d/${id}/preview`;
+          frame.title = video.title;
+          frame.allow = 'fullscreen';
+          frame.allowFullscreen = true;
+          document.getElementById('video-title').textContent = video.title;
+          document.getElementById('video-original').href = video.gdrive_link;
+          document.getElementById('video-frame').replaceChildren(frame);
+          dialog.showModal();
+        });
+      });
+      document.getElementById('close-video').onclick = () => dialog.close();
+      dialog.addEventListener('close', () => document.getElementById('video-frame').replaceChildren());
+      dialog.addEventListener('click', event => {
+        if (event.target !== dialog) return;
+        const box = dialog.getBoundingClientRect();
+        if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close();
+      });
+    });
   </script>
 </body>
 </html>

@@ -7,25 +7,330 @@
   "animation": "assets/animations/attacking-purpose.json",
   "themeColor": "#f59e42",
   "questions": [
-    { "question": "What should you do if you're in a 2v1 situation?", "options": ["Try to dribble the defender alone", "Pass to your teammate if the defender comes to you", "Shoot from far away", "Pass backwards"], "correct": 1, "explanation": "Draw the defender in, then pass to your open teammate." },
-    { "question": "What is the goal of an attacking play?", "options": ["To keep possession without moving forward", "To get the ball wide every time", "To score or create a chance to score", "To dribble until a defender steps in"], "correct": 2, "explanation": "Every attack should move toward scoring or threatening the goal." },
-    { "question": "An overlap is when:", "options": ["A teammate runs around the outside to get ahead of the ball", "A teammate drops behind the ball to defend", "Two attackers stand in the same passing lane", "A defender steps into midfield"], "correct": 0, "explanation": "Overlapping creates confusion for defenders and passing options." },
-    { "question": "When is a good time to dribble instead of pass?", "options": ["When you're alone and have space", "When 3 defenders are in front", "When a safer forward pass is open", "Every time you receive wide"], "correct": 0, "explanation": "Use dribbling when there's space or you can beat a single player." },
-    { "question": "Why is it smart to keep your head up while attacking?", "options": ["To scan defenders, teammates, and open space", "To focus only on the sideline", "To slow down every attack", "To avoid passing through midfield"], "correct": 0, "explanation": "Good attackers scan for options while moving." },
-    { "question": "A through ball is:", "options": ["A pass into open space behind the defenders", "A shot from far away", "A pass that always goes backward", "A cross from the corner area"], "correct": 0, "explanation": "A through ball helps a teammate run behind the defense to score." },
-    { "question": "What's the best way to break down a tight defense?", "options": ["Pass slowly", "Try solo moves", "Pass quickly and move off the ball", "Shoot every time"], "correct": 2, "explanation": "Fast passing and movement pulls defenders out of position." },
-    { "question": "If you're near the goal with the ball, what do you do?", "options": ["Reset to midfield even if space is open", "Shoot high from any angle", "Look to shoot or pass quickly", "Hold the ball until all defenders recover"], "correct": 2, "explanation": "Quick decisions lead to goals." },
-    { "question": "When your teammate is making a run forward, you should:", "options": ["Pass behind them", "Wait until they stop", "Pass in front into space", "Pass to their back foot every time"], "correct": 2, "explanation": "Timing and leading passes create scoring chances." },
-    { "question": "What is the benefit of switching the play?", "options": ["It confuses teammates", "It finds space on the other side", "It makes it harder to pass", "It delays the attack"], "correct": 1, "explanation": "Switching helps attack open areas when one side is crowded." },
-    { "question": "What helps attackers most when playing as a team?", "options": ["Individual tricks only", "Spacing, timing, and support", "All players standing on the same line", "Forward runs with no passing angle"], "correct": 1, "explanation": "Attacking as a group needs movement and smart choices." },
-    { "question": "You are wide open near the goal. What should your teammate do?", "options": ["Pass to you", "Shoot from far away", "Turn around", "Pass backward"], "correct": 0, "explanation": "Using open players near goal leads to better chances." },
-    { "question": "When attacking, where is the most dangerous space to go?", "options": ["The middle in front of the goal", "The sideline near halfway", "The defensive third", "The space behind your own back line"], "correct": 0, "explanation": "The middle near the goal is the best area to create chances." },
-    { "question": "If you're outnumbered on attack, what should you do?", "options": ["Take on all the defenders", "Hold the ball and wait for support", "Run beyond the last defender too early", "Force a pass into pressure"], "correct": 1, "explanation": "Slow down and keep possession until teammates arrive." },
-    { "question": "Why should you try to attack fast after winning the ball?", "options": ["The other team is out of position", "Your team can stop supporting the ball", "The safest pass is always backward", "The wide players should stay still"], "correct": 0, "explanation": "Quick attacks can surprise a team that just lost the ball." },
-    { "question": "What is a cutback pass?", "options": ["A pass from near the endline back toward open space", "A pass into your own net", "A throw-in", "A pass only to the goalkeeper"], "correct": 0, "explanation": "Cutbacks are dangerous because defenders often run toward goal and leave space behind them." },
-    { "question": "What should the player without the ball do during a 2v1?", "options": ["Stay wide enough to be a real passing option", "Run right beside the ball carrier", "Stand in the defender's cover shadow", "Move behind the ball carrier only"], "correct": 0, "explanation": "Good spacing makes the defender choose between stopping the dribble or the pass." },
-    { "question": "What is a third-player run?", "options": ["A run by a teammate who receives after two other players combine", "A run that starts from an offside position", "A defender holding the back line", "A shot from midfield"], "correct": 0, "explanation": "Third-player runs are hard to mark because the runner arrives from a different angle." },
-    { "question": "When should an attacker hold the ball up?", "options": ["When teammates need time to join the attack", "Every time they get it", "Only after the attack has already ended", "When no teammate can support"], "correct": 0, "explanation": "Holding the ball can turn a rushed attack into a stronger team attack." },
-    { "question": "Why is timing important for runs behind the defense?", "options": ["A well-timed run stays onside and meets the pass", "Late runs are always better", "Timing does not affect the passing lane", "It helps the runner avoid receiving the ball"], "correct": 0, "explanation": "Good timing helps the passer find you without you going offside." }
+    {
+      "question": "What should you do if you're in a 2v1 situation?",
+      "options": [
+        "Try to dribble the defender alone",
+        "Pass to your teammate if the defender comes to you",
+        "Shoot from far away",
+        "Pass backwards"
+      ],
+      "correct": 1,
+      "explanation": "Draw the defender in, then pass to your open teammate.",
+      "id": "attacking-purpose-01",
+      "level": "beginner"
+    },
+    {
+      "question": "What is the goal of an attacking play?",
+      "options": [
+        "To keep possession without moving forward",
+        "To get the ball wide every time",
+        "To score or create a chance to score",
+        "To dribble until a defender steps in"
+      ],
+      "correct": 2,
+      "explanation": "Every attack should move toward scoring or threatening the goal.",
+      "id": "attacking-purpose-02",
+      "level": "novice"
+    },
+    {
+      "question": "An overlap is when:",
+      "options": [
+        "A teammate runs around the outside to get ahead of the ball",
+        "A teammate drops behind the ball to defend",
+        "Two attackers stand in the same passing lane",
+        "A defender steps into midfield"
+      ],
+      "correct": 0,
+      "explanation": "Overlapping creates confusion for defenders and passing options.",
+      "id": "attacking-purpose-03",
+      "level": "beginner"
+    },
+    {
+      "question": "When is a good time to dribble instead of pass?",
+      "options": [
+        "When you're alone and have space",
+        "When 3 defenders are in front",
+        "When a safer forward pass is open",
+        "Every time you receive wide"
+      ],
+      "correct": 0,
+      "explanation": "Use dribbling when there's space or you can beat a single player.",
+      "id": "attacking-purpose-04",
+      "level": "novice"
+    },
+    {
+      "question": "Why is it smart to keep your head up while attacking?",
+      "options": [
+        "To scan defenders, teammates, and open space",
+        "To focus only on the sideline",
+        "To slow down every attack",
+        "To avoid passing through midfield"
+      ],
+      "correct": 0,
+      "explanation": "Good attackers scan for options while moving.",
+      "id": "attacking-purpose-05",
+      "level": "novice"
+    },
+    {
+      "question": "A through ball is:",
+      "options": [
+        "A pass into open space behind the defenders",
+        "A shot from far away",
+        "A pass that always goes backward",
+        "A cross from the corner area"
+      ],
+      "correct": 0,
+      "explanation": "A through ball helps a teammate run behind the defense to score.",
+      "id": "attacking-purpose-06",
+      "level": "beginner"
+    },
+    {
+      "question": "A compact defense blocks the direct route to goal. What can create an opening?",
+      "options": [
+        "Move the ball and change supporting angles to draw defenders out",
+        "Keep forcing passes through the same blocked lane",
+        "Have everyone wait near the penalty spot",
+        "Dribble toward the largest group of defenders"
+      ],
+      "correct": 0,
+      "explanation": "Use width, combinations, or a switch to move the defense. A patient backward pass may help create the next opening.",
+      "id": "attacking-purpose-07",
+      "level": "intermediate"
+    },
+    {
+      "question": "If you're near the goal with the ball, what do you do?",
+      "options": [
+        "Reset to midfield even if space is open",
+        "Shoot high from any angle",
+        "Look to shoot or pass quickly",
+        "Hold the ball until all defenders recover"
+      ],
+      "correct": 2,
+      "explanation": "Check the keeper, defenders, and teammates before the ball arrives. When a useful chance appears, a quick controlled shot or pass can use it before the space closes.",
+      "id": "attacking-purpose-08",
+      "level": "beginner"
+    },
+    {
+      "question": "Your teammate starts a run behind the defense and the passing lane is open. What helps the pass connect?",
+      "options": [
+        "Lead the run with the right timing and pace",
+        "Pass to where the runner started",
+        "Wait until a defender closes the lane",
+        "Use maximum power regardless of distance"
+      ],
+      "correct": 0,
+      "explanation": "Time the pass and judge the runner's speed. Where offside applies, check their position when the ball is played.",
+      "id": "attacking-purpose-09",
+      "level": "beginner"
+    },
+    {
+      "question": "What is the benefit of switching the play?",
+      "options": [
+        "It confuses teammates",
+        "It finds space on the other side",
+        "It makes it harder to pass",
+        "It delays the attack"
+      ],
+      "correct": 1,
+      "explanation": "Switching helps attack open areas when one side is crowded.",
+      "id": "attacking-purpose-10",
+      "level": "beginner"
+    },
+    {
+      "question": "What helps attackers most when playing as a team?",
+      "options": [
+        "Individual tricks only",
+        "Spacing, timing, and support",
+        "All players standing on the same line",
+        "Forward runs with no passing angle"
+      ],
+      "correct": 1,
+      "explanation": "Attacking as a group needs movement and smart choices.",
+      "id": "attacking-purpose-11",
+      "level": "novice"
+    },
+    {
+      "question": "You are unmarked near goal and a clear passing lane connects you to the ball. What is useful?",
+      "options": [
+        "Be ready for a pass and a quick finish",
+        "Move behind the nearest defender",
+        "Stay facing away from the ball",
+        "Run toward the passer and close the space"
+      ],
+      "correct": 0,
+      "explanation": "Being available includes a clear lane and being ready to receive. Unmarked does not always mean a pass can reach you.",
+      "id": "attacking-purpose-12",
+      "level": "beginner"
+    },
+    {
+      "question": "When attacking, where is the most dangerous space to go?",
+      "options": [
+        "The middle in front of the goal",
+        "The sideline near halfway",
+        "The defensive third",
+        "The space behind your own back line"
+      ],
+      "correct": 0,
+      "explanation": "The middle near the goal is the best area to create chances.",
+      "id": "attacking-purpose-13",
+      "level": "novice"
+    },
+    {
+      "question": "You are outnumbered, the forward route is blocked, and support is arriving. What can help?",
+      "options": [
+        "Protect or recycle the ball until support can join",
+        "Attack the largest group of defenders immediately",
+        "Force a pass through a blocked lane",
+        "Stop looking for teammates"
+      ],
+      "correct": 0,
+      "explanation": "Holding the ball can buy time. Use a safe supporting pass if that is better than shielding. Attack quickly if a real opening appears.",
+      "id": "attacking-purpose-14",
+      "level": "intermediate"
+    },
+    {
+      "question": "You win the ball and see open space before opponents recover. Why might you attack quickly?",
+      "options": [
+        "Their defensive shape has not recovered yet",
+        "Every turnover requires a first-time forward pass",
+        "Your teammates can stop providing cover",
+        "The offside rule stops applying"
+      ],
+      "correct": 0,
+      "explanation": "A quick attack can use the space before it closes. If no useful route is open, keeping the ball is a good choice.",
+      "id": "attacking-purpose-15",
+      "level": "beginner"
+    },
+    {
+      "question": "What is a cutback pass?",
+      "options": [
+        "A pass from near the endline back toward open space",
+        "A pass into your own net",
+        "A throw-in",
+        "A pass only to the goalkeeper"
+      ],
+      "correct": 0,
+      "explanation": "Cutbacks are dangerous because defenders often run toward goal and leave space behind them.",
+      "id": "attacking-purpose-16",
+      "level": "beginner"
+    },
+    {
+      "question": "What should the player without the ball do during a 2v1?",
+      "options": [
+        "Stay wide enough to be a real passing option",
+        "Run right beside the ball carrier",
+        "Stand in the defender's cover shadow",
+        "Move behind the ball carrier only"
+      ],
+      "correct": 0,
+      "explanation": "Good spacing makes the defender choose between stopping the dribble or the pass.",
+      "id": "attacking-purpose-17",
+      "level": "intermediate"
+    },
+    {
+      "question": "What is a third-player run?",
+      "options": [
+        "A run by a teammate who receives after two other players combine",
+        "A run that starts from an offside position",
+        "A defender holding the back line",
+        "A shot from midfield"
+      ],
+      "correct": 0,
+      "explanation": "Third-player runs are hard to mark because the runner arrives from a different angle.",
+      "id": "attacking-purpose-18",
+      "level": "intermediate"
+    },
+    {
+      "question": "When should an attacker hold the ball up?",
+      "options": [
+        "When teammates need time to join the attack",
+        "Every time they get it",
+        "Only after the attack has already ended",
+        "When no teammate can support"
+      ],
+      "correct": 0,
+      "explanation": "Holding the ball can turn a rushed attack into a stronger team attack.",
+      "id": "attacking-purpose-19",
+      "level": "beginner"
+    },
+    {
+      "question": "In a game using offside, why time a run behind the defense with the pass?",
+      "options": [
+        "To be onside when a teammate plays the ball and arrive at the right moment",
+        "To be onside only when you receive the ball",
+        "To avoid ever running behind a defender",
+        "To wait until the passer has stopped moving"
+      ],
+      "correct": 0,
+      "explanation": "Offside position is judged when a teammate plays or touches the ball, not when you receive it. Local youth formats may use different offside rules.",
+      "id": "attacking-purpose-20",
+      "level": "intermediate"
+    },
+    {
+      "id": "attacking-purpose-21",
+      "level": "advanced",
+      "question": "A right-footed player starts on the left wing. What opportunity can that role create?",
+      "options": [
+        "Moving inside onto their stronger foot to pass or shoot",
+        "Being required to stay on the touchline for the whole attack",
+        "Making their left foot unusable",
+        "Removing the need for a teammate to provide width"
+      ],
+      "correct": 0,
+      "explanation": "This is a common inverted-winger role. Cutting inside can open passing or shooting angles, but the player should still read the defender and can go outside when it helps."
+    },
+    {
+      "id": "attacking-purpose-22",
+      "level": "advanced",
+      "question": "An inverted winger moves inside and a full-back is free to overlap. What must the team balance?",
+      "options": [
+        "Width on the outside and cover if the ball is lost",
+        "Getting every nearby player into the same inside lane",
+        "Keeping the full-back behind the ball in every attack",
+        "Sending both center-backs into the penalty area too"
+      ],
+      "correct": 0,
+      "explanation": "The overlap can preserve width as the winger moves inside. Other players must adjust their support and protection against a counter-attack."
+    },
+    {
+      "id": "attacking-purpose-23",
+      "level": "advanced",
+      "question": "Three defenders have shifted toward your left-side attack. Your right winger is open. What is the purpose of keeping the ball on the left briefly?",
+      "options": [
+        "Draw pressure before switching when the route to the right is ready",
+        "Keep passing left even after every lane is blocked",
+        "Make the right winger move into the same crowd",
+        "Wait until the right winger is also marked"
+      ],
+      "correct": 0,
+      "explanation": "An overload uses extra players in one area. It can draw defenders across and free the other side, but the switch still needs a safe route and good timing."
+    },
+    {
+      "id": "attacking-purpose-24",
+      "level": "advanced",
+      "question": "A striker drops short and a center-back follows. What can another attacker look for?",
+      "options": [
+        "A timed run into the space the center-back has left",
+        "The exact same short space beside the striker",
+        "A run straight beyond the line before the pass is possible",
+        "A position that blocks the striker's passing lane"
+      ],
+      "correct": 0,
+      "explanation": "One player's movement can create a chance for another. Check the space, the passer, and the offside line before making the run."
+    },
+    {
+      "id": "attacking-purpose-25",
+      "level": "advanced",
+      "question": "Your team has a 3v2 attack. One defender guards the passing lane while the other backs away from you. What should you read?",
+      "options": [
+        "Whether carrying forward can make a defender commit before you release the ball",
+        "Which teammate you decided to pass to before the break",
+        "Only the distance to goal, ignoring both defenders",
+        "Only the farthest teammate, regardless of the passing lane"
+      ],
+      "correct": 0,
+      "explanation": "Do not pass just because you have an extra player. Carrying into open space can make a defender choose, then the pass or shot may become clearer."
+    }
   ]
 }

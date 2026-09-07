@@ -9,133 +9,338 @@
   "questions": [
     {
       "question": "On a throw-in, what should the thrower look for first?",
-      "options": ["A teammate who is open and ready", "The longest throw possible", "A teammate marked tightly", "The most crowded central space"],
+      "options": [
+        "A teammate who is open and ready",
+        "The longest throw possible",
+        "A teammate marked tightly",
+        "The most crowded central space"
+      ],
       "correct": 0,
-      "explanation": "The best throw-in keeps the ball with your team, even if it is short."
+      "explanation": "The best throw-in keeps the ball with your team, even if it is short.",
+      "id": "set-pieces-restarts-01",
+      "level": "novice"
     },
     {
       "question": "In the diagram, which throw-in option is usually safest if A is open to feet?",
       "image": "assets/graphics/quiz/throw-in-options.svg",
       "imageAlt": "Throw-in options near the sideline",
-      "options": ["Throw to A's feet", "Force it into the crowded middle", "Throw toward a marked teammate", "Wait until the open lane closes"],
+      "options": [
+        "Throw to A's feet",
+        "Force it into the crowded middle",
+        "Throw toward a marked teammate",
+        "Wait until the open lane closes"
+      ],
       "correct": 0,
-      "explanation": "A short open option helps your team keep possession and play forward after receiving."
+      "explanation": "A short open option helps your team keep possession and play forward after receiving.",
+      "id": "set-pieces-restarts-02",
+      "level": "beginner"
     },
     {
-      "question": "What are the thrower's feet supposed to do on a legal throw-in?",
-      "options": ["Stay on or behind the line with both feet down", "Lift one foot before release", "Step fully onto the field before release", "Stand several yards inside the field"],
+      "question": "At the moment you release a throw-in, what must your feet do?",
+      "options": [
+        "Keep part of each foot touching the line or the ground outside it",
+        "Have both feet entirely inside the field",
+        "Lift one foot to add distance",
+        "Jump with both feet before releasing"
+      ],
       "correct": 0,
-      "explanation": "Both feet must stay on or behind the touchline when the ball is released."
+      "explanation": "Some part of each foot must stay on the touchline or the ground behind it at release. You also face the field and throw with both hands from behind and over your head.",
+      "id": "set-pieces-restarts-03",
+      "level": "novice"
     },
     {
-      "question": "Can you be offside directly from a throw-in?",
-      "options": ["No", "Yes, always", "Only from attacking throw-ins", "Only if the throw goes forward"],
+      "question": "Under standard offside rules, can you be penalized for receiving directly from a throw-in in an offside position?",
+      "options": [
+        "No, a direct throw-in reception is an exception",
+        "Yes, if you receive in the attacking half",
+        "Yes, unless a defender touches it first",
+        "Only if the throw goes backward"
+      ],
       "correct": 0,
-      "explanation": "There is no offside directly from a throw-in, but normal offside rules return after the next touch."
+      "explanation": "There is no offside offence for receiving directly from a throw-in. After a teammate next plays the ball, ordinary offside decisions can apply.",
+      "id": "set-pieces-restarts-04",
+      "level": "beginner"
     },
     {
       "question": "On an attacking corner, what should players do before the kick?",
-      "options": ["Know their run or job", "All attack the exact same space", "Wait flat-footed until the ball arrives", "Stand behind the keeper before the kick"],
+      "options": [
+        "Know their run or job",
+        "All attack the exact same space",
+        "Wait flat-footed until the ball arrives",
+        "Stand behind the keeper before the kick"
+      ],
       "correct": 0,
-      "explanation": "Good corners work best when each player knows where to run and who attacks rebounds."
+      "explanation": "Good corners work best when each player knows where to run and who attacks rebounds.",
+      "id": "set-pieces-restarts-05",
+      "level": "novice"
     },
     {
       "question": "In the corner diagram, why is the player at the edge of the box useful?",
       "image": "assets/graphics/quiz/corner-kick-options.svg",
       "imageAlt": "Corner kick with near post, spot, and edge options",
-      "options": ["They can shoot or stop a clearance", "They should stand on the goal line", "They make the near-post run crowded", "They mark their own teammate"],
+      "options": [
+        "They can shoot or stop a clearance",
+        "They should stand on the goal line",
+        "They make the near-post run crowded",
+        "They mark their own teammate"
+      ],
       "correct": 0,
-      "explanation": "The edge player can win loose clearances and help stop counter-attacks."
+      "explanation": "The edge player can win loose clearances and help stop counter-attacks.",
+      "id": "set-pieces-restarts-06",
+      "level": "intermediate"
     },
     {
       "question": "When defending a corner, what matters most?",
-      "options": ["Mark players, protect space, and be first to the ball", "All chase the kicker", "Stand still", "Wait for the keeper to do everything"],
+      "options": [
+        "Mark players, protect space, and be first to the ball",
+        "All chase the kicker",
+        "Stand still",
+        "Wait for the keeper to do everything"
+      ],
       "correct": 0,
-      "explanation": "Corners are dangerous, so defenders must communicate and attack the ball."
+      "explanation": "Corners are dangerous, so defenders must communicate and attack the ball.",
+      "id": "set-pieces-restarts-07",
+      "level": "beginner"
     },
     {
-      "question": "What is a direct free kick?",
-      "options": ["A free kick that can score without another touch", "A kick that must go backward", "A throw-in", "A keeper punt"],
+      "question": "What does a direct free kick allow?",
+      "options": [
+        "A goal straight into the opponents' goal without another player touching it",
+        "A goal only after a second teammate touches it",
+        "The kicker to play the ball twice before anyone else",
+        "The ball to be kicked while rolling"
+      ],
       "correct": 0,
-      "explanation": "On a direct free kick, the shooter can score straight from the kick."
+      "explanation": "A direct free kick can go straight into the opponents' goal. You can still choose a pass when it offers a better chance.",
+      "id": "set-pieces-restarts-08",
+      "level": "beginner"
     },
     {
       "question": "In the direct free kick diagram, what should the shooter consider before shooting?",
       "image": "assets/graphics/quiz/free-kick-direct.svg",
       "imageAlt": "Direct free kick with wall and passing option",
-      "options": ["Distance, wall, keeper, and a possible pass", "Only how hard they can kick", "Only the nearest defender", "Whether every teammate is inside the wall"],
+      "options": [
+        "Distance, wall, keeper, and a possible pass",
+        "Only how hard they can kick",
+        "Only the nearest defender",
+        "Whether every teammate is inside the wall"
+      ],
       "correct": 0,
-      "explanation": "A smart free kick choice depends on the whole picture, not just power."
+      "explanation": "A smart free kick choice depends on the whole picture, not just power.",
+      "id": "set-pieces-restarts-09",
+      "level": "intermediate"
     },
     {
-      "question": "What is an indirect free kick?",
-      "options": ["A free kick that must touch another player before a goal counts", "A penalty kick", "A goal kick", "A shot that always counts"],
+      "question": "How can an indirect free kick lead to a goal?",
+      "options": [
+        "The ball must touch another player before entering the goal",
+        "The kicker can kick it twice themselves",
+        "The ball only needs to touch a post first",
+        "It counts directly if the kick is powerful enough"
+      ],
       "correct": 0,
-      "explanation": "For an indirect kick, a teammate or opponent must touch the ball before it can be a goal."
+      "explanation": "Another player, a teammate or opponent, must touch the ball. The referee signals an indirect free kick with a raised arm.",
+      "id": "set-pieces-restarts-10",
+      "level": "beginner"
     },
     {
-      "question": "In the indirect kick diagram, why does the first player touch the ball lightly?",
+      "question": "In the indirect free-kick diagram, what makes the planned second player's shot valid?",
       "image": "assets/graphics/quiz/indirect-kick-box.svg",
       "imageAlt": "Indirect free kick with first touch and shot",
-      "options": ["To make the next shot legal", "To move the ball farther from goal", "To restart before teammates are ready", "Because indirect kicks cannot lead to goals"],
+      "options": [
+        "The first player kicks the ball so it clearly moves, then the second plays it",
+        "The first player rests a foot on a ball that stays still",
+        "The first player takes two touches before the second",
+        "The second player shoots before the first touch"
+      ],
       "correct": 0,
-      "explanation": "The first touch allows the second player to shoot and score legally."
+      "explanation": "The restart must put the ball into play with clear movement. The second player then provides the other touch needed for a goal.",
+      "id": "set-pieces-restarts-11",
+      "level": "intermediate"
     },
     {
       "question": "What should the defending team do on a free kick near their goal?",
-      "options": ["Set a wall, mark runners, and listen to the keeper", "All run to midfield and leave the box open", "Turn away from the shooter", "Stand behind the goal line"],
+      "options": [
+        "Set a wall, mark runners, and listen to the keeper",
+        "All run to midfield and leave the box open",
+        "Turn away from the shooter",
+        "Stand behind the goal line"
+      ],
       "correct": 0,
-      "explanation": "The wall blocks the shot, while other defenders mark passes and rebounds."
+      "explanation": "The wall blocks the shot, while other defenders mark passes and rebounds.",
+      "id": "set-pieces-restarts-12",
+      "level": "beginner"
     },
     {
       "question": "On a penalty kick, what should the shooter focus on?",
       "image": "assets/graphics/quiz/penalty-kick.svg",
       "imageAlt": "Penalty kick setup",
-      "options": ["Pick a spot, stay calm, and strike cleanly", "Change their mind during the run-up", "Strike without looking at the ball", "Aim at the keeper's body"],
+      "options": [
+        "Pick a spot, stay calm, and strike cleanly",
+        "Change their mind during the run-up",
+        "Strike without looking at the ball",
+        "Aim at the keeper's body"
+      ],
       "correct": 0,
-      "explanation": "A calm, clean strike gives the shooter the best chance."
+      "explanation": "A calm, clean strike gives the shooter the best chance.",
+      "id": "set-pieces-restarts-13",
+      "level": "beginner"
     },
     {
-      "question": "After taking a penalty, what should the shooter do?",
-      "options": ["Follow in for a rebound", "Run away before the keeper reacts", "Turn away from the goalmouth", "Stop outside the box if the ball is live"],
+      "question": "During normal play, your penalty is saved and the ball stays loose. What can you do?",
+      "options": [
+        "Try for the rebound after the keeper has touched it",
+        "Touch it again even if it only hit the post",
+        "Kick it out of the keeper's hands",
+        "Stop because penalty rebounds never count"
+      ],
       "correct": 0,
-      "explanation": "If the keeper saves and the ball stays in play, rebounds can still be scored."
+      "explanation": "In normal play, the taker may play the ball again after another player touches it. A post alone does not count. Penalty shoot-outs do not allow follow-up shots.",
+      "id": "set-pieces-restarts-14",
+      "level": "beginner"
     },
     {
       "question": "On a goal kick, what is a good team shape?",
-      "options": ["Spread out to create safe passing lanes", "All stand in one corner", "Stay behind opponents", "Stand flat on the goal line"],
+      "options": [
+        "Spread out to create safe passing lanes",
+        "All stand in one corner",
+        "Stay behind opponents",
+        "Stand flat on the goal line"
+      ],
       "correct": 0,
-      "explanation": "Good spacing gives the kicker more safe choices."
+      "explanation": "Good spacing gives the kicker more safe choices.",
+      "id": "set-pieces-restarts-15",
+      "level": "beginner"
     },
     {
-      "question": "When should a team take a quick free kick?",
-      "options": ["When the ball is stopped and a good quick option is open", "When nobody on your team is ready", "When the referee says wait for the whistle", "When the only option is marked"],
+      "question": "A quick free kick may help your team. What should you check first?",
+      "options": [
+        "The ball is stationary, the option is useful, and the referee has not told you to wait",
+        "Only whether the other team is distracted",
+        "Whether you can move the ball to a better place",
+        "Whether your teammate will notice after you kick"
+      ],
       "correct": 0,
-      "explanation": "A quick restart can surprise the other team, but only if it is allowed and useful."
+      "explanation": "A quick restart still needs to follow the rules. If the referee requires a whistle, wait for it.",
+      "id": "set-pieces-restarts-16",
+      "level": "intermediate"
     },
     {
-      "question": "If the referee tells you to wait for the whistle on a free kick, what should you do?",
-      "options": ["Wait for the whistle", "Kick it before the referee is ready", "Move the ball to a better angle without permission", "Ask the other team to organize first"],
+      "question": "The referee tells you to wait for the whistle before a free kick. What should you do?",
+      "options": [
+        "Wait for the whistle",
+        "Kick as soon as a teammate calls",
+        "Kick if a defender looks away",
+        "Move closer to goal before taking it"
+      ],
       "correct": 0,
-      "explanation": "If the referee says wait, kicking early can make your team lose the restart."
+      "explanation": "Follow the referee's instruction. Taking it too early can lead to a retake and a caution.",
+      "id": "set-pieces-restarts-17",
+      "level": "novice"
     },
     {
       "question": "What is a good job for a player not attacking the ball on a corner?",
-      "options": ["Stay balanced to stop a counter-attack", "Stand beyond the far sideline", "Watch without marking anyone", "Crowd the shooter at the corner"],
+      "options": [
+        "Stay balanced to stop a counter-attack",
+        "Stand beyond the far sideline",
+        "Watch without marking anyone",
+        "Crowd the shooter at the corner"
+      ],
       "correct": 0,
-      "explanation": "Not everyone should crash the goal; some players protect the team if the ball is cleared."
+      "explanation": "Not everyone should crash the goal; some players protect the team if the ball is cleared.",
+      "id": "set-pieces-restarts-18",
+      "level": "intermediate"
     },
     {
-      "question": "On defensive throw-ins, what should nearby players do?",
-      "options": ["Mark tightly and block easy passes", "Give every receiver space to turn", "Run away from the ball-side channel", "Stand behind the thrower"],
+      "question": "When the other team has a throw-in, what should nearby defenders do?",
+      "options": [
+        "Track receivers and close passing lanes while respecting the thrower's space",
+        "Stand against the thrower to block their arms",
+        "Leave every receiver free and watch the ball",
+        "Turn away until the throw is taken"
+      ],
       "correct": 0,
-      "explanation": "Good pressure on throw-ins can force a mistake or a backwards pass."
+      "explanation": "Mark and communicate without obstructing the throw. Under standard Laws, opponents must stay at least two metres from the throw-in point.",
+      "id": "set-pieces-restarts-19",
+      "level": "beginner"
     },
     {
       "question": "Why are set pieces important?",
-      "options": ["They are planned chances to score or defend well", "They rarely affect field position", "They are only for goalkeepers", "They remove the need for teamwork"],
+      "options": [
+        "They are planned chances to score or defend well",
+        "They rarely affect field position",
+        "They are only for goalkeepers",
+        "They remove the need for teamwork"
+      ],
       "correct": 0,
-      "explanation": "Restarts happen every game, and a prepared team can gain a big advantage."
+      "explanation": "Restarts happen every game, and a prepared team can gain a big advantage.",
+      "id": "set-pieces-restarts-20",
+      "level": "novice"
+    },
+    {
+      "id": "set-pieces-restarts-21",
+      "level": "advanced",
+      "question": "Your team has an attacking corner. An opponent stays high for a counter. What job is useful away from the goalmouth?",
+      "options": [
+        "Cover the outlet and be ready for a clearance",
+        "Add another runner into the same crowded goalmouth",
+        "Stand beside the corner taker with no passing lane",
+        "Watch from the halfway line without checking the opponent"
+      ],
+      "correct": 0,
+      "explanation": "A set piece includes both the scoring chance and what happens if possession changes. Balance the attack with players ready to protect the team."
+    },
+    {
+      "id": "set-pieces-restarts-22",
+      "level": "advanced",
+      "question": "Under standard Laws in normal play, your penalty hits only the post and rebounds to you. What should you do?",
+      "options": [
+        "Let another player touch it before you play it again",
+        "Shoot again immediately because the post resets the play",
+        "Pick up the ball and ask to retake the kick",
+        "Dribble once before taking a second shot"
+      ],
+      "correct": 0,
+      "explanation": "The taker cannot touch the ball again until it touches another player. The post or crossbar is not another player."
+    },
+    {
+      "id": "set-pieces-restarts-23",
+      "level": "advanced",
+      "question": "A short corner draws two defenders out. A teammate is now open in a better crossing position. What is the purpose of the short combination?",
+      "options": [
+        "Change the angle and create a better delivery opportunity",
+        "Use extra passes even if the original cross was clear",
+        "Remove the need for runners in the penalty area",
+        "Keep the ball by the corner for the entire attack"
+      ],
+      "correct": 0,
+      "explanation": "A short corner can move defenders and open another angle. Read the response; if it closes down, keep the ball through another safe option."
+    },
+    {
+      "id": "set-pieces-restarts-24",
+      "level": "advanced",
+      "question": "A defender follows your first movement at a throw-in. How can you create a new receiving lane?",
+      "options": [
+        "Change direction and time the next movement with the thrower",
+        "Hold the same position and ask for a harder throw",
+        "Push the marker away before receiving",
+        "Move into the lane a teammate is already using"
+      ],
+      "correct": 0,
+      "explanation": "A change of direction can separate you from a marker. Coordinate with the thrower so the lane is open when the ball is released."
+    },
+    {
+      "id": "set-pieces-restarts-25",
+      "level": "advanced",
+      "question": "The referee signals an indirect free kick near goal. The defense expects a short touch then a shot. What should your team still read?",
+      "options": [
+        "The wall, the open lanes, and whether a pass creates a better chance",
+        "Only the original plan, regardless of the defense",
+        "Only which teammate can kick hardest",
+        "Only whether the ball is close enough for a direct shot"
+      ],
+      "correct": 0,
+      "explanation": "A restart plan is a starting point. The required touches still apply, but a different combination may work better if opponents block the planned route."
     }
   ]
 }

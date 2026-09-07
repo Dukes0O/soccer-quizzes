@@ -7,25 +7,330 @@
   "animation": "assets/animations/passing.json",
   "themeColor": "#2563eb",
   "questions": [
-    {"question": "When making a pass to your teammate, where should you aim?","options": ["Behind them", "Where they're running to (into space)", "At their feet if they're standing still", "Far away from them"],"correct": 1,"explanation": "Pass into space so your teammate can run onto the ball without slowing down."},
-    {"question": "What's the best way to make sure your pass reaches your teammate?","options": ["Look down only at your feet", "Call for the ball without scanning", "Look at your teammate before passing", "Pass before checking pressure"],"correct": 2,"explanation": "Always look up to find your teammate before passing."},
-    {"question": "After passing the ball, what should you usually do?","options": ["Stop moving in the same spot", "Follow your pass to support your teammate", "Run away from the field shape", "Stay where you passed from"],"correct": 1,"explanation": "Move after passing so your teammate can pass back or you can find space."},
-    {"question": "A 'give-and-go' means:","options": ["You pass, then your teammate passes right back", "You keep the ball instead of combining", "You pass into pressure and stop moving", "You pass backward only"],"correct": 0,"explanation": "A give-and-go helps quickly move past defenders with teamwork."},
-    {"question": "If your teammate is covered closely, how can you help them?","options": ["Stay hidden behind a defender", "Stand still on the same line", "Move to space so they can pass easier", "Move into the defender's cover shadow"],"correct": 2,"explanation": "Finding space makes it easier for teammates to pass safely."},
-    {"question": "Which part of your foot gives the most control for short passes?","options": ["Toe", "Heel", "Inside of the foot", "Outside edge"],"correct": 2,"explanation": "The inside of your foot helps you make accurate, controlled passes."},
-    {"question": "Why should you spread out when your team has the ball?","options": ["So defenders have to chase more", "To get closer together in one lane", "To leave the wide channels unused", "To reduce passing angles"],"correct": 0,"explanation": "Spreading out creates space and makes it harder for defenders to cover everyone."},
-    {"question": "When your teammate passes you the ball, how should you receive it?","options": ["Kick it away from support", "Move away from the passing lane", "Use a soft touch to control it", "Stop your run too early"],"correct": 2,"explanation": "A soft first touch helps you control the ball and get ready to pass again quickly."},
-    {"question": "How can you let your teammate know you want the ball?","options": ["Wave without moving into space", "Call their name clearly", "Stay quiet while marked", "Hide behind a defender"],"correct": 1,"explanation": "Clear communication helps teammates know when and where to pass."},
-    {"question": "Passing backwards is:","options": ["Always bad", "Never useful in build-up", "Sometimes a smart choice", "Only allowed for defenders"],"correct": 2,"explanation": "Passing backwards can help keep possession when forward passes are too risky."},
-    {"question": "When should you use a long pass?","options": ["To switch play to open teammates", "Every time you receive the ball", "Only when you are near goal", "Never when space is open wide"],"correct": 0,"explanation": "Long passes help move the ball quickly to open areas far away."},
-    {"question": "If defenders are around you, what's the best type of pass?","options": ["Hard and uncontrolled", "Gentle and accurate", "Slow enough for defenders to step in", "High and looping under close pressure"],"correct": 1,"explanation": "A gentle, accurate pass is easier for your teammate to control under pressure."},
-    {"question": "Moving without the ball helps you:","options": ["Pull teammates out of shape", "Create passing options", "Move into tighter pressure", "Make the field smaller"],"correct": 1,"explanation": "Moving off the ball creates new opportunities to receive passes and attack."},
-    {"question": "Before passing, you should always:","options": ["Call before checking options", "Check your shoulders and surroundings", "Pass without looking up", "Jump before striking the ball"],"correct": 1,"explanation": "Looking around helps you see teammates and defenders clearly before making a pass."},
-    {"question": "Passing quickly between teammates helps because it:","options": ["Makes defenders chase more", "Slows your team down", "Gives defenders time to recover", "Keeps the ball on one side only"],"correct": 0,"explanation": "Fast passing can tire defenders and open gaps for scoring chances."},
-    {"question": "What is a good support angle?","options": ["Standing where your teammate can see and pass to you", "Hiding directly behind a defender", "Standing on the same line as the ball", "Running away from the passing lane"],"correct": 0,"explanation": "A support angle gives the player on the ball a clear passing lane."},
-    {"question": "Why should you check your shoulder before receiving?","options": ["To know if you can turn or need to pass quickly", "To watch the crowd instead of pressure", "To slow the play down every time", "To avoid supporting the ball"],"correct": 0,"explanation": "Scanning before the ball arrives helps you make your next decision faster."},
-    {"question": "When is a one-touch pass useful?","options": ["When you already know the next pass and pressure is close", "When you have not scanned yet", "When you want extra touches in pressure", "When the ball is out of play"],"correct": 0,"explanation": "One-touch passing can beat pressure, but only when you have scanned first."},
-    {"question": "What should the player who passes do in a give-and-go?","options": ["Move into space for the return pass", "Stand still and watch", "Run behind their own goal", "Stop supporting the ball"],"correct": 0,"explanation": "The pass is only half the move; the run creates the next option."},
-    {"question": "If one side of the field is crowded, what should your team try?","options": ["Switch the ball to the open side", "Force another pass into the crowd", "All run into the same channel", "Clear it even with open support"],"correct": 0,"explanation": "Switching play can find space and make defenders shift across the field."}
+    {
+      "question": "Your teammate runs into a clear lane ahead. Where should you aim the pass?",
+      "options": [
+        "Into their path with a speed they can reach",
+        "Behind them so they must stop",
+        "At the position they have already left",
+        "As far ahead as you can kick it"
+      ],
+      "correct": 0,
+      "explanation": "Lead a moving teammate into space. For a stationary or tightly marked player, a pass to feet may be better.",
+      "id": "passing-movement-01",
+      "level": "beginner"
+    },
+    {
+      "question": "What's the best way to make sure your pass reaches your teammate?",
+      "options": [
+        "Look down only at your feet",
+        "Call for the ball without scanning",
+        "Look at your teammate before passing",
+        "Pass before checking pressure"
+      ],
+      "correct": 2,
+      "explanation": "Always look up to find your teammate before passing.",
+      "id": "passing-movement-02",
+      "level": "novice"
+    },
+    {
+      "question": "After passing, how can you support the next player?",
+      "options": [
+        "Move to a useful new passing angle",
+        "Always follow the ball into the same lane",
+        "Stop until the ball is returned",
+        "Run forward even when support behind is needed"
+      ],
+      "correct": 0,
+      "explanation": "Move to help the next action. That may mean going ahead, sideways, or behind, not simply following your pass.",
+      "id": "passing-movement-03",
+      "level": "beginner"
+    },
+    {
+      "question": "What makes a 'give-and-go' work?",
+      "options": [
+        "Pass, move past a defender, and receive a return pass",
+        "Pass and wait in the same place for a return",
+        "Dribble in a circle before passing",
+        "Pass long and stop supporting"
+      ],
+      "correct": 0,
+      "explanation": "The passer moves into a new lane after releasing the ball. The return pass then helps them get past the defender.",
+      "id": "passing-movement-04",
+      "level": "beginner"
+    },
+    {
+      "question": "If your teammate is covered closely, how can you help them?",
+      "options": [
+        "Stay hidden behind a defender",
+        "Stand still on the same line",
+        "Move to space so they can pass easier",
+        "Move into the defender's cover shadow"
+      ],
+      "correct": 2,
+      "explanation": "Finding space makes it easier for teammates to pass safely.",
+      "id": "passing-movement-05",
+      "level": "beginner"
+    },
+    {
+      "question": "Which part of your foot gives the most control for short passes?",
+      "options": [
+        "Toe",
+        "Heel",
+        "Inside of the foot",
+        "Outside edge"
+      ],
+      "correct": 2,
+      "explanation": "The inside of your foot helps you make accurate, controlled passes.",
+      "id": "passing-movement-06",
+      "level": "novice"
+    },
+    {
+      "question": "Why should you spread out when your team has the ball?",
+      "options": [
+        "So defenders have to chase more",
+        "To get closer together in one lane",
+        "To leave the wide channels unused",
+        "To reduce passing angles"
+      ],
+      "correct": 0,
+      "explanation": "Spreading out creates space and makes it harder for defenders to cover everyone.",
+      "id": "passing-movement-07",
+      "level": "beginner"
+    },
+    {
+      "question": "When your teammate passes you the ball, how should you receive it?",
+      "options": [
+        "Kick it away from support",
+        "Move away from the passing lane",
+        "Use a soft touch to control it",
+        "Stop your run too early"
+      ],
+      "correct": 2,
+      "explanation": "A soft first touch helps you control the ball and get ready to pass again quickly.",
+      "id": "passing-movement-08",
+      "level": "novice"
+    },
+    {
+      "question": "How can you let your teammate know you want the ball?",
+      "options": [
+        "Wave without moving into space",
+        "Call their name clearly",
+        "Stay quiet while marked",
+        "Hide behind a defender"
+      ],
+      "correct": 1,
+      "explanation": "Clear communication helps teammates know when and where to pass.",
+      "id": "passing-movement-09",
+      "level": "novice"
+    },
+    {
+      "question": "Passing backwards is:",
+      "options": [
+        "Always bad",
+        "Never useful in build-up",
+        "Sometimes a smart choice",
+        "Only allowed for defenders"
+      ],
+      "correct": 2,
+      "explanation": "Passing backwards can help keep possession when forward passes are too risky.",
+      "id": "passing-movement-10",
+      "level": "beginner"
+    },
+    {
+      "question": "When should you use a long pass?",
+      "options": [
+        "To switch play to open teammates",
+        "Every time you receive the ball",
+        "Only when you are near goal",
+        "Never when space is open wide"
+      ],
+      "correct": 0,
+      "explanation": "Long passes help move the ball quickly to open areas far away.",
+      "id": "passing-movement-11",
+      "level": "intermediate"
+    },
+    {
+      "question": "A defender may intercept a slow pass. How should you pass to an open nearby teammate?",
+      "options": [
+        "Firmly enough to beat the defender, but with control",
+        "As gently as possible every time",
+        "As hard as possible regardless of distance",
+        "With the same force for every teammate"
+      ],
+      "correct": 0,
+      "explanation": "Match the weight of the pass to distance, pressure, and the receiver. Too soft can invite an interception; too hard can be difficult to control.",
+      "id": "passing-movement-12",
+      "level": "beginner"
+    },
+    {
+      "question": "Moving without the ball helps you:",
+      "options": [
+        "Pull teammates out of shape",
+        "Create passing options",
+        "Move into tighter pressure",
+        "Make the field smaller"
+      ],
+      "correct": 1,
+      "explanation": "Moving off the ball creates new opportunities to receive passes and attack.",
+      "id": "passing-movement-13",
+      "level": "novice"
+    },
+    {
+      "question": "Before passing, you should always:",
+      "options": [
+        "Call before checking options",
+        "Check your shoulders and surroundings",
+        "Pass without looking up",
+        "Jump before striking the ball"
+      ],
+      "correct": 1,
+      "explanation": "Looking around helps you see teammates and defenders clearly before making a pass.",
+      "id": "passing-movement-14",
+      "level": "beginner"
+    },
+    {
+      "question": "Why can quick passing and movement help against a settled defense?",
+      "options": [
+        "It can move the ball before defenders close the next lane",
+        "It means you never need to look up",
+        "It makes every forward pass safe",
+        "It replaces the need for good spacing"
+      ],
+      "correct": 0,
+      "explanation": "Move the ball when a useful option is there. Passing quickly is helpful when the team can keep control and create a better angle.",
+      "id": "passing-movement-15",
+      "level": "beginner"
+    },
+    {
+      "question": "What is a good support angle?",
+      "options": [
+        "Standing where your teammate can see and pass to you",
+        "Hiding directly behind a defender",
+        "Standing on the same line as the ball",
+        "Running away from the passing lane"
+      ],
+      "correct": 0,
+      "explanation": "A support angle gives the player on the ball a clear passing lane.",
+      "id": "passing-movement-16",
+      "level": "intermediate"
+    },
+    {
+      "question": "Why should you check your shoulder before receiving?",
+      "options": [
+        "To know if you can turn or need to pass quickly",
+        "To watch the crowd instead of pressure",
+        "To slow the play down every time",
+        "To avoid supporting the ball"
+      ],
+      "correct": 0,
+      "explanation": "Scanning before the ball arrives helps you make your next decision faster.",
+      "id": "passing-movement-17",
+      "level": "intermediate"
+    },
+    {
+      "question": "When is a one-touch pass useful?",
+      "options": [
+        "When you already know the next pass and pressure is close",
+        "When you have not scanned yet",
+        "When you want extra touches in pressure",
+        "When the ball is out of play"
+      ],
+      "correct": 0,
+      "explanation": "One-touch passing can beat pressure, but only when you have scanned first.",
+      "id": "passing-movement-18",
+      "level": "intermediate"
+    },
+    {
+      "question": "You pass for a give-and-go, but a defender blocks your return run. What should you do?",
+      "options": [
+        "Find another useful space instead of forcing the same run",
+        "Run into the defender to keep the plan",
+        "Demand the return pass through the blocked lane",
+        "Stop supporting because the move did not work"
+      ],
+      "correct": 0,
+      "explanation": "A combination is an option, not a promise. Read how the defender reacts and find the next way to help.",
+      "id": "passing-movement-19",
+      "level": "beginner"
+    },
+    {
+      "question": "If one side of the field is crowded, what should your team try?",
+      "options": [
+        "Switch the ball to the open side",
+        "Force another pass into the crowd",
+        "All run into the same channel",
+        "Clear it even with open support"
+      ],
+      "correct": 0,
+      "explanation": "Switching play can find space and make defenders shift across the field.",
+      "id": "passing-movement-20",
+      "level": "intermediate"
+    },
+    {
+      "id": "passing-movement-21",
+      "level": "advanced",
+      "question": "What is the central learning idea in a rondo?",
+      "options": [
+        "Keep possession under pressure by using passing angles, support, and quick decisions",
+        "Complete a fixed pattern with exactly four outside players and one defender",
+        "Keep every player on a cone and avoid changing positions",
+        "Practise shooting at goal after every pass"
+      ],
+      "correct": 0,
+      "explanation": "A rondo is a possession practice against opponents trying to win the ball. Numbers, spaces, and roles can vary. The point is to read pressure and keep useful connections, not memorize one layout."
+    },
+    {
+      "id": "passing-movement-22",
+      "level": "advanced",
+      "question": "A coach changes a rondo from one defender to two. What should the players with the ball expect?",
+      "options": [
+        "New pressure and blocked lanes, so support and decisions must adapt",
+        "Exactly the same passing choices because the outside shape has not changed",
+        "No need to scan because the next pass is predetermined",
+        "Every pass must now go between the two defenders"
+      ],
+      "correct": 0,
+      "explanation": "Another defender changes the available space and timing. Sometimes you can play between defenders; sometimes you should go around them or change your angle."
+    },
+    {
+      "id": "passing-movement-23",
+      "level": "advanced",
+      "question": "A can pass to B, but not directly to C. B can see C arriving in space. How can they connect?",
+      "options": [
+        "A passes to B, who sets the ball for C to receive facing forward",
+        "A forces a pass through the defender toward C",
+        "C stands directly behind B in the same passing lane",
+        "B holds the ball until C is marked"
+      ],
+      "correct": 0,
+      "explanation": "This is a third-player combination. The middle player connects a pass that was not available directly. The timing of C's movement matters as much as the first pass."
+    },
+    {
+      "id": "passing-movement-24",
+      "level": "advanced",
+      "question": "You are closely marked in a possession practice. How can your movement still help?",
+      "options": [
+        "Move to take your marker away and open a lane for someone else",
+        "Stay hidden and demand the ball",
+        "Run toward the ball so all receivers share one lane",
+        "Assume every useful movement must end with you receiving"
+      ],
+      "correct": 0,
+      "explanation": "A supporting run can create space without receiving the ball. Check whether your movement frees a teammate or blocks their lane."
+    },
+    {
+      "id": "passing-movement-25",
+      "level": "advanced",
+      "question": "You receive with pressure at your back. A teammate facing forward is free behind the passer. What combination may help?",
+      "options": [
+        "Set the ball to the free supporting player and move to offer again",
+        "Turn blindly because the goal is ahead",
+        "Take extra touches until the marker commits a foul",
+        "Pass toward the closest opponent to make them react"
+      ],
+      "correct": 0,
+      "explanation": "A short set pass can let a teammate with a better view play forward. The first receiver does not have to turn to help the team progress."
+    }
   ]
 }

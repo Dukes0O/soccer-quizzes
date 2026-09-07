@@ -7,26 +7,330 @@
   "animation": "assets/animations/shooting.json",
   "themeColor": "#f59e42",
   "questions": [
-    {"question": "When shooting, where should you usually aim?","options": ["Right at the goalkeeper", "Wide of the goal", "Corners of the net", "Over the goal"],"correct": 2,"explanation": "Aim for corners because they're hardest for goalkeepers to reach."},
-    {"question": "The best part of your foot for a powerful shot is:","options": ["Inside of foot", "Outside edge", "Toe", "Top of your foot (laces)"],"correct": 3,"explanation": "Using the top of your foot (laces) gives you the most power."},
-    {"question": "What should you do right after shooting?","options": ["Start celebrating before the keeper reacts", "Stand still and watch the shot", "Follow up for rebounds", "Turn away from the goalmouth"],"correct": 2,"explanation": "Always follow your shot to be ready for rebounds or loose balls."},
-    {"question": "A good first touch before shooting helps you:","options": ["Move the ball out of shooting range", "Set up the ball for an easier shot", "Hide the ball from your support players", "Slow down even when space is open"],"correct": 1,"explanation": "A clean first touch sets up an accurate and powerful shot."},
-    {"question": "When you're close to the goal, what's usually the best shot choice?","options": ["Hard and high from any angle", "Soft and controlled into a corner", "Straight at the goalkeeper's body", "High over the crossbar area"],"correct": 1,"explanation": "Close shots should be controlled into corners, harder for the goalkeeper."},
-    {"question": "Which foot should you practice shooting with?","options": ["Only your strong foot", "Only your weak foot", "Both feet", "Neither"],"correct": 2,"explanation": "Practicing with both feet makes you more dangerous and unpredictable."},
-    {"question": "Shooting low is often good because:","options": ["Goalkeepers must get down quickly", "Low shots cannot miss the target", "Low shots always beat defenders", "The keeper cannot dive sideways"],"correct": 0,"explanation": "Low shots are harder for keepers because they must get down quickly."},
-    {"question": "If you're off-balance, you should:","options": ["Shoot anyway without control", "Pass or control first", "Let yourself fall before deciding", "Dribble away from goal every time"],"correct": 1,"explanation": "Controlling or passing might be better if you're not balanced for a good shot."},
-    {"question": "When should you use a softer, placed shot instead of a powerful blast?","options": ["When you're far away and need maximum power", "When the goalkeeper is very close", "On every shot from midfield", "Only when the goal is empty"],"correct": 1,"explanation": "A placed shot works better close-up when power isn't needed."},
-    {"question": "Why follow your shots?","options": ["To stop your teammate from shooting", "To get a rebound if the goalie saves it", "To run past the goal line", "To leave the central space empty"],"correct": 1,"explanation": "Following up lets you react quickly if the keeper can't hold your shot."},
-    {"question": "Aiming across the goalkeeper helps because:","options": ["It gives the keeper an easier angle", "It's harder for the goalie to reach", "It takes you farther from goal", "It removes rebound chances"],"correct": 1,"explanation": "Shooting across the keeper's body makes it harder to save."},
-    {"question": "Before shooting, you should always:","options": ["Check where the goalkeeper is", "Ignore the keeper and shoot blind", "Turn away from goal first", "Only look at the ball carrier"],"correct": 0,"explanation": "Knowing the keeper's position helps you decide where to shoot."},
-    {"question": "When should you shoot with your weaker foot?","options": ["Never, even when it is the open side", "When it gives you the best quick chance", "On every shot regardless of angle", "Only after stopping the ball completely"],"correct": 1,"explanation": "Use your weaker foot when needed; practice makes it better."},
-    {"question": "If a teammate is open for an easy goal, you should:","options": ["Shoot yourself from a worse angle", "Pass to them", "Hold the ball until defenders recover", "Kick it away from the goalmouth"],"correct": 1,"explanation": "A simple pass can often guarantee a goal."},
-    {"question": "If your shot misses, you should:","options": ["Stop playing the next phase", "Get back quickly and keep playing", "Stay offside near the goal", "Argue instead of recovering"],"correct": 1,"explanation": "Mistakes happen-stay focused and ready for the next chance."},
-    {"question": "When a teammate cuts the ball back from the endline, where should an attacker arrive?","options": ["Around the penalty spot or open space behind defenders", "Inside their own goal", "Outside the attacking third", "Behind the passer only"],"correct": 0,"explanation": "Cutbacks are dangerous because defenders often run toward their goal and leave space behind them."},
-    {"question": "What is often better than shooting from a bad angle?","options": ["Pass across goal to an open teammate", "Shoot into the side net from anywhere", "Turn away from goal", "Stop the attack"],"correct": 0,"explanation": "A pass to a teammate with a better angle can create a much easier goal."},
-    {"question": "Why should attackers stay calm in front of goal?","options": ["Calm players pick better shots", "Calm players never shoot", "It makes the keeper bigger", "It slows the ball"],"correct": 0,"explanation": "Composure helps you see the keeper, the corners, and open teammates."},
-    {"question": "If the goalkeeper spills a shot, what should nearby attackers do?","options": ["Attack the rebound", "Stop outside the box", "Wait for the keeper to reset", "Recover to midfield immediately"],"correct": 0,"explanation": "Rebounds are great scoring chances because the keeper may be out of position."},
-    {"question": "What does 'shoot across the keeper' mean?","options": ["Aim toward the far side of goal from your angle", "Shoot back toward your own half", "Pass softly to the keeper", "Always shoot high at the near post"],"correct": 0,"explanation": "A far-side shot is harder to save and can create rebounds for teammates."
+    {
+      "question": "When shooting, where should you usually aim?",
+      "options": [
+        "Right at the goalkeeper",
+        "Wide of the goal",
+        "Corners of the net",
+        "Over the goal"
+      ],
+      "correct": 2,
+      "explanation": "Aim for corners because they're hardest for goalkeepers to reach.",
+      "id": "shooting-finishing-01",
+      "level": "beginner"
+    },
+    {
+      "question": "The best part of your foot for a powerful shot is:",
+      "options": [
+        "Inside of foot",
+        "Outside edge",
+        "Toe",
+        "Top of your foot (laces)"
+      ],
+      "correct": 3,
+      "explanation": "Using the top of your foot (laces) gives you the most power.",
+      "id": "shooting-finishing-02",
+      "level": "novice"
+    },
+    {
+      "question": "What should you do right after shooting?",
+      "options": [
+        "Start celebrating before the keeper reacts",
+        "Stand still and watch the shot",
+        "Follow up for rebounds",
+        "Turn away from the goalmouth"
+      ],
+      "correct": 2,
+      "explanation": "Always follow your shot to be ready for rebounds or loose balls.",
+      "id": "shooting-finishing-03",
+      "level": "novice"
+    },
+    {
+      "question": "A good first touch before shooting helps you:",
+      "options": [
+        "Move the ball out of shooting range",
+        "Set up the ball for an easier shot",
+        "Hide the ball from your support players",
+        "Slow down even when space is open"
+      ],
+      "correct": 1,
+      "explanation": "A clean first touch sets up an accurate and powerful shot.",
+      "id": "shooting-finishing-04",
+      "level": "novice"
+    },
+    {
+      "question": "You are close to goal with an open corner to aim at. What matters most?",
+      "options": [
+        "A controlled finish with enough pace to reach the gap",
+        "Maximum power regardless of direction",
+        "Making the shot as soft as possible",
+        "Lifting every shot high"
+      ],
+      "correct": 0,
+      "explanation": "Accuracy and suitable pace matter more than power alone. The right finish depends on the keeper, angle, and pressure.",
+      "id": "shooting-finishing-05",
+      "level": "beginner"
+    },
+    {
+      "question": "Which foot should you practice shooting with?",
+      "options": [
+        "Only your strong foot",
+        "Only your weak foot",
+        "Both feet",
+        "Neither"
+      ],
+      "correct": 2,
+      "explanation": "Practicing with both feet makes you more dangerous and unpredictable.",
+      "id": "shooting-finishing-06",
+      "level": "novice"
+    },
+    {
+      "question": "Shooting low is often good because:",
+      "options": [
+        "Goalkeepers must get down quickly",
+        "Low shots cannot miss the target",
+        "Low shots always beat defenders",
+        "The keeper cannot dive sideways"
+      ],
+      "correct": 0,
+      "explanation": "Low shots are harder for keepers because they must get down quickly.",
+      "id": "shooting-finishing-07",
+      "level": "beginner"
+    },
+    {
+      "question": "If you're off-balance, you should:",
+      "options": [
+        "Shoot anyway without control",
+        "Pass or control first",
+        "Let yourself fall before deciding",
+        "Dribble away from goal every time"
+      ],
+      "correct": 1,
+      "explanation": "Controlling or passing might be better if you're not balanced for a good shot.",
+      "id": "shooting-finishing-08",
+      "level": "intermediate"
+    },
+    {
+      "question": "You have time, balance, and a clear corner to aim for. Why might you use the inside of your foot?",
+      "options": [
+        "It can give good control for a placed finish",
+        "It guarantees a goal if the keeper is close",
+        "It makes checking the keeper unnecessary",
+        "It is only allowed inside the penalty area"
+      ],
+      "correct": 0,
+      "explanation": "The inside of the foot can help you place a shot accurately. Use enough pace and choose a finish that fits the chance.",
+      "id": "shooting-finishing-09",
+      "level": "beginner"
+    },
+    {
+      "question": "The goalkeeper has caught your shot securely. What should you do?",
+      "options": [
+        "Stop challenging for the ball and get ready to defend",
+        "Kick at the ball while it is in their hands",
+        "Charge into the keeper to create a rebound",
+        "Stand in their way to stop them releasing it"
+      ],
+      "correct": 0,
+      "explanation": "Follow a loose rebound, but do not challenge a keeper who controls the ball with their hands. Get ready for the next phase.",
+      "id": "shooting-finishing-10",
+      "level": "beginner"
+    },
+    {
+      "question": "The near side is covered and the far corner is open. Why might you shoot across the keeper?",
+      "options": [
+        "The open far side may be harder for them to reach",
+        "The far side is always the best choice",
+        "An across-goal shot cannot go wide",
+        "The keeper is not allowed to dive across"
+      ],
+      "correct": 0,
+      "explanation": "The best target depends on the keeper and defenders. Across goal can be useful when that space is open, not on every shot.",
+      "id": "shooting-finishing-11",
+      "level": "beginner"
+    },
+    {
+      "question": "Before shooting, you should always:",
+      "options": [
+        "Check where the goalkeeper is",
+        "Ignore the keeper and shoot blind",
+        "Turn away from goal first",
+        "Only look at the ball carrier"
+      ],
+      "correct": 0,
+      "explanation": "Knowing the keeper's position helps you decide where to shoot.",
+      "id": "shooting-finishing-12",
+      "level": "beginner"
+    },
+    {
+      "question": "When should you shoot with your weaker foot?",
+      "options": [
+        "Never, even when it is the open side",
+        "When it gives you the best quick chance",
+        "On every shot regardless of angle",
+        "Only after stopping the ball completely"
+      ],
+      "correct": 1,
+      "explanation": "Use your weaker foot when needed; practice makes it better.",
+      "id": "shooting-finishing-13",
+      "level": "intermediate"
+    },
+    {
+      "question": "A teammate has a clearer shot and the pass to them is open. What is often a good choice?",
+      "options": [
+        "Pass so they can finish",
+        "Shoot from the worse angle to avoid sharing",
+        "Wait until the pass is blocked",
+        "Pass behind them to slow their run"
+      ],
+      "correct": 0,
+      "explanation": "Use the player with the better chance when the pass is on. No pass guarantees a goal, but it can improve the opportunity.",
+      "id": "shooting-finishing-14",
+      "level": "beginner"
+    },
+    {
+      "question": "If your shot misses, you should:",
+      "options": [
+        "Stop playing the next phase",
+        "Get back quickly and keep playing",
+        "Stay offside near the goal",
+        "Argue instead of recovering"
+      ],
+      "correct": 1,
+      "explanation": "Mistakes happen-stay focused and ready for the next chance.",
+      "id": "shooting-finishing-15",
+      "level": "novice"
+    },
+    {
+      "question": "When a teammate cuts the ball back from the endline, where should an attacker arrive?",
+      "options": [
+        "Around the penalty spot or open space behind defenders",
+        "Inside their own goal",
+        "Outside the attacking third",
+        "Behind the passer only"
+      ],
+      "correct": 0,
+      "explanation": "Cutbacks are dangerous because defenders often run toward their goal and leave space behind them.",
+      "id": "shooting-finishing-16",
+      "level": "intermediate"
+    },
+    {
+      "question": "What is often better than shooting from a bad angle?",
+      "options": [
+        "Pass across goal to an open teammate",
+        "Shoot into the side net from anywhere",
+        "Turn away from goal",
+        "Stop the attack"
+      ],
+      "correct": 0,
+      "explanation": "A pass to a teammate with a better angle can create a much easier goal.",
+      "id": "shooting-finishing-17",
+      "level": "intermediate"
+    },
+    {
+      "question": "Why should attackers stay calm in front of goal?",
+      "options": [
+        "Calm players pick better shots",
+        "Calm players never shoot",
+        "It makes the keeper bigger",
+        "It slows the ball"
+      ],
+      "correct": 0,
+      "explanation": "Composure helps you see the keeper, the corners, and open teammates.",
+      "id": "shooting-finishing-18",
+      "level": "beginner"
+    },
+    {
+      "question": "If the goalkeeper spills a shot, what should nearby attackers do?",
+      "options": [
+        "Attack the rebound",
+        "Stop outside the box",
+        "Wait for the keeper to reset",
+        "Recover to midfield immediately"
+      ],
+      "correct": 0,
+      "explanation": "Rebounds are great scoring chances because the keeper may be out of position.",
+      "id": "shooting-finishing-19",
+      "level": "beginner"
+    },
+    {
+      "question": "What does 'shoot across the keeper' mean?",
+      "options": [
+        "Aim toward the far side of the goal from your shooting angle",
+        "Aim straight at the nearest post every time",
+        "Pass behind yourself to a supporting player",
+        "Shoot directly toward the keeper's body"
+      ],
+      "correct": 0,
+      "explanation": "It describes the direction of the shot. It can create a chance or rebound, but choose the target based on the space you see.",
+      "id": "shooting-finishing-20",
+      "level": "intermediate"
+    },
+    {
+      "id": "shooting-finishing-21",
+      "level": "advanced",
+      "question": "You receive near goal on your weaker-foot side. A defender will block you if you take another touch. What should guide the choice?",
+      "options": [
+        "Whether you can make a controlled first-time finish now",
+        "Whether using your preferred foot matters more than the open chance",
+        "Whether every first-time shot is better than a pass",
+        "Whether a powerful swing can replace balance"
+      ],
+      "correct": 0,
+      "explanation": "A weaker-foot finish may use an opening before it closes. Read the ball, the target, and your balance; first-time shooting is not always the answer."
+    },
+    {
+      "id": "shooting-finishing-22",
+      "level": "advanced",
+      "question": "A low cutback is coming. Defenders have run toward the goal line. Where might a late arriving attacker find space?",
+      "options": [
+        "Behind those defenders, in a clear lane for the cutback",
+        "Alongside the defenders on the goal line",
+        "Directly behind the passer outside their view",
+        "In the same lane as the attacker already receiving"
+      ],
+      "correct": 0,
+      "explanation": "A late run can reach space defenders have left behind. Arrive in time to meet the pass rather than standing there so early that you are marked."
+    },
+    {
+      "id": "shooting-finishing-23",
+      "level": "advanced",
+      "question": "The keeper steps forward and narrows your shooting angle. A teammate is free across goal with a clear pass. What should you weigh?",
+      "options": [
+        "Whether the pass gives a clearer finish than your own shot",
+        "Whether the keeper moving forward requires a chip",
+        "Whether keeping the shot on your stronger foot matters most",
+        "Whether every pass across goal is intercepted"
+      ],
+      "correct": 0,
+      "explanation": "Do not choose a finish by habit. Compare the available shot with the teammate's chance, including the risk and timing of the pass."
+    },
+    {
+      "id": "shooting-finishing-24",
+      "level": "advanced",
+      "question": "A defender blocks the direct shooting lane, but you have space to touch sideways. Why might that touch help?",
+      "options": [
+        "It can change the shooting angle before the defender adjusts",
+        "It adds power without changing the angle",
+        "It guarantees that the keeper cannot see the ball",
+        "It removes the need to check for a second defender"
+      ],
+      "correct": 0,
+      "explanation": "A small touch can open a lane. Keep it controlled and check whether the extra touch gives another defender time to close you."
+    },
+    {
+      "id": "shooting-finishing-25",
+      "level": "advanced",
+      "question": "A teammate shoots across goal. You are onside when the shot is taken and near the far side. What useful run can you make?",
+      "options": [
+        "Follow into a reachable rebound lane without crowding the shooter",
+        "Stay still until the keeper has recovered",
+        "Run behind the goal to receive the ball",
+        "Move into the shooter's path before they strike"
+      ],
+      "correct": 0,
+      "explanation": "An across-goal shot can produce a loose rebound. Anticipate it while staying aware of offside and avoiding contact with a keeper controlling the ball."
     }
   ]
 }

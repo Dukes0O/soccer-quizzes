@@ -2,7 +2,7 @@
   {
     "id": "defense",
     "title": "Defense Challenge",
-    "description": "Test your defensive soccer defending knowledge!",
+    "description": "Pressure, cover, and protecting the goal.",
     "graphic": "🛡️",
     "badge": "assets/badges/defense.png",
     "animation": "assets/animations/defense.json",

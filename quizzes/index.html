@@ -25,25 +25,33 @@
   </header>
 
   <main class="w-full max-w-4xl flex-1 p-6">
-    <section class="mb-12 glass-panel rounded-2xl p-8 border-t-4 border-yellow-500">
-      <h2 class="text-2xl font-bold mb-6 font-sports flex items-center gap-3">
-        <span class="text-yellow-500">🏆</span> Your Pro Badges
-      </h2>
-      <div id="badge-list" class="flex flex-wrap gap-4"></div>
+    <section class="learning-level mb-10">
+      <div>
+        <label for="level-picker" class="block font-sports font-bold text-xl mb-2">Learning Level</label>
+        <select id="level-picker" disabled>
+          <option value="novice">Novice</option><option value="beginner" selected>Beginner</option>
+          <option value="intermediate">Intermediate</option><option value="advanced">Advanced</option>
+        </select>
+        <p id="level-description" class="text-slate-300 mt-3"></p>
+      </div>
+      <div class="mixed-start">
+        <a id="mixed-challenge" class="quiz-button" href="quiz.html?quiz=all&amp;level=beginner" hidden>All-round challenge</a>
+        <p class="text-slate-400 text-sm mt-2">10 questions | All topics <span id="mixed-best"></span></p>
+      </div>
     </section>
 
     <section>
       <h2 class="text-2xl font-bold mb-6 font-sports flex items-center gap-3">
-        <span class="text-green-500">⚽</span> Available Challenges
+        <span class="text-green-500">⚽</span> Topic Practice
       </h2>
-      <div id="quiz-list" class="grid gap-6 md:grid-cols-2"></div>
+      <div id="quiz-list" class="grid gap-6 md:grid-cols-2"><p>Loading quizzes...</p></div>
     </section>
 
-    <section class="mt-12">
-      <button onclick="if(confirm('Reset all progress?')) { window.userCore.resetUserProgress(); window.location.reload(); }"
-              class="bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 px-6 py-2 rounded-full text-sm font-sports transition">
-        Reset Academy Progress
-      </button>
+    <section class="mt-12 border-t border-white/10 pt-6">
+      <h2 class="text-2xl font-bold mb-6 font-sports">Your Badges</h2>
+      <ul id="badge-list" class="badge-list"></ul>
+      <p id="save-status" class="text-slate-400 text-sm mt-6" role="status"></p>
+      <button id="reset-progress" class="text-red-300 underline mt-4 text-sm" disabled>Reset saved progress</button>
     </section>
   </main>
 
@@ -51,20 +59,8 @@
     &copy; 2025 ELITE SOCCER ACADEMY
   </footer>
 
+  <script src="../js/quiz.js"></script>
   <script src="../js/user.js"></script>
   <script src="../js/landing.js"></script>
-  <script>
-    (async function() {
-      try {
-        const quizzes = await window.landingCore.loadManifest();
-        const userProgress = window.userCore.getUserData().progress || {};
-        window.landingCore.renderQuizCards(quizzes, userProgress);
-        window.landingCore.renderBadges(userProgress, quizzes);
-      } catch (err) {
-        console.error('Error loading quizzes manifest:', err);
-        document.getElementById('quiz-list').innerHTML = '<p class="text-red-400">Failed to load mission data.</p>';
-      }
-    })();
-  </script>
 </body>
 </html>

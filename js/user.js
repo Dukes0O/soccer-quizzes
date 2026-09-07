@@ -1,44 +1,59 @@
-// user.js: Handles user progress, badges, and localStorage
-
 const USER_STORAGE_KEY = 'soccerQuizUser';
+let memoryUser = {};
+let storageAvailable = true;
 
 function getUserData() {
-  return JSON.parse(localStorage.getItem(USER_STORAGE_KEY) || '{}');
+  if (!storageAvailable) return memoryUser;
+  try {
+    const value = JSON.parse(localStorage.getItem(USER_STORAGE_KEY) || '{}');
+    if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error('Invalid saved progress');
+    memoryUser = value;
+  } catch (error) {
+    storageAvailable = false;
+  }
+  return memoryUser;
 }
 
 function saveUserData(data) {
-  localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(data));
+  memoryUser = data;
+  if (!storageAvailable) return false;
+  try {
+    localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(data));
+    return true;
+  } catch (error) {
+    storageAvailable = false;
+    return false;
+  }
 }
 
-function getQuizProgress(quizId) {
-  const user = getUserData();
-  return user.progress ? user.progress[quizId] : undefined;
+function getQuizProgress(quizId, level) {
+  return getUserData().progress?.[level ? `${quizId}:${level}` : quizId];
 }
 
-function setQuizProgress(quizId, score, badge) {
+function setQuizProgress(quizId, score, badge, level, total = 10) {
   const user = getUserData();
   user.progress = user.progress || {};
-  const prev = user.progress[quizId]?.score || 0;
-  // Always store the best score and badge if perfect
-  let bestScore = Math.max(score, prev);
-  let earnedBadge = badge;
-  if (bestScore === 10) {
-    earnedBadge = badge; // Only award badge if perfect
-  } else {
-    earnedBadge = null;
-  }
-  user.progress[quizId] = { score: bestScore, badge: earnedBadge };
-  saveUserData(user);
+  const key = level ? `${quizId}:${level}` : quizId;
+  const previous = user.progress[key];
+  const better = !previous || score / total >= previous.score / (previous.total || 10);
+  user.progress[key] = {
+    score: better ? score : previous.score,
+    total: better ? total : previous.total || 10,
+    badge: previous?.badge || (score === total ? badge : null),
+    attempts: (previous?.attempts || 0) + 1
+  };
+  return saveUserData(user);
 }
 
 function resetUserProgress() {
-  localStorage.removeItem(USER_STORAGE_KEY);
+  try {
+    localStorage.removeItem(USER_STORAGE_KEY);
+    memoryUser = {};
+    storageAvailable = true;
+    return true;
+  } catch (error) {
+    return false;
+  }
 }
 
-window.userCore = {
-  getUserData,
-  saveUserData,
-  getQuizProgress,
-  setQuizProgress,
-  resetUserProgress
-};
+window.userCore = { getUserData, saveUserData, getQuizProgress, setQuizProgress, resetUserProgress, canSave: () => storageAvailable };

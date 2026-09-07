@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mission Control | Soccer Pro Hub</title>
+  <title>Soccer Quiz | Soccer Pro Hub</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,11 +30,11 @@
   </nav>
 
   <main class="w-full max-w-4xl flex-1 p-4 md:p-8 flex flex-col items-center">
-    <div id="quiz-app" class="w-full"></div>
+    <div id="quiz-app" class="w-full"><p>Loading quiz...</p></div>
 
     <div class="w-full mt-8 glass-panel rounded-3xl overflow-hidden border-b-4 border-green-500 shadow-2xl">
       <div class="bg-slate-800/50 p-3 text-center border-b border-white/5">
-         <span class="font-sports text-xs tracking-[0.3em] text-slate-500 uppercase">Live Match Simulation</span>
+         <span id="field-caption" class="font-sports text-sm text-slate-300">Quiz Progress</span>
       </div>
       <div id="field-container" class="relative w-full aspect-[2/1] bg-emerald-900/20"></div>
     </div>

@@ -7,25 +7,330 @@
   "animation": "assets/animations/transitions.json",
   "themeColor": "#6366f1",
   "questions": [
-    { "question": "What does a 'transition' mean in soccer?", "options": ["The moment your team changes shape after winning or losing the ball", "A planned substitution from the sideline", "A restart after the ball goes out", "A long pass from the goalkeeper"], "correct": 0, "explanation": "Transitions happen instantly when possession changes." },
-    { "question": "When your team loses the ball, what's the first thing to do?", "options": ["Pause and wait for the team shape to reset", "Recover and defend quickly", "Stay high even if the counter is dangerous", "Look only for a forward run"], "correct": 1, "explanation": "Fast reaction helps prevent counter-attacks." },
-    { "question": "If you win the ball in defense, what should you look for first?", "options": ["A quick pass forward", "A slow dribble across your own goal", "A teammate already under pressure", "A pass into the most crowded area"], "correct": 0, "explanation": "A quick forward pass can launch a counter-attack." },
-    { "question": "Why are transitions important?", "options": ["They only matter after set pieces", "They change which team has the kickoff", "They are when goals often happen", "They always slow the game down"], "correct": 2, "explanation": "Many goals are scored during fast changes in possession." },
-    { "question": "If the ball is lost near the opponent's goal, what can you do?", "options": ["Counter-press to win it back", "Drop every player into your own box immediately", "Let the ball carrier turn forward freely", "Run away from the passing lanes"], "correct": 0, "explanation": "Winning it back quickly high up the field is a great opportunity." },
-    { "question": "After your team wins the ball, what should you do if you're far from the play?", "options": ["Hold your old position and watch", "Move only if the ball comes to you", "Sprint into a good position to help", "Run into the same space as the ball carrier"], "correct": 2, "explanation": "Support the play to keep the ball moving and stay dangerous." },
-    { "question": "If you lose the ball while attacking, should you always run all the way back?", "options": ["Yes, unless you're close enough to press", "No, attackers never defend", "Only if the ball is in your defensive third", "Never when you are in a wide position"], "correct": 0, "explanation": "Sometimes you need to stay close to press or block passes." },
-    { "question": "Good transition teams are:", "options": ["Slow to react but spread wide", "Loud but late to recover", "Fast and organized", "Always narrow in possession"], "correct": 2, "explanation": "Fast thinking and organized movement makes transition play powerful." },
-    { "question": "How can you prepare before a transition happens?", "options": ["Watch closely and stay alert", "Turn away after your pass", "Stand flat with no cover behind the attack", "Only watch the player with the ball"], "correct": 0, "explanation": "Being alert helps you react faster when the ball changes teams." },
-    { "question": "In a defensive transition, your team should:", "options": ["Drop back and close space", "Run forward past the ball", "Spread out wide and leave the middle open", "Allow the first forward pass"], "correct": 0, "explanation": "Quickly getting into shape stops the other team from attacking." },
-    { "question": "What's a counter-attack?", "options": ["A slow reset through the back line", "A quick attack right after winning the ball", "A defensive wall on a free kick", "A restart from the sideline"], "correct": 1, "explanation": "Quick attacks right after winning the ball can be deadly." },
-    { "question": "Why is communication important during transitions?", "options": ["To tell teammates who presses, covers, or recovers", "To make every player chase the ball", "So one player can stop running", "To slow the first pass down"], "correct": 0, "explanation": "Talking helps teammates react and organize fast." },
-    { "question": "Should defenders always stay back during transitions?", "options": ["No, sometimes they can join attacks", "Yes, they should never support forward", "Only center-backs can move forward", "Only if the ball is out wide"], "correct": 0, "explanation": "Even defenders can support quick transitions at the right time." },
-    { "question": "A smart attacker during transitions will:", "options": ["Dribble slowly toward pressure", "Look for passes and space immediately", "Start celebrating before the chance is finished", "Stay behind the player who won the ball"], "correct": 1, "explanation": "Reading the game fast leads to better chances." },
-    { "question": "After winning the ball, what do you look for first?", "options": ["The open space or teammate", "The most crowded passing lane", "A pass back into pressure", "A teammate who is marked tightly"], "correct": 0, "explanation": "Spotting the best next move helps keep the advantage." },
-    { "question": "What should the closest player do right after losing the ball?", "options": ["Apply quick pressure if they can", "Recover slowly behind the farthest defender", "Wait for someone else to press", "Complain about the lost pass"], "correct": 0, "explanation": "Quick pressure can slow the counter-attack or win the ball back." },
-    { "question": "What should players behind the ball do in defensive transition?", "options": ["Recover goal-side and protect the middle", "Run past the ball into attack", "Stay wide and high", "Stand flat behind the goalkeeper"], "correct": 0, "explanation": "Getting goal-side means standing between the ball and your goal again." },
-    { "question": "If your team wins the ball but no forward pass is safe, what is smart?", "options": ["Keep it with a safe pass", "Force a risky pass", "Kick it away", "Dribble into three defenders"], "correct": 0, "explanation": "A transition does not always need to be fast forward; keeping the ball is valuable." },
-    { "question": "What is rest defense?", "options": ["Players staying balanced behind the attack in case the ball is lost", "Every attacker staying behind the ball", "Never joining attacks from defense", "Only the goalkeeper organizing the team"], "correct": 0, "explanation": "Rest defense helps stop counter-attacks before they become dangerous." },
-    { "question": "Why are the first few seconds after losing the ball so important?", "options": ["The other team may be unorganized but has space", "The ball must always go out of play", "The counter-attack is already impossible", "The referee will always stop play"], "correct": 0, "explanation": "Fast reactions in those seconds often decide whether a counter-attack happens." }
+    {
+      "question": "What does a 'transition' mean in soccer?",
+      "options": [
+        "The moment your team changes shape after winning or losing the ball",
+        "A planned substitution from the sideline",
+        "A restart after the ball goes out",
+        "A long pass from the goalkeeper"
+      ],
+      "correct": 0,
+      "explanation": "Transitions happen instantly when possession changes.",
+      "id": "transitions-01",
+      "level": "novice"
+    },
+    {
+      "question": "When your team loses the ball, what's the first thing to do?",
+      "options": [
+        "Pause and wait for the team shape to reset",
+        "Recover and defend quickly",
+        "Stay high even if the counter is dangerous",
+        "Look only for a forward run"
+      ],
+      "correct": 1,
+      "explanation": "Fast reaction helps prevent counter-attacks.",
+      "id": "transitions-02",
+      "level": "novice"
+    },
+    {
+      "question": "After winning the ball in defense, what should you look for?",
+      "options": [
+        "A useful forward option, or a safe support pass if it is blocked",
+        "A forward pass even when the lane is closed",
+        "The longest kick without looking",
+        "A dribble across your own goal under pressure"
+      ],
+      "correct": 0,
+      "explanation": "Look forward early, but do not force it. The next action should use the space you see and help keep the ball.",
+      "id": "transitions-03",
+      "level": "beginner"
+    },
+    {
+      "question": "Why are transitions important?",
+      "options": [
+        "They only matter after set pieces",
+        "They change which team has the kickoff",
+        "They are when goals often happen",
+        "They always slow the game down"
+      ],
+      "correct": 2,
+      "explanation": "Many goals are scored during fast changes in possession.",
+      "id": "transitions-04",
+      "level": "beginner"
+    },
+    {
+      "question": "You lose the ball near their goal. Several teammates are close and covering behind. What may work?",
+      "options": [
+        "Press together immediately to regain it or delay the attack",
+        "Have one player chase alone while the rest stop",
+        "Let the receiver turn without pressure",
+        "Send every player beyond the ball"
+      ],
+      "correct": 0,
+      "explanation": "Counter-pressing means trying to regain the ball soon after losing it. Nearby support and cover make it more effective.",
+      "id": "transitions-05",
+      "level": "intermediate"
+    },
+    {
+      "question": "After your team wins the ball, what should you do if you're far from the play?",
+      "options": [
+        "Hold your old position and watch",
+        "Move only if the ball comes to you",
+        "Sprint into a good position to help",
+        "Run into the same space as the ball carrier"
+      ],
+      "correct": 2,
+      "explanation": "Support the play to keep the ball moving and stay dangerous.",
+      "id": "transitions-06",
+      "level": "beginner"
+    },
+    {
+      "question": "You lose the ball and cannot reach the new ball carrier. What is your next useful job?",
+      "options": [
+        "Recover into a position that protects a dangerous lane or runner",
+        "Chase from behind regardless of the space you leave",
+        "Stay high because attackers do not defend",
+        "Run all the way to your goal line in every situation"
+      ],
+      "correct": 0,
+      "explanation": "Recover where you can help the team. The aim is to protect the next danger, not simply run the greatest distance.",
+      "id": "transitions-07",
+      "level": "intermediate"
+    },
+    {
+      "question": "Good transition teams are:",
+      "options": [
+        "Slow to react but spread wide",
+        "Loud but late to recover",
+        "Fast and organized",
+        "Always narrow in possession"
+      ],
+      "correct": 2,
+      "explanation": "Fast thinking and organized movement makes transition play powerful.",
+      "id": "transitions-08",
+      "level": "novice"
+    },
+    {
+      "question": "How can you prepare before a transition happens?",
+      "options": [
+        "Watch closely and stay alert",
+        "Turn away after your pass",
+        "Stand flat with no cover behind the attack",
+        "Only watch the player with the ball"
+      ],
+      "correct": 0,
+      "explanation": "Being alert helps you react faster when the ball changes teams.",
+      "id": "transitions-09",
+      "level": "novice"
+    },
+    {
+      "question": "An opponent escapes your first press and can play forward. What should the team do?",
+      "options": [
+        "Recover together and close dangerous central spaces",
+        "Keep chasing individually with no cover",
+        "Spread wider to prepare to attack",
+        "Leave runners to follow the ball"
+      ],
+      "correct": 0,
+      "explanation": "Once the immediate press is beaten, recover and protect the route to goal. Delay when you can and help each other get organized.",
+      "id": "transitions-10",
+      "level": "beginner"
+    },
+    {
+      "question": "What's a counter-attack?",
+      "options": [
+        "A slow reset through the back line",
+        "A quick attack right after winning the ball",
+        "A defensive wall on a free kick",
+        "A restart from the sideline"
+      ],
+      "correct": 1,
+      "explanation": "Quick attacks right after winning the ball can be deadly.",
+      "id": "transitions-11",
+      "level": "beginner"
+    },
+    {
+      "question": "Why is communication important during transitions?",
+      "options": [
+        "To tell teammates who presses, covers, or recovers",
+        "To make every player chase the ball",
+        "So one player can stop running",
+        "To slow the first pass down"
+      ],
+      "correct": 0,
+      "explanation": "Talking helps teammates react and organize fast.",
+      "id": "transitions-12",
+      "level": "novice"
+    },
+    {
+      "question": "Should defenders always stay back during transitions?",
+      "options": [
+        "No, sometimes they can join attacks",
+        "Yes, they should never support forward",
+        "Only center-backs can move forward",
+        "Only if the ball is out wide"
+      ],
+      "correct": 0,
+      "explanation": "Even defenders can support quick transitions at the right time.",
+      "id": "transitions-13",
+      "level": "intermediate"
+    },
+    {
+      "question": "A smart attacker during transitions will:",
+      "options": [
+        "Dribble slowly toward pressure",
+        "Look for passes and space immediately",
+        "Start celebrating before the chance is finished",
+        "Stay behind the player who won the ball"
+      ],
+      "correct": 1,
+      "explanation": "Reading the game fast leads to better chances.",
+      "id": "transitions-14",
+      "level": "beginner"
+    },
+    {
+      "question": "After winning the ball, what do you look for first?",
+      "options": [
+        "The open space or teammate",
+        "The most crowded passing lane",
+        "A pass back into pressure",
+        "A teammate who is marked tightly"
+      ],
+      "correct": 0,
+      "explanation": "Spotting the best next move helps keep the advantage.",
+      "id": "transitions-15",
+      "level": "beginner"
+    },
+    {
+      "question": "What should the closest player do right after losing the ball?",
+      "options": [
+        "Apply quick pressure if they can",
+        "Recover slowly behind the farthest defender",
+        "Wait for someone else to press",
+        "Complain about the lost pass"
+      ],
+      "correct": 0,
+      "explanation": "Quick pressure can slow the counter-attack or win the ball back.",
+      "id": "transitions-16",
+      "level": "beginner"
+    },
+    {
+      "question": "What should players behind the ball do in defensive transition?",
+      "options": [
+        "Recover goal-side and protect the middle",
+        "Run past the ball into attack",
+        "Stay wide and high",
+        "Stand flat behind the goalkeeper"
+      ],
+      "correct": 0,
+      "explanation": "Getting goal-side means standing between the ball and your goal again.",
+      "id": "transitions-17",
+      "level": "beginner"
+    },
+    {
+      "question": "If your team wins the ball but no forward pass is safe, what is smart?",
+      "options": [
+        "Keep it with a safe pass",
+        "Force a risky pass",
+        "Kick it away",
+        "Dribble into three defenders"
+      ],
+      "correct": 0,
+      "explanation": "A transition does not always need to be fast forward; keeping the ball is valuable.",
+      "id": "transitions-18",
+      "level": "beginner"
+    },
+    {
+      "question": "What is 'rest defense' while your team attacks?",
+      "options": [
+        "The positioning of players ready to deal with losing the ball",
+        "Giving defenders a break from watching play",
+        "Keeping all players behind the ball",
+        "Only the goalkeeper staying alert"
+      ],
+      "correct": 0,
+      "explanation": "Players behind or around the attack cover dangerous routes and track opponents. Their position depends on where a counter-attack could begin.",
+      "id": "transitions-19",
+      "level": "intermediate"
+    },
+    {
+      "question": "Why does reacting quickly after losing the ball matter?",
+      "options": [
+        "You may stop the first forward action before opponents use open space",
+        "The referee must stop play after every turnover",
+        "Every player must immediately tackle the ball",
+        "A counter-attack can only start after several passes"
+      ],
+      "correct": 0,
+      "explanation": "A quick response can regain the ball or delay the attack. If the press cannot work, recover together and protect the middle.",
+      "id": "transitions-20",
+      "level": "intermediate"
+    },
+    {
+      "id": "transitions-21",
+      "level": "advanced",
+      "question": "Your team loses the ball with most players ahead of it. The nearest player cannot reach the opponent quickly. What is the stronger team response?",
+      "options": [
+        "Recover into cover and delay the next forward action",
+        "Send a lone player into a long, unsupported press",
+        "Keep the attacking shape and wait for an interception",
+        "Push the back line higher while the passer is unpressured"
+      ],
+      "correct": 0,
+      "explanation": "An immediate press is not always available. Protect the route to goal and slow the attack while teammates recover."
+    },
+    {
+      "id": "transitions-22",
+      "level": "advanced",
+      "question": "You regain possession in a crowd. A backward pass can reach a free teammate facing forward. Why might you use it?",
+      "options": [
+        "It can escape the crowd and let the next player attack",
+        "It means the team should stop looking for a counter-attack",
+        "It avoids the need to support the receiver",
+        "It guarantees the ball cannot be lost again"
+      ],
+      "correct": 0,
+      "explanation": "The first pass after a regain does not have to go forward. A supporting player may have a clearer view and a better forward route."
+    },
+    {
+      "id": "transitions-23",
+      "level": "advanced",
+      "question": "Your team attacks down the right. Two opponents stay high on the left, ready to counter. What should players behind the attack consider?",
+      "options": [
+        "Position to cover those outlets while still supporting possession",
+        "Move everyone to the right because that is where the ball is",
+        "Stand beside the goalkeeper until the attack ends",
+        "Wait for possession to change before checking opponents"
+      ],
+      "correct": 0,
+      "explanation": "Rest defense starts before a turnover. Read the possible first pass out and keep enough connection to support your own team."
+    },
+    {
+      "id": "transitions-24",
+      "level": "advanced",
+      "question": "A press after losing the ball forces the opponent backward, but does not win possession. Has it helped?",
+      "options": [
+        "Yes, it may have delayed the attack and allowed recovery",
+        "No, a press only works if it wins the ball immediately",
+        "No, the first presser must keep chasing alone",
+        "Yes, so the rest of the team can stop moving"
+      ],
+      "correct": 0,
+      "explanation": "A press can succeed by slowing or redirecting play. Recovering teammates still need to organize behind it."
+    },
+    {
+      "id": "transitions-25",
+      "level": "advanced",
+      "question": "Your side leads late in a match. You win the ball, but the only forward pass is into heavy pressure. What is sensible?",
+      "options": [
+        "Keep possession through an open supporting teammate",
+        "Force the forward pass to prove you are attacking",
+        "Stop playing while waiting for the final whistle",
+        "Send all defenders ahead of the ball"
+      ],
+      "correct": 0,
+      "explanation": "The score and time can affect risk, but the picture on the field still matters. Keep the ball through a useful open option and remain ready to progress."
+    }
   ]
 }

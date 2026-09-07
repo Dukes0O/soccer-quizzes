@@ -1,93 +1,69 @@
-// landing.js: Loads manifest, renders quiz cards, badges, and user progress
+const { escapeHtml: html, LEVELS: quizLevels } = window.quizCore;
 
-async function loadManifest() {
-  // Determine correct manifest path
-  const inQuizzes = location.pathname.includes('/quizzes/');
-  const manifestPath = inQuizzes ? './manifest.json' : 'quizzes/manifest.json';
-  const res = await fetch(manifestPath);
-  if (!res.ok) {
-    console.error('landing.js: manifest fetch error', res.status, res.statusText);
-    throw new Error('Manifest not found');
-  }
-  const data = await res.json();
-  return data;
+function renderBadge(badge, title) {
+  if (!/^assets\/badges\/[a-z0-9-]+\.(png|svg)$/i.test(badge || '')) return '';
+  return `<a href="../${badge}" download title="Download ${html(title)} badge"><img src="../${badge}" alt="${html(title)} badge" width="48" height="48" loading="lazy"></a>`;
 }
 
-function renderBadge(badge, alt, size = 'small', downloadable = false) {
-  if (badge && /\.(png|svg)$/i.test(badge)) {
-    let sizeClass;
-    if (size === 'large') {
-      sizeClass = 'w-24 h-24'; // Tailwind standard size for card display
-    } else {
-      sizeClass = 'w-10 h-10';
-    }
-    // fix path when on quizzes page
-    let src = badge;
-    if (window.location.pathname.includes('/quizzes/')) src = '../' + badge;
-    const imgTag = `<img src="${src}" alt="${alt || 'Badge'}" class="inline ${sizeClass} align-middle rounded-lg shadow-lg badge-glow" loading="lazy">`;
-    if (downloadable) {
-      return `<a href="${src}" download title="Download badge">${imgTag}</a>`;
-    }
-    return imgTag;
-  }
-  return badge || '';
-}
-
-function renderGraphic(graphic, alt) {
-  if (graphic && /\.(png|svg)$/i.test(graphic)) {
-    let src = graphic;
-    if (window.location.pathname.includes('/quizzes/')) src = '../' + graphic;
-    return `<img src="${src}" alt="${alt || 'Quiz icon'}" class="w-12 h-12 object-contain" loading="lazy">`;
-  }
-  return graphic || '';
-}
-
-function renderQuizCards(quizzes, userProgress) {
-  const container = document.getElementById('quiz-list');
-  container.innerHTML = '';
-  quizzes.forEach(q => {
-    const badge = userProgress[q.id]?.badge || '';
-    const best = userProgress[q.id]?.score || 0;
-    let badgeOrBest = '';
-    if (badge) {
-      badgeOrBest = renderBadge(badge, q.title, 'large', false);
-    } else if (best > 0) {
-      badgeOrBest = `<div class="text-sm font-sports text-yellow-500 bg-yellow-500/10 px-3 py-1 rounded-full border border-yellow-500/20">Best: ${best}/10</div>`;
-    } else {
-      badgeOrBest = '';
-    }
-    container.innerHTML += `
-      <div class="glass-panel rounded-2xl flex items-center gap-4 p-6 border-l-4 card-hover" style="border-color: ${q.themeColor};">
-        <div class="bg-white/5 p-4 rounded-xl text-3xl flex items-center justify-center">${renderGraphic(q.graphic, q.title)}</div>
-        <div class="quiz-info flex-1">
-          <h2 class="text-xl font-bold font-sports tracking-wide mb-1">${q.title}</h2>
-          <p class="text-slate-400 text-sm mb-4">${q.description}</p>
-          <button onclick="location.href='quiz.html?quiz=${q.id}'" class="bg-blue-600 hover:bg-blue-500 text-white font-sports text-sm rounded-full px-6 py-2 transition shadow-lg">ENTER MISSION</button>
-        </div>
-        <div class="quiz-badge flex flex-col items-center justify-center min-w-[100px]">${badgeOrBest}</div>
-      </div>
-    `;
-  });
-}
-
-function renderBadges(userProgress, quizzes) {
-  const container = document.getElementById('badge-list');
-  container.innerHTML = '';
-  let count = 0;
-  quizzes.forEach(q => {
-    const badge = userProgress[q.id]?.badge;
-    if (badge) {
-      count++;
-      container.innerHTML += `<span class="badge transition-transform hover:scale-110 cursor-pointer" title="${q.title}">${renderBadge(badge, q.title, 'small', true)}</span>`;
-    }
-  });
-  if (count === 0) {
-    container.innerHTML = '<p class="text-slate-500 italic">No badges earned yet. Complete a quiz with 10/10 to earn your first pro badge!</p>';
+async function loadQuizList() {
+  const list = document.getElementById('quiz-list');
+  try {
+    const manifest = await window.quizCore.loadJson('manifest.json');
+    const banks = [];
+    for (const quiz of manifest) banks.push({ ...(await window.quizCore.loadJson(`${quiz.id}.json`)), ...quiz });
+    let level = window.quizCore.quizLevel();
+    const picker = document.getElementById('level-picker');
+    picker.value = level;
+    const render = () => {
+      const progress = window.userCore.getUserData().progress || {};
+      const allBest = progress[`all:${level}`];
+      document.getElementById('mixed-challenge').href = `quiz.html?quiz=all&level=${level}`;
+      document.getElementById('mixed-best').textContent = allBest ? `Best: ${allBest.score}/${allBest.total || 10}` : '';
+      const descriptions = { novice: 'The ball, the field, and your teammates', beginner: 'Simple choices on the ball and off it', intermediate: 'Read pressure, space, and timing', advanced: 'Connect ideas and weigh your options' };
+      document.getElementById('level-description').textContent = descriptions[level];
+      list.innerHTML = banks.map(q => {
+        const count = q.questions.filter(question => question.level === level).length;
+        const saved = progress[`${q.id}:${level}`];
+        const graphic = /^assets\//.test(q.graphic) ? `<img src="../${q.graphic}" alt="" width="40" height="40">` : html(q.graphic);
+        return `<article class="topic-card" style="border-top-color:${q.themeColor}">
+          <div class="topic-heading"><span class="topic-graphic" aria-hidden="true">${graphic}</span><h3>${html(q.title)}</h3></div>
+          <p class="text-slate-300 text-sm">${html(q.description)}</p>
+          <div class="topic-meta"><span>${Math.min(10, count)} questions</span><span>${saved ? `Best: ${saved.score}/${saved.total || 10}` : ''}</span></div>
+          <a class="quiz-button text-center" href="quiz.html?quiz=${q.id}&level=${level}">Start quiz<span class="sr-only">: ${html(q.title)}, ${level}</span></a>
+        </article>`;
+      }).join('');
+      const badges = [];
+      for (const q of manifest) {
+        for (const suffix of ['', ...quizLevels.map(value => `:${value}`)]) {
+          const saved = progress[`${q.id}${suffix}`];
+          if (!saved?.badge) continue;
+          const label = `${q.title} | ${suffix ? suffix.slice(1) : 'Original challenge'}`;
+          badges.push(`<li class="earned-badge">${renderBadge(saved.badge, label)}<span>${html(label)}</span></li>`);
+        }
+      }
+      document.getElementById('badge-list').innerHTML = badges.length ? badges.join('') : '<li class="text-slate-400">No badges yet.</li>';
+      document.getElementById('save-status').textContent = window.userCore.canSave() ? 'Progress stays in this browser on this device.' : 'Progress cannot be saved in this browser right now.';
+    };
+    picker.addEventListener('change', () => {
+      level = picker.value;
+      history.replaceState(null, '', `?level=${level}`);
+      render();
+    });
+    render();
+    picker.disabled = false;
+    document.getElementById('mixed-challenge').hidden = false;
+    document.getElementById('reset-progress').disabled = false;
+    document.getElementById('reset-progress').onclick = () => {
+      if (!confirm('Delete all quiz scores and badges saved in this browser?')) return;
+      if (!window.userCore.resetUserProgress()) {
+        document.getElementById('save-status').textContent = 'Progress could not be reset. Browser storage is unavailable.';
+        return;
+      }
+      render();
+    };
+  } catch (error) {
+    list.innerHTML = '<p role="alert">Quizzes could not load. Please reload the page to try again.</p>';
   }
 }
 
-window.landingCore = {
-  loadManifest,
-  renderQuizCards,
-  renderBadges
-};
+document.addEventListener('DOMContentLoaded', loadQuizList);

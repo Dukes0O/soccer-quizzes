@@ -1,332 +1,114 @@
-// quiz-ui.js: Modular UI for Soccer Quiz Platform
-const USERNAME_KEY = 'soccerQuizUsername';
-
-function getQuizId() {
-  const params = new URLSearchParams(window.location.search);
-  return params.get('quiz');
-}
-
-function getPlayerName() {
-  return localStorage.getItem(USERNAME_KEY) || '';
-}
-
-function setPlayerName(name) {
-  localStorage.setItem(USERNAME_KEY, name);
-}
-
-function renderBadge(badge, alt) {
-  if (badge && /\.(png|svg)$/i.test(badge)) {
-    let src = badge;
-    if (window.location.pathname.includes('/quizzes/') && !badge.startsWith('../') && !badge.startsWith('/')) {
-      src = `../${badge}`;
-    }
-    return `<img src="${src}" alt="${alt || 'Badge'}" class="inline w-12 h-12 align-middle rounded-lg shadow-lg badge-glow" loading="lazy">`;
-  }
-  return badge || '';
-}
-
-function resolveAssetPath(path) {
-  if (!path || path.startsWith('http')) return path || '';
-  if (window.location.pathname.includes('/quizzes/') && !path.startsWith('../') && !path.startsWith('/')) {
-    return `../${path}`;
-  }
-  return path;
-}
-
-function renderQuestionMedia(question) {
-  if (!question.image) return '';
-  const src = resolveAssetPath(question.image);
-  return `
-    <div class="mb-8 overflow-hidden rounded-2xl border border-white/10 bg-slate-950/40">
-      <img src="${src}" alt="${question.imageAlt || 'Tactical diagram'}" class="w-full h-auto" loading="lazy" />
-    </div>
-  `;
-}
-
-function renderQuizGraphic(graphic, alt, sizeClass = 'w-12 h-12') {
-  if (graphic && /\.(png|svg)$/i.test(graphic)) {
-    return `<img src="${resolveAssetPath(graphic)}" alt="${alt || 'Quiz icon'}" class="${sizeClass} object-contain" loading="lazy">`;
-  }
-  const textSize = sizeClass.includes('w-10') ? 'text-3xl' : 'text-5xl';
-  return `<span class="${textSize}">${graphic || ''}</span>`;
-}
-
-function triggerGoalAnimation() {
-  const goalText = document.createElement('div');
-  goalText.className = 'fixed inset-0 flex items-center justify-center z-[100] pointer-events-none';
-  goalText.innerHTML = `<h1 class="text-8xl md:text-9xl font-black font-sports italic text-yellow-500 animate-bounce drop-shadow-[0_0_30px_rgba(234,179,8,0.8)]">GOAL!!!</h1>`;
-  document.body.appendChild(goalText);
-
-  // Simple "confetti"
-  for(let i=0; i<50; i++) {
-    const c = document.createElement('div');
-    c.className = 'fixed w-2 h-2 z-[99]';
-    c.style.backgroundColor = ['#f59e0b', '#22c55e', '#3b82f6', '#ef4444'][Math.floor(Math.random()*4)];
-    c.style.left = Math.random() * 100 + 'vw';
-    c.style.top = '-10px';
-    c.style.transform = `rotate(${Math.random()*360}deg)`;
-    document.body.appendChild(c);
-
-    const duration = 2000 + Math.random() * 3000;
-    c.animate([
-      { top: '-10px', opacity: 1 },
-      { top: '100vh', opacity: 0, transform: `rotate(${Math.random()*1000}deg)` }
-    ], { duration });
-
-    setTimeout(() => c.remove(), duration);
-  }
-
-  setTimeout(() => goalText.remove(), 2500);
-}
-
-function triggerMissAnimation() {
-  document.body.classList.add('animate-shake');
-  setTimeout(() => document.body.classList.remove('animate-shake'), 400);
-}
+const { escapeHtml: html, LEVELS: quizLevels } = window.quizCore;
 
 async function renderQuizUI() {
-  const quizId = getQuizId();
-  if (!quizId) {
-    document.getElementById('quiz-app').innerHTML = '<p class="text-red-400">Mission data corrupted.</p>';
-    return;
-  }
-  let quizData;
+  const app = document.getElementById('quiz-app');
+  const quizId = new URLSearchParams(location.search).get('quiz');
+  const level = window.quizCore.quizLevel();
+  let data;
   try {
-    quizData = await window.quizCore.loadQuizData(quizId);
-  } catch (e) {
-    document.getElementById('quiz-app').innerHTML = `<p class="text-red-400">Failed to establish link to mission ${quizId}.</p>`;
+    data = await window.quizCore.loadQuizData(quizId);
+  } catch (error) {
+    app.innerHTML = '<p role="alert">This quiz could not load.</p><a class="text-green-400 underline" href="index.html">Back to quizzes</a>';
+    return;
+  }
+  const pool = data.questions.filter(q => q.level === level);
+  if (!pool.length) {
+    app.innerHTML = '<p>No questions at this level yet.</p><a href="index.html">Back to quizzes</a>';
     return;
   }
 
-  // --- 1. Name Entry Screen ---
-  let playerName = getPlayerName();
-  if (!playerName) {
-    document.getElementById('quiz-app').innerHTML = `
-      <div class="glass-panel rounded-3xl p-10 flex flex-col items-center shadow-2xl border-t-4" style="border-color:${quizData.themeColor}">
-        <div class="bg-white/5 p-6 rounded-2xl mb-6">
-          ${renderQuizGraphic(quizData.graphic, quizData.title, 'w-14 h-14')}
-        </div>
-        <h2 class="text-3xl font-bold font-sports italic mb-2 text-white">${quizData.title}</h2>
-        <p class="text-slate-400 text-center mb-8 max-w-sm">Welcome to the Academy. Enter your callsign to begin the tactical evaluation.</p>
-
-        <input id="player-name-input" type="text" placeholder="PLAYER NAME"
-               class="bg-slate-900 border border-white/10 rounded-xl px-6 py-4 mb-6 w-full max-w-xs text-lg font-sports tracking-widest text-white focus:outline-none focus:border-green-500 transition" maxlength="20" />
-
-        <button id="start-challenge" class="quiz-button w-full max-w-xs">START EVALUATION</button>
-      </div>
-    `;
-    document.getElementById('start-challenge').onclick = () => {
-      const name = document.getElementById('player-name-input').value.trim();
-      if (name.length < 2) {
-        alert('IDENTIFICATION REQUIRED');
-        return;
-      }
-      setPlayerName(name);
-      renderQuizUI();
-    };
-    return;
-  }
-
-  // --- 2. Quiz Logic ---
-  const questions = window.quizCore.pickRandomQuestions(quizData.questions, 10);
-  let current = 0, score = 0, answers = Array(10).fill(null), checked = false;
-
-  function renderFieldProgress() {
-    const percent = (current / 10) * 100;
-    const container = document.getElementById('field-container');
-
-    const playerImage = resolveAssetPath('assets/graphics/football-player-cr7.png');
-
-    container.innerHTML = `
-      <div class="relative w-full h-full overflow-hidden bg-[repeating-linear-gradient(90deg,#0b5c2a_0_9%,#0a5427_9%_18%)]">
-        <div class="absolute inset-4 rounded-sm border-2 border-white/15"></div>
-        <div class="absolute top-4 bottom-4 left-1/2 w-px bg-white/15"></div>
-        <div class="absolute top-1/2 left-1/2 w-20 h-20 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white/15"></div>
-        <div class="absolute top-[22%] bottom-[22%] left-4 w-[18%] border-y-2 border-r-2 border-white/15"></div>
-        <div class="absolute top-[34%] bottom-[34%] left-4 w-[7%] border-y-2 border-r-2 border-white/15"></div>
-        <div class="absolute top-[22%] bottom-[22%] right-4 w-[18%] border-y-2 border-l-2 border-white/15"></div>
-        <div class="absolute top-[34%] bottom-[34%] right-4 w-[7%] border-y-2 border-l-2 border-white/15"></div>
-        <div class="absolute top-1/2 left-[17%] h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/15"></div>
-        <div class="absolute top-1/2 right-[17%] h-2 w-2 translate-x-1/2 -translate-y-1/2 rounded-full bg-white/15"></div>
-
-        <!-- Progress Line -->
-        <div class="absolute top-1/2 left-0 h-1 bg-gradient-to-r from-green-500 to-transparent transition-all duration-1000" style="width: ${percent}%; transform: translateY(-50%)"></div>
-
-        <!-- Player -->
-        <div class="absolute transition-all duration-1000 ease-out flex flex-col items-center"
-             style="left: ${percent}%; top: 50%; transform: translate(-50%, -50%); z-index: 10;">
-          <img src="${playerImage}" alt="Ronaldo" class="w-16 md:w-24 h-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" />
-          <div class="bg-black/80 px-2 py-0.5 rounded text-[10px] font-sports text-white mt-1 border border-white/20 whitespace-nowrap uppercase">${getPlayerName()}</div>
-        </div>
-
-        <div class="absolute bottom-4 right-6 font-sports text-slate-500 text-xs tracking-widest uppercase">
-          ZONE: ${current + 1} / 10
-        </div>
-      </div>
-    `;
-  }
-
-  function renderQuestion(idx) {
-    checked = false;
-    renderFieldProgress();
-    const q = questions[idx];
-    let options = '';
-    q.options.forEach((opt, i) => {
-      options += `
-        <label class="option-label group">
-          <input type="radio" name="option" value="${i}" class="hidden" ${answers[idx] === i ? 'checked' : ''} />
-          <div class="flex items-center gap-4">
-             <span class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-xs font-sports group-hover:border-green-500 transition-colors">${String.fromCharCode(65 + i)}</span>
-             <span class="text-lg">${opt}</span>
-          </div>
-        </label>
-      `;
-    });
-
-    document.getElementById('quiz-app').innerHTML = `
-      <div class="glass-panel rounded-3xl p-8 md:p-12 shadow-2xl border-t-4" style="border-color:${quizData.themeColor}">
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
-          <div class="flex items-center gap-4">
-            <div class="bg-white/5 p-4 rounded-xl">
-              ${renderQuizGraphic(quizData.graphic, quizData.title, 'w-10 h-10')}
-            </div>
-            <div>
-              <h2 class="text-2xl font-bold font-sports italic text-white uppercase">${quizData.title}</h2>
-              <p class="text-slate-500 text-xs font-sports tracking-widest">TACTICAL EVALUATION IN PROGRESS</p>
-            </div>
-          </div>
-          <div class="flex gap-2">
-            ${Array(10).fill(0).map((_, i) => `
-              <div class="w-2 h-2 rounded-full ${i < idx ? 'bg-green-500' : (i === idx ? 'bg-blue-500 animate-pulse' : 'bg-slate-700')}"></div>
-            `).join('')}
-          </div>
-        </div>
-
-        ${renderQuestionMedia(q)}
-
-        <div class="text-xl md:text-2xl font-semibold mb-10 text-slate-100 leading-relaxed">${q.question}</div>
-
-        <form id="options-form" class="grid gap-2 mb-10">${options}</form>
-
-        <div class="flex items-center justify-between gap-4">
-          <div id="feedback" class="flex-1"></div>
-          <button id="check-answer" class="quiz-button min-w-[200px]" disabled>SUBMIT DECISION</button>
-        </div>
-      </div>
-    `;
-
-    document.querySelectorAll('input[name="option"]').forEach(radio => {
-      radio.onchange = () => {
-        document.querySelectorAll('.option-label').forEach(l => l.classList.remove('ring-2', 'ring-blue-500'));
-        radio.closest('.option-label').classList.add('ring-2', 'ring-blue-500');
-        document.getElementById('check-answer').disabled = false;
-      };
-    });
-
-    document.getElementById('check-answer').onclick = (e) => {
-      e.preventDefault();
-      if (checked) return;
-
-      const selectedInput = document.querySelector('input[name="option"]:checked');
-      const selected = parseInt(selectedInput.value);
-      answers[idx] = selected;
-      checked = true;
-      const correct = q.correct;
-
-      const labels = document.querySelectorAll('.option-label');
-      labels[correct].classList.add('correct');
-
-      if (selected === correct) {
-        score++;
-        document.querySelectorAll('input[name="option"]').forEach(input => input.disabled = true);
-
-        setTimeout(() => {
-          if (idx < 9) {
-            current++;
-            renderQuestion(current);
-          } else {
-            renderResults();
-          }
-        }, 300);
-        return;
-      } else {
-        triggerMissAnimation();
-        labels[selected].classList.add('selected-incorrect');
-        document.querySelectorAll('input[name="option"]').forEach(input => input.disabled = true);
-        document.getElementById('feedback').innerHTML = `
-          <div class="rounded-2xl border border-red-500/20 bg-red-500/10 p-4">
-            <p class="text-red-300 font-sports font-bold italic tracking-wider mb-2">TACTICAL CORRECTION</p>
-            <p class="text-slate-200 text-sm leading-relaxed mb-2">${q.explanation}</p>
-            <p class="text-slate-400 text-xs leading-relaxed"><span class="font-bold text-slate-300">Correct answer:</span> ${q.options[correct]}</p>
-          </div>
-        `;
-      }
-
-      const nextBtn = document.createElement('button');
-      nextBtn.className = 'quiz-button min-w-[200px] ml-auto bg-blue-600 hover:bg-blue-500';
-      nextBtn.innerText = idx < 9 ? 'NEXT ZONE' : 'FINAL RESULTS';
-
-      document.getElementById('check-answer').replaceWith(nextBtn);
-
-      nextBtn.onclick = () => {
-        if (idx < 9) {
-          current++;
-          renderQuestion(current);
-        } else {
-          renderResults();
-        }
-      };
-    };
-  }
-
-  function renderResults() {
-    renderFieldProgress();
-    let passed = score === 10;
-    if (passed) {
-      window.userCore.setQuizProgress(quizId, score, quizData.badge);
-      triggerGoalAnimation();
-    } else {
-      window.userCore.setQuizProgress(quizId, score, null);
+  function startSession(source, practice = false) {
+    const questions = window.quizCore.pickRandomQuestions(source, 10);
+    const answers = [];
+    let current = 0;
+    let saved = true;
+    function field(completed) {
+      const percent = 12 + completed / questions.length * 76;
+      document.getElementById('field-container').innerHTML = `<div class="quiz-pitch" aria-hidden="true"><div class="pitch-outline"></div><div class="pitch-halfway"></div><div class="pitch-circle"></div><img src="../assets/graphics/football-player-cr7.png" alt="" class="progress-player" style="left:${percent}%"></div>`;
+      document.getElementById('field-caption').textContent = `${completed} of ${questions.length} completed`;
     }
-
-    document.getElementById('quiz-app').innerHTML = `
-      <div class="glass-panel rounded-3xl p-10 flex flex-col items-center shadow-2xl border-t-4" style="border-color:${quizData.themeColor}">
-        <div class="bg-white/5 p-6 rounded-2xl mb-6">
-          ${renderQuizGraphic(quizData.graphic, quizData.title, 'w-14 h-14')}
-        </div>
-        <h2 class="text-3xl font-bold font-sports italic mb-2 text-white uppercase">${quizData.title} COMPLETED</h2>
-        <p class="text-slate-400 text-center mb-8">Debriefing for <span class="text-white font-bold">${getPlayerName()}</span></p>
-
-        <div class="grid grid-cols-2 gap-4 w-full mb-10">
-           <div class="bg-white/5 rounded-2xl p-6 text-center border border-white/5">
-              <div class="text-slate-500 font-sports text-xs tracking-widest mb-1 uppercase">Tactical Score</div>
-              <div class="text-4xl font-sports font-bold ${passed ? 'text-green-500' : 'text-yellow-500'}">${score} / 10</div>
-           </div>
-           <div class="bg-white/5 rounded-2xl p-6 text-center border border-white/5 flex flex-col items-center justify-center">
-              <div class="text-slate-500 font-sports text-xs tracking-widest mb-1 uppercase">Academy Badge</div>
-              ${passed ? renderBadge(quizData.badge, quizData.title) : '<span class="text-slate-600 italic text-xs">NOT EARNED</span>'}
-           </div>
-        </div>
-
-        ${passed ? `
-          <div class="bg-green-500/10 border border-green-500/20 rounded-2xl p-6 mb-10 w-full text-center">
-            <p class="text-green-400 font-sports italic font-bold text-xl">PRO STATUS ACHIEVED!</p>
-            <p class="text-green-300/60 text-sm">Perfect execution. You have mastered this tactical module.</p>
-          </div>
-        ` : `
-          <div class="bg-yellow-500/10 border border-yellow-500/20 rounded-2xl p-6 mb-10 w-full text-center">
-            <p class="text-yellow-500 font-sports italic font-bold text-xl">TRAINING REQUIRED</p>
-            <p class="text-yellow-400/60 text-sm">Review the playbook and try again for 10/10 to earn your badge.</p>
-          </div>
-        `}
-
-        <div class="flex flex-col md:flex-row gap-4 w-full">
-          <button onclick="window.location.href='../index.html'" class="flex-1 bg-slate-800 hover:bg-slate-700 text-white font-sports py-4 rounded-xl transition uppercase tracking-widest">Exit Hub</button>
-          <button onclick="window.location.reload()" class="flex-1 bg-green-600 hover:bg-green-500 text-white font-sports py-4 rounded-xl transition uppercase tracking-widest shadow-lg">Retry Mission</button>
-        </div>
-      </div>
-    `;
+    function focusHeading() {
+      const heading = app.querySelector('[tabindex="-1"]');
+      heading?.focus({ preventScroll: true });
+      app.scrollIntoView({ block: 'start', behavior: 'instant' });
+    }
+    function renderQuestion() {
+      const q = questions[current];
+      let checked = false;
+      field(current);
+      app.innerHTML = `<section class="quiz-panel" style="border-top-color:${data.themeColor}">
+        <div class="quiz-topline"><a href="index.html?level=${level}">All quizzes</a><span>${html(level)}${practice ? ' | Practice' : ''}</span></div>
+        <h1 class="quiz-title">${html(data.title)}</h1>
+        <p class="question-count">Question ${current + 1} of ${questions.length}${q.topic ? ` | ${html(q.topic)}` : ''}</p>
+        ${q.image ? `<img class="question-diagram" src="../${q.image}" alt="${html(q.imageAlt || 'Tactical diagram')}">` : ''}
+        <form id="answer-form">
+          <fieldset><legend id="question-heading" tabindex="-1">${html(q.question)}</legend>
+          <div class="answer-options">${q.options.map((option, i) => `<label class="option-label"><input type="radio" name="answer" value="${i}" required><span>${html(option)}</span><span class="answer-mark"></span></label>`).join('')}</div>
+          </fieldset>
+          <div id="feedback" tabindex="-1" role="status" aria-live="polite"></div>
+          <div class="quiz-actions"><button class="quiz-button" id="check-answer" type="submit" disabled>Check answer</button><button class="quiz-button" id="next-question" type="button" hidden>${current + 1 === questions.length ? 'See results' : 'Next question'}</button></div>
+        </form>
+      </section>`;
+      app.querySelectorAll('input[name="answer"]').forEach(radio => radio.addEventListener('change', () => { document.getElementById('check-answer').disabled = false; }));
+      document.getElementById('answer-form').onsubmit = event => {
+        event.preventDefault();
+        if (checked) return;
+        const input = app.querySelector('input[name="answer"]:checked');
+        if (!input) return;
+        checked = true;
+        const selected = Number(input.value);
+        answers.push(selected);
+        app.querySelectorAll('input[name="answer"]').forEach(radio => {
+          radio.disabled = true;
+          const label = radio.closest('label');
+          if (Number(radio.value) === q.correct) {
+            label.classList.add('correct');
+            label.querySelector('.answer-mark').textContent = 'Correct';
+          } else if (radio.checked) {
+            label.classList.add('selected-incorrect');
+            label.querySelector('.answer-mark').textContent = 'Your answer';
+          }
+        });
+        const feedback = document.getElementById('feedback');
+        feedback.className = 'quiz-feedback';
+        feedback.innerHTML = `<strong>${selected === q.correct ? 'That\'s right.' : 'Good chance to learn.'}</strong><p>${html(q.explanation)}</p>`;
+        document.getElementById('check-answer').hidden = true;
+        document.getElementById('next-question').hidden = false;
+        feedback.focus({ preventScroll: true });
+        feedback.scrollIntoView({ block: 'nearest', behavior: 'instant' });
+        field(current + 1);
+      };
+      document.getElementById('next-question').onclick = () => {
+        if (!checked) return;
+        current++;
+        if (current < questions.length) renderQuestion();
+        else results();
+      };
+      focusHeading();
+    }
+    function results() {
+      const missed = questions.filter((q, i) => answers[i] !== q.correct);
+      const score = questions.length - missed.length;
+      const perfect = !missed.length;
+      if (!practice) saved = window.userCore.setQuizProgress(quizId, score, data.badge || null, level, questions.length);
+      field(questions.length);
+      if (perfect) document.getElementById('field-caption').textContent = `GOAL! ${questions.length} of ${questions.length} correct`;
+      const nextLevel = quizLevels[quizLevels.indexOf(level) + 1];
+      app.innerHTML = `<section class="quiz-panel" style="border-top-color:${data.themeColor}">
+        <p class="question-count">${html(level)}${practice ? ' | Practice' : ''}</p>
+        <h1 class="quiz-title" tabindex="-1">${perfect ? 'Great Work' : 'Keep Building'}!</h1>
+        <p class="result-score">${score}<span> / ${questions.length}</span></p>
+        <p class="text-slate-300">${perfect ? 'You got every question right this time.' : 'Every decision is a chance to learn.'}</p>
+        ${perfect && data.badge && !practice ? `<div class="result-badge"><img src="../${data.badge}" alt="${html(data.title)} badge" width="64" height="64"><p>${html(level)} badge earned</p></div>` : ''}
+        ${!saved ? '<p role="status" class="mt-4 text-amber-300">Your score could not be saved in this browser.</p>' : ''}
+        <div class="quiz-actions mt-6"><a href="index.html?level=${level}" class="secondary-link">All quizzes</a><button id="retry" class="quiz-button">Try again</button>${missed.length ? '<button id="practice-mistakes" class="quiz-button">Practice missed questions</button>' : ''}${nextLevel && !practice ? `<a class="secondary-link" href="quiz.html?quiz=${quizId}&level=${nextLevel}">Try ${nextLevel}</a>` : ''}</div>
+        <div class="answer-review"><h2>Review</h2>${questions.map((q, i) => `<details><summary>${answers[i] === q.correct ? 'Correct' : 'To practise'}: ${html(q.question)}</summary><p><strong>Your answer:</strong> ${html(q.options[answers[i]])}</p><p><strong>Correct answer:</strong> ${html(q.options[q.correct])}</p><p>${html(q.explanation)}</p></details>`).join('')}</div>
+      </section>`;
+      document.getElementById('retry').onclick = () => startSession(pool);
+      document.getElementById('practice-mistakes')?.addEventListener('click', () => startSession(missed, true));
+      focusHeading();
+    }
+    renderQuestion();
   }
-
-  renderQuestion(current);
+  startSession(pool);
 }

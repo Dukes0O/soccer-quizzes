@@ -7,25 +7,330 @@
   "animation": "assets/animations/field-awareness.json",
   "themeColor": "#0284c7",
   "questions": [
-    { "question": "What's the name of the big box in front of your goal?", "options": ["The center circle", "The 18-yard box (penalty area)", "The wide channel", "The attacking third"], "correct": 1, "explanation": "The 18-yard box is the penalty area. It is where the goalkeeper can use their hands and where penalty kicks are awarded." },
-    { "question": "Where is the midfield line?", "options": ["Across the center, splitting the field into two halves", "Along the sideline in the wide channel", "At the top of the penalty area", "Across the endline behind the goal"], "correct": 0, "explanation": "The midfield line divides the field into your defensive half and attacking half. Kickoffs restart from this central area." },
-    { "question": "Why should you know where the sidelines are?", "options": ["To judge how much wide space you have before the ball goes out", "To know where the center circle begins", "To decide when the goalkeeper can use hands", "To mark the edge of the penalty area"], "correct": 0, "explanation": "Sideline awareness helps wide players keep the ball in play, use the wide channel, and know when a defender is running out of space." },
-    { "question": "If you're a winger (wide player), where should you usually be?", "options": ["In the central lane beside the striker", "In the left or right wide third, often near the sideline", "Inside your own penalty area", "On the halfway line as the deepest defender"], "correct": 1, "explanation": "Wingers usually work in the left or right wide third. That width stretches defenders and creates room for passes inside." },
-    { "question": "The job of a center-back is mostly to:", "options": ["Protect the central defensive third and organize the back line", "Stay in the wide attacking channel", "Play only inside the center circle", "Make forward runs into the opponent's penalty area first"], "correct": 0, "explanation": "Center-backs mainly defend the central space in front of goal. They also organize the line and help the team build from the back." },
-    { "question": "A striker usually plays:", "options": ["Primarily in the defensive third", "Mostly in the left or right wide third", "Primarily in the offensive third", "Along the sideline as the deepest defender"], "correct": 2, "explanation": "A striker usually plays highest up the field, primarily in the offensive third, where they can receive passes and create scoring chances." },
-    { "question": "Why is checking over your shoulder important?", "options": ["To see pressure, teammates, and open space before the ball arrives", "To find the nearest sideline only after receiving", "To slow the attack down before every pass", "To keep your first touch under your foot every time"], "correct": 0, "explanation": "Scanning before the ball arrives helps you know whether to turn, pass, shield, or take your first touch into space." },
-    { "question": "What does 'switching the play' mean?", "options": ["Moving the ball from one side of the field to the other", "Moving every player into the central third", "Passing backward only inside your defensive third", "Changing positions with the goalkeeper"], "correct": 0, "explanation": "Switching play moves the ball away from pressure and can open the weak side in the opposite wide third." },
-    { "question": "Why should defenders spread out when your team has the ball?", "options": ["To create width and passing lanes when building from the back", "To leave the central defensive third empty", "To make every pass go through the sideline", "To stand level with the striker"], "correct": 0, "explanation": "When defenders spread out, they stretch the press and give the goalkeeper or teammate safer passing angles." },
-    { "question": "The 'final third' is:", "options": ["The defensive third closest to your own goal", "The middle third around the halfway line", "The offensive third closest to the opponent's goal", "Only the space outside both sidelines"], "correct": 2, "explanation": "The final third is the attacking third near the opponent's goal. It is where teams try to create crosses, through balls, and shots." },
-    { "question": "When you lose the ball, what should you do first?", "options": ["Recover goal-side or apply quick pressure if you are closest", "Stay high in the offensive third no matter what", "Move wider and wait for the ball to come back", "Stop and check whether the ball crossed the sideline"], "correct": 0, "explanation": "The first reaction after losing the ball is transition defending: either pressure the ball or recover between the ball and your goal." },
-    { "question": "What's the benefit of staying wide on offense?", "options": ["It stretches defenders across the field and opens central lanes", "It keeps every attacker in the same channel", "It makes the field shorter for the defense", "It moves the attack away from the opponent's goal"], "correct": 0, "explanation": "Width forces defenders to cover more space. That can open passing lanes through the middle or space for a winger to receive." },
-    { "question": "The halfway circle is used for:", "options": ["Kickoffs and keeping opponents the right distance away", "Marking where wingers should stand during attack", "Showing the edge of the defensive third", "Deciding where throw-ins are taken"], "correct": 0, "explanation": "At kickoff, the ball starts in the center circle area and opponents must stay outside the circle until the ball is played." },
-    { "question": "Which area should you defend the hardest?", "options": ["The wide channel near the opponent's corner", "The center circle when your team has the ball", "The central space in front of your own goal", "The attacking third touchline"], "correct": 2, "explanation": "The central space in front of your own goal is the danger zone because shots and final passes from there are most dangerous." },
-    { "question": "When you're in your own half, what's most important?", "options": ["Protecting the ball and avoiding risky central giveaways", "Dribbling into the offensive third every time", "Taking shots from the defensive third", "Standing wide even when the middle is open"], "correct": 0, "explanation": "In your own half, possession mistakes can become chances for the opponent. Safer passes and good body shape matter." },
-    { "question": "What is the weak side?", "options": ["The side away from the ball", "The side closest to your goalkeeper", "The sideline beside the benches", "The central lane between both penalty areas"], "correct": 0, "explanation": "The weak side is away from the ball. It can become open if defenders shift too far toward the strong side." },
-    { "question": "Why should you look before the ball gets to you?", "options": ["So you know your next action before your first touch", "So you can avoid turning into the attacking third", "So you can ignore pressure behind you", "So the passer always has to choose for you"], "correct": 0, "explanation": "Great players scan early so their first touch and pass match the space, pressure, and teammate movement around them." },
-    { "question": "What does depth mean in attack?", "options": ["Having players at different distances ahead of and behind the ball", "Putting every player flat across the same line", "Keeping all attackers in one wide channel", "Standing only inside the opponent's penalty area"], "correct": 0, "explanation": "Depth gives the ball carrier forward options, support underneath, and space behind defenders to attack." },
-    { "question": "If your team is defending, what should the far-side players do?", "options": ["Tuck in toward the middle to protect central space", "Stay on the far sideline even if the middle is open", "Push past the striker into the offensive third", "Stand inside the goalkeeper's six-yard box"], "correct": 0, "explanation": "Far-side defenders tuck in because the central lane is more dangerous than the far sideline when the ball is on the opposite side." },
-    { "question": "What is a good first touch into space?", "options": ["A touch away from pressure and toward your next action", "A touch straight into the nearest defender", "A touch across the sideline to reset play", "A touch that stops under your foot every time"], "correct": 0, "explanation": "Your first touch should help you escape pressure, play forward, or connect the next pass." }
+    {
+      "question": "What is the large marked area in front of each goal called?",
+      "options": [
+        "The penalty area",
+        "The center circle",
+        "The wide channel",
+        "The halfway line"
+      ],
+      "correct": 0,
+      "explanation": "The penalty area marks where a goalkeeper may handle the ball, subject to the handling rules. Its size can vary in youth soccer.",
+      "id": "field-awareness-01",
+      "level": "novice"
+    },
+    {
+      "question": "Where is the midfield line?",
+      "options": [
+        "Across the center, splitting the field into two halves",
+        "Along the sideline in the wide channel",
+        "At the top of the penalty area",
+        "Across the endline behind the goal"
+      ],
+      "correct": 0,
+      "explanation": "The midfield line divides the field into your defensive half and attacking half. Kickoffs restart from this central area.",
+      "id": "field-awareness-02",
+      "level": "novice"
+    },
+    {
+      "question": "Why should you know where the sidelines are?",
+      "options": [
+        "To judge how much wide space you have before the ball goes out",
+        "To know where the center circle begins",
+        "To decide when the goalkeeper can use hands",
+        "To mark the edge of the penalty area"
+      ],
+      "correct": 0,
+      "explanation": "Sideline awareness helps wide players keep the ball in play, use the wide channel, and know when a defender is running out of space.",
+      "id": "field-awareness-03",
+      "level": "novice"
+    },
+    {
+      "question": "If you're a winger (wide player), where should you usually be?",
+      "options": [
+        "In the central lane beside the striker",
+        "In the left or right wide third, often near the sideline",
+        "Inside your own penalty area",
+        "On the halfway line as the deepest defender"
+      ],
+      "correct": 1,
+      "explanation": "Wingers usually work in the left or right wide third. That width stretches defenders and creates room for passes inside.",
+      "id": "field-awareness-04",
+      "level": "beginner"
+    },
+    {
+      "question": "The job of a center-back is mostly to:",
+      "options": [
+        "Protect the central defensive third and organize the back line",
+        "Stay in the wide attacking channel",
+        "Play only inside the center circle",
+        "Make forward runs into the opponent's penalty area first"
+      ],
+      "correct": 0,
+      "explanation": "Center-backs mainly defend the central space in front of goal. They also organize the line and help the team build from the back.",
+      "id": "field-awareness-05",
+      "level": "beginner"
+    },
+    {
+      "question": "A striker usually plays:",
+      "options": [
+        "Primarily in the defensive third",
+        "Mostly in the left or right wide third",
+        "Primarily in the offensive third",
+        "Along the sideline as the deepest defender"
+      ],
+      "correct": 2,
+      "explanation": "A striker usually plays highest up the field, primarily in the offensive third, where they can receive passes and create scoring chances.",
+      "id": "field-awareness-06",
+      "level": "novice"
+    },
+    {
+      "question": "Why is checking over your shoulder important?",
+      "options": [
+        "To see pressure, teammates, and open space before the ball arrives",
+        "To find the nearest sideline only after receiving",
+        "To slow the attack down before every pass",
+        "To keep your first touch under your foot every time"
+      ],
+      "correct": 0,
+      "explanation": "Scanning before the ball arrives helps you know whether to turn, pass, shield, or take your first touch into space.",
+      "id": "field-awareness-07",
+      "level": "beginner"
+    },
+    {
+      "question": "What does 'switching the play' mean?",
+      "options": [
+        "Moving the ball from one side of the field to the other",
+        "Moving every player into the central third",
+        "Passing backward only inside your defensive third",
+        "Changing positions with the goalkeeper"
+      ],
+      "correct": 0,
+      "explanation": "Switching play moves the ball away from pressure and can open the weak side in the opposite wide third.",
+      "id": "field-awareness-08",
+      "level": "beginner"
+    },
+    {
+      "question": "Why should defenders spread out when your team has the ball?",
+      "options": [
+        "To create width and passing lanes when building from the back",
+        "To leave the central defensive third empty",
+        "To make every pass go through the sideline",
+        "To stand level with the striker"
+      ],
+      "correct": 0,
+      "explanation": "When defenders spread out, they stretch the press and give the goalkeeper or teammate safer passing angles.",
+      "id": "field-awareness-09",
+      "level": "beginner"
+    },
+    {
+      "question": "The 'final third' is:",
+      "options": [
+        "The defensive third closest to your own goal",
+        "The middle third around the halfway line",
+        "The offensive third closest to the opponent's goal",
+        "Only the space outside both sidelines"
+      ],
+      "correct": 2,
+      "explanation": "The final third is the attacking third near the opponent's goal. It is where teams try to create crosses, through balls, and shots.",
+      "id": "field-awareness-10",
+      "level": "novice"
+    },
+    {
+      "question": "When you lose the ball, what should you do first?",
+      "options": [
+        "Recover goal-side or apply quick pressure if you are closest",
+        "Stay high in the offensive third no matter what",
+        "Move wider and wait for the ball to come back",
+        "Stop and check whether the ball crossed the sideline"
+      ],
+      "correct": 0,
+      "explanation": "The first reaction after losing the ball is transition defending: either pressure the ball or recover between the ball and your goal.",
+      "id": "field-awareness-11",
+      "level": "intermediate"
+    },
+    {
+      "question": "What's the benefit of staying wide on offense?",
+      "options": [
+        "It stretches defenders across the field and opens central lanes",
+        "It keeps every attacker in the same channel",
+        "It makes the field shorter for the defense",
+        "It moves the attack away from the opponent's goal"
+      ],
+      "correct": 0,
+      "explanation": "Width forces defenders to cover more space. That can open passing lanes through the middle or space for a winger to receive.",
+      "id": "field-awareness-12",
+      "level": "beginner"
+    },
+    {
+      "question": "At a kickoff, where is the ball placed?",
+      "options": [
+        "On the center mark",
+        "Anywhere inside the center circle",
+        "On the edge of the center circle",
+        "On the nearest touchline"
+      ],
+      "correct": 0,
+      "explanation": "The ball starts on the center mark. Under the standard Laws, opponents stay at least 9.15 metres away until it is in play. Youth competition distances may differ.",
+      "id": "field-awareness-13",
+      "level": "beginner"
+    },
+    {
+      "question": "Which area should you defend the hardest?",
+      "options": [
+        "The wide channel near the opponent's corner",
+        "The center circle when your team has the ball",
+        "The central space in front of your own goal",
+        "The attacking third touchline"
+      ],
+      "correct": 2,
+      "explanation": "The central space in front of your own goal is the danger zone because shots and final passes from there are most dangerous.",
+      "id": "field-awareness-14",
+      "level": "beginner"
+    },
+    {
+      "question": "When you're in your own half, what's most important?",
+      "options": [
+        "Protecting the ball and avoiding risky central giveaways",
+        "Dribbling into the offensive third every time",
+        "Taking shots from the defensive third",
+        "Standing wide even when the middle is open"
+      ],
+      "correct": 0,
+      "explanation": "In your own half, possession mistakes can become chances for the opponent. Safer passes and good body shape matter.",
+      "id": "field-awareness-15",
+      "level": "intermediate"
+    },
+    {
+      "question": "What is the weak side?",
+      "options": [
+        "The side away from the ball",
+        "The side closest to your goalkeeper",
+        "The sideline beside the benches",
+        "The central lane between both penalty areas"
+      ],
+      "correct": 0,
+      "explanation": "The weak side is away from the ball. It can become open if defenders shift too far toward the strong side.",
+      "id": "field-awareness-16",
+      "level": "beginner"
+    },
+    {
+      "question": "You scanned early, but a defender moved as the pass travelled. What helps?",
+      "options": [
+        "Check again when safe and adjust your next action",
+        "Stick to your first decision regardless",
+        "Turn without looking because you already scanned",
+        "Stop scanning until the next pass"
+      ],
+      "correct": 0,
+      "explanation": "Scanning is repeated, not a single look. Update your picture as play changes while still tracking the ball.",
+      "id": "field-awareness-17",
+      "level": "beginner"
+    },
+    {
+      "question": "What does depth mean in attack?",
+      "options": [
+        "Having players at different distances ahead of and behind the ball",
+        "Putting every player flat across the same line",
+        "Keeping all attackers in one wide channel",
+        "Standing only inside the opponent's penalty area"
+      ],
+      "correct": 0,
+      "explanation": "Depth gives the ball carrier forward options, support underneath, and space behind defenders to attack.",
+      "id": "field-awareness-18",
+      "level": "intermediate"
+    },
+    {
+      "question": "If your team is defending, what should the far-side players do?",
+      "options": [
+        "Tuck in toward the middle to protect central space",
+        "Stay on the far sideline even if the middle is open",
+        "Push past the striker into the offensive third",
+        "Stand inside the goalkeeper's six-yard box"
+      ],
+      "correct": 0,
+      "explanation": "Far-side defenders tuck in because the central lane is more dangerous than the far sideline when the ball is on the opposite side.",
+      "id": "field-awareness-19",
+      "level": "intermediate"
+    },
+    {
+      "question": "What is a good first touch into space?",
+      "options": [
+        "A touch away from pressure and toward your next action",
+        "A touch straight into the nearest defender",
+        "A touch across the sideline to reset play",
+        "A touch that stops under your foot every time"
+      ],
+      "correct": 0,
+      "explanation": "Your first touch should help you escape pressure, play forward, or connect the next pass.",
+      "id": "field-awareness-20",
+      "level": "intermediate"
+    },
+    {
+      "id": "field-awareness-21",
+      "level": "advanced",
+      "question": "Which player is commonly described as an inverted winger?",
+      "options": [
+        "A left-footed player on the right, or a right-footed player on the left, able to move inside onto their stronger foot",
+        "A winger who only runs backward",
+        "A center-back who stays near the corner flag",
+        "A winger who is forbidden to cross the ball"
+      ],
+      "correct": 0,
+      "explanation": "Inverted refers to playing on the opposite flank to the stronger foot. It describes a starting role and useful options, not a requirement to cut inside every time."
+    },
+    {
+      "id": "field-awareness-22",
+      "level": "advanced",
+      "question": "A coach mentions a 'half-space'. Which area are they describing?",
+      "options": [
+        "A channel between the central lane and the wide touchline lane",
+        "The entire attacking half of the field",
+        "Only the center circle",
+        "The space outside the touchline"
+      ],
+      "correct": 0,
+      "explanation": "Half-spaces are tactical channels, not official field markings. From there, a player may connect central and wide teammates with different passing angles."
+    },
+    {
+      "id": "field-awareness-23",
+      "level": "advanced",
+      "question": "You stand between opponents' midfield and defense, but directly behind a marker. What would improve your position?",
+      "options": [
+        "Adjust sideways into a visible lane and scan before receiving",
+        "Stay still because being between lines is enough",
+        "Run toward the passer into the same blocked lane",
+        "Ask for a harder pass through the marker"
+      ],
+      "correct": 0,
+      "explanation": "Being between lines is only useful if the ball can reach you and you can handle the pressure afterward. Small changes in angle can matter."
+    },
+    {
+      "id": "field-awareness-24",
+      "level": "advanced",
+      "question": "Your teammate moves wide to receive. Why might you avoid moving wide into exactly the same lane?",
+      "options": [
+        "Another angle can stretch the defense and give a next-pass option",
+        "Two players are never allowed in one channel",
+        "Staying in your original spot is always best",
+        "Wide movement is only for defenders"
+      ],
+      "correct": 0,
+      "explanation": "Good spacing connects players without putting them all on one line. Adjust to what your teammate does and what the defender leaves open."
+    },
+    {
+      "id": "field-awareness-25",
+      "level": "advanced",
+      "question": "You see space ahead before receiving, but pressure arrives from behind as the ball travels. Which information matters most now?",
+      "options": [
+        "The updated pressure and the next safe action",
+        "Your first scan, even if the picture changed",
+        "The position you played in last week",
+        "Only how loudly a teammate asks for the ball"
+      ],
+      "correct": 0,
+      "explanation": "Awareness means updating the picture. A good initial plan may need to become a set pass, a shield, or a different first touch."
+    }
   ]
 }

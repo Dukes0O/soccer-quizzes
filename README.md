@@ -1,5 +1,11 @@
 # Soccer Academy Pro Hub
 
+## 2026/27 season
+
+The new season starts empty. The complete Spring 2026 stats page remains available from the Stats page. Quizzes now have four learning levels, 225 teaching questions, answer explanations, and missed-question practice. Existing badges are preserved.
+
+See [season refresh and hosting notes](docs/season-refresh.md) for content sources, season maintenance, progress storage, and the GitHub Pages / Netlify recommendation. Run `node --test tests/site.test.cjs` to check the data and core behavior.
+
 A professional-grade, high-energy soccer hub designed for U11 players and their parents. This platform combines tactical learning, gamified quizzes, and video analysis into a sleek, "EA FC" inspired dashboard.
 
 ---

@@ -8,126 +8,331 @@
   "themeColor": "#22c55e",
   "questions": [
     {
-      "question": "What is a good goalkeeper ready position before a shot?",
-      "options": ["Feet set, knees bent, hands ready", "Standing tall with arms crossed", "Sitting on the goal line", "Turning sideways"],
+      "question": "What is a useful ready position before a shot?",
+      "options": [
+        "Balanced, knees slightly bent, hands ready",
+        "Leaning all your weight onto one leg",
+        "Standing stiffly with feet together",
+        "Still taking large steps as the shot comes"
+      ],
       "correct": 0,
-      "explanation": "A set, balanced body helps the keeper move quickly in any direction."
+      "explanation": "A balanced position helps you react in either direction. Stay ready to move rather than locking your legs.",
+      "id": "goalkeeper-basics-01",
+      "level": "novice"
     },
     {
-      "question": "When should a goalkeeper get set?",
-      "options": ["As the shooter is about to strike the ball", "After the shot is already past them", "Only after a goal", "Only on corner kicks"],
+      "question": "When should a goalkeeper try to get set for a shot?",
+      "options": [
+        "Just before the shooter strikes",
+        "Only after seeing which corner the shot targets",
+        "As soon as play enters the half, without moving again",
+        "Only after the ball bounces"
+      ],
       "correct": 0,
-      "explanation": "Being still and balanced right before the shot gives the keeper the best chance to save it."
+      "explanation": "Adjust your position as the attack develops, then aim to be balanced when the ball is struck.",
+      "id": "goalkeeper-basics-02",
+      "level": "beginner"
     },
     {
-      "question": "What should a goalkeeper do after making a save but not holding the ball?",
-      "options": ["Recover quickly and look for the rebound", "Celebrate right away", "Turn around", "Wait for the referee"],
+      "question": "You save a shot but the ball stays loose. What next?",
+      "options": [
+        "Recover your position and watch for the next shot",
+        "Turn to check the goal net first",
+        "Start moving upfield for a pass",
+        "Assume a defender will collect it"
+      ],
       "correct": 0,
-      "explanation": "Many goals come from rebounds, so the keeper must get up and be ready again."
+      "explanation": "Stay involved after the first save. A loose ball may create another chance, so recover and communicate.",
+      "id": "goalkeeper-basics-03",
+      "level": "novice"
     },
     {
-      "question": "If a shot is coming straight at the keeper, what is usually safest?",
-      "options": ["Catch it or block it into a safe area", "Duck under it", "Punch it into the middle", "Let a defender handle it"],
+      "question": "A shot comes straight at you. What is usually safest?",
+      "options": [
+        "Hold it securely if possible, otherwise direct it away from danger",
+        "Push every shot straight ahead",
+        "Try to catch every shot even when off balance",
+        "Kick at every shot instead of using your hands"
+      ],
       "correct": 0,
-      "explanation": "If the keeper can catch cleanly, catch it. If not, push it away from danger."
+      "explanation": "Choose the action you can control. A secure catch removes the rebound; a controlled deflection can help when catching is not realistic.",
+      "id": "goalkeeper-basics-04",
+      "level": "beginner"
     },
     {
-      "question": "Where can the goalkeeper use their hands?",
-      "options": ["Inside their own penalty area", "Anywhere on the field", "Only inside the goal", "Only at midfield"],
+      "question": "In which area may a goalkeeper normally use their hands?",
+      "options": [
+        "Their own penalty area",
+        "Anywhere in their own half",
+        "Either penalty area",
+        "Only their own goal area, the smaller box"
+      ],
       "correct": 0,
-      "explanation": "A keeper may use hands inside their own penalty area, not outside it."
+      "explanation": "The ball must be in the keeper's own penalty area. Some situations still forbid handling, including a deliberate kick to the keeper by a teammate.",
+      "id": "goalkeeper-basics-05",
+      "level": "novice"
     },
     {
-      "question": "A teammate passes the ball back with their foot. What should the goalkeeper usually do?",
-      "options": ["Use their feet to control or pass it", "Pick it up with their hands", "Leave it alone", "Catch it and punt"],
+      "question": "A teammate deliberately kicks the ball to you as goalkeeper. How should you play it?",
+      "options": [
+        "Use your feet, not pick it up",
+        "Pick it up as long as it is in your penalty area",
+        "Pick it up only if a forward is pressing",
+        "Let it roll toward goal without reacting"
+      ],
       "correct": 0,
-      "explanation": "On a deliberate foot pass from a teammate, the keeper should not pick it up."
+      "explanation": "Under the standard Laws, you cannot handle a ball deliberately kicked to you by a teammate. Control or pass with your feet.",
+      "id": "goalkeeper-basics-06",
+      "level": "beginner"
     },
     {
-      "question": "Why should a keeper talk loudly and clearly?",
-      "options": ["To organize defenders and warn about danger", "To distract teammates", "To complain", "To make the crowd laugh"],
+      "question": "Why are clear goalkeeper calls useful?",
+      "options": [
+        "They help defenders spot danger and organize",
+        "They replace the need to adjust your position",
+        "They mean defenders no longer need to look around",
+        "They let every defender chase the ball"
+      ],
       "correct": 0,
-      "explanation": "The keeper sees the whole field, so clear calls help defenders mark, step, and clear."
+      "explanation": "Use short, useful information. Tell teammates about runners, pressure, or a ball you are coming to claim.",
+      "id": "goalkeeper-basics-07",
+      "level": "novice"
     },
     {
-      "question": "What is the best call when a keeper is coming to catch a cross?",
-      "options": ["Keeper!", "Maybe!", "Someone!", "Mine maybe later!"],
+      "question": "You commit to safely catching a cross. Which call is clearest?",
+      "options": [
+        "Keeper!",
+        "Someone get it!",
+        "Maybe mine!",
+        "Over there!"
+      ],
       "correct": 0,
-      "explanation": "A loud 'Keeper!' tells defenders to protect space and avoid getting in the way."
+      "explanation": "An early, clear call tells teammates your decision. They still need to watch opponents and avoid unfairly blocking them.",
+      "id": "goalkeeper-basics-08",
+      "level": "beginner"
     },
     {
-      "question": "On a cross, when should the keeper come out?",
-      "options": ["When they are sure they can reach the ball safely", "Every time no matter what", "Never", "Only if a parent says so"],
+      "question": "A cross is beyond your reach in a crowd. What is a sensible decision?",
+      "options": [
+        "Let defenders challenge, then adjust and get ready for the next ball",
+        "Charge through the crowd regardless",
+        "Stop moving because you cannot catch it",
+        "Follow the ball so far that you lose sight of goal"
+      ],
       "correct": 0,
-      "explanation": "A keeper should attack crosses they can win. If they cannot reach it, they should stay set."
+      "explanation": "Judge the flight, distance, and traffic. If you cannot claim safely, stay involved and prepare for a shot or second ball.",
+      "id": "goalkeeper-basics-09",
+      "level": "intermediate"
     },
     {
-      "question": "In a 1v1 breakaway, what should the goalkeeper try to do?",
-      "options": ["Stay big, close the angle, and delay the shot", "Run past the attacker", "Turn their back", "Slide from far away every time"],
+      "question": "A forward breaks through. You cannot reach the ball first. How can you help?",
+      "options": [
+        "Adjust your distance, stay balanced, and make the shooting angle smaller",
+        "Sprint past the ball carrier",
+        "Dive at their feet from too far away",
+        "Keep moving forward even when they are about to shoot"
+      ],
       "correct": 0,
-      "explanation": "Closing the angle makes the goal look smaller and gives defenders time to recover."
+      "explanation": "You may delay the shot and allow defenders to recover. Get balanced as the attacker prepares to finish; avoid a reckless challenge.",
+      "id": "goalkeeper-basics-10",
+      "level": "intermediate"
     },
     {
-      "question": "What does 'protect the near post' mean?",
-      "options": ["Do not leave an easy shot between you and the closer post", "Stand in the middle no matter what", "Stand outside the goal", "Only watch the far post"],
+      "question": "A shooter moves wide. How should a keeper adjust?",
+      "options": [
+        "Move with the shooting angle while covering the near side and the rest of goal",
+        "Stay in the exact center regardless",
+        "Stand touching the near post regardless of distance",
+        "Turn fully toward the far post"
+      ],
       "correct": 0,
-      "explanation": "The keeper must cover the closest side first because that shot is often quickest."
+      "explanation": "Position relative to the ball and goal. Protecting the near side does not mean leaving the rest of the goal unguarded.",
+      "id": "goalkeeper-basics-11",
+      "level": "intermediate"
     },
     {
-      "question": "What should a keeper do after catching the ball?",
-      "options": ["Look up and choose a safe distribution", "Throw it away quickly without looking", "Hold it forever", "Drop it in front of goal"],
+      "question": "After a secure catch, what should you do?",
+      "options": [
+        "Scan quickly and choose a useful distribution",
+        "Throw to the first shirt you see",
+        "Wait until every teammate is marked",
+        "Always punt before looking"
+      ],
       "correct": 0,
-      "explanation": "A calm keeper can start the next attack with a smart throw, roll, or pass."
+      "explanation": "Look for a realistic way to start the attack and release within the allowed time. The best option can be short or long.",
+      "id": "goalkeeper-basics-12",
+      "level": "beginner"
     },
     {
-      "question": "In the diagram, what should the keeper usually choose if player A is open and close?",
+      "question": "In the diagram, A is open nearby with a clear passing lane. What is a sensible option?",
       "image": "assets/graphics/quiz/keeper-distribution.svg",
       "imageAlt": "Goalkeeper distribution options with a short open teammate",
-      "options": ["Roll or pass to A", "Blast it straight at the opponent", "Dribble into pressure", "Wait until everyone is marked"],
+      "options": [
+        "Roll or pass to A",
+        "Kick into the nearest opponent",
+        "Wait for A to be marked",
+        "Dribble into the pressure ahead"
+      ],
       "correct": 0,
-      "explanation": "A short open teammate is usually the safest way to keep the ball and build play."
+      "explanation": "A short open option can help keep possession. Check the lane and A's readiness before releasing the ball.",
+      "id": "goalkeeper-basics-13",
+      "level": "intermediate"
     },
     {
-      "question": "When is a long clearance a smart choice?",
-      "options": ["When short options are marked and danger is close", "Every time the keeper has the ball", "Only after a goal", "Never"],
+      "question": "Short options are tightly marked and pressure is close. What may be sensible?",
+      "options": [
+        "A longer clearance toward a safer area",
+        "A short pass through the closest opponent",
+        "Holding the ball beyond the allowed time",
+        "Dribbling across your goal regardless of pressure"
+      ],
       "correct": 0,
-      "explanation": "If the team is under heavy pressure, clearing long can protect the goal."
+      "explanation": "Protect the goal first. A longer ball can relieve pressure when short passes are unsafe.",
+      "id": "goalkeeper-basics-14",
+      "level": "beginner"
     },
     {
-      "question": "What is a good keeper habit on corner kicks?",
-      "options": ["Start in a strong position and talk before the kick", "Hide behind defenders", "Stand outside the box", "Watch only the kicker"],
+      "question": "Before a corner is taken, what helps the goalkeeper?",
+      "options": [
+        "Check the position of runners and teammates and give clear calls",
+        "Watch only the kicker and ignore the box",
+        "Wait until the ball arrives to organize",
+        "Stand behind the goal line for more space"
+      ],
       "correct": 0,
-      "explanation": "Before the kick, the keeper should organize marks and be ready for the cross."
+      "explanation": "Prepare before the delivery. Know who is covering key spaces, then react to the flight of the ball.",
+      "id": "goalkeeper-basics-15",
+      "level": "beginner"
     },
     {
-      "question": "If a shot is too hard to catch cleanly, where should the keeper try to push it?",
-      "options": ["Wide or away from the middle", "Back into the center", "Straight to an attacker", "Into their own goal"],
+      "question": "A hard shot cannot be caught securely. Where should you try to direct it?",
+      "options": [
+        "Away from waiting attackers, often toward a wide area",
+        "Back toward the penalty spot regardless",
+        "Toward the nearest attacker to make them move",
+        "Directly in front of your goal whenever possible"
+      ],
       "correct": 0,
-      "explanation": "Pushing wide makes rebounds harder for attackers to finish."
+      "explanation": "Try to make a follow-up finish harder. The safest direction depends on where attackers and teammates are.",
+      "id": "goalkeeper-basics-16",
+      "level": "beginner"
     },
     {
-      "question": "What should defenders do when their keeper has the ball?",
-      "options": ["Spread out and offer safe passing options", "Run behind the goal", "Stand next to the keeper", "All hide behind opponents"],
+      "question": "Your goalkeeper has the ball. How can outfield players help?",
+      "options": [
+        "Show at different safe passing angles",
+        "All stand directly in front of the keeper",
+        "Stay behind opponents and ask for a pass",
+        "Run forward without checking the keeper"
+      ],
       "correct": 0,
-      "explanation": "Good spacing helps the keeper pass instead of just kicking long."
+      "explanation": "Make it possible to pass to you. Check pressure and leave useful distances between teammates.",
+      "id": "goalkeeper-basics-17",
+      "level": "beginner"
     },
     {
-      "question": "What does it mean for a keeper to be brave but smart?",
-      "options": ["Attack balls they can win and stay safe when they cannot", "Dive at everything", "Never leave the line", "Ignore the score"],
+      "question": "What does being brave and sensible as a goalkeeper mean?",
+      "options": [
+        "Commit to a decision you can carry out safely",
+        "Dive into every challenge regardless of who gets there first",
+        "Never leave the goal line",
+        "Take a risky option to look confident"
+      ],
       "correct": 0,
-      "explanation": "Good goalkeeping is about good decisions, not just big dives."
+      "explanation": "Confidence includes knowing when to act and when to stay ready. Safety and control matter more than making a dramatic save.",
+      "id": "goalkeeper-basics-18",
+      "level": "beginner"
     },
     {
-      "question": "If the ball is rolling slowly toward the box with an attacker chasing, what should the keeper think first?",
-      "options": ["Can I get there first safely?", "Can I wait on the line?", "Can I turn away?", "Can I pick it up anywhere?"],
+      "question": "A through ball is rolling toward the edge of your area. What should guide whether you come out?",
+      "options": [
+        "The ball's speed, your distance, the runner, and where you can reach it",
+        "Only whether the crowd shouts",
+        "Only whether it is on your stronger-foot side",
+        "Whether you came out for the previous pass"
+      ],
       "correct": 0,
-      "explanation": "The keeper should judge distance and speed before deciding to come out."
+      "explanation": "Read each situation again. Outside the penalty area, you must play without your hands and avoid dangerous contact.",
+      "id": "goalkeeper-basics-19",
+      "level": "intermediate"
     },
     {
-      "question": "What is the keeper's main job?",
-      "options": ["Stop goals and help the team stay organized", "Score every game", "Only punt the ball", "Stay silent"],
+      "question": "What is a goalkeeper's main role?",
+      "options": [
+        "Protect the goal and help organize the team",
+        "Only kick the ball long",
+        "Stay in one position regardless of play",
+        "Leave all passing decisions to defenders"
+      ],
       "correct": 0,
-      "explanation": "A keeper protects the goal, communicates, and helps the team start attacks."
+      "explanation": "Keepers save shots, communicate, and help their team keep or regain control of the ball.",
+      "id": "goalkeeper-basics-20",
+      "level": "novice"
+    },
+    {
+      "id": "goalkeeper-basics-21",
+      "level": "advanced",
+      "question": "Your team keeps a high defensive line. What should affect how far you stand off your goal line?",
+      "options": [
+        "The ball, pressure on the passer, runners, and your recovery distance",
+        "Only the position you used for the last attack",
+        "Only how far forward your center-backs ask you to stand",
+        "Only whether your team is winning"
+      ],
+      "correct": 0,
+      "explanation": "A supporting keeper can deal with through balls, but must also protect against a shot over them. Adjust as pressure and space change."
+    },
+    {
+      "id": "goalkeeper-basics-22",
+      "level": "advanced",
+      "question": "A pass back draws a forward toward you. A defender is now open on the other side. What may the keeper's next pass achieve?",
+      "options": [
+        "Move the ball away from the press through the newly opened lane",
+        "Keep the forward close by taking extra touches",
+        "Return to the same crowded side to avoid changing direction",
+        "Send the ball long without checking the open defender"
+      ],
+      "correct": 0,
+      "explanation": "The keeper can help move the press, not just receive a rescue pass. Scan before the ball arrives and release with suitable pace."
+    },
+    {
+      "id": "goalkeeper-basics-23",
+      "level": "advanced",
+      "question": "You dive and push a shot wide. The ball stays in play and an attacker approaches it. What is the next priority?",
+      "options": [
+        "Recover toward the new shooting angle while watching the ball",
+        "Return to the exact middle regardless of where the ball is",
+        "Watch the previous shot path while staying on the ground",
+        "Leave the goal to argue about the first shot"
+      ],
+      "correct": 0,
+      "explanation": "The danger has moved. Recover quickly, locate the ball, and prepare for a follow-up from its new position."
+    },
+    {
+      "id": "goalkeeper-basics-24",
+      "level": "advanced",
+      "question": "A teammate takes a throw-in directly to you inside your penalty area. Under standard Laws, how should you play it?",
+      "options": [
+        "Use your feet without picking it up",
+        "Catch it because a throw is different from a kick",
+        "Catch it only if you stay inside the goal area",
+        "Catch it after it bounces once"
+      ],
+      "correct": 0,
+      "explanation": "A goalkeeper may not handle a ball received directly from a teammate's throw-in. Plan a safe next pass with the feet before it arrives."
+    },
+    {
+      "id": "goalkeeper-basics-25",
+      "level": "advanced",
+      "question": "You are ready to distribute after a catch. A distant winger has space, but a nearby defender is tightly marked. What should guide the choice?",
+      "options": [
+        "Whether the throw or kick can reach the open winger safely",
+        "The nearby option must be safer because it is shorter",
+        "Long distribution is only useful after a goal kick",
+        "The closest player should decide without you scanning"
+      ],
+      "correct": 0,
+      "explanation": "Shorter is not automatically safer. Compare the passing route, distance, and receiver's situation before choosing."
     }
   ]
 }

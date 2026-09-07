@@ -8,15 +8,17 @@
   "themeColor": "#10b981",
   "questions": [
     {
-      "question": "What's the easiest way to move the ball up the field?",
+      "question": "What helps you choose a route out of defense?",
       "options": [
-        "Through the middle where it's crowded",
-        "Along the sidelines where fewer players are",
-        "Backwards only",
-        "High in the air"
+        "Look for open space and a teammate with a clear passing lane",
+        "Use the sideline even when it is crowded",
+        "Pass through the middle even when it is blocked",
+        "Choose the longest pass before looking up"
       ],
-      "correct": 1,
-      "explanation": "The sidelines usually have more space, so it's easier to pass and dribble there."
+      "correct": 0,
+      "explanation": "There is no best route every time. Look at the pressure and the receiving player. The open route might be wide, central, or over the press.",
+      "id": "build-from-back-01",
+      "level": "beginner"
     },
     {
       "question": "Why should defenders spread out when starting an attack?",
@@ -27,29 +29,35 @@
         "To force the goalkeeper to play long"
       ],
       "correct": 0,
-      "explanation": "Spreading creates passing lanes and makes it easier to keep the ball."
+      "explanation": "Spreading creates passing lanes and makes it easier to keep the ball.",
+      "id": "build-from-back-02",
+      "level": "novice"
     },
     {
-      "question": "Who should step forward to receive the ball from the goalie?",
+      "question": "Who is a useful short option for a goalkeeper with the ball?",
       "options": [
-        "The closest defender",
-        "A marked forward near halfway",
-        "A player standing behind an opponent",
-        "No passing option"
+        "A teammate showing in a clear passing lane",
+        "The nearest defender, even behind a marker",
+        "A teammate facing away with pressure on both sides",
+        "A teammate pointing while staying hidden"
       ],
       "correct": 0,
-      "explanation": "The nearest defender helps the goalie by offering an easy option to pass."
+      "explanation": "Being close is not enough. Show where the keeper can reach you and check the pressure around you.",
+      "id": "build-from-back-03",
+      "level": "beginner"
     },
     {
-      "question": "What's a smart choice if the middle is too tight?",
+      "question": "The middle is crowded, but the far side is open. What can help?",
       "options": [
-        "Pass back to the goalie",
-        "Switch play to the opposite sideline",
-        "Dribble into traffic",
-        "Kick it out"
+        "Use a safe pass to switch toward the open side",
+        "Force the ball through the closest crowd",
+        "Send every teammate toward the ball",
+        "Carry the ball toward your own goal"
       ],
-      "correct": 1,
-      "explanation": "Switching to the other side finds more open space."
+      "correct": 0,
+      "explanation": "A switch can open a route forward. It may take more than one pass, including a pass back, to reach that space safely.",
+      "id": "build-from-back-04",
+      "level": "beginner"
     },
     {
       "question": "When a teammate is open on the wing, you should:",
@@ -60,7 +68,9 @@
         "Wait until the defender closes them"
       ],
       "correct": 0,
-      "explanation": "A quick pass to an open wing player moves the attack forward safely."
+      "explanation": "A quick pass to an open wing player moves the attack forward safely.",
+      "id": "build-from-back-05",
+      "level": "beginner"
     },
     {
       "question": "Why do we sometimes take a few small passes instead of one long pass?",
@@ -71,7 +81,9 @@
         "To keep every teammate in the same lane"
       ],
       "correct": 0,
-      "explanation": "Short, accurate passes help keep possession under pressure."
+      "explanation": "Short, accurate passes help keep possession under pressure.",
+      "id": "build-from-back-06",
+      "level": "beginner"
     },
     {
       "question": "What does 'playing out of the back' mean?",
@@ -82,7 +94,9 @@
         "Only dribbling"
       ],
       "correct": 0,
-      "explanation": "It's moving the ball forward with control, starting from defense."
+      "explanation": "It's moving the ball forward with control, starting from defense.",
+      "id": "build-from-back-07",
+      "level": "novice"
     },
     {
       "question": "If a defender is double-teamed, you should:",
@@ -93,7 +107,9 @@
         "Move farther from the passing lane"
       ],
       "correct": 0,
-      "explanation": "Moving into space gives your teammate a safe outlet."
+      "explanation": "Moving into space gives your teammate a safe outlet.",
+      "id": "build-from-back-08",
+      "level": "novice"
     },
     {
       "question": "When building from the back, why is it okay to pass backwards sometimes?",
@@ -104,18 +120,22 @@
         "It invites pressure if no teammate moves"
       ],
       "correct": 0,
-      "explanation": "A backward pass can reset and open up new spaces to attack."
+      "explanation": "A backward pass can reset and open up new spaces to attack.",
+      "id": "build-from-back-09",
+      "level": "novice"
     },
     {
-      "question": "In which situation should you play a long ball forward?",
+      "question": "Opponents press high. A teammate is running into open space behind them. What can work?",
       "options": [
-        "When the other team is pressing high",
-        "When they're far from our goal",
-        "When we're losing",
-        "When no one is there"
+        "A well-aimed longer pass into that space",
+        "A short pass into the closest marked player",
+        "A clearance with no look at the runner",
+        "Waiting until the runner is surrounded"
       ],
       "correct": 0,
-      "explanation": "A long ball can break a high press by finding teammates behind defenders."
+      "explanation": "A high press can leave space behind it. A longer pass is useful when the target and passing route are realistic, not simply because the press is high.",
+      "id": "build-from-back-10",
+      "level": "intermediate"
     },
     {
       "question": "What role does the defensive midfielder play in building from the back?",
@@ -126,18 +146,22 @@
         "Only defends inside the penalty area"
       ],
       "correct": 0,
-      "explanation": "They link defense and attack by receiving and distributing passes."
+      "explanation": "They link defense and attack by receiving and distributing passes.",
+      "id": "build-from-back-11",
+      "level": "beginner"
     },
     {
-      "question": "If a pass in front is risky, you should:",
+      "question": "A forward pass is blocked and a wide teammate is free. What is a good choice?",
       "options": [
-        "Pass wide to a defender",
-        "Dribble into the box",
-        "Hold the ball until pressure arrives",
-        "Force the pass through the middle"
+        "Pass wide through the clear lane",
+        "Force the original forward pass",
+        "Wait for the wide teammate to be marked",
+        "Dribble straight into the blocking player"
       ],
       "correct": 0,
-      "explanation": "Passing wide lets you keep control and find a better angle."
+      "explanation": "Use the available support. If wide options are also blocked, a safe backward pass or a clearance may be better.",
+      "id": "build-from-back-12",
+      "level": "beginner"
     },
     {
       "question": "Why is checking over your shoulder useful when building out?",
@@ -148,18 +172,22 @@
         "To ignore the defender behind you"
       ],
       "correct": 0,
-      "explanation": "It helps you pick the best passing lane and avoid pressure."
+      "explanation": "It helps you pick the best passing lane and avoid pressure.",
+      "id": "build-from-back-13",
+      "level": "novice"
     },
     {
-      "question": "What does it mean to 'break the lines' in build-up play?",
+      "question": "What does it mean to 'break a line'?",
       "options": [
-        "Pass into space behind the opponent's midfield",
-        "Run offside",
-        "Pass to our own goalkeeper",
-        "Dribble across your own goal"
+        "Move the ball past a row of opponents to a teammate or space beyond",
+        "Keep passing in front of the same opponents",
+        "Send the ball over a touchline",
+        "Move every teammate into one straight row"
       ],
       "correct": 0,
-      "explanation": "It moves the ball past defenders into areas where teammates can run."
+      "explanation": "A pass or dribble can break a line of pressure. Check that the next player can use the ball, not just that the ball gets past someone.",
+      "id": "build-from-back-14",
+      "level": "intermediate"
     },
     {
       "question": "The most important thing in building from the back is:",
@@ -170,7 +198,9 @@
         "Never passing"
       ],
       "correct": 0,
-      "explanation": "Safe, smart passing helps your team control the game and create chances."
+      "explanation": "Safe, smart passing helps your team control the game and create chances.",
+      "id": "build-from-back-15",
+      "level": "beginner"
     },
     {
       "question": "Why should center-backs split wide when the goalkeeper has the ball?",
@@ -181,18 +211,22 @@
         "To stay behind the pressing forward"
       ],
       "correct": 0,
-      "explanation": "Splitting wide stretches the press and gives the keeper safer options."
+      "explanation": "Splitting wide stretches the press and gives the keeper safer options.",
+      "id": "build-from-back-16",
+      "level": "beginner"
     },
     {
-      "question": "What body shape helps you receive when building out?",
+      "question": "You have room to receive from a center-back. Which body position helps you see forward?",
       "options": [
-        "Side-on so you can see the field",
-        "Facing only your own goal",
-        "Back turned to pressure and teammates",
-        "Square to the ball with no view forward"
+        "Side-on, with a view of the ball and the next space",
+        "Facing only the passer until the ball arrives",
+        "Facing only the far goal before checking pressure",
+        "Standing square and deciding only after the first touch"
       ],
       "correct": 0,
-      "explanation": "A side-on body lets you see pressure and play forward more quickly."
+      "explanation": "An open, side-on position can help you play forward. If a defender is tight behind you, protect the ball and use support instead of forcing a turn.",
+      "id": "build-from-back-17",
+      "level": "intermediate"
     },
     {
       "question": "What should the defensive midfielder do during build-up?",
@@ -203,7 +237,9 @@
         "Move beyond the striker too early"
       ],
       "correct": 0,
-      "explanation": "The defensive midfielder can connect defenders to midfield when they find a passing lane."
+      "explanation": "The defensive midfielder can connect defenders to midfield when they find a passing lane.",
+      "id": "build-from-back-18",
+      "level": "intermediate"
     },
     {
       "question": "If opponents press one side hard, what can the back line do?",
@@ -214,7 +250,9 @@
         "Stop creating new passing angles"
       ],
       "correct": 0,
-      "explanation": "Switching through a safe player can escape pressure and find open space."
+      "explanation": "Switching through a safe player can escape pressure and find open space.",
+      "id": "build-from-back-19",
+      "level": "intermediate"
     },
     {
       "question": "When should you clear instead of build short?",
@@ -225,7 +263,74 @@
         "Only after the first half"
       ],
       "correct": 0,
-      "explanation": "Playing short is good, but protecting the goal comes first."
+      "explanation": "Playing short is good, but protecting the goal comes first.",
+      "id": "build-from-back-20",
+      "level": "beginner"
+    },
+    {
+      "id": "build-from-back-21",
+      "level": "advanced",
+      "question": "The keeper and two defenders face two pressing forwards. Why might the keeper remain available for a return pass?",
+      "options": [
+        "To help create a spare passing option and change the angle of attack",
+        "To ensure every attack must restart from the goal line",
+        "To keep both defenders in the same lane",
+        "To avoid ever passing beyond the forwards"
+      ],
+      "correct": 0,
+      "explanation": "Including the keeper can create a numerical advantage. A return pass is useful only when the keeper has time and a clear next option."
+    },
+    {
+      "id": "build-from-back-22",
+      "level": "advanced",
+      "question": "A midfielder appears open but has a defender directly behind them. What should the passer consider?",
+      "options": [
+        "Whether the receiver can protect, set, or turn with the ball",
+        "Only whether the pass can reach their feet",
+        "Only whether they are the nearest teammate",
+        "Whether passing forward always counts as progress"
+      ],
+      "correct": 0,
+      "explanation": "A pass beyond a line is not useful if it traps the receiver. Look at the pressure after reception and the support for their next action."
+    },
+    {
+      "id": "build-from-back-23",
+      "level": "advanced",
+      "question": "You can carry the ball forward with no opponent close. Why might that be better than an immediate sideways pass?",
+      "options": [
+        "It gains space and may draw an opponent out before the next pass",
+        "It means teammates should stop moving",
+        "It removes all risk of losing possession",
+        "It makes passing unnecessary for the rest of the move"
+      ],
+      "correct": 0,
+      "explanation": "Carrying can fix a defender, meaning make them choose whether to leave their position and engage. Keep scanning and release before the space closes."
+    },
+    {
+      "id": "build-from-back-24",
+      "level": "advanced",
+      "question": "A full-back moves into midfield during build-up. What is the useful idea behind this movement?",
+      "options": [
+        "Create another central passing option while teammates maintain width and cover",
+        "Put every defender into midfield together",
+        "Make the player stop defending for the rest of the game",
+        "Keep the same team spacing regardless of the movement"
+      ],
+      "correct": 0,
+      "explanation": "An inverted full-back moves inward in possession. It can help connect passes and protect central space, but teammates must adjust around that movement."
+    },
+    {
+      "id": "build-from-back-25",
+      "level": "advanced",
+      "question": "Your short build-up has drawn several opponents forward, but their back line leaves space behind. What should you consider?",
+      "options": [
+        "A longer pass to a reachable target if that route is now open",
+        "Continuing short passes regardless of the pressure",
+        "Waiting until all opponents retreat before advancing",
+        "Using a long pass even if nobody can reach it"
+      ],
+      "correct": 0,
+      "explanation": "Building from the back is not a rule to pass short forever. Drawing a press can create a useful longer route over or through it."
     }
   ]
 }
