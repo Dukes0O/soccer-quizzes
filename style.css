@@ -124,6 +124,12 @@ h1, h2, h3, .font-sports {
     background-color: #334155; /* hover:bg-slate-700 */
 }
 
+.fixture-card { border-left: 4px solid var(--accent-primary); }
+.fixture-date, .fixture-match { display: flex; justify-content: space-between; gap: 1rem; align-items: center; }
+.fixture-date { font-family: 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: .05em; }
+.fixture-match { margin-top: .8rem; font-weight: 600; }
+.fixture-match strong { color: var(--accent-secondary); font-size: .75rem; letter-spacing: .08em; }
+
 .option-label::before {
     content: '';
     position: absolute;

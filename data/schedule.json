@@ -1,0 +1,14 @@
+{
+  "team": "LUSA - 15M Bunnell",
+  "season": "2026/27",
+  "fixtures": [
+    { "date": "2026-09-12", "time": "16:30", "home": "LUSA - 15M Bunnell", "away": "LUSA - 15M Bowes", "field": "Walnut Grove TURF #1" },
+    { "date": "2026-09-19", "home": "BYE U12B-ORANGE", "away": "LUSA - 15M Bunnell", "field": "TBD" },
+    { "date": "2026-09-26", "home": "SUSC - Juventus 15M", "away": "LUSA - 15M Bunnell", "field": "TBD" },
+    { "date": "2026-10-03", "home": "LUSA - 15M Bunnell", "away": "CFC - 15M Black", "field": "TBD" },
+    { "date": "2026-10-17", "home": "NSFC - 15M Mustangs Blue", "away": "LUSA - 15M Bunnell", "field": "TBD" },
+    { "date": "2026-10-24", "home": "LUSA - 15M Bunnell", "away": "NDFC - NDFC United 15M", "field": "TBD" },
+    { "date": "2026-10-31", "home": "SFC - Knights 15M", "away": "LUSA - 15M Bunnell", "field": "TBD" },
+    { "date": "2026-11-07", "home": "LUSA - 15M Bunnell", "away": "GAC - PSG 15M", "field": "TBD" }
+  ]
+}
