@@ -1,0 +1,992 @@
+{
+  "id": "ep3",
+  "series": "Back to the Keeper",
+  "number": 3,
+  "title": "How to pass it back",
+  "cue": "Side, not middle",
+  "clipSources": {
+    "clips/ortega-positioning.mp4": {
+      "from": "sources/youtube/nA5vkCnSYg4.mp4",
+      "crop": "1724:970:98:0"
+    },
+    "clips/leno-open-mic.mp4": {
+      "from": "sources/research/round2/0FnTsABu3m4.mp4",
+      "crop": "1920:1080:0:0",
+      "start": 80,
+      "duration": 180
+    }
+  },
+  "scenes": [
+    {
+      "type": "title",
+      "id": "title",
+      "vo": "Back to the Keeper. Episode three: how to pass it back. A good back-pass keeps the ball for your team. A bad one can give away a goal."
+    },
+    {
+      "type": "steps",
+      "id": "steps",
+      "steps": [
+        {
+          "variant": "look",
+          "heading": "Look first",
+          "sub": "Keepers move. Pass to where your keeper is now.",
+          "vo": "Step one. Look first. Keepers move. Before you pass back, check where your keeper is right now."
+        },
+        {
+          "variant": "call",
+          "heading": "The keeper calls it",
+          "sub": "You can point. The keeper's call wins.",
+          "vo": "Step two. Talk. You can shout keeper, and point. But your keeper has the best view, so the keeper's call wins. If your keeper shouts, yes, left side, that's where it goes. Away means kick it clear."
+        },
+        {
+          "variant": "side",
+          "heading": "Side, not middle",
+          "sub": "Missed? A pass to the side rolls wide, not in.",
+          "vo": "Step three. Side, not middle. Pass to the side of the goal, never at the middle. If it's missed, a pass to the side rolls wide. A pass to the middle rolls into your own net."
+        },
+        {
+          "variant": "pace",
+          "heading": "Firm, to the foot",
+          "sub": "A slow pass lets the attacker get there first.",
+          "vo": "Step four. Firm, to the foot. A slow pass lets the attacker get there first. Pass it firm, to your keeper's stronger foot."
+        },
+        {
+          "variant": "keeper",
+          "heading": "Keepers: move!",
+          "sub": "Step up to the edge of the box, or out to the side of the goal.",
+          "vo": "Keepers, this part is for you. Don't stay on your goal line. Step up to the edge of your box, or out to the side of the goal. Then your defenders know where to look, and you have time on the ball."
+        }
+      ]
+    },
+    {
+      "type": "clip",
+      "id": "ortega",
+      "src": "clips/ortega-positioning.mp4",
+      "label": "Man City keeper Stefan Ortega",
+      "credit": "Goalkeeping Solutions / YouTube",
+      "pausedSide": "right",
+      "beats": [
+        {
+          "t": "freeze",
+          "at": 18.5,
+          "lowerThird": "Watch the keeper",
+          "vo": "Watch Manchester City's keeper, in green. See where he stands before the pass."
+        },
+        {
+          "t": "play",
+          "from": 18.5,
+          "to": 19.3
+        },
+        {
+          "t": "freeze",
+          "at": 19.3,
+          "vo": "He has moved out wide, to the side of his goal. His defender has an easy, safe pass.",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 1405,
+              "y": 380,
+              "r": 52,
+              "color": "green",
+              "label": "Keeper",
+              "labelSide": "up"
+            },
+            {
+              "kind": "ring",
+              "x": 1480,
+              "y": 488,
+              "r": 50,
+              "color": "blue",
+              "label": "Defender",
+              "labelSide": "down"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1455,
+                520
+              ],
+              "to": [
+                1412,
+                425
+              ],
+              "color": "green",
+              "delay": 1.4
+            }
+          ]
+        },
+        {
+          "t": "play",
+          "from": 19.3,
+          "to": 20.6
+        },
+        {
+          "t": "play",
+          "from": 39.2,
+          "to": 46.6,
+          "lowerThird": "Again: he opens wide to help"
+        },
+        {
+          "t": "freeze",
+          "at": 46.6,
+          "vo": "Here he moves into position again, out wide at the side of his goal. His defender has a safe pass back. Watch.",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 1660,
+              "y": 515,
+              "r": 50,
+              "color": "blue",
+              "label": "Defender",
+              "labelSide": "down"
+            },
+            {
+              "kind": "ring",
+              "x": 1850,
+              "y": 175,
+              "r": 42,
+              "color": "green",
+              "label": "Keeper",
+              "labelSide": "down"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1640,
+                470
+              ],
+              "to": [
+                1850,
+                215
+              ],
+              "color": "green",
+              "delay": 1.4
+            }
+          ]
+        },
+        {
+          "t": "play",
+          "from": 46.6,
+          "to": 48.4
+        },
+        {
+          "t": "play",
+          "from": 52,
+          "to": 56.6,
+          "lowerThird": "He has it"
+        },
+        {
+          "t": "freeze",
+          "at": 56.6,
+          "vo": "Stop. A Newcastle attacker is running at him. His choices: one, the defender who passed it back, now out wide. Two, the midfielder in the middle. Three, kick it long.",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 1538,
+              "y": 328,
+              "r": 40,
+              "color": "green",
+              "label": "Keeper",
+              "labelSide": "up"
+            },
+            {
+              "kind": "ring",
+              "x": 1590,
+              "y": 380,
+              "r": 40,
+              "color": "red",
+              "label": "Attacker",
+              "labelSide": "down"
+            },
+            {
+              "kind": "ring",
+              "x": 1346,
+              "y": 520,
+              "r": 45,
+              "color": "white",
+              "label": "1",
+              "labelSide": "down",
+              "delay": 3,
+              "cue": "one the defender"
+            },
+            {
+              "kind": "ring",
+              "x": 792,
+              "y": 290,
+              "r": 42,
+              "color": "white",
+              "label": "2",
+              "labelSide": "up",
+              "delay": 5.6,
+              "cue": "two the midfielder"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1490,
+                300
+              ],
+              "to": [
+                1100,
+                120
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 7.6,
+              "cue": "three kick"
+            },
+            {
+              "kind": "label",
+              "x": 1050,
+              "y": 150,
+              "text": "3. Kick it long",
+              "color": "white",
+              "delay": 7.9,
+              "cue": "three kick"
+            }
+          ]
+        },
+        {
+          "t": "freeze",
+          "at": 56.6,
+          "question": "Keeper: which would you pick?",
+          "questionSide": "left",
+          "questionTop": 640,
+          "countdown": 5,
+          "vo": "Keeper, which would you pick?",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 1538,
+              "y": 328,
+              "r": 40,
+              "color": "green",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 1590,
+              "y": 380,
+              "r": 40,
+              "color": "red",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 1346,
+              "y": 520,
+              "r": 45,
+              "color": "white",
+              "label": "1",
+              "labelSide": "down",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 792,
+              "y": 290,
+              "r": 42,
+              "color": "white",
+              "label": "2",
+              "labelSide": "up",
+              "delay": 0
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1490,
+                300
+              ],
+              "to": [
+                1100,
+                120
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 0
+            },
+            {
+              "kind": "label",
+              "x": 1050,
+              "y": 150,
+              "text": "3. Kick it long",
+              "color": "white",
+              "delay": 0
+            }
+          ]
+        },
+        {
+          "t": "freeze",
+          "at": 56.6,
+          "vo": "One. The defender who passed it back has moved wide, and he's free. The midfielder has a Newcastle player close to him. Kicking long would be safe, but City would probably lose the ball. Ortega stays calm, lets the attacker come to him, then plays it to the free defender.",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 1538,
+              "y": 328,
+              "r": 40,
+              "color": "green",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 1590,
+              "y": 380,
+              "r": 40,
+              "color": "red",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 1346,
+              "y": 520,
+              "r": 45,
+              "color": "green",
+              "label": "Free",
+              "labelSide": "down",
+              "delay": 0.4,
+              "cue": "and he's free"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1515,
+                365
+              ],
+              "to": [
+                1380,
+                470
+              ],
+              "color": "green",
+              "delay": 1,
+              "cue": "plays it to"
+            },
+            {
+              "kind": "ring",
+              "x": 792,
+              "y": 290,
+              "r": 42,
+              "color": "yellow",
+              "label": "Marked",
+              "labelSide": "up",
+              "delay": 4,
+              "cue": "newcastle player"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1490,
+                300
+              ],
+              "to": [
+                1100,
+                120
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 0
+            },
+            {
+              "kind": "label",
+              "x": 1150,
+              "y": 75,
+              "text": "Long: safe, but gives it away",
+              "color": "white",
+              "delay": 6.6,
+              "cue": "kicking long"
+            }
+          ]
+        },
+        {
+          "t": "play",
+          "from": 62.7,
+          "to": 68,
+          "lowerThird": "Watch the play finish"
+        },
+        {
+          "t": "play",
+          "from": 62.7,
+          "to": 65,
+          "rate": 0.5,
+          "lowerThird": "Again, slower"
+        },
+        {
+          "t": "freeze",
+          "at": 67.3,
+          "vo": "City keep the ball and carry it up the pitch. The keeper was ready out wide, the defender got open again, and the keeper found him. That's a back-pass done right, from start to finish.",
+          "caption": "Ready wide. Get open again. Find the free player.",
+          "captionTop": 790,
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 1448,
+              "y": 585,
+              "r": 45,
+              "color": "green",
+              "label": "City keep it",
+              "labelSide": "up"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "clip",
+      "id": "leno",
+      "src": "clips/leno-open-mic.mp4",
+      "label": "Leicester v Arsenal, keeper Bernd Leno",
+      "credit": "Arsenal / YouTube",
+      "beats": [
+        {
+          "t": "freeze",
+          "at": 40.5,
+          "lowerThird": "The keeper's voice",
+          "vo": "Keepers see the whole pitch, so they talk all game. This is Arsenal's keeper, Bernd Leno, with a microphone on. Turn the sound up and listen to what he shouts."
+        },
+        {
+          "t": "play",
+          "from": 40.5,
+          "to": 45,
+          "volume": 1
+        },
+        {
+          "t": "play",
+          "from": 133,
+          "to": 141.5,
+          "volume": 1
+        },
+        {
+          "t": "play",
+          "from": 157,
+          "to": 165,
+          "volume": 1
+        },
+        {
+          "t": "freeze",
+          "at": 162,
+          "vo": "Short, loud and early. A name, then an instruction. Man on. Higher. His team-mates do what he says, because he can see what they can't.",
+          "caption": "A name, then an instruction.",
+          "captionTop": true
+        },
+        {
+          "t": "play",
+          "from": 172,
+          "to": 177.5,
+          "volume": 1,
+          "lowerThird": "Coming for the ball"
+        },
+        {
+          "t": "freeze",
+          "at": 173.5,
+          "vo": "And when the keeper wants the ball, the call is: keeper! It's the keeper's call, and it wins.",
+          "caption": "The keeper's call wins.",
+          "captionTop": true
+        }
+      ]
+    },
+    {
+      "type": "clip",
+      "id": "chelsea",
+      "src": "clips/06-jorginho-kepa-blind-back-pass.mp4",
+      "label": "Chelsea v Arsenal",
+      "credit": "Chelsea FC / YouTube",
+      "beats": [
+        {
+          "t": "freeze",
+          "at": 0,
+          "lowerThird": "Watch",
+          "vo": "Chelsea against Arsenal. Watch the pass back to the keeper."
+        },
+        {
+          "t": "play",
+          "from": 0,
+          "to": 1.2
+        },
+        {
+          "t": "freeze",
+          "at": 1.2,
+          "vo": "Stop. Jorginho, in blue, is about to pass back. Two places he could aim: one, the middle of the goal, where keepers usually stand. Two, out to the side of the net.",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 1168,
+              "y": 500,
+              "r": 50,
+              "color": "blue",
+              "label": "Passer",
+              "labelSide": "down"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1200,
+                525
+              ],
+              "to": [
+                1515,
+                352
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 3.6,
+              "cue": "one the middle"
+            },
+            {
+              "kind": "label",
+              "x": 1380,
+              "y": 300,
+              "text": "1. Middle of the goal",
+              "color": "white",
+              "delay": 4,
+              "cue": "one the middle"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1205,
+                530
+              ],
+              "to": [
+                1700,
+                432
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 6.6,
+              "cue": "two out"
+            },
+            {
+              "kind": "label",
+              "x": 1560,
+              "y": 520,
+              "text": "2. Side of the net",
+              "color": "white",
+              "delay": 7,
+              "cue": "two out"
+            }
+          ]
+        },
+        {
+          "t": "freeze",
+          "at": 1.2,
+          "question": "Which should it be? Find the keeper.",
+          "countdown": 5,
+          "vo": "Which should it be? Find the keeper first.",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 1168,
+              "y": 500,
+              "r": 50,
+              "color": "blue",
+              "delay": 0
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1200,
+                525
+              ],
+              "to": [
+                1515,
+                352
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 0
+            },
+            {
+              "kind": "label",
+              "x": 1380,
+              "y": 300,
+              "text": "1. Middle of the goal",
+              "color": "white",
+              "delay": 0
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1205,
+                530
+              ],
+              "to": [
+                1700,
+                432
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 0
+            },
+            {
+              "kind": "label",
+              "x": 1560,
+              "y": 520,
+              "text": "2. Side of the net",
+              "color": "white",
+              "delay": 0
+            }
+          ]
+        },
+        {
+          "t": "freeze",
+          "at": 1.2,
+          "vo": "Two. Kepa, in green, is out to the side of his net. That's where this pass should go. Watch where it goes.",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 1168,
+              "y": 500,
+              "r": 50,
+              "color": "blue",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 1733,
+              "y": 405,
+              "r": 52,
+              "color": "green",
+              "label": "Kepa",
+              "labelSide": "up",
+              "delay": 0.3
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1205,
+                530
+              ],
+              "to": [
+                1700,
+                432
+              ],
+              "color": "green",
+              "delay": 0
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1200,
+                525
+              ],
+              "to": [
+                1515,
+                352
+              ],
+              "color": "red",
+              "dashed": true,
+              "delay": 0
+            },
+            {
+              "kind": "label",
+              "x": 1380,
+              "y": 300,
+              "text": "Middle: nobody there",
+              "color": "red",
+              "delay": 1.6,
+              "cue": "that's where"
+            }
+          ]
+        },
+        {
+          "t": "play",
+          "from": 1.2,
+          "to": 8.4,
+          "lowerThird": "Watch what happens"
+        },
+        {
+          "t": "play",
+          "from": 11.6,
+          "to": 13.8,
+          "rate": 0.6,
+          "lowerThird": "Again, slower",
+          "masks": [
+            [
+              130,
+              85,
+              310,
+              100
+            ]
+          ]
+        },
+        {
+          "t": "freeze",
+          "at": 13.8,
+          "masks": [
+            [
+              130,
+              85,
+              310,
+              100
+            ]
+          ],
+          "vo": "The pass went to the middle of the goal, where keepers usually stand. But Kepa had moved to the side. Look first. Pass to where your keeper is.",
+          "caption": "Look first. Pass to where your keeper is.",
+          "captionTop": true,
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 562,
+              "y": 960,
+              "r": 60,
+              "color": "green",
+              "label": "Kepa",
+              "labelSide": "up"
+            },
+            {
+              "kind": "ring",
+              "x": 986,
+              "y": 843,
+              "r": 26,
+              "color": "yellow",
+              "label": "Ball",
+              "labelSide": "up"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                990,
+                870
+              ],
+              "to": [
+                1010,
+                1060
+              ],
+              "color": "red",
+              "dashed": true,
+              "delay": 1
+            }
+          ]
+        },
+        {
+          "t": "play",
+          "from": 13.8,
+          "to": 16.4,
+          "masks": [
+            [
+              130,
+              85,
+              310,
+              100
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "clip",
+      "id": "japan",
+      "src": "clips/04-iwasaki-short-back-pass.mp4",
+      "label": "Japan v USA, U-20 Women's World Cup",
+      "credit": "FIFA Training Centre",
+      "beats": [
+        {
+          "t": "freeze",
+          "at": 1,
+          "lowerThird": "Watch",
+          "vo": "Japan against the USA, at the Under-20 Women's World Cup. Watch the speed of this back-pass."
+        },
+        {
+          "t": "play",
+          "from": 1,
+          "to": 3.2
+        },
+        {
+          "t": "freeze",
+          "at": 3.2,
+          "question": "Who gets to the ball first?",
+          "countdown": 5,
+          "vo": "Stop. Who gets to the ball first, the keeper or the attacker?",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 1000,
+              "y": 460,
+              "r": 24,
+              "color": "yellow",
+              "label": "Ball",
+              "labelSide": "down"
+            },
+            {
+              "kind": "ring",
+              "x": 910,
+              "y": 428,
+              "r": 48,
+              "color": "red",
+              "label": "Attacker",
+              "labelSide": "up"
+            },
+            {
+              "kind": "ring",
+              "x": 1662,
+              "y": 425,
+              "r": 50,
+              "color": "green",
+              "label": "Keeper",
+              "labelSide": "up"
+            }
+          ]
+        },
+        {
+          "t": "freeze",
+          "at": 3.2,
+          "vo": "The attacker. The pass is too slow.",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 1000,
+              "y": 460,
+              "r": 24,
+              "color": "yellow",
+              "label": "Ball",
+              "labelSide": "down",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 910,
+              "y": 428,
+              "r": 48,
+              "color": "red",
+              "label": "Attacker",
+              "labelSide": "up",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 1662,
+              "y": 425,
+              "r": 50,
+              "color": "green",
+              "label": "Keeper",
+              "labelSide": "up",
+              "delay": 0
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1030,
+                462
+              ],
+              "to": [
+                1600,
+                445
+              ],
+              "color": "yellow",
+              "dashed": true,
+              "delay": 0.4
+            }
+          ]
+        },
+        {
+          "t": "play",
+          "from": 3.2,
+          "to": 9.6,
+          "lowerThird": "Watch what happens"
+        },
+        {
+          "t": "freeze",
+          "at": 4,
+          "lowerThird": "Keepers, watch Iwasaki",
+          "vo": "Now, keepers, watch Iwasaki. She starts deep, near her goal, and she is backing up.",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 1430,
+              "y": 425,
+              "r": 52,
+              "color": "green",
+              "label": "Still deep",
+              "labelSide": "up"
+            },
+            {
+              "kind": "ring",
+              "x": 873,
+              "y": 462,
+              "r": 24,
+              "color": "yellow",
+              "label": "Ball",
+              "labelSide": "down"
+            }
+          ]
+        },
+        {
+          "t": "play",
+          "from": 4,
+          "to": 5.3,
+          "rate": 0.5
+        },
+        {
+          "t": "freeze",
+          "at": 5.3,
+          "vo": "Then she charges out. Coming out makes the goal smaller for the attacker. There is much less net to shoot at.",
+          "caption": "Coming out makes the goal smaller.",
+          "annotations": [
+            {
+              "kind": "cone",
+              "points": [
+                [
+                  845,
+                  460
+                ],
+                [
+                  1466,
+                  402
+                ],
+                [
+                  1862,
+                  478
+                ]
+              ],
+              "color": "yellow",
+              "delay": 0.2
+            },
+            {
+              "kind": "ring",
+              "x": 990,
+              "y": 425,
+              "r": 52,
+              "color": "green",
+              "label": "Charges out",
+              "labelSide": "up",
+              "delay": 1.2
+            }
+          ]
+        },
+        {
+          "t": "play",
+          "from": 5.3,
+          "to": 8.4,
+          "rate": 0.75
+        },
+        {
+          "t": "freeze",
+          "at": 8.4,
+          "vo": "She blocks it, but it was close. Defenders, pass it firm. Keepers, be ready early, at the edge of your box.",
+          "caption": "Pass it firm. Keepers: be ready early."
+        }
+      ]
+    },
+    {
+      "type": "recap",
+      "id": "recap",
+      "items": [
+        "Look first",
+        "Keeper calls it",
+        "Side, not middle",
+        "Firm, to the foot"
+      ],
+      "note": "Building out or clearing from the middle? Aim for the side there too.",
+      "vo": "Remember. Look first. The keeper calls it. Side, not middle. Firm, to the foot. And side, not middle works all over the pitch. When we build out from the back, or clear a ball from the middle, we aim for the side."
+    },
+    {
+      "type": "credits",
+      "id": "credits",
+      "lines": [
+        "Clips: Chelsea FC (YouTube), FIFA Training Centre, Goalkeeping Solutions (YouTube), Arsenal (YouTube)",
+        "Made for Team Blue Thunder teaching only"
+      ],
+      "vo": "Thanks for watching. See you at training."
+    }
+  ]
+}

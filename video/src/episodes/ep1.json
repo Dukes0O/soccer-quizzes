@@ -1,0 +1,2059 @@
+{
+  "id": "ep1",
+  "series": "Back to the Keeper",
+  "number": 1,
+  "title": "When do we go back?",
+  "cue": "Turn or return",
+  "clipSources": {
+    "clips/steele-back-pass.mp4": {
+      "from": "sources/youtube/6qTZDxuL1CY.mp4",
+      "crop": "1511:850:409:0"
+    },
+    "clips/ederson-napoli.mp4": {
+      "from": "sources/research/success/yt_Xq0U8ZqVlP0.mp4",
+      "crop": "1024:576:256:0",
+      "start": 48,
+      "duration": 20
+    }
+  },
+  "scenes": [
+    {
+      "type": "title",
+      "id": "title",
+      "vo": "Back to the Keeper. Episode one: when do we go back? A pass back to your keeper can be the smartest pass on the pitch, if you pick the right moment."
+    },
+    {
+      "type": "steps",
+      "id": "steps",
+      "view": {
+        "x": 140,
+        "y": 150,
+        "w": 720,
+        "h": 590
+      },
+      "steps": [
+        {
+          "kicker": "Step 1 of 3",
+          "heading": "When to go back",
+          "sub": "Facing our goal. Attacker close. Nothing safe forward.",
+          "vo": "Step one. When do we go back? Check three things. Are you facing our own goal? Is an attacker close behind you? Is there nothing safe going forward? Then go back to your keeper.",
+          "board": {
+            "players": [
+              {
+                "id": "gk",
+                "team": "keeper",
+                "label": "GK",
+                "path": [
+                  [
+                    0,
+                    500,
+                    668
+                  ],
+                  [
+                    0.62,
+                    500,
+                    668
+                  ],
+                  [
+                    0.72,
+                    400,
+                    640
+                  ]
+                ]
+              },
+              {
+                "id": "d",
+                "team": "us",
+                "label": "5",
+                "path": [
+                  [
+                    0,
+                    560,
+                    300
+                  ],
+                  [
+                    0.14,
+                    560,
+                    335
+                  ]
+                ]
+              },
+              {
+                "id": "a",
+                "team": "them",
+                "label": "A",
+                "path": [
+                  [
+                    0,
+                    600,
+                    215
+                  ],
+                  [
+                    0.3,
+                    585,
+                    270
+                  ]
+                ]
+              },
+              {
+                "id": "m",
+                "team": "us",
+                "label": "8",
+                "path": [
+                  [
+                    0,
+                    400,
+                    235
+                  ]
+                ]
+              },
+              {
+                "id": "b",
+                "team": "them",
+                "label": "B",
+                "path": [
+                  [
+                    0,
+                    450,
+                    215
+                  ],
+                  [
+                    0.45,
+                    415,
+                    250
+                  ]
+                ]
+              }
+            ],
+            "ball": [
+              [
+                0,
+                600,
+                205
+              ],
+              [
+                0.13,
+                552,
+                355
+              ],
+              [
+                0.76,
+                552,
+                355
+              ],
+              [
+                0.86,
+                415,
+                648
+              ]
+            ],
+            "tags": [
+              {
+                "at": [
+                  720,
+                  380
+                ],
+                "text": "FACING OUR GOAL",
+                "color": "yellow",
+                "t": [
+                  0.2,
+                  0.24
+                ],
+                "until": 0.74
+              },
+              {
+                "at": [
+                  735,
+                  262
+                ],
+                "text": "ATTACKER CLOSE",
+                "color": "red",
+                "t": [
+                  0.36,
+                  0.4
+                ],
+                "until": 0.74
+              },
+              {
+                "at": [
+                  300,
+                  300
+                ],
+                "text": "FORWARD: BLOCKED",
+                "color": "red",
+                "t": [
+                  0.52,
+                  0.56
+                ],
+                "until": 0.74
+              },
+              {
+                "at": [
+                  290,
+                  560
+                ],
+                "text": "GO BACK",
+                "color": "green",
+                "size": 48,
+                "t": [
+                  0.86,
+                  0.9
+                ]
+              }
+            ],
+            "lines": [
+              {
+                "from": [
+                  548,
+                  340
+                ],
+                "to": [
+                  420,
+                  262
+                ],
+                "color": "red",
+                "dashed": true,
+                "t": [
+                  0.5,
+                  0.56
+                ],
+                "until": 0.74
+              },
+              {
+                "from": [
+                  552,
+                  360
+                ],
+                "to": [
+                  418,
+                  630
+                ],
+                "color": "green",
+                "t": [
+                  0.76,
+                  0.86
+                ]
+              }
+            ],
+            "marks": [
+              {
+                "kind": "cross",
+                "at": [
+                  486,
+                  300
+                ],
+                "t": [
+                  0.56,
+                  0.58
+                ],
+                "until": 0.74
+              }
+            ],
+            "bubbles": [
+              {
+                "at": "gk",
+                "text": "YES!",
+                "color": "green",
+                "below": true,
+                "t": [
+                  0.7,
+                  0.74
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "kicker": "Step 2 of 3",
+          "heading": "Turn when you can",
+          "sub": "Space and time? Turn and play forward.",
+          "vo": "Step two. If the attacker is far away and you have time, turn and play forward. Going back every time makes us easy to press. Check over your shoulder before the ball arrives, so you already know which one it is.",
+          "board": {
+            "players": [
+              {
+                "id": "gk",
+                "team": "keeper",
+                "label": "GK",
+                "path": [
+                  [
+                    0,
+                    400,
+                    640
+                  ]
+                ]
+              },
+              {
+                "id": "d",
+                "team": "us",
+                "label": "5",
+                "path": [
+                  [
+                    0,
+                    560,
+                    335
+                  ],
+                  [
+                    0.14,
+                    560,
+                    395
+                  ],
+                  [
+                    0.46,
+                    560,
+                    395
+                  ],
+                  [
+                    0.6,
+                    545,
+                    315
+                  ]
+                ],
+                "faces": [
+                  [
+                    0,
+                    "down"
+                  ],
+                  [
+                    0.44,
+                    "up"
+                  ]
+                ]
+              },
+              {
+                "id": "a",
+                "team": "them",
+                "label": "A",
+                "path": [
+                  [
+                    0,
+                    585,
+                    270
+                  ],
+                  [
+                    0.16,
+                    770,
+                    235
+                  ]
+                ]
+              },
+              {
+                "id": "m",
+                "team": "us",
+                "label": "8",
+                "path": [
+                  [
+                    0,
+                    400,
+                    235
+                  ],
+                  [
+                    0.6,
+                    380,
+                    222
+                  ]
+                ]
+              },
+              {
+                "id": "b",
+                "team": "them",
+                "label": "B",
+                "path": [
+                  [
+                    0,
+                    415,
+                    250
+                  ],
+                  [
+                    0.4,
+                    520,
+                    215
+                  ]
+                ]
+              }
+            ],
+            "ball": [
+              [
+                0,
+                415,
+                648
+              ],
+              [
+                0.14,
+                552,
+                412
+              ],
+              [
+                0.46,
+                552,
+                412
+              ],
+              [
+                0.6,
+                538,
+                332
+              ],
+              [
+                0.66,
+                538,
+                332
+              ],
+              [
+                0.76,
+                392,
+                240
+              ]
+            ],
+            "tags": [
+              {
+                "at": [
+                  745,
+                  320
+                ],
+                "text": "ATTACKER FAR",
+                "color": "green",
+                "t": [
+                  0.18,
+                  0.22
+                ],
+                "until": 0.8
+              },
+              {
+                "at": [
+                  700,
+                  430
+                ],
+                "text": "TIME TO TURN",
+                "color": "yellow",
+                "t": [
+                  0.42,
+                  0.46
+                ],
+                "until": 0.8
+              },
+              {
+                "at": [
+                  300,
+                  300
+                ],
+                "text": "PLAY FORWARD",
+                "color": "green",
+                "t": [
+                  0.76,
+                  0.8
+                ]
+              }
+            ],
+            "lines": [
+              {
+                "from": [
+                  538,
+                  330
+                ],
+                "to": [
+                  400,
+                  248
+                ],
+                "color": "green",
+                "t": [
+                  0.66,
+                  0.76
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "kicker": "Step 3 of 3",
+          "heading": "Back keeps the ball",
+          "sub": "Your keeper is an extra player. Then we start again.",
+          "vo": "Step three. Going back is not giving up. It keeps the ball, and your keeper becomes an extra player. The attacker has to chase all the way back, and we can start again on the other side.",
+          "board": {
+            "players": [
+              {
+                "id": "gk",
+                "team": "keeper",
+                "label": "GK",
+                "path": [
+                  [
+                    0,
+                    400,
+                    640
+                  ]
+                ]
+              },
+              {
+                "id": "d",
+                "team": "us",
+                "label": "5",
+                "path": [
+                  [
+                    0,
+                    545,
+                    315
+                  ],
+                  [
+                    0.14,
+                    560,
+                    340
+                  ]
+                ]
+              },
+              {
+                "id": "a",
+                "team": "them",
+                "label": "A",
+                "path": [
+                  [
+                    0,
+                    770,
+                    235
+                  ],
+                  [
+                    0.16,
+                    588,
+                    278
+                  ],
+                  [
+                    0.44,
+                    588,
+                    278
+                  ],
+                  [
+                    0.74,
+                    470,
+                    560
+                  ]
+                ]
+              },
+              {
+                "id": "m",
+                "team": "us",
+                "label": "8",
+                "path": [
+                  [
+                    0,
+                    380,
+                    222
+                  ]
+                ]
+              },
+              {
+                "id": "b",
+                "team": "them",
+                "label": "B",
+                "path": [
+                  [
+                    0,
+                    520,
+                    215
+                  ]
+                ]
+              },
+              {
+                "id": "f",
+                "team": "us",
+                "label": "2",
+                "path": [
+                  [
+                    0,
+                    790,
+                    600
+                  ],
+                  [
+                    0.5,
+                    770,
+                    520
+                  ]
+                ]
+              }
+            ],
+            "ball": [
+              [
+                0,
+                392,
+                240
+              ],
+              [
+                0.14,
+                552,
+                358
+              ],
+              [
+                0.3,
+                552,
+                358
+              ],
+              [
+                0.42,
+                415,
+                648
+              ],
+              [
+                0.6,
+                415,
+                648
+              ],
+              [
+                0.74,
+                755,
+                538
+              ]
+            ],
+            "lines": [
+              {
+                "from": [
+                  552,
+                  362
+                ],
+                "to": [
+                  418,
+                  630
+                ],
+                "color": "green",
+                "dashed": true,
+                "t": [
+                  0.3,
+                  0.42
+                ],
+                "until": 0.84
+              },
+              {
+                "from": [
+                  425,
+                  640
+                ],
+                "to": [
+                  745,
+                  540
+                ],
+                "color": "green",
+                "t": [
+                  0.6,
+                  0.74
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "at": [
+                  290,
+                  580
+                ],
+                "text": "EXTRA PLAYER",
+                "color": "yellow",
+                "t": [
+                  0.44,
+                  0.48
+                ],
+                "until": 0.9
+              },
+              {
+                "at": [
+                  700,
+                  470
+                ],
+                "text": "START AGAIN",
+                "color": "green",
+                "t": [
+                  0.76,
+                  0.8
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "kicker": "For keepers",
+          "heading": "Be the way out",
+          "sub": "See it early. Get open to the side. Call \"Yes!\"",
+          "vo": "Keepers, when you see a team-mate facing our goal with an attacker behind, that's your cue. Get off your line, get open to the side, and call yes, nice and loud.",
+          "board": {
+            "players": [
+              {
+                "id": "gk",
+                "team": "keeper",
+                "label": "GK",
+                "path": [
+                  [
+                    0,
+                    500,
+                    690
+                  ],
+                  [
+                    0.18,
+                    500,
+                    690
+                  ],
+                  [
+                    0.4,
+                    385,
+                    630
+                  ]
+                ]
+              },
+              {
+                "id": "d",
+                "team": "us",
+                "label": "5",
+                "path": [
+                  [
+                    0,
+                    560,
+                    340
+                  ]
+                ]
+              },
+              {
+                "id": "a",
+                "team": "them",
+                "label": "A",
+                "path": [
+                  [
+                    0,
+                    590,
+                    275
+                  ]
+                ]
+              },
+              {
+                "id": "m",
+                "team": "us",
+                "label": "8",
+                "path": [
+                  [
+                    0,
+                    380,
+                    222
+                  ]
+                ]
+              },
+              {
+                "id": "b",
+                "team": "them",
+                "label": "B",
+                "path": [
+                  [
+                    0,
+                    400,
+                    255
+                  ]
+                ]
+              }
+            ],
+            "ball": [
+              [
+                0,
+                552,
+                358
+              ],
+              [
+                0.68,
+                552,
+                358
+              ],
+              [
+                0.8,
+                400,
+                640
+              ]
+            ],
+            "tags": [
+              {
+                "at": [
+                  680,
+                  735
+                ],
+                "text": "NOT ON THE LINE",
+                "color": "red",
+                "t": [
+                  0.08,
+                  0.12
+                ],
+                "until": 0.3
+              },
+              {
+                "at": [
+                  290,
+                  570
+                ],
+                "text": "GET OPEN EARLY",
+                "color": "green",
+                "t": [
+                  0.4,
+                  0.44
+                ]
+              }
+            ],
+            "bubbles": [
+              {
+                "at": "gk",
+                "text": "YES!",
+                "color": "green",
+                "below": true,
+                "t": [
+                  0.58,
+                  0.62
+                ]
+              }
+            ],
+            "lines": [
+              {
+                "from": [
+                  552,
+                  362
+                ],
+                "to": [
+                  404,
+                  624
+                ],
+                "color": "green",
+                "dashed": true,
+                "t": [
+                  0.68,
+                  0.8
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "clip",
+      "id": "ederson",
+      "src": "clips/ederson-napoli.mp4",
+      "label": "Napoli v Man City, keeper Ederson",
+      "credit": "Piotr Foot / YouTube",
+      "beats": [
+        {
+          "t": "freeze",
+          "at": 5.3,
+          "lowerThird": "Done right",
+          "vo": "First, how it's done. Napoli against Manchester City. City's defender, number 30, has the ball near his own box, facing his own goal, and a Napoli forward is chasing him.",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 1730,
+              "y": 830,
+              "r": 85,
+              "color": "blue",
+              "label": "Defender",
+              "labelSide": "up"
+            },
+            {
+              "kind": "ring",
+              "x": 1320,
+              "y": 770,
+              "r": 85,
+              "color": "red",
+              "label": "Forward",
+              "labelSide": "up"
+            }
+          ]
+        },
+        {
+          "t": "freeze",
+          "at": 5.3,
+          "vo": "He has two choices. One: turn and dribble up the line. Two: pass it back to his keeper, Ederson, out by the side of the goal.",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 1730,
+              "y": 830,
+              "r": 85,
+              "color": "blue",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 1320,
+              "y": 770,
+              "r": 85,
+              "color": "red",
+              "delay": 0
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1790,
+                900
+              ],
+              "to": [
+                1850,
+                990
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 1,
+              "cue": "one turn"
+            },
+            {
+              "kind": "label",
+              "x": 1560,
+              "y": 950,
+              "text": "1. Turn up the line",
+              "color": "white",
+              "delay": 1.4,
+              "cue": "one turn"
+            },
+            {
+              "kind": "ring",
+              "x": 1210,
+              "y": 405,
+              "r": 85,
+              "color": "white",
+              "delay": 4,
+              "cue": "two pass"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1660,
+                850
+              ],
+              "to": [
+                1280,
+                470
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 4.4,
+              "cue": "two pass"
+            },
+            {
+              "kind": "label",
+              "x": 1530,
+              "y": 560,
+              "text": "2. Back to the keeper",
+              "color": "white",
+              "delay": 4.8,
+              "cue": "two pass"
+            }
+          ]
+        },
+        {
+          "t": "freeze",
+          "at": 5.3,
+          "question": "Which would you pick?",
+          "questionSide": "left",
+          "questionTop": 560,
+          "countdown": 5,
+          "vo": "Which would you pick?",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 1730,
+              "y": 830,
+              "r": 85,
+              "color": "blue",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 1320,
+              "y": 770,
+              "r": 85,
+              "color": "red",
+              "delay": 0
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1790,
+                900
+              ],
+              "to": [
+                1850,
+                990
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 0
+            },
+            {
+              "kind": "label",
+              "x": 1560,
+              "y": 950,
+              "text": "1. Turn up the line",
+              "color": "white",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 1210,
+              "y": 405,
+              "r": 85,
+              "color": "white",
+              "delay": 0
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1660,
+                850
+              ],
+              "to": [
+                1280,
+                470
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 0
+            },
+            {
+              "kind": "label",
+              "x": 1530,
+              "y": 560,
+              "text": "2. Back to the keeper",
+              "color": "white",
+              "delay": 0
+            }
+          ]
+        },
+        {
+          "t": "freeze",
+          "at": 5.3,
+          "vo": "Back to the keeper. If he turns, the forward is right there. Ederson is off his line and out to the side, ready for it. That's a safe pass, away from the forward.",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 1730,
+              "y": 830,
+              "r": 85,
+              "color": "blue",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 1320,
+              "y": 770,
+              "r": 85,
+              "color": "red",
+              "delay": 0
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1790,
+                900
+              ],
+              "to": [
+                1850,
+                990
+              ],
+              "color": "red",
+              "dashed": true,
+              "delay": 0
+            },
+            {
+              "kind": "label",
+              "x": 1560,
+              "y": 950,
+              "text": "Turn: forward on him",
+              "color": "red",
+              "delay": 0.6,
+              "cue": "if he turns"
+            },
+            {
+              "kind": "ring",
+              "x": 1210,
+              "y": 405,
+              "r": 85,
+              "color": "green",
+              "label": "Keeper: out wide",
+              "labelSide": "up",
+              "delay": 2,
+              "cue": "ederson is off"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1660,
+                850
+              ],
+              "to": [
+                1280,
+                470
+              ],
+              "color": "green",
+              "delay": 2.4,
+              "cue": "safe pass"
+            }
+          ]
+        },
+        {
+          "t": "play",
+          "from": 11.4,
+          "to": 13.5,
+          "lowerThird": "Watch"
+        },
+        {
+          "t": "freeze",
+          "at": 13.5,
+          "vo": "Stop. Now the forward is chasing Ederson. His choices: one, a short pass to his team-mate on the left. Two, kick it long, up the pitch.",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 1490,
+              "y": 515,
+              "r": 75,
+              "color": "green",
+              "label": "Keeper",
+              "labelSide": "up"
+            },
+            {
+              "kind": "ring",
+              "x": 1650,
+              "y": 615,
+              "r": 65,
+              "color": "red",
+              "delay": 0.3
+            },
+            {
+              "kind": "ring",
+              "x": 220,
+              "y": 500,
+              "r": 90,
+              "color": "white",
+              "delay": 2.4,
+              "cue": "one a short"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1300,
+                585
+              ],
+              "to": [
+                300,
+                520
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 2.8,
+              "cue": "one a short"
+            },
+            {
+              "kind": "label",
+              "x": 700,
+              "y": 470,
+              "text": "1. Short, to the left",
+              "color": "white",
+              "delay": 3.2,
+              "cue": "one a short"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1400,
+                470
+              ],
+              "to": [
+                900,
+                120
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 5.4,
+              "cue": "two kick"
+            },
+            {
+              "kind": "label",
+              "x": 1000,
+              "y": 250,
+              "text": "2. Kick it long",
+              "color": "white",
+              "delay": 5.8,
+              "cue": "two kick"
+            }
+          ]
+        },
+        {
+          "t": "freeze",
+          "at": 13.5,
+          "question": "Keeper: which would you pick?",
+          "questionSide": "left",
+          "questionTop": 700,
+          "countdown": 5,
+          "vo": "Keeper, which would you pick?",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 1490,
+              "y": 515,
+              "r": 75,
+              "color": "green",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 1650,
+              "y": 615,
+              "r": 65,
+              "color": "red",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 220,
+              "y": 500,
+              "r": 90,
+              "color": "white",
+              "delay": 0
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1300,
+                585
+              ],
+              "to": [
+                300,
+                520
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 0
+            },
+            {
+              "kind": "label",
+              "x": 700,
+              "y": 470,
+              "text": "1. Short, to the left",
+              "color": "white",
+              "delay": 0
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1400,
+                470
+              ],
+              "to": [
+                900,
+                120
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 0
+            },
+            {
+              "kind": "label",
+              "x": 1000,
+              "y": 250,
+              "text": "2. Kick it long",
+              "color": "white",
+              "delay": 0
+            }
+          ]
+        },
+        {
+          "t": "freeze",
+          "at": 13.5,
+          "vo": "Both are safe. His team-mate on the left is open, with no one near him, so the short pass keeps the ball. Ederson doesn't wait for the forward to arrive. One touch, and pass it to the open player.",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 1490,
+              "y": 515,
+              "r": 75,
+              "color": "green",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 1650,
+              "y": 615,
+              "r": 65,
+              "color": "red",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 220,
+              "y": 500,
+              "r": 90,
+              "color": "green",
+              "label": "Open",
+              "labelSide": "up",
+              "delay": 0.4
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1300,
+                585
+              ],
+              "to": [
+                300,
+                520
+              ],
+              "color": "green",
+              "delay": 0.8
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1400,
+                470
+              ],
+              "to": [
+                900,
+                120
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 0
+            },
+            {
+              "kind": "label",
+              "x": 1000,
+              "y": 250,
+              "text": "Long: safe too",
+              "color": "white",
+              "delay": 1.2
+            }
+          ]
+        },
+        {
+          "t": "play",
+          "from": 13.5,
+          "to": 17.8,
+          "lowerThird": "Watch what happens"
+        },
+        {
+          "t": "play",
+          "from": 11.4,
+          "to": 16,
+          "rate": 0.5,
+          "lowerThird": "Again, slower"
+        },
+        {
+          "t": "freeze",
+          "at": 17.6,
+          "vo": "The forward slides in and misses. City keep the ball. A firm pass back to the side, a keeper who's ready out wide, and a quick pass to the open player. That's how it's done.",
+          "caption": "Back to the side. Keeper ready. Find the open player.",
+          "captionTop": true
+        }
+      ]
+    },
+    {
+      "type": "clip",
+      "id": "steele",
+      "src": "clips/steele-back-pass.mp4",
+      "label": "Premier League, keeper Jason Steele",
+      "credit": "Goalkeeper Analysis / YouTube",
+      "beats": [
+        {
+          "t": "freeze",
+          "at": 0,
+          "lowerThird": "Watch",
+          "vo": "Now one where it went wrong, so we can learn from it. A Premier League game. A long ball goes over the defence. Watch the defender, in light green, chasing it back toward his own goal."
+        },
+        {
+          "t": "play",
+          "from": 0,
+          "to": 4.4
+        },
+        {
+          "t": "freeze",
+          "at": 4.4,
+          "questionSide": "right",
+          "vo": "Stop. The defender gets there first, but he's facing his own goal. He has three choices. One: turn up the line. Two: pass inside to his midfielder. Three: pass it back to the keeper.",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 873,
+              "y": 340,
+              "r": 56,
+              "color": "blue",
+              "label": "Defender",
+              "labelSide": "up"
+            },
+            {
+              "kind": "ring",
+              "x": 787,
+              "y": 333,
+              "r": 56,
+              "color": "red",
+              "label": "Striker",
+              "labelSide": "down"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                910,
+                300
+              ],
+              "to": [
+                1010,
+                205
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 4,
+              "cue": "one turn"
+            },
+            {
+              "kind": "label",
+              "x": 1180,
+              "y": 200,
+              "text": "1. Turn",
+              "color": "white",
+              "delay": 4.3,
+              "cue": "one turn"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                880,
+                395
+              ],
+              "to": [
+                845,
+                600
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 6,
+              "cue": "two pass inside"
+            },
+            {
+              "kind": "label",
+              "x": 560,
+              "y": 520,
+              "text": "2. Inside",
+              "color": "white",
+              "delay": 6.3,
+              "cue": "two pass inside"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                960,
+                360
+              ],
+              "to": [
+                1880,
+                470
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 8.4,
+              "cue": "three pass"
+            },
+            {
+              "kind": "label",
+              "x": 1520,
+              "y": 530,
+              "text": "3. Back to the keeper",
+              "color": "white",
+              "delay": 8.7,
+              "cue": "three pass"
+            }
+          ]
+        },
+        {
+          "t": "freeze",
+          "at": 4.4,
+          "question": "Which would you pick?",
+          "questionSide": "right",
+          "countdown": 5,
+          "vo": "Which would you pick?",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 873,
+              "y": 340,
+              "r": 56,
+              "color": "blue",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 787,
+              "y": 333,
+              "r": 56,
+              "color": "red",
+              "delay": 0
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                910,
+                300
+              ],
+              "to": [
+                1010,
+                205
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 0
+            },
+            {
+              "kind": "label",
+              "x": 1180,
+              "y": 200,
+              "text": "1. Turn",
+              "color": "white",
+              "delay": 0
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                880,
+                395
+              ],
+              "to": [
+                845,
+                600
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 0
+            },
+            {
+              "kind": "label",
+              "x": 560,
+              "y": 520,
+              "text": "2. Inside",
+              "color": "white",
+              "delay": 0
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                960,
+                360
+              ],
+              "to": [
+                1880,
+                470
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 0
+            },
+            {
+              "kind": "label",
+              "x": 1520,
+              "y": 530,
+              "text": "3. Back to the keeper",
+              "color": "white",
+              "delay": 0
+            }
+          ]
+        },
+        {
+          "t": "freeze",
+          "at": 4.4,
+          "questionSide": "right",
+          "vo": "Back to the keeper. Turning, the striker is right on his shoulder. Inside, his midfielder is running toward our goal too. The keeper can see the whole pitch. Watch what he does.",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 873,
+              "y": 340,
+              "r": 56,
+              "color": "blue",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 787,
+              "y": 333,
+              "r": 56,
+              "color": "red",
+              "delay": 0
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                910,
+                300
+              ],
+              "to": [
+                1010,
+                205
+              ],
+              "color": "red",
+              "dashed": true,
+              "delay": 0
+            },
+            {
+              "kind": "label",
+              "x": 1300,
+              "y": 200,
+              "text": "Turn: striker on him",
+              "color": "red",
+              "delay": 1,
+              "cue": "turning"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                880,
+                395
+              ],
+              "to": [
+                845,
+                600
+              ],
+              "color": "yellow",
+              "dashed": true,
+              "delay": 0,
+              "cue": "inside his"
+            },
+            {
+              "kind": "label",
+              "x": 470,
+              "y": 520,
+              "text": "Inside: facing our goal too",
+              "color": "yellow",
+              "delay": 3.4,
+              "cue": "inside his"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                960,
+                360
+              ],
+              "to": [
+                1880,
+                470
+              ],
+              "color": "green",
+              "delay": 0
+            },
+            {
+              "kind": "label",
+              "x": 1520,
+              "y": 530,
+              "text": "Back to the keeper",
+              "color": "green",
+              "delay": 6.4,
+              "cue": "the keeper can see"
+            }
+          ]
+        },
+        {
+          "t": "play",
+          "from": 4.4,
+          "to": 6.7,
+          "lowerThird": "Watch what he does"
+        },
+        {
+          "t": "freeze",
+          "at": 81,
+          "vo": "Good choice. Now you're the keeper. This is his view, and the striker is closing him down. Your choices: one, the midfielder in the middle. Two, the midfielder on the right. Three, the defender who just passed it, out wide, off the picture to the right. Four, kick it long.",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 987,
+              "y": 907,
+              "r": 105,
+              "color": "green",
+              "label": "Keeper",
+              "labelSide": "up"
+            },
+            {
+              "kind": "ring",
+              "x": 1683,
+              "y": 773,
+              "r": 88,
+              "color": "red",
+              "label": "Striker",
+              "labelSide": "up"
+            },
+            {
+              "kind": "ring",
+              "x": 913,
+              "y": 200,
+              "r": 64,
+              "color": "white",
+              "label": "1",
+              "labelSide": "up",
+              "delay": 6,
+              "cue": "one the midfielder"
+            },
+            {
+              "kind": "ring",
+              "x": 1763,
+              "y": 200,
+              "r": 64,
+              "color": "white",
+              "label": "2",
+              "labelSide": "down",
+              "delay": 8.6,
+              "cue": "two the midfielder"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1160,
+                905
+              ],
+              "to": [
+                1900,
+                600
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 11,
+              "cue": "three the defender"
+            },
+            {
+              "kind": "label",
+              "x": 1380,
+              "y": 650,
+              "text": "3. The defender",
+              "color": "white",
+              "delay": 11.4,
+              "cue": "three the defender"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1120,
+                900
+              ],
+              "to": [
+                560,
+                300
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 16,
+              "cue": "four kick"
+            },
+            {
+              "kind": "label",
+              "x": 470,
+              "y": 560,
+              "text": "4. Kick it long",
+              "color": "white",
+              "delay": 16.4,
+              "cue": "four kick"
+            }
+          ]
+        },
+        {
+          "t": "freeze",
+          "at": 81,
+          "question": "Keeper: which would you pick?",
+          "questionSide": "left",
+          "questionTop": 440,
+          "countdown": 5,
+          "vo": "Keeper, which would you pick?",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 987,
+              "y": 907,
+              "r": 105,
+              "color": "green",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 1683,
+              "y": 773,
+              "r": 88,
+              "color": "red",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 913,
+              "y": 200,
+              "r": 64,
+              "color": "white",
+              "label": "1",
+              "labelSide": "up",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 1763,
+              "y": 200,
+              "r": 64,
+              "color": "white",
+              "label": "2",
+              "labelSide": "down",
+              "delay": 0
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1160,
+                905
+              ],
+              "to": [
+                1900,
+                600
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 0
+            },
+            {
+              "kind": "label",
+              "x": 1380,
+              "y": 650,
+              "text": "3. The defender",
+              "color": "white",
+              "delay": 0
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1120,
+                900
+              ],
+              "to": [
+                560,
+                300
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 0
+            },
+            {
+              "kind": "label",
+              "x": 470,
+              "y": 560,
+              "text": "4. Kick it long",
+              "color": "white",
+              "delay": 0
+            }
+          ]
+        },
+        {
+          "t": "freeze",
+          "at": 81,
+          "vo": "One, three and four are all good. The midfielder in the middle is open. The defender out wide is free. Kicking it long is safe. Two is the risky one: the midfielder on the right has an opponent right next to him. Watch what he did.",
+          "annotations": [
+            {
+              "kind": "ring",
+              "x": 987,
+              "y": 907,
+              "r": 105,
+              "color": "green",
+              "delay": 0
+            },
+            {
+              "kind": "ring",
+              "x": 913,
+              "y": 200,
+              "r": 64,
+              "color": "green",
+              "label": "Open",
+              "labelSide": "up",
+              "delay": 0.4,
+              "cue": "middle is open"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1080,
+                860
+              ],
+              "to": [
+                935,
+                300
+              ],
+              "color": "green",
+              "dashed": true,
+              "delay": 0.8,
+              "cue": "middle is open"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1160,
+                905
+              ],
+              "to": [
+                1900,
+                600
+              ],
+              "color": "green",
+              "delay": 3.6,
+              "cue": "out wide is free"
+            },
+            {
+              "kind": "label",
+              "x": 1640,
+              "y": 560,
+              "text": "Free: the defender",
+              "color": "green",
+              "delay": 3.8,
+              "cue": "out wide is free"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1120,
+                900
+              ],
+              "to": [
+                560,
+                300
+              ],
+              "color": "white",
+              "dashed": true,
+              "delay": 0
+            },
+            {
+              "kind": "label",
+              "x": 470,
+              "y": 560,
+              "text": "Long: safe",
+              "color": "white",
+              "delay": 6,
+              "cue": "kicking it long"
+            },
+            {
+              "kind": "ring",
+              "x": 1763,
+              "y": 200,
+              "r": 64,
+              "color": "yellow",
+              "label": "Covered",
+              "labelSide": "down",
+              "delay": 8,
+              "cue": "two is the risky"
+            },
+            {
+              "kind": "ring",
+              "x": 1500,
+              "y": 140,
+              "r": 58,
+              "color": "red",
+              "delay": 8.4,
+              "cue": "opponent right next"
+            }
+          ]
+        },
+        {
+          "t": "play",
+          "from": 6.7,
+          "to": 12,
+          "lowerThird": "Watch what he did"
+        },
+        {
+          "t": "play",
+          "from": 6.6,
+          "to": 9.6,
+          "rate": 0.5,
+          "lowerThird": "Again, slower"
+        },
+        {
+          "t": "freeze",
+          "at": 81,
+          "vo": "He played it in between them, toward the covered player. It was cut out, and they scored. Keepers: pick the open player, or kick it long. Defenders: after you pass back, get open again.",
+          "caption": "After you pass back, get open again.",
+          "captionTop": 455,
+          "annotations": [
+            {
+              "kind": "arrow",
+              "from": [
+                1140,
+                930
+              ],
+              "to": [
+                1290,
+                420
+              ],
+              "color": "red",
+              "dashed": true,
+              "delay": 0.4
+            },
+            {
+              "kind": "label",
+              "x": 1380,
+              "y": 360,
+              "text": "His pass: toward the covered player",
+              "color": "red",
+              "delay": 0.9
+            },
+            {
+              "kind": "ring",
+              "x": 913,
+              "y": 200,
+              "r": 64,
+              "color": "green",
+              "label": "Open",
+              "labelSide": "up",
+              "delay": 4.2,
+              "cue": "pick the open"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1080,
+                860
+              ],
+              "to": [
+                935,
+                300
+              ],
+              "color": "green",
+              "dashed": true,
+              "delay": 4.6,
+              "cue": "pick the open"
+            },
+            {
+              "kind": "arrow",
+              "from": [
+                1160,
+                905
+              ],
+              "to": [
+                1900,
+                600
+              ],
+              "color": "green",
+              "delay": 5,
+              "cue": "defenders after"
+            },
+            {
+              "kind": "label",
+              "x": 1640,
+              "y": 560,
+              "text": "Free: the defender",
+              "color": "green",
+              "delay": 5.4,
+              "cue": "defenders after"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "recap",
+      "id": "recap",
+      "items": [
+        "Facing our goal?",
+        "Attacker close?",
+        "Nothing forward?",
+        "Then go back"
+      ],
+      "highlight": 3,
+      "noteLabel": "SPACE AND TIME?",
+      "note": "Turn and play forward. Check over your shoulder before the ball arrives.",
+      "vo": "Remember the three checks. Facing our goal? Attacker close? Nothing safe forward? Then go back. If you have space and time, turn and play forward. Turn, or return."
+    },
+    {
+      "type": "credits",
+      "id": "credits",
+      "lines": [
+        "Clips: Piotr Foot (YouTube), Goalkeeper Analysis (YouTube)",
+        "Made for Team Blue Thunder teaching only"
+      ],
+      "vo": "Thanks for watching. See you at training."
+    }
+  ]
+}

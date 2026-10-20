@@ -1,0 +1,17 @@
+{
+  "name": "back-to-keeper-video",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Builds the Back to the Keeper lesson videos with Remotion.",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.536",
+    "@remotion/google-fonts": "4.0.536",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.536"
+  }
+}

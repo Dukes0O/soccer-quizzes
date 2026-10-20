@@ -1,0 +1,336 @@
+{
+  "id": "ep2",
+  "series": "Back to the Keeper",
+  "number": 2,
+  "title": "The back-pass rule",
+  "cue": "",
+  "clipSources": {
+    "clips/ipswich-wolves.mp4": { "from": "sources/research/rule/-zrlxZc2bzM.mp4", "crop": "1280:720:0:0", "start": 0, "duration": 32 },
+    "clips/westham-headback.mp4": { "from": "sources/research/header/westham_wrexham_headback_1080.mp4", "crop": "1280:720:0:160", "start": 6, "duration": 10 },
+    "clips/navas-chestback.mp4": { "from": "sources/research/header/sevilla_inter_navas_chestback_1080.mp4", "crop": "1200:675:100:405", "start": 0, "duration": 12 },
+    "clips/montreal-trick.mp4": { "from": "sources/research/rule/NIV4Pi6UwjI.mp4", "crop": "768:432:43:0", "start": 12, "duration": 8.5 }
+  },
+  "scenes": [
+    {
+      "type": "title",
+      "id": "title",
+      "vo": "Back to the Keeper. Episode two: the back-pass rule. When can the keeper use their hands, and when is it feet only?"
+    },
+    {
+      "type": "steps",
+      "id": "steps",
+      "view": { "x": -40, "y": 200, "w": 720, "h": 590 },
+      "steps": [
+        {
+          "kicker": "The situation",
+          "heading": "Kicked back",
+          "sub": "Your team-mate passes it back with their foot, on purpose.",
+          "vo": "Your team-mate kicks the ball back to you on purpose. You're the keeper, inside your own box.",
+          "board": {
+            "players": [
+              { "id": "gk", "team": "keeper", "label": "GK", "path": [[0, 470, 600]] },
+              { "id": "d", "team": "us", "label": "5", "path": [[0, 520, 380]] },
+              { "id": "a", "team": "them", "label": "A", "path": [[0, 560, 300]] }
+            ],
+            "ball": [[0, 508, 398], [0.3, 508, 398], [0.62, 478, 585]],
+            "lines": [{ "from": [508, 402], "to": [480, 570], "color": "green", "t": [0.3, 0.58] }]
+          }
+        },
+        {
+          "kicker": "You choose",
+          "heading": "Hands or feet?",
+          "sub": "Can the keeper pick it up?",
+          "countdown": 3,
+          "vo": "Can the keeper pick it up? Say hands, or feet.",
+          "board": {
+            "players": [
+              { "id": "gk", "team": "keeper", "label": "GK", "path": [[0, 470, 600]] },
+              { "id": "d", "team": "us", "label": "5", "path": [[0, 520, 380]] },
+              { "id": "a", "team": "them", "label": "A", "path": [[0, 560, 300]] }
+            ],
+            "ball": [[0, 478, 585]],
+            "bubbles": [{ "at": "gk", "text": "HANDS?", "color": "amber", "below": true, "t": [0.05, 0.1] }]
+          }
+        },
+        {
+          "kicker": "The answer",
+          "heading": "Feet only",
+          "sub": "Pick it up: indirect free kick to them, from where it was handled.",
+          "vo": "Feet only. If the keeper picks it up, the other team gets an indirect free kick from the spot where the keeper touched it. If that's inside the small box, the kick moves out to the edge of the small box. It's so close to goal that our whole team may have to stand on the goal line, between the posts. Don't pick it up.",
+          "board": {
+            "players": [
+              { "id": "gk", "team": "keeper", "label": "GK", "path": [[0, 470, 600], [0.5, 480, 698]] },
+              { "id": "d", "team": "us", "label": "5", "path": [[0, 520, 380], [0.5, 520, 698]], "faces": [[0, "down"], [0.45, "up"]] },
+              { "id": "p", "team": "us", "label": "4", "path": [[0, 250, 420], [0.5, 440, 698]], "faces": [[0, "up"]] },
+              { "id": "a", "team": "them", "label": "A", "path": [[0, 560, 300], [0.42, 500, 560]] },
+              { "id": "a2", "team": "them", "label": "B", "path": [[0, 300, 330], [0.42, 420, 540]] }
+            ],
+            "ball": [[0, 478, 585], [0.35, 480, 600]],
+            "marks": [{ "kind": "cross", "at": [400, 600], "t": [0.08, 0.12] }],
+            "tags": [
+              { "at": [320, 250], "text": "INDIRECT FREE KICK", "color": "amber", "size": 38, "t": [0.16, 0.2] },
+              { "at": [320, 775], "text": "OUR TEAM ON THE GOAL LINE", "color": "red", "t": [0.56, 0.6] }
+            ]
+          }
+        },
+        {
+          "kicker": "Same rule",
+          "heading": "Throw-in back",
+          "sub": "A throw-in straight to the keeper: feet only too.",
+          "vo": "Same with a throw-in. If your team-mate throws it straight to you, it's feet only.",
+          "board": {
+            "players": [
+              { "id": "t", "team": "us", "label": "3", "path": [[0, -10, 470], [0.15, 18, 470]], "faces": [[0, "up"]] },
+              { "id": "gk", "team": "keeper", "label": "GK", "path": [[0, 480, 698], [0.2, 380, 600]] },
+              { "id": "d", "team": "us", "label": "5", "path": [[0, 520, 698], [0.2, 560, 420]] },
+              { "id": "p", "team": "us", "label": "4", "path": [[0, 440, 698], [0.2, 600, 540]], "faces": [[0, "up"]] },
+              { "id": "a", "team": "them", "label": "A", "path": [[0, 500, 560], [0.2, 280, 430]] },
+              { "id": "a2", "team": "them", "label": "B", "path": [[0, 420, 540], [0.2, 560, 330]] }
+            ],
+            "ball": [[0, 18, 430], [0.35, 18, 430], [0.58, 370, 585]],
+            "lines": [{ "from": [30, 430], "to": [362, 575], "color": "white", "dashed": true, "t": [0.35, 0.58] }],
+            "tags": [
+              { "at": [120, 380], "text": "THROW-IN", "color": "white", "t": [0.12, 0.16] },
+              { "at": [250, 680], "text": "FEET ONLY", "color": "amber", "size": 40, "t": [0.62, 0.66] }
+            ]
+          }
+        },
+        {
+          "kicker": "You choose",
+          "heading": "Header back?",
+          "sub": "A team-mate heads it back to you. Hands or feet?",
+          "countdown": 3,
+          "vo": "Your team-mate heads it back to you. Hands, or feet?",
+          "board": {
+            "players": [
+              { "id": "t", "team": "us", "label": "3", "path": [[0, 18, 470], [0.3, 150, 380]], "faces": [[0, "up"]] },
+              { "id": "gk", "team": "keeper", "label": "GK", "path": [[0, 380, 600]] },
+              { "id": "d", "team": "us", "label": "5", "path": [[0, 560, 420], [0.2, 520, 400]], "faces": [[0, "up"]] },
+              { "id": "p", "team": "us", "label": "4", "path": [[0, 600, 540]], "faces": [[0, "up"]] },
+              { "id": "a", "team": "them", "label": "A", "path": [[0, 280, 430], [0.3, 470, 330]] },
+              { "id": "a2", "team": "them", "label": "B", "path": [[0, 560, 330]] }
+            ],
+            "ball": [[0, 600, 210], [0.3, 515, 345]],
+            "bubbles": [{ "at": "d", "text": "HEADER", "t": [0.3, 0.36] }]
+          }
+        },
+        {
+          "kicker": "The answer",
+          "heading": "Hands are OK",
+          "sub": "Head, chest or knee: the keeper can pick it up.",
+          "vo": "Hands are fine. The rule is only for kicks and throw-ins. If it comes off a team-mate's head, chest or knee, you can pick it up.",
+          "board": {
+            "players": [
+              { "id": "t", "team": "us", "label": "3", "path": [[0, 150, 380]], "faces": [[0, "up"]] },
+              { "id": "gk", "team": "keeper", "label": "GK", "path": [[0, 380, 600]] },
+              { "id": "d", "team": "us", "label": "5", "path": [[0, 520, 400]], "faces": [[0, "up"]] },
+              { "id": "p", "team": "us", "label": "4", "path": [[0, 600, 540]], "faces": [[0, "up"]] },
+              { "id": "a", "team": "them", "label": "A", "path": [[0, 470, 330]] },
+              { "id": "a2", "team": "them", "label": "B", "path": [[0, 560, 330]] }
+            ],
+            "ball": [[0, 515, 345], [0.25, 388, 560]],
+            "marks": [{ "kind": "tick", "at": [460, 520], "t": [0.3, 0.34] }],
+            "bubbles": [{ "at": "gk", "text": "KEEPER!", "color": "green", "below": true, "t": [0.26, 0.3] }]
+          }
+        },
+        {
+          "kicker": "Watch out",
+          "heading": "No tricks",
+          "sub": "Flicking it up just to head it back isn't allowed.",
+          "vo": "No tricks, though. Flicking the ball up with your foot just to head it back is not allowed. The other team gets an indirect free kick where it happened, and the player who started the trick gets a yellow card.",
+          "board": {
+            "players": [
+              { "id": "t", "team": "us", "label": "3", "path": [[0, 150, 380]], "faces": [[0, "up"]] },
+              { "id": "gk", "team": "keeper", "label": "GK", "path": [[0, 380, 600]] },
+              { "id": "d", "team": "us", "label": "5", "path": [[0, 520, 400]] },
+              { "id": "p", "team": "us", "label": "4", "path": [[0, 600, 540]], "faces": [[0, "up"]] },
+              { "id": "a", "team": "them", "label": "A", "path": [[0, 470, 330]] },
+              { "id": "a2", "team": "them", "label": "B", "path": [[0, 560, 330]] }
+            ],
+            "ball": [[0, 510, 422], [0.2, 510, 422], [0.28, 510, 330], [0.36, 510, 345]],
+            "tags": [
+              { "at": [320, 250], "text": "FLICK UP, HEAD BACK", "color": "white", "t": [0.2, 0.24], "until": 0.5 },
+              { "at": [320, 250], "text": "FREE KICK TO THEM", "color": "red", "size": 38, "t": [0.56, 0.6] }
+            ],
+            "marks": [{ "kind": "cross", "at": [585, 360], "t": [0.48, 0.52] }]
+          }
+        },
+        {
+          "kicker": "You choose",
+          "heading": "Miskick?",
+          "sub": "A team-mate tries to clear it, and slices it toward our goal.",
+          "countdown": 3,
+          "vo": "Your team-mate tries to kick it clear, but slices it toward our goal. Hands, or feet?",
+          "board": {
+            "players": [
+              { "id": "t", "team": "us", "label": "3", "path": [[0, 150, 380]], "faces": [[0, "up"]] },
+              { "id": "gk", "team": "keeper", "label": "GK", "path": [[0, 380, 600]] },
+              { "id": "d", "team": "us", "label": "5", "path": [[0, 520, 400]], "faces": [[0, "up"]] },
+              { "id": "p", "team": "us", "label": "4", "path": [[0, 600, 540]], "faces": [[0, "up"]] },
+              { "id": "a", "team": "them", "label": "A", "path": [[0, 470, 330]] },
+              { "id": "a2", "team": "them", "label": "B", "path": [[0, 560, 330]] }
+            ],
+            "ball": [[0, 510, 422]],
+            "ballCurve": { "t": [0.15, 0.45], "from": [510, 422], "via": [660, 560], "to": [440, 610] },
+            "lines": [{ "from": [510, 422], "to": [440, 610], "curve": [660, 560], "color": "white", "dashed": true, "t": [0.15, 0.45] }],
+            "tags": [{ "at": [400, 300], "text": "SLICED CLEARANCE", "color": "white", "t": [0.1, 0.14] }]
+          }
+        },
+        {
+          "kicker": "The answer",
+          "heading": "Hands are OK",
+          "sub": "A miskick or a deflection isn't a pass back.",
+          "vo": "Hands are fine. A miskick or a deflection isn't a pass to the keeper, so the keeper can pick it up.",
+          "board": {
+            "players": [
+              { "id": "t", "team": "us", "label": "3", "path": [[0, 150, 380]], "faces": [[0, "up"]] },
+              { "id": "gk", "team": "keeper", "label": "GK", "path": [[0, 380, 600], [0.2, 425, 605]] },
+              { "id": "d", "team": "us", "label": "5", "path": [[0, 520, 400]], "faces": [[0, "up"]] },
+              { "id": "p", "team": "us", "label": "4", "path": [[0, 600, 540]], "faces": [[0, "up"]] },
+              { "id": "a", "team": "them", "label": "A", "path": [[0, 470, 330]] },
+              { "id": "a2", "team": "them", "label": "B", "path": [[0, 560, 330]] }
+            ],
+            "ball": [[0, 440, 610], [0.2, 430, 572]],
+            "marks": [{ "kind": "tick", "at": [500, 540], "t": [0.24, 0.28] }],
+            "bubbles": [{ "at": "gk", "text": "KEEPER!", "color": "green", "below": true, "t": [0.2, 0.24] }]
+          }
+        },
+        {
+          "kicker": "For keepers",
+          "heading": "Be good with your feet",
+          "sub": "Most back-passes are feet only. Practise receiving with both feet.",
+          "vo": "So keepers, most back-passes are feet only. That's why every keeper on our team practises receiving with both feet.",
+          "board": {
+            "players": [
+              { "id": "t", "team": "us", "label": "3", "path": [[0, 150, 380], [0.5, 90, 480]], "faces": [[0, "up"]] },
+              { "id": "gk", "team": "keeper", "label": "GK", "path": [[0, 425, 605], [0.15, 400, 620]] },
+              { "id": "d", "team": "us", "label": "5", "path": [[0, 520, 400]] },
+              { "id": "p", "team": "us", "label": "4", "path": [[0, 600, 540]], "faces": [[0, "up"]] },
+              { "id": "a", "team": "them", "label": "A", "path": [[0, 470, 330], [0.6, 450, 470]] },
+              { "id": "a2", "team": "them", "label": "B", "path": [[0, 560, 330]] }
+            ],
+            "ball": [[0, 508, 418], [0.18, 508, 418], [0.36, 408, 628], [0.52, 408, 628], [0.72, 100, 498]],
+            "lines": [
+              { "from": [508, 422], "to": [412, 612], "color": "green", "dashed": true, "t": [0.18, 0.36], "until": 0.85 },
+              { "from": [400, 630], "to": [112, 500], "color": "green", "t": [0.52, 0.72] }
+            ],
+            "tags": [{ "at": [250, 700], "text": "FEET ONLY", "color": "amber", "size": 40, "t": [0.4, 0.44] }]
+          }
+        }
+      ]
+    },
+    {
+      "type": "clip",
+      "id": "westham",
+      "src": "clips/westham-headback.mp4",
+      "label": "West Ham v Wrexham, 2026",
+      "credit": "West Ham United / YouTube",
+      "beats": [
+        { "t": "freeze", "at": 3.0, "lowerThird": "Real game", "vo": "Now real games. West Ham against Wrexham. A long ball drops, and a West Ham defender, in claret, is under pressure. Watch how he plays it back." },
+        { "t": "play", "from": 3.0, "to": 6.4, "volume": 0.4 },
+        {
+          "t": "freeze",
+          "at": 6.4,
+          "question": "Headed back. Hands or feet?",
+          "countdown": 3,
+          "vo": "He headed it back to his keeper. Hands, or feet?",
+          "annotations": [
+            { "kind": "ring", "x": 570, "y": 480, "r": 20, "color": "yellow", "label": "Ball", "labelSide": "down" },
+            { "kind": "ring", "x": 180, "y": 510, "r": 50, "color": "green", "label": "Keeper", "labelSide": "up" }
+          ]
+        },
+        { "t": "freeze", "at": 6.4, "vo": "Hands. It came off his head, not his foot, so the keeper can pick it up. Watch.", "caption": "Header back: hands are OK.", "captionTop": 120 },
+        { "t": "play", "from": 6.4, "to": 9.0, "volume": 0.4, "lowerThird": "Watch" },
+        { "t": "play", "from": 5.0, "to": 8.0, "rate": 0.5, "lowerThird": "Again, slower" },
+        {
+          "t": "freeze",
+          "at": 7.6,
+          "vo": "He picks it up, and the referee lets play go on. That's allowed.",
+          "annotations": [{ "kind": "ring", "x": 465, "y": 510, "r": 50, "color": "green", "label": "Allowed", "labelSide": "up" }]
+        }
+      ]
+    },
+    {
+      "type": "clip",
+      "id": "navas",
+      "src": "clips/navas-chestback.mp4",
+      "label": "Sevilla v Inter, Europa League final 2020",
+      "credit": "TNT Sports Football / YouTube",
+      "beats": [
+        { "t": "freeze", "at": 4.0, "lowerThird": "Real game", "vo": "Same rule with the chest. Sevilla's captain, Jesus Navas, in white, near his own goal." },
+        { "t": "play", "from": 4.0, "to": 11.8, "volume": 0.6 },
+        { "t": "play", "from": 4.5, "to": 9.4, "rate": 0.5, "volume": 0, "lowerThird": "Again, slower" },
+        {
+          "t": "freeze",
+          "at": 11.3,
+          "vo": "He chests it back. The ball bounces, Bono controls it at his feet, then picks it up with his hands. No free kick. Chest, head or knee: the keeper can use his hands.",
+          "caption": "Chest back: hands are OK.",
+          "captionTop": 120
+        }
+      ]
+    },
+    {
+      "type": "clip",
+      "id": "ipswich",
+      "src": "clips/ipswich-wolves.mp4",
+      "label": "Ipswich v Wolves, 2025",
+      "credit": "KKTott18 / YouTube",
+      "beats": [
+        { "t": "freeze", "at": 6.0, "lowerThird": "Real game", "vo": "Now the other way. Ipswich against Wolves. A defender kicks a simple pass back to his keeper. Watch the keeper's feet." },
+        { "t": "play", "from": 6.0, "to": 12.6, "volume": 0.3 },
+        {
+          "t": "freeze",
+          "at": 12.6,
+          "question": "Can he grab it?",
+          "countdown": 3,
+          "vo": "The ball rolls under his foot. Can he grab it with his hands?"
+        },
+        { "t": "freeze", "at": 12.6, "vo": "No. It was kicked back to him on purpose, so it's feet only, even when you miss it. Watch what the referee gives.", "caption": "Kicked back: feet only.", "captionTop": 120 },
+        { "t": "play", "from": 12.6, "to": 15.5, "volume": 0.3 },
+        { "t": "play", "from": 19.0, "to": 22.0, "volume": 0.3, "lowerThird": "Arm up: indirect free kick" },
+        { "t": "play", "from": 22.0, "to": 29.0, "volume": 0.3, "lowerThird": "Whole team on the goal line" },
+        {
+          "t": "freeze",
+          "at": 25.0,
+          "vo": "An indirect free kick, right next to the goal, and the whole Ipswich team on the goal line. That's what one mistake costs. Feet only.",
+          "caption": "Indirect free kick, right by the goal.",
+          "captionTop": 120
+        }
+      ]
+    },
+    {
+      "type": "clip",
+      "id": "trick",
+      "src": "clips/montreal-trick.mp4",
+      "label": "Montreal v Toronto, MLS 2016",
+      "credit": "JFB / YouTube",
+      "beats": [
+        { "t": "freeze", "at": 1.0, "lowerThird": "Watch out", "vo": "Last one. Montreal against Toronto. Watch the defender in blue." },
+        { "t": "play", "from": 1.0, "to": 8.4, "volume": 0.3 },
+        {
+          "t": "freeze",
+          "at": 8.0,
+          "question": "Is that allowed?",
+          "countdown": 3,
+          "vo": "He flicked it up with his foot, headed it back, and the keeper caught it. Is that allowed?"
+        },
+        { "t": "freeze", "at": 8.0, "vo": "No. That's a trick to get around the rule. The referee missed it. It should have been an indirect free kick and a yellow card for the defender.", "caption": "Flick up, head back: not allowed.", "captionTop": 120 }
+      ]
+    },
+    {
+      "type": "recap",
+      "id": "recap",
+      "items": ["Kicked back: feet", "Throw-in back: feet", "Head, chest, knee: hands", "Miskick: hands"],
+      "highlight": 0,
+      "noteLabel": "NO TRICKS",
+      "note": "Flicking it up to head it back means a free kick to them.",
+      "vo": "Remember. Kicked back on purpose, or a throw-in: feet only. Head, chest or knee, or a miskick: hands are fine. And no tricks."
+    },
+    {
+      "type": "credits",
+      "id": "credits",
+      "lines": ["Rule: IFAB Laws of the Game, Laws 12 and 13", "Clips: West Ham United, TNT Sports Football, KKTott18, JFB (all YouTube)", "Made for Team Blue Thunder teaching only"],
+      "vo": "Thanks for watching. See you at training."
+    }
+  ]
+}

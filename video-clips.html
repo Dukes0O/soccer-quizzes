@@ -84,6 +84,24 @@
   <script>
     const videoClipsData = [
       {
+        title: "Back to the Keeper 1: When do we go back?",
+        tag: "FILM ROOM",
+        thumbnail: "assets/thumbnails/back-to-keeper-1.png",
+        gdrive_link: "https://drive.google.com/file/d/1p7yFHele6G6FziUZYGWMmjAfk7jUnyr5/view?usp=drive_link"
+      },
+      {
+        title: "Back to the Keeper 2: The back-pass rule",
+        tag: "FILM ROOM",
+        thumbnail: "assets/thumbnails/back-to-keeper-2.png",
+        gdrive_link: "https://drive.google.com/file/d/1GFYPvxLOA5TUOxKAoAyVt7O1H-wF4pzU/view?usp=drive_link"
+      },
+      {
+        title: "Back to the Keeper 3: How to pass it back",
+        tag: "FILM ROOM",
+        thumbnail: "assets/thumbnails/back-to-keeper-3.png",
+        gdrive_link: "https://drive.google.com/file/d/1yMxRgZ939RzlAJsIY6gDbaB0T8ETtETg/view?usp=drive_link"
+      },
+      {
         title: "Looking Around",
         thumbnail: "assets/thumbnails/soccer-basics-looking-around.png",
         gdrive_link: "https://drive.google.com/file/d/1dYs4NJD57N-lSYpG6E3KPvmjbBMjcJn_/view?usp=drive_link"
@@ -135,7 +153,7 @@
               </div>
             </div>
             <div class="p-6">
-              <span class="text-amber-500 font-sports text-[10px] tracking-widest uppercase mb-1 block">TACTICAL DRILL</span>
+              <span class="text-amber-500 font-sports text-[10px] tracking-widest uppercase mb-1 block">${video.tag || 'TACTICAL DRILL'}</span>
               <h3 class="text-lg font-bold font-sports text-white group-hover:text-amber-400 transition-colors uppercase italic">${video.title}</h3>
             </div>
           </a>

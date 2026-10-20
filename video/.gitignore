@@ -1,0 +1,6 @@
+node_modules/
+out/
+public/clips/
+public/stills/
+public/narration/
+public/narration-cache/
