@@ -6,33 +6,206 @@
   <title>Team Stats | Soccer Pro Hub</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
 </head>
-<body class="min-h-screen flex flex-col items-center">
-  <nav class="site-nav" aria-label="Main">
-    <a href="index.html">Home</a><a href="quizzes/index.html">Quizzes</a>
-    <a href="resources/index.html">Playbook</a><a href="video-clips.html">Videos</a>
-    <a href="schedule.html">Schedule</a>
-    <a href="stats.html" aria-current="page">Stats</a>
+<body class="bg-[#0f172a] text-slate-50 min-h-screen flex flex-col items-center">
+  <nav class="bg-[#1e293b]/80 backdrop-blur-md border-b border-white/10 p-4 flex flex-wrap justify-center gap-x-8 gap-y-2 w-full sticky top-0 z-50">
+    <a href="index.html" class="font-sports text-slate-300 hover:text-green-400 transition">HOME</a>
+    <a href="quizzes/index.html" class="font-sports text-slate-300 hover:text-green-400 transition">QUIZZES</a>
+    <a href="resources/index.html" class="font-sports text-slate-300 hover:text-green-400 transition">PLAYBOOK</a>
+    <a href="video-clips.html" class="font-sports text-slate-300 hover:text-green-400 transition">VIDEOS</a>
+    <a href="schedule.html" class="font-sports text-slate-300 hover:text-green-400 transition">SCHEDULE</a>
+    <a href="stats.html" aria-current="page" class="font-sports text-green-400 font-bold tracking-widest border-b-2 border-green-400">STATS</a>
   </nav>
-  <header class="w-full max-w-5xl px-6 py-10">
-    <h1 class="text-4xl font-bold font-sports">Team <span class="text-green-400">Stats</span></h1>
-    <p id="season-label" class="text-slate-300 mt-2">2026/27 Season</p>
-    <div class="season-links mt-6" aria-label="Seasons">
-      <a href="stats.html" aria-current="page">Current season</a>
-      <a href="stats-spring-2026.html">Spring 2026 archive</a>
-    </div>
+
+  <header class="w-full py-10 bg-gradient-to-b from-emerald-900/25 to-[#0f172a] text-center">
+    <h1 class="text-4xl md:text-5xl font-bold font-sports italic text-white">Team <span class="text-green-500">Stats</span></h1>
+    <p id="season-label" class="text-slate-300 font-sports mt-2">2026/27 Season</p>
+    <div class="season-links justify-center mt-4"><a href="stats.html" aria-current="page">Current season</a><a href="stats-spring-2026.html">Spring 2026 archive</a></div>
   </header>
-  <main class="w-full max-w-5xl px-6 pb-12 flex-1">
-    <div id="season-stats" aria-live="polite"><p>Loading season results...</p></div>
-    <noscript><p>Enable JavaScript to view current results. <a href="schedule.html">Team schedule</a> | <a href="stats-spring-2026.html">Spring 2026 archive</a></p></noscript>
-    <section class="border-t border-white/10 mt-12 pt-6">
-      <h2 class="font-sports text-2xl font-bold">Past Seasons</h2>
-      <a href="stats-spring-2026.html" class="archive-link">
-        <span>Spring 2026</span><span>9 matches | 3 clean sheets | 5 wins, 1 loss, 3 ties</span>
-      </a>
+
+  <main class="w-full max-w-7xl flex-1 p-6">
+    <p id="stats-status" role="status" class="text-slate-300 mb-6">Loading season stats...</p>
+    <noscript><p>Enable JavaScript to view current stats.</p></noscript>
+    <section class="glass-panel rounded-3xl overflow-hidden border border-white/10 shadow-2xl mb-10">
+      <div class="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr]">
+        <div class="p-8 md:p-10 bg-gradient-to-br from-emerald-950/70 to-slate-900/70">
+          <p class="font-sports text-green-400 font-bold tracking-[0.35em] text-xs mb-4">TEAM IDENTITY</p>
+          <h2 class="font-sports text-4xl md:text-6xl font-bold italic leading-none text-white mb-6">
+            Defending together
+          </h2>
+          <p id="team-story" class="text-slate-300 text-lg md:text-xl leading-relaxed max-w-3xl">
+            Team defending starts with holding shape, protecting each other, and making good decisions together.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-px bg-white/10">
+          <div class="bg-slate-900/95 p-6">
+            <p id="stat-clean-sheets" class="font-sports text-5xl font-bold text-green-400">--</p>
+            <p class="font-sports text-xs tracking-widest text-slate-500 uppercase">Clean Sheets</p>
+          </div>
+          <div class="bg-slate-900/95 p-6">
+            <p id="stat-clean-minutes" class="font-sports text-5xl font-bold text-green-400">--</p>
+            <p class="font-sports text-xs tracking-widest text-slate-500 uppercase">Clean Minutes</p>
+          </div>
+          <div class="bg-slate-900/95 p-6">
+            <p id="stat-record" class="font-sports text-5xl font-bold text-white">--</p>
+            <p class="font-sports text-xs tracking-widest text-slate-500 uppercase">Record (W-L-D)</p>
+          </div>
+          <div class="bg-slate-900/95 p-6">
+            <p id="stat-difference" class="font-sports text-5xl font-bold text-white">--</p>
+            <p class="font-sports text-xs tracking-widest text-slate-500 uppercase">Goal Spread</p>
+          </div>
+          <div class="bg-slate-900/95 p-6">
+            <p id="stat-ga-average" class="font-sports text-5xl font-bold text-white">--</p>
+            <p class="font-sports text-xs tracking-widest text-slate-500 uppercase">GA / Game</p>
+          </div>
+          <div class="bg-slate-900/95 p-6">
+            <p id="stat-goals-for" class="font-sports text-5xl font-bold text-white">--</p>
+            <p class="font-sports text-xs tracking-widest text-slate-500 uppercase">Goals For</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+      <div class="glass-panel rounded-2xl p-6 border-t-4 border-green-500 card-hover">
+        <p class="font-sports text-green-400 tracking-[0.3em] text-xs mb-3">SHUTOUT WINS</p>
+        <p id="shutout-wins" class="font-sports text-4xl font-bold text-white mb-2">--</p>
+        <p class="text-slate-400 text-sm leading-relaxed"><span id="shutout-note">No shutout wins recorded yet.</span></p>
+      </div>
+
+      <div class="glass-panel rounded-2xl p-6 border-t-4 border-blue-500 card-hover">
+        <p class="font-sports text-blue-400 tracking-[0.3em] text-xs mb-3">BACK LINE RUN</p>
+        <p class="font-sports text-3xl font-bold text-white mb-2">Awaiting records</p>
+        <p class="text-slate-400 text-sm leading-relaxed">Defensive-unit and scoreless-run records have not been entered for this season.</p>
+      </div>
+
+      <div class="glass-panel rounded-2xl p-6 border-t-4 border-amber-500 card-hover">
+        <p class="font-sports text-amber-400 tracking-[0.3em] text-xs mb-3">SCORING BALANCE</p>
+        <p id="scoring-balance" class="font-sports text-3xl font-bold text-white mb-2">Awaiting records</p>
+        <p class="text-slate-400 text-sm leading-relaxed">Player goals and assists have not been entered for this season.</p>
+      </div>
+    </section>
+
+    <section class="grid grid-cols-1 xl:grid-cols-[1.15fr_0.85fr] gap-8 mb-10">
+      <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+        <div class="bg-slate-800/60 p-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 border-b border-white/10">
+          <div>
+            <p class="font-sports text-green-500 font-bold tracking-[0.3em] text-xs mb-2">DEFENSIVE STORY</p>
+            <h2 class="text-3xl font-bold font-sports italic text-white">Match Record</h2>
+          </div>
+          <p class="text-slate-500 font-sports tracking-widest uppercase text-xs">Goals against by game</p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left">
+            <thead class="bg-slate-950/40 border-b border-white/10">
+              <tr>
+                <th class="px-5 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase">Date</th>
+                <th class="px-5 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase">Opponent</th>
+                <th class="px-5 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase text-right">For</th>
+                <th class="px-5 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase text-right">Against</th>
+                <th class="px-5 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase text-right">Result</th>
+              </tr>
+            </thead>
+            <tbody id="match-table" class="divide-y divide-white/5"><tr><td colspan="5" class="px-5 py-6 text-slate-400">Loading match records...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+        <div class="bg-slate-800/60 p-6 border-b border-white/10">
+          <p class="font-sports text-green-500 font-bold tracking-[0.3em] text-xs mb-2">CLEAN SHEET CREDIT</p>
+          <h2 class="text-3xl font-bold font-sports italic text-white">Clean Sheet Unit</h2>
+        </div>
+
+        <div class="p-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <p class="font-sports text-blue-400 tracking-widest text-xs uppercase mb-4">Goalkeepers</p>
+              <div id="keeper-credit" class="space-y-4"><p class="text-slate-400 text-sm">Keeper appearances not recorded yet.</p></div>
+            </div>
+            <div>
+              <p class="font-sports text-green-400 tracking-widest text-xs uppercase mb-4">Back Line</p>
+              <div id="defensive-credit" class="space-y-4"><p class="text-slate-400 text-sm">Back-line appearances not recorded yet.</p></div>
+            </div>
+          </div>
+          <div class="mt-6 p-5 rounded-2xl bg-green-500/10 border border-green-500/20">
+            <p class="font-sports text-green-400 tracking-widest text-xs uppercase mb-2">Coach's Note</p>
+            <p class="text-slate-300 text-sm leading-relaxed">Clean sheet appearances are recorded as unit credit. They recognize discipline, positioning, communication, and the keeper/defender partnership behind every shutout.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="glass-panel rounded-3xl overflow-hidden border border-white/10 shadow-2xl mb-10">
+      <div class="bg-slate-800/60 p-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 border-b border-white/10">
+        <div>
+          <p class="font-sports text-blue-400 font-bold tracking-[0.3em] text-xs mb-2">LINEUP CONTEXT</p>
+          <h2 class="text-3xl font-bold font-sports italic text-white">Keeper & Defensive Line vs. Goals Against</h2>
+        </div>
+        <p class="text-slate-500 font-sports tracking-widest uppercase text-xs">Recorded matches</p>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left">
+          <thead class="bg-slate-950/40 border-b border-white/10">
+            <tr>
+              <th class="px-5 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase">Date</th>
+              <th class="px-5 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase">Goalkeeper</th>
+              <th class="px-5 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase">Defence Mid</th>
+              <th class="px-5 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase">Left Defence</th>
+              <th class="px-5 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase">Right Defence</th>
+              <th class="px-5 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase text-right">GA</th>
+            </tr>
+          </thead>
+          <tbody id="defense-table" class="divide-y divide-white/5"><tr><td colspan="6" class="px-5 py-8 text-slate-400">Defensive lineups have not been recorded yet.</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+      <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+        <div class="bg-slate-800/60 p-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 border-b border-white/10">
+          <div>
+            <p class="font-sports text-lime-500 font-bold tracking-[0.3em] text-xs mb-2">ATTACKING OUTPUT</p>
+            <h2 class="text-3xl font-bold font-sports italic text-white">Goals & Assists</h2>
+          </div>
+          <p class="text-slate-500 font-sports tracking-widest uppercase text-xs">1 goal + 1 assist = 2 points</p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left">
+            <thead class="bg-slate-950/40 border-b border-white/10">
+              <tr>
+                <th class="px-6 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase">Player</th>
+                <th class="px-6 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase text-right">Goals</th>
+                <th class="px-6 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase text-right">Assists</th>
+                <th class="px-6 py-4 font-sports text-sm tracking-widest text-slate-400 uppercase text-right">Points</th>
+              </tr>
+            </thead>
+            <tbody id="attacking-table" class="divide-y divide-white/5"><tr><td colspan="4" class="px-6 py-8 text-slate-400">Player goals and assists have not been recorded yet.</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+        <div class="bg-slate-800/60 p-6 border-b border-white/10">
+          <p class="font-sports text-amber-500 font-bold tracking-[0.3em] text-xs mb-2">SEASON SHAPE</p>
+          <h2 class="text-3xl font-bold font-sports italic text-white">Team Totals</h2>
+        </div>
+        <div id="team-totals" class="grid grid-cols-2 gap-px bg-white/10"></div>
+      </div>
     </section>
   </main>
-  <footer class="w-full py-8 text-center text-slate-400 text-sm font-sports">Soccer Pro Hub | Team Stats</footer>
+
+  <footer class="w-full py-12 text-center text-slate-600 text-sm font-sports border-t border-white/5 mt-12">
+    2026/27 SOCCER PRO HUB | TEAM STATS
+  </footer>
+
   <script src="js/stats.js"></script>
 </body>
 </html>

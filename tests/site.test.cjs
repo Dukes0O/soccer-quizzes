@@ -9,7 +9,7 @@ const read = name => fs.readFileSync(path.join(root, name), 'utf8');
 const manifest = JSON.parse(read('quizzes/manifest.json'));
 const banks = manifest.map(q => JSON.parse(read(`quizzes/${q.id}.json`)));
 const core = require('../js/quiz.js');
-const { seasonTotals } = require('../js/stats.js');
+const { seasonTotals, seasonSummary } = require('../js/stats.js');
 
 test('all nine topics have valid, distinct questions at all four levels', () => {
   const ids = new Set();
@@ -115,6 +115,24 @@ test('current results use Bunnell scores and omit the bye and unplayed fixtures'
   assert.equal(seasonTotals([{ for: 6, against: 8, countsForTeamStats: false }]).for, 0);
   assert.equal(seasonTotals([{ for: null, against: null }]).played, 0);
   assert.equal(seasonTotals([{ for: 1, against: 2 }]).losses, 1);
+});
+
+test('season summary keeps unrecorded player and defensive figures unknown', () => {
+  const season = JSON.parse(read('data/current-season.json'));
+  const summary = seasonSummary(season);
+  assert.equal(summary.difference, '-2');
+  assert.equal(summary.gaAverage, '4.50');
+  assert.equal(summary.gfAverage, '4.00');
+  assert.equal(summary.assists, null);
+  assert.equal(summary.points, null);
+  assert.equal(summary.cleanMinutes, null);
+  assert.deepEqual(season.defensiveLines, []);
+  assert.deepEqual(season.keeperCleanSheetCredits, []);
+  assert.deepEqual(season.cleanSheetCredits, []);
+  const recorded = seasonSummary({ ...season, cleanMinutes: 0, players: [{ goals: 16, assists: 0 }] });
+  assert.equal(recorded.assists, 0);
+  assert.equal(recorded.points, 16);
+  assert.equal(recorded.cleanMinutes, 0);
 });
 
 function archiveData(source) {
