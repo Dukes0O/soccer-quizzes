@@ -1,5 +1,10 @@
 {
   "season": "2026/27",
-  "matches": [],
+  "matches": [
+    { "date": "2026-09-12", "opponent": "LUSA - 15M Bowes", "homeAway": "Home", "for": 6, "against": 5 },
+    { "date": "2026-09-26", "opponent": "SUSC - Juventus 15M", "homeAway": "Away", "for": 4, "against": 5 },
+    { "date": "2026-10-03", "opponent": "CFC - 15M Black", "homeAway": "Home", "for": 3, "against": 5 },
+    { "date": "2026-10-17", "opponent": "NSFC - 15M Mustangs Blue", "homeAway": "Away", "for": 3, "against": 3 }
+  ],
   "players": []
 }

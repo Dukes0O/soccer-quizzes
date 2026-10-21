@@ -1,5 +1,5 @@
 function seasonTotals(matches) {
-  return matches.filter(m => m.countsForTeamStats !== false).reduce((total, match) => {
+  return matches.filter(m => m.countsForTeamStats !== false && Number.isInteger(m.for) && Number.isInteger(m.against)).reduce((total, match) => {
     total.played++;
     total.for += match.for;
     total.against += match.against;
@@ -21,6 +21,12 @@ async function renderSeason() {
     const totals = seasonTotals(season.matches);
     const metrics = [['Matches', totals.played], ['Clean sheets', totals.cleanSheets], ['Goals for', totals.for], ['Goals against', totals.against]];
     container.innerHTML = `<dl class="season-metrics">${metrics.map(([label, value]) => `<div><dt>${label}</dt><dd>${value}</dd></div>`).join('')}</dl>`;
+    if (totals.played) {
+      const record = document.createElement('p');
+      record.className = 'text-slate-300 mt-4';
+      record.textContent = `${totals.wins} win${totals.wins === 1 ? '' : 's'}, ${totals.ties} draw${totals.ties === 1 ? '' : 's'}, ${totals.losses} loss${totals.losses === 1 ? '' : 'es'}`;
+      container.appendChild(record);
+    }
     if (!season.matches.length) {
       container.insertAdjacentHTML('beforeend', '<section class="py-12 border-b border-white/10"><h2 class="font-sports text-3xl font-bold mb-3">A New Season Starts Here</h2><p class="text-slate-300">No matches recorded yet.</p></section>');
       return;
@@ -33,7 +39,9 @@ async function renderSeason() {
     for (const match of season.matches) {
       const row = document.createElement('li');
       row.className = 'archive-link';
-      row.textContent = `${match.date} | ${match.opponent} | ${match.for}-${match.against}${match.countsForTeamStats === false ? ' (Friendly, excluded from totals)' : ''}`;
+      const date = new Intl.DateTimeFormat('en-CA', { month: 'short', day: 'numeric' }).format(new Date(`${match.date}T12:00:00`));
+      const result = match.for > match.against ? 'WIN' : match.for < match.against ? 'LOSS' : 'DRAW';
+      row.textContent = `${date} | ${match.opponent}${match.homeAway ? ` (${match.homeAway})` : ''} | ${match.for}-${match.against} ${result}${match.countsForTeamStats === false ? ' (Friendly, excluded from totals)' : ''}`;
       list.appendChild(row);
     }
     container.appendChild(list);

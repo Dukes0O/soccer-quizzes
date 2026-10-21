@@ -131,7 +131,7 @@ h1, h2, h3, .font-sports {
 @media (max-width: 640px) { .fixture-match { grid-template-columns: 1fr; gap: .35rem; } .fixture-match strong, .fixture-match > :last-child { text-align: left; } }
 .fixture-date { font-family: 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: .05em; }
 .fixture-match { margin-top: .8rem; font-weight: 600; }
-.fixture-match strong { color: var(--accent-secondary); font-size: .75rem; letter-spacing: .08em; }
+.fixture-match strong { color: var(--accent-secondary); font-size: 1.125rem; letter-spacing: 0; }
 
 .option-label::before {
     content: '';

@@ -95,12 +95,25 @@ test('blocked and malformed storage do not prevent play or overwrite damaged dat
   }
 });
 
-test('new season is empty and excludes friendlies from totals', () => {
+test('current results use Bunnell scores and omit the bye and unplayed fixtures', () => {
   const season = JSON.parse(read('data/current-season.json'));
-  assert.deepEqual(season.matches, []);
+  const schedule = JSON.parse(read('data/schedule.json'));
+  const completed = schedule.fixtures.filter(f => Number.isInteger(f.homeScore) && Number.isInteger(f.awayScore));
+  assert.equal(season.matches.length, 4);
+  assert.equal(completed.length, 4);
+  assert.deepEqual(seasonTotals(season.matches), { played: 4, for: 16, against: 18, wins: 1, ties: 1, losses: 2, cleanSheets: 0 });
+  for (const match of season.matches) {
+    const fixture = completed.find(f => f.date === match.date);
+    assert.ok(fixture);
+    const home = fixture.home === schedule.team;
+    assert.equal(match.for, home ? fixture.homeScore : fixture.awayScore);
+    assert.equal(match.against, home ? fixture.awayScore : fixture.homeScore);
+    assert.equal(match.opponent, home ? fixture.away : fixture.home);
+  }
   assert.deepEqual(season.players, []);
   assert.equal(seasonTotals([]).played, 0);
   assert.equal(seasonTotals([{ for: 6, against: 8, countsForTeamStats: false }]).for, 0);
+  assert.equal(seasonTotals([{ for: null, against: null }]).played, 0);
   assert.equal(seasonTotals([{ for: 1, against: 2 }]).losses, 1);
 });
 
